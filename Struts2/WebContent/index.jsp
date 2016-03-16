@@ -6,6 +6,6 @@
 <title>Hello</title>
 </head>
 <body>
-<div>登入功成，歡迎你！</div>
+<div>登入功成，歡迎你！Ha Ha Ha</div>
 </body>
 </html>
