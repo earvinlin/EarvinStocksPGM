@@ -7,5 +7,6 @@
 </head>
 <body>
 <div>登入功成，歡迎你！Ha Ha Ha</div>
+<div>Add from Win7</div>
 </body>
 </html>
