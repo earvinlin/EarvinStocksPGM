@@ -1,0 +1,55 @@
+import re
+import sys
+import urllib.request
+import urllib.parse
+from bs4 import BeautifulSoup
+
+#params = urllib.parse.urlencode({'myear':sys.argv[1], 'mmon':sys.argv[2]}) #這是我自己的參數
+#params = params.encode('big5')
+
+
+if len(sys.argv) < 2 :
+    print("You need input one parameter(fmt : theProcessDate(yyyy/mm/dd))")
+    print("syntax : C:\python 01_taiwanDataTSECDataWithParams.py 2017/02/06 ")
+    sys.exit()
+
+print("input-value= " + sys.argv[1] + "\n")
+#params = urllib.parse.urlencode({"input_date": "106/02/06"}) #這是我自己的參數
+params = urllib.parse.urlencode({"qdate": sys.argv[1]}) #這是我自己的參數
+params = params.encode('big5') #這裡很重要，沒有encode會有error
+url = "http://www.tse.com.tw/ch/trading/exchange/BWIBBU/BWIBBU_d.php"
+f = urllib.request.urlopen(url, params)
+#print(f.read())
+
+bsObj = BeautifulSoup(f.read())
+#tableObj = bsObj.findAll("table")
+tableObj = bsObj.find_all("table")
+print(tableObj)
+
+try :
+    # 取得資料的日期
+    theTD = tableObj[0].find('td')
+    theDate = theTD.get_text()
+    theYMD = re.findall('[0-9]+', theDate)
+    print('資料日期：' + theYMD[0] + theYMD[1] + theYMD[2])
+    fileName = "stocks_個股日本益比殖利率及股價淨值比-" + theYMD[0] + theYMD[1] + theYMD[2] + ".txt"
+
+    with open(fileName, 'w') as out :
+        # Table第1列內容為[106年04月20日 個股日本益比、殖利率及股價淨值比&nbsp;(依證券代碼排序查詢)]，略掉不寫入檔案
+        omitFirstLine = True
+        for theTR in tableObj[0].findAll('tr') :
+            outputStr = ""
+            print("omitFirstLine= " + str(omitFirstLine) + ", aa= " + outputStr + "\n")
+            if not omitFirstLine :
+                print("bb= " + outputStr + "\n")
+                for theTD in theTR.findAll('td') :
+                    outputStr += theTD.get_text() + ";"
+                print("bb= " + outputStr + "\n")
+                if len(outputStr) > 1 :
+                    out.write(outputStr.encode('CP950', 'ignore').decode('CP950') + "\n")
+            omitFirstLine = False
+            print("omitFirstLine= " + str(omitFirstLine) + ", aa= " + outputStr + "\n")
+    print('資料處理完成!!')
+except IOError as err :
+    print('Fie error : ' + str(err))
+
