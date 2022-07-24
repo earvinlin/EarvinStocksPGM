@@ -1,0 +1,1 @@
+python GenDatScript.py 20180930

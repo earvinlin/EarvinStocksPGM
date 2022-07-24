@@ -1,0 +1,38 @@
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220601
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220602
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220606
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220607
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220608
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220609
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220610
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220613
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220614
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220615
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220616
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220617
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220620
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220621
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220622
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220623
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220624
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220627
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220628
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220629
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220630
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220701
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220704
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220705
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220706
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220707
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220708
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220711
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220712
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220713
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220714
+rem Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220715
+
+Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220718
+Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220719
+Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220720
+Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220721
+Python FormatTaiwanDataPolarisWithParams_V1.1.py Close20220722
