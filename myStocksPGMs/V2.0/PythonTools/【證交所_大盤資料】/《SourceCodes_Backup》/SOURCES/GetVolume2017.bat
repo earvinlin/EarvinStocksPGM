@@ -1,4 +1,0 @@
-Python 03_getTaiwanDataTsecVolumeWithParams.py 2017 01
-Python 03_getTaiwanDataTsecVolumeWithParams.py 2017 02
-Python 03_getTaiwanDataTsecVolumeWithParams.py 2017 03
-Python 03_getTaiwanDataTsecVolumeWithParams.py 2017 04
