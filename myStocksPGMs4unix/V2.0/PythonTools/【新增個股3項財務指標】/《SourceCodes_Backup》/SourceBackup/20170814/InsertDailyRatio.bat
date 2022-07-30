@@ -1,9 +1,0 @@
-rem python 02_insertDailyRatiosToMySQLDB.py 1060801 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170801.txt
-rem python 02_insertDailyRatiosToMySQLDB.py 1060802 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170802.txt
-rem python 02_insertDailyRatiosToMySQLDB.py 1060803 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170803.txt
-rem python 02_insertDailyRatiosToMySQLDB.py 1060804 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170804.txt
-rem python 02_insertDailyRatiosToMySQLDB.py 1060807 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170807.txt
-rem python 02_insertDailyRatiosToMySQLDB.py 1060808 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170808.txt
-rem python 02_insertDailyRatiosToMySQLDB.py 1060809 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170809.txt
-python 02_insertDailyRatiosToMySQLDB.py 1060810 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170810.txt
-python 02_insertDailyRatiosToMySQLDB.py 1060811 stocks_らセ痲ゑ崔瞯の基瞓ゑ-20170811.txt

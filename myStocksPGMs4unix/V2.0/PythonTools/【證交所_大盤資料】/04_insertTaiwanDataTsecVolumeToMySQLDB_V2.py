@@ -48,7 +48,8 @@ try:
         tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
     else :
 #       iMac 如何取得程式執行路徑 ?? -- 20220723 Wait to solve ...        
-        saveFileDir = "/home/earvin/Dropbox/myStocksPGMs/V2.0/PythonTools/【證交所_大盤資料】/大盤成交量/"
+        saveFileDir = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/myStocksPGMs4unix/V2.0/PythonTools/【證交所_大盤資料】/大盤成交量/"
+
         tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
 
     reader = csv.DictReader(tsec, delimiter=',')

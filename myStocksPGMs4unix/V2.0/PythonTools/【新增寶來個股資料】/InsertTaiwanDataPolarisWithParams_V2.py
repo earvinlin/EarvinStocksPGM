@@ -37,8 +37,9 @@ try :
 #       Linux 如何取得程式執行路徑 ?? -- 20220723 Wait to solve ...        
         saveFileDir = "/home/earvin/Dropbox/myStocksPGMs/V2.0/PythonTools/【新增寶來個股資料】/Files/"
     else :
-#       iMac 如何取得程式執行路徑 ?? -- 20220723 Wait to solve ...        
-        saveFileDir = "/home/earvin/Dropbox/myStocksPGMs/V2.0/PythonTools/【新增寶來個股資料】/Files/"
+#       iMac 如何取得程式執行路徑 ?? -- 20220723 Wait to solve ...     
+#       放在公司的iMac路徑   
+        saveFileDir = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/myStocksPGMs4unix/V2.0/PythonTools/【新增寶來個股資料】/Files/"
 
     insertCnt = 0
     theFileName = sys.argv[1]
