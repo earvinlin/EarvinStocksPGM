@@ -3,6 +3,8 @@ import datetime
 import sys
 import os
 import csv
+import numpy as np
+import pandas as pd
 
 user = 'root'
 pwd  = 'lin32ledi'
@@ -70,7 +72,13 @@ try:
 		print(theRevenueCond)
 		cursor.execute(theRevenueCond, args)
 		data = cursor.fetchall()
-		print(data)
+		
+		if not data :
+			print("No data found!!!")
+		else :
+			df = pd.DataFrame(data, columns=['股票代號', '年', '累計營收_億', '累計營收年增_百分比'])
+			df2 = pd.DataFrame(df.累計營收年增_百分比 > 0)
+			print("aa=" ,df2)
 #		for row in cursor:
 #			print(row)
 		
