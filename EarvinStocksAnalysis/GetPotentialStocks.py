@@ -1,3 +1,5 @@
+from pickle import FALSE
+from xmlrpc.client import boolean
 import mysql.connector
 import datetime
 import sys
@@ -11,6 +13,7 @@ pwd  = 'lin32ledi'
 host = '127.0.0.1'
 db   = 'stocksdb'
 
+DEF_COMP_TIME = 3
 input_file = "STOCKS_LIST.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
@@ -41,7 +44,7 @@ try:
 					"avg_ann_yield as 年均殖利率_合計, eps, earnings_dis_ratio as 盈餘分配率_合計 " + \
 					"from STOCKS_DIVIDEND ) c " + \
 					"on a.股票代號 = c.股票代號 and a.年度 = c.股利所屬期間 " + \
-					"where a.股票代號 = %s "
+					"where a.股票代號 = %s order by a.年度 desc "
 
 
 	print(input_file)
@@ -60,12 +63,29 @@ try:
 		if not data :
 			print("No data found!!!")
 		else :
-			df = pd.DataFrame(data, columns=['股票代號', '年度', '累計營收_億', '累計營收年增_百分比', \
-				'股本_億', '財報評分', '年度股價_收盤', '年度股價_平均', 'roe', 'roa', 'bps', '股利所屬期間', \
+			df = pd.DataFrame(data, columns=['股票代號', '年度', '累計營收_億', \
+				'累計營收年增_百分比', '股本_億', '財報評分', '年度股價_收盤', \
+				'年度股價_平均', 'roe', 'roa', 'bps', '股利所屬期間', \
 				'股利合計', '年均殖利率_合計', 'eps', '盈餘分配率_合計'])		
-			print(df[['股票代號', '年度', '累計營收年增_百分比']])
-			output_file = stockNo + ".csv"
-			df.to_csv(output_file, encoding="utf_8_sig")
+#			print(df[['股票代號', '年度', '累計營收年增_百分比']])
+
+			df.fillna(value=-1, inplace = True)	# 將空值填入-1
+			counts = 0		# 記錄符合條件的次數
+			compTimes = 3	# 要比對的次數
+
+#			如果資料筆數小於預設比對次數，則減少比對次數			
+			if len(df.index) < DEF_COMP_TIME :
+				compTimes = len(df.index)
+
+			for num in range(0, compTimes) :
+				if df.iloc[num,3] >= 10 :
+					print(df.iloc[num,3])
+					counts += 1
+				else :
+					counts -= 1
+				if counts == compTimes :
+					output_file = stockNo + ".csv"
+					df.to_csv("DATA\\" + output_file, encoding="utf_8_sig")
 
 		readCnt += 1
 
