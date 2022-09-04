@@ -11,38 +11,8 @@ pwd  = 'lin32ledi'
 host = '127.0.0.1'
 db   = 'stocksdb'
 
-"""
-			// 營收成長率
-			select 
-			stock_no as 股票代號,
-			date as 月別,
-			cum_revenue as 營業收入_累計營收_億,
-			ann_ins_cum_revenue_p as 營業收入_累計年增_百分比
-			from stocks_sale_month
-			where stock_no = '2049' and mid(cast(date as char),5,2) = '12';
-			// 財報分數、每股帳面價值
-			select stock_no,
-			year as 年度, share_capital as 股本_億, fin_report_score as 財報評分,
-			ann_stock_end_price as 年度股價_元_收盤, ann_stock_avg_price as 年度股價_元_平均,
-			roe, roa, bps as BPS_元_每股帳面價值
-			from STOCKS_BZ_PERFORMANCE 
-			where stock_no = '2049';
-			// EPS、殖利率、盈餘分配率
-			select 
-			stock_no as 股票代號,
-			dividend_year as 股利發放年度,
-			total_dividend as 股利合計,
-			year_high_price as 年度股價最高價,
-			year_low_price as 年度股價最低價,
-			year_avg_price as 年度股價年均價,
-			avg_ann_yield as 年均殖利率_合計,
-			period_of_dividend as 股利所屬期間,
-			eps as EPS_元,
-			earnings_dis_ratio as 盈餘分配率_合計
-			from STOCKS_DIVIDEND where stock_no = '2049';
-
-"""
-
+input_file = "STOCKS_LIST.txt"
+output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
 
 cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
@@ -54,38 +24,53 @@ try:
 #        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20170501 ")
 #        sys.exit()
 
-	theRevenueCond = "select stock_no, date, cum_revenue, ann_ins_cum_revenue_p " + \
-		"from stocks_sale_month " + \
-		"where mid(cast(date as char),5,2) = %s and stock_no = %s order by date desc " 
+	theSQLCmd = "select a.股票代號, a.年度, a.累計營收_億, a.累計營收年增_百分比, " + \
+					"b.股本_億, b.財報評分, b.年度股價_收盤, b.年度股價_平均, b.roe, b.roa, b.bps, " + \
+					"c.股利所屬期間, c.股利合計, c.年均殖利率_合計, c.eps, c.盈餘分配率_合計 " + \
+					"from ( select stock_no as 股票代號, mid(cast(date as char),1,4) as 年度, " + \
+					"cum_revenue as 累計營收_億, ann_ins_cum_revenue_p as 累計營收年增_百分比 " + \
+					"from stocks_sale_month where mid(cast(date as char),5,2) = '12' ) a " + \
+					"left outer join " + \
+					"( select stock_no as 股票代號, year as 年度, share_capital as 股本_億, fin_report_score as 財報評分, " + \
+					"ann_stock_end_price as 年度股價_收盤, ann_stock_avg_price as 年度股價_平均, roe, roa, bps " + \
+					"from STOCKS_BZ_PERFORMANCE ) b " + \
+					"on a.股票代號 = b.股票代號 and a.年度 = b.年度 " + \
+					"left outer join " + \
+					"( select stock_no as 股票代號, period_of_dividend as 股利所屬期間, total_dividend as 股利合計, " + \
+					"year_high_price as 年度股價最高價, year_low_price as 年度股價最低價, year_avg_price as 年度股價年均價, " + \
+					"avg_ann_yield as 年均殖利率_合計, eps, earnings_dis_ratio as 盈餘分配率_合計 " + \
+					"from STOCKS_DIVIDEND ) c " + \
+					"on a.股票代號 = c.股票代號 and a.年度 = c.股利所屬期間 " + \
+					"where a.股票代號 = %s "
 
-	THE_MONTH = '12'
-	input_file = "STOCKS_LIST.txt"
+
 	print(input_file)
 	twStocksList = open(input_file, 'r')	# 預設以系統編碼開啟
 	stocks = twStocksList.readlines()
 	for stockNo in stocks :
 		stockNo = stockNo.replace('\n','')	# 不知為何檔案會有換行符號
 		print("正在處理", stockNo)
-		args = (THE_MONTH, (stockNo))
-		print(args)
+		theArgs = (stockNo,)
+		print(theArgs)
 #       判斷每年盈收成長率是否大於10%(連續3年)
-		print(theRevenueCond)
-		cursor.execute(theRevenueCond, args)
+		print(theSQLCmd)
+		cursor.execute(theSQLCmd, theArgs)
 		data = cursor.fetchall()
 		
 		if not data :
 			print("No data found!!!")
 		else :
-			df = pd.DataFrame(data, columns=['股票代號', '年', '累計營收_億', '累計營收年增_百分比'])
-			df2 = pd.DataFrame(df.累計營收年增_百分比 > 0)
-			print("aa=" ,df2)
-#		for row in cursor:
-#			print(row)
-		
+			df = pd.DataFrame(data, columns=['股票代號', '年度', '累計營收_億', '累計營收年增_百分比', \
+				'股本_億', '財報評分', '年度股價_收盤', '年度股價_平均', 'roe', 'roa', 'bps', '股利所屬期間', \
+				'股利合計', '年均殖利率_合計', 'eps', '盈餘分配率_合計'])		
+			print(df[['股票代號', '年度', '累計營收年增_百分比']])
+			output_file = stockNo + ".csv"
+			df.to_csv(output_file, encoding="utf_8_sig")
+
 		readCnt += 1
 
 except mysql.connector.Error as err:
-    print("insert to table 'taiwan_data_tsec' failed.")
+    print("Processing Error!!! ")
     print("Error: {}".format(err.msg))
     sys.exit()
 
