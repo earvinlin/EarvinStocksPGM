@@ -9,58 +9,80 @@ pwd  = 'lin32ledi'
 host = '127.0.0.1'
 db   = 'stocksdb'
 
-# ÀÉ®×¦Wµ{®æ¦¡¡G¤j½L«ü¼Æ_yymm.txt
-# ¸ê®Æ¨Ó¦ÛÃÒ¥æ©Òºô¯¸¡A¥]§t¤U¦CÄæ¦ì¡G¤é´Á, ¶}½L«ü¼Æ, ³Ì°ª«ü¼Æ, ³Ì§C«ü¼Æ, ¦¬½L«ü¼Æ
-select_sql = "SELECT * FROM taiwan_data_tsec where date = %s"
+"""
+			// ç‡Ÿæ”¶æˆé•·ç‡
+			select 
+			stock_no as è‚¡ç¥¨ä»£è™Ÿ,
+			date as æœˆåˆ¥,
+			cum_revenue as ç‡Ÿæ¥­æ”¶å…¥_ç´¯è¨ˆç‡Ÿæ”¶_å„„,
+			ann_ins_cum_revenue_p as ç‡Ÿæ¥­æ”¶å…¥_ç´¯è¨ˆå¹´å¢_ç™¾åˆ†æ¯”
+			from stocks_sale_month
+			where stock_no = '2049' and mid(cast(date as char),5,2) = '12';
+			// è²¡å ±åˆ†æ•¸ã€æ¯è‚¡å¸³é¢åƒ¹å€¼
+			select stock_no,
+			year as å¹´åº¦, share_capital as è‚¡æœ¬_å„„, fin_report_score as è²¡å ±è©•åˆ†,
+			ann_stock_end_price as å¹´åº¦è‚¡åƒ¹_å…ƒ_æ”¶ç›¤, ann_stock_avg_price as å¹´åº¦è‚¡åƒ¹_å…ƒ_å¹³å‡,
+			roe, roa, bps as BPS_å…ƒ_æ¯è‚¡å¸³é¢åƒ¹å€¼
+			from STOCKS_BZ_PERFORMANCE 
+			where stock_no = '2049';
+			// EPSã€æ®–åˆ©ç‡ã€ç›ˆé¤˜åˆ†é…ç‡
+			select 
+			stock_no as è‚¡ç¥¨ä»£è™Ÿ,
+			dividend_year as è‚¡åˆ©ç™¼æ”¾å¹´åº¦,
+			total_dividend as è‚¡åˆ©åˆè¨ˆ,
+			year_high_price as å¹´åº¦è‚¡åƒ¹æœ€é«˜åƒ¹,
+			year_low_price as å¹´åº¦è‚¡åƒ¹æœ€ä½åƒ¹,
+			year_avg_price as å¹´åº¦è‚¡åƒ¹å¹´å‡åƒ¹,
+			avg_ann_yield as å¹´å‡æ®–åˆ©ç‡_åˆè¨ˆ,
+			period_of_dividend as è‚¡åˆ©æ‰€å±¬æœŸé–“,
+			eps as EPS_å…ƒ,
+			earnings_dis_ratio as ç›ˆé¤˜åˆ†é…ç‡_åˆè¨ˆ
+			from STOCKS_DIVIDEND where stock_no = '2049';
+
+"""
+
+readCnt = 0
 
 cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
 cursor = cnx.cursor()
 
 try:
-    if len(sys.argv) < 2 :
-        print("You need input one parameter(fmt : theDate(yyyymmdd))")
-        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20170501 ")
-        sys.exit()
+#    if len(sys.argv) < 2 :
+#        print("You need input one parameter(fmt : theDate(yyyymmdd))")
+#        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20170501 ")
+#        sys.exit()
 
-    saveFileDir = "¤j½L«ü¼Æ\\"
-    input_file = "¤j½L«ü¼Æ_" + sys.argv[1] + ".txt"
-    print(input_file)
-    tsec = open(saveFileDir + input_file, 'r')	# ¹w³]¥H¨t²Î½s½X¶}±Ò
-    reader = csv.DictReader(tsec, delimiter=',')
-	
-    THE_STOCK_NO = 'taiex'
-    THE_STOCK_NAME ='¤j½L«ü¼Æ'
+	theRevenueCond = "select stock_no, date, cum_revenue, ann_ins_cum_revenue_p " + \
+		"from stocks_sale_month " + \
+		"where mid(cast(date as char),5,2) = %s and stock_no = %s order by date desc " 
 
-    insertCnt = 0
-    for row in reader :
-#       ¥ı¬d¸ê®Æ¬O§_¤w¦s¦b¡A¦s¦b­n¥Î§ó·s¡F¤£¦s¦b¥Î·s¼W!!
-#		NOTE : parse ¤é´Á yy/mm/dd
-        tehDateList = row['¤é´Á'].split('/')
-        theDate = str(int(tehDateList[0])+1911) + "/" + str(tehDateList[1]) + "/" + str(tehDateList[2])
-        print("¥æ©ö¤é´Á= " + theDate)
-        theTradeDate = datetime.date((int(tehDateList[0])+1911), int(tehDateList[1]), int(tehDateList[2]))
-        cursor.execute(select_sql, (theTradeDate,))
-        data = cursor.fetchall()
-
-        if not data :
-#           insert data to db
-            theStartPrice = float(row['¶}½L«ü¼Æ'].replace(',', ''))
-            theHighPrice = float(row['³Ì°ª«ü¼Æ'].replace(',', ''))
-            theLowPrice = float(row['³Ì§C«ü¼Æ'].replace(',', ''))
-            theEndPrice = float(row['¦¬½L«ü¼Æ'].replace(',', ''))
-            insertstmt=("INSERT INTO taiwan_data_tsec (stock_no, date, stock_name, start_price, high_price, low_price, end_price) VALUES ('%s', '%s', '%s', '%f', '%f', '%f', '%f')" % (THE_STOCK_NO, theTradeDate, THE_STOCK_NAME, theStartPrice, theHighPrice, theLowPrice, theEndPrice))
-            cursor.execute(insertstmt)
-            insertCnt += 1
-        else :
-            print("Duplicate data, stock_no = " + THE_STOCK_NO + ", date = " + str(theTradeDate));
+	THE_MONTH = '12'
+	input_file = "STOCKS_LIST.txt"
+	print(input_file)
+	twStocksList = open(input_file, 'r')	# é è¨­ä»¥ç³»çµ±ç·¨ç¢¼é–‹å•Ÿ
+	stocks = twStocksList.readlines()
+	for stockNo in stocks :
+		stockNo = stockNo.replace('\n','')	# ä¸çŸ¥ç‚ºä½•æª”æ¡ˆæœƒæœ‰æ›è¡Œç¬¦è™Ÿ
+		print("æ­£åœ¨è™•ç†", stockNo)
+		args = (THE_MONTH, (stockNo))
+		print(args)
+#       åˆ¤æ–·æ¯å¹´ç›ˆæ”¶æˆé•·ç‡æ˜¯å¦å¤§æ–¼10%(é€£çºŒ3å¹´)
+		print(theRevenueCond)
+		cursor.execute(theRevenueCond, args)
+		data = cursor.fetchall()
+		print(data)
+#		for row in cursor:
+#			print(row)
+		
+		readCnt += 1
 
 except mysql.connector.Error as err:
     print("insert to table 'taiwan_data_tsec' failed.")
     print("Error: {}".format(err.msg))
     sys.exit()
 
-print("·s¼W¸ê®Æ§¹¦¨!! ¦@ " + str(insertCnt) + " µ§¡C")
-tsec.close()
+print("è³‡æ–™è™•ç†å®Œæˆ!! å…± " + str(readCnt) + " ç­†ã€‚")
+twStocksList.close()
 cnx.commit()
 cursor.close()
 cnx.close()
