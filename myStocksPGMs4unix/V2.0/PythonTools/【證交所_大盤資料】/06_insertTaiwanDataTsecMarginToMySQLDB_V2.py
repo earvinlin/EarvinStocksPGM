@@ -47,11 +47,11 @@ try:
         tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
     else :
 #       iMac 如何取得程式執行路徑 ?? -- 20220723 Wait to solve ...        
-        saveFileDir = "/home/earvin/Dropbox/myStocksPGMs/V2.0/PythonTools/【證交所_大盤資料】/大盤融資融券/"
+        saveFileDir = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/myStocksPGMs4unix/V2.0/PythonTools/【證交所_大盤資料】/大盤融資融券/"
+
         tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
 
     reader = csv.DictReader(tsec, delimiter=',')
-
 
 #	NOTE : parse 日期 yyy/mm/dd (因為民國年可能為2位數或3位數，所以改由後面算長度)
     theDate = sys.argv[1][0:4] + "/" + sys.argv[1][4:6] + "/" + sys.argv[1][6:]

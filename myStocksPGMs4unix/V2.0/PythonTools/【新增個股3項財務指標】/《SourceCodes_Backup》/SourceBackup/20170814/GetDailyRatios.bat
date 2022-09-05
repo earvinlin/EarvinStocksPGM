@@ -1,9 +1,0 @@
-﻿rem python 01_getStocksDailyRatiosData.py 20170801
-rem python 01_getStocksDailyRatiosData.py 20170802
-rem python 01_getStocksDailyRatiosData.py 20170803
-rem python 01_getStocksDailyRatiosData.py 20170804
-rem python 01_getStocksDailyRatiosData.py 20170807
-rem python 01_getStocksDailyRatiosData.py 20170808
-rem python 01_getStocksDailyRatiosData.py 20170809
-python 01_getStocksDailyRatiosData.py 20170810
-python 01_getStocksDailyRatiosData.py 20170811

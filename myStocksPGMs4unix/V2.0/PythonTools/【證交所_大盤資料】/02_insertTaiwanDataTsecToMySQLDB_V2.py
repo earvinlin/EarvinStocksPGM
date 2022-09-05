@@ -36,8 +36,8 @@ try:
     input_file = "大盤指數_" + sys.argv[1] + ".txt"
     print(input_file)
     tesc = null
-#    saveFileDir = "大盤指數\\"
     saveFileDir = ""
+
     if platform.system() == "Windows" :
         saveFileDir = "大盤指數\\"
         tsec = open(saveFileDir + input_file, 'r')	# 預設以系統編碼開啟
@@ -47,10 +47,9 @@ try:
         tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
     else :
 #       iMac 如何取得程式執行路徑 ?? -- 20220723 Wait to solve ...        
-        saveFileDir = "/home/earvin/Dropbox/myStocksPGMs/V2.0/PythonTools/【證交所_大盤資料】/大盤指數/"
-        tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
+        saveFileDir = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/myStocksPGMs4unix/V2.0/PythonTools/【證交所_大盤資料】/大盤指數/"
 
-#    tsec = open(saveFileDir + input_file, 'r')	# 預設以系統編碼開啟
+    tsec = open(saveFileDir + input_file, 'r', encoding = 'cp950')	# 預設以系統編碼開啟
     reader = csv.DictReader(tsec, delimiter=',')
 	
     THE_STOCK_NO = 'taiex'
