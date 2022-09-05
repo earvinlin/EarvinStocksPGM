@@ -7,13 +7,21 @@ import os
 import csv
 import numpy as np
 import pandas as pd
+import platform
 
 user = 'root'
 pwd  = 'lin32ledi'
 host = '127.0.0.1'
 db   = 'stocksdb'
 
-DEF_COMP_TIME = 3
+# 絕對路徑：OK
+#IMAC_PATH = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/DATA/"
+# 試試相對路徑是否ok
+IMAC_PATH = "./DATA/"
+
+# 打算比對的次數
+DEF_COMP_TIME = 5
+
 input_file = "STOCKS_LIST.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
@@ -85,7 +93,10 @@ try:
 					counts -= 1
 				if counts == compTimes :
 					output_file = stockNo + ".csv"
-					df.to_csv("DATA\\" + output_file, encoding="utf_8_sig")
+					if platform.system() == "Windows" :
+						df.to_csv("DATA\\" + output_file, encoding="utf_8_sig")
+					else :
+						df.to_csv(IMAC_PATH + output_file, encoding="utf_8_sig")
 
 		readCnt += 1
 
