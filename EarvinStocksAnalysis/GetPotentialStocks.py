@@ -20,7 +20,7 @@ db   = 'stocksdb'
 DATA_PATH = "DATA\\"
 
 # 打算比對的次數
-DEF_COMP_TIME = 5
+DEF_COMP_TIME = 3
 
 input_file = "STOCKS_LIST.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
@@ -35,7 +35,7 @@ try:
 #        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20170501 ")
 #        sys.exit()
 
-	theSQLCmd = "select a.股票代號, a.年度, a.累計營收_億, a.累計營收年增_百分比, " + \
+	theSQLCmd = "select a.股票代號, d.stock_name as 股票名稱, a.年度, a.累計營收_億, a.累計營收年增_百分比, " + \
 					"b.股本_億, b.財報評分, b.年度股價_收盤, b.年度股價_平均, b.roe, b.roa, b.bps, " + \
 					"c.股利所屬期間, c.股利合計, c.年均殖利率_合計, c.eps, c.盈餘分配率_合計 " + \
 					"from ( select stock_no as 股票代號, mid(cast(date as char),1,4) as 年度, " + \
@@ -52,6 +52,8 @@ try:
 					"avg_ann_yield as 年均殖利率_合計, eps, earnings_dis_ratio as 盈餘分配率_合計 " + \
 					"from STOCKS_DIVIDEND ) c " + \
 					"on a.股票代號 = c.股票代號 and a.年度 = c.股利所屬期間 " + \
+					"left outer join stocks_name d " + \
+					"on a.股票代號 = d.stock_no " + \
 					"where a.股票代號 = %s order by a.年度 desc "
 
 
@@ -71,7 +73,7 @@ try:
 		if not data :
 			print("No data found!!!")
 		else :
-			df = pd.DataFrame(data, columns=['股票代號', '年度', '累計營收_億', \
+			df = pd.DataFrame(data, columns=['股票代號', '股票名稱', '年度', '累計營收_億', \
 				'累計營收年增_百分比', '股本_億', '財報評分', '年度股價_收盤', \
 				'年度股價_平均', 'roe', 'roa', 'bps', '股利所屬期間', \
 				'股利合計', '年均殖利率_合計', 'eps', '盈餘分配率_合計'])		
@@ -84,14 +86,14 @@ try:
 #			如果資料筆數小於預設比對次數，則不處理!!			
 			if len(df.index) >= DEF_COMP_TIME :
 				for num in range(0, compTimes) :
-					if df.iloc[num,3] >= 10 :
-						print(df.iloc[num,3])
+					if df.iloc[num,4] >= 20 :
+						print(df.iloc[num,4])
 						counts += 1
 					else :
 						counts -= 1
 					if counts == compTimes :
-						output_file = stockNo + ".csv"
-						if platform.system() == "Windows" :
+						output_file = stockNo + str(df.iloc[num,1]) + ".csv"
+						if platform.system() != "Windows" :
 							DATA_PATH = "./DATA/"
 						df.to_csv(DATA_PATH + output_file, encoding="utf_8_sig")
 
