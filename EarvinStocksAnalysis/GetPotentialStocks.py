@@ -16,8 +16,8 @@ db   = 'stocksdb'
 
 # 絕對路徑：OK
 #IMAC_PATH = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/DATA/"
-# 試試相對路徑是否ok
-IMAC_PATH = "./DATA/"
+# 相對路徑：預設為Windows Platform
+DATA_PATH = "DATA\\"
 
 # 打算比對的次數
 DEF_COMP_TIME = 5
@@ -79,24 +79,21 @@ try:
 
 			df.fillna(value=-1, inplace = True)	# 將空值填入-1
 			counts = 0		# 記錄符合條件的次數
-			compTimes = 3	# 要比對的次數
+			compTimes = DEF_COMP_TIME	# 要比對的次數
 
-#			如果資料筆數小於預設比對次數，則減少比對次數			
-			if len(df.index) < DEF_COMP_TIME :
-				compTimes = len(df.index)
-
-			for num in range(0, compTimes) :
-				if df.iloc[num,3] >= 10 :
-					print(df.iloc[num,3])
-					counts += 1
-				else :
-					counts -= 1
-				if counts == compTimes :
-					output_file = stockNo + ".csv"
-					if platform.system() == "Windows" :
-						df.to_csv("DATA\\" + output_file, encoding="utf_8_sig")
+#			如果資料筆數小於預設比對次數，則不處理!!			
+			if len(df.index) >= DEF_COMP_TIME :
+				for num in range(0, compTimes) :
+					if df.iloc[num,3] >= 10 :
+						print(df.iloc[num,3])
+						counts += 1
 					else :
-						df.to_csv(IMAC_PATH + output_file, encoding="utf_8_sig")
+						counts -= 1
+					if counts == compTimes :
+						output_file = stockNo + ".csv"
+						if platform.system() == "Windows" :
+							DATA_PATH = "./DATA/"
+						df.to_csv(DATA_PATH + output_file, encoding="utf_8_sig")
 
 		readCnt += 1
 
