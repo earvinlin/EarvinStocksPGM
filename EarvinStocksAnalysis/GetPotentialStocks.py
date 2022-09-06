@@ -86,11 +86,21 @@ try:
 #			如果資料筆數小於預設比對次數，則不處理!!			
 			if len(df.index) >= DEF_COMP_TIME :
 				for num in range(0, compTimes) :
+#					累計營收年增_百分比					
 					if df.iloc[num,4] >= 20 :
 						print(df.iloc[num,4])
 						counts += 1
 					else :
 						counts -= 1
+
+#					殖利率 < 4%
+					if df.iloc[num,14] < 4.0 :
+						counts -= 1
+
+#					eps >= 0
+					if df.iloc[num,15] < 0 :
+						counts -= 1
+
 					if counts == compTimes :
 						output_file = stockNo + str(df.iloc[num,1]) + ".csv"
 						if platform.system() != "Windows" :
