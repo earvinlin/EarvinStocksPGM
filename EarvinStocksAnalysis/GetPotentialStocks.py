@@ -20,7 +20,7 @@ db   = 'stocksdb'
 DATA_PATH = "DATA\\"
 
 # 打算比對的次數
-DEF_COMP_TIME = 3
+DEF_COMP_TIME = 8
 
 input_file = "STOCKS_LIST.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
@@ -84,22 +84,11 @@ try:
 			compTimes = DEF_COMP_TIME	# 要比對的次數
 
 #			如果資料筆數小於預設比對次數，則不處理!!			
-			if len(df.index) >= DEF_COMP_TIME :
+			if len(df.index) >= DEF_COMP_TIME and df.iloc[0,2] == '2021' :
 				for num in range(0, compTimes) :
-#					累計營收年增_百分比					
-					if df.iloc[num,4] >= 20 :
-						print(df.iloc[num,4])
+
+					if df.iloc[num,14] > 6.0 :
 						counts += 1
-					else :
-						counts -= 1
-
-#					殖利率 < 4%
-					if df.iloc[num,14] < 4.0 :
-						counts -= 1
-
-#					eps >= 0
-					if df.iloc[num,15] < 0 :
-						counts -= 1
 
 					if counts == compTimes :
 						output_file = stockNo + str(df.iloc[num,1]) + ".csv"
