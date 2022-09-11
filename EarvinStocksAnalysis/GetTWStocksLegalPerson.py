@@ -50,7 +50,8 @@ try :
         print('檔案名稱：' + theOutputFile)
         with open(theSaveFileDir + theOutputFile, 'w') as out :
 #		    f.read()是byte型態，需解碼(decode)儲存成字串
-            out.write(f.read().decode('big5'))
+#            out.write(f.read().decode('big5'))
+            out.write(f.read().decode('cp950'))
         print('資料儲存完成!!')
     twStocksList.close()
 except IOError as err :
