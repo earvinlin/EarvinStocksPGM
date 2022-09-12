@@ -1,6 +1,21 @@
 """
+【程式功能說明】
 讀取法人買賣與持股資料資料，並將之格式化為Insert SQL Command
 資料來源：https://jsjustweb.jihsun.com.tw/z/zc/zcl/zcl.djhtm?a=2049&c=2021-9-7&d=2022-9-7
+
+<NOTE>
+(01)
+讀取資料放置處，執行前需確認程式(GetTWStocksLegalPerson.py)抓的資料有放在下列路徑：(以windows平台為例)
+==> theLoadFileDir = "Data\\LEGAL\\20190101-20191231\\"
+產生SQL Command的資料放置處：(以windows平台為例)
+==> theSaveFileDir = "Data\\LEGAL\\SQL\\"
+
+(02)
+如果資料來源是在windows平台抓取，則直接使用下列開檔指令(使用預設編碼)
+inputfile = open(theLoadRelativePath, 'r')	# 預設以系統編碼開啟
+如果資料來源是在imac/linux平台抓取，則直接使用下列開檔指令(即需指定編碼為utf-8)
+inputfile = open(theLoadRelativePath, 'r', encoding='utf-8')	# utf-8編碼(for iMac/Linux)
+
 """
 import os 
 import re
@@ -31,7 +46,7 @@ theOutputFile = ""
 theLoadFileDir = ""
 theSaveFileDir = ""
 if platform.system() == "Windows" :
-    theLoadFileDir = "Data\\LEGAL\\"
+    theLoadFileDir = "Data\\LEGAL\\20200101-20220909\\"
     theSaveFileDir = "Data\\LEGAL\\SQL\\"
 else :
     theLoadFileDir = "./Data/LEGAL/"
@@ -46,8 +61,9 @@ try :
             theOutputFile = theFile[: len(theFile) - 4] + ".txt"
             theSaveRelativePath = os.path.join(theSaveFileDir, theOutputFile)
             print("outfile: " + theOutputFile)
-            inputfile = open(theLoadRelativePath + theInputFile, 'r')	# 預設以系統編碼開啟
-            outfile = open(theSaveRelativePath + theOutputFile, 'w')
+            inputfile = open(theLoadRelativePath, 'r')	# 預設以系統編碼開啟
+#            inputfile = open(theLoadRelativePath, 'r', encoding='utf-8')	# utf-8編碼(for iMac/Linux)
+            outfile = open(theSaveRelativePath, 'w')
             objSoup = bs4.BeautifulSoup(inputfile, 'html.parser')
             objForm = objSoup.find('form')
             objTables = objForm.find_all('table')
