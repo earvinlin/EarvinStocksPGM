@@ -12,7 +12,7 @@ import platform
 
 if len(sys.argv) < 4 :
     print("You need input three parameter(fmt : theFilename theBeginDate theEndDate (fmt : yyyymmdd))")
-    print("syntax : C:\python GetTWStocksLegalPersonVolume.py 20170401 20220401")
+    print("syntax : C:\python GetTWStocksLegalPerson.py STOCKS_LIST 20170401 20220401")
     sys.exit()
 
 theInputFile = sys.argv[1]
