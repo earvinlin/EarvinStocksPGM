@@ -10,7 +10,7 @@ import urllib.parse
 import ssl
 import platform
 
-if len(sys.argv) < 4 :
+if len(sys.argv) < 5 :
     print("You need input three parameter(fmt : theFilename theBeginDate theEndDate (fmt : yyyymmdd))")
     print("syntax : C:\python GetTWStocksLegalPerson.py STOCKS_LIST 20170401 20220401")
     sys.exit()
@@ -21,7 +21,8 @@ theSaveFileDir = ""
 if platform.system() == "Windows" :
     theSaveFileDir = "Data\\LEGAL\\"
 else :
-    theSaveFileDir = "./Data/LEGAL/"
+#    theSaveFileDir = "./Data/LEGAL/20170101-20171231(imac-utf8)/"
+    theSaveFileDir = "./Data/LEGAL/" + sys.argv[4] + "/"
 
 readCnt = 0
 
