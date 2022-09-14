@@ -1,0 +1,3539 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<script language="JavaScript"><!--
+if (navigator.userAgent.toLowerCase().indexOf('msie') != -1) {
+	if (navigator.userAgent.toLowerCase().match(/msie ([\d.]+)/)[1] <=10) {
+		document.writeln('<script language="JavaScript" src="/z/js/jquery-latest.djjs"></script>\n');
+	} else {
+		document.writeln('<script language="JavaScript" src="/z/js/jquery.djjs"></script>\n');
+	}
+} else {
+document.writeln('<script language="JavaScript" src="/z/js/jquery.djjs"></script>\n');
+}
+// --></script>
+<script language="JavaScript" src="/z/js/jsFunction.djjs"></script>
+<script language="JavaScript" src="/z/js/isSpecialKind.djjs"></script>
+<script language="JavaScript" src="/z/js/mdj.js"></script>
+<script type="text/javascript" src="/z/js/Applet2Canvas.djjs"></script>
+<script type="text/javascript" src="/z/js/DJWebGraph.djjs"></script>
+<script type="text/javascript" src="/z/js/xml2jsonJS.djjs"></script>
+<script type="text/javascript" src="/z/js/json2xmlJS.djjs"></script>
+<script type="text/javascript" src="/z/js/json2.djjs"></script>
+<script type="text/javascript" src="/z/js/GenUpDownJS.djjs"></script>
+<link rel=stylesheet href="/z/js/mdj.css" type="text/css">
+<title>個股法人持股-2330</title>
+</head>
+<script language="JavaScript"><!--
+CheckMenu(4, '2330');
+function chkSetUpMenu(){ 
+	if (typeof(SetUpMenu) == 'function'){
+		SetUpMenu(4,'2330');
+}
+	else
+		setTimeout(function(){chkSetUpMenu();},5000);
+}
+// --></script>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div id="SysJustIFRAMEDIV">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td colspan="3" valign="top" align="left">
+<script language="javascript" src="/z/js/disableselectionjs.djjs"></script>
+<script language="javascript" src="/z/js/SU.js"></script>
+<script language="javascript"><!--
+ chkSetUpMenu();
+//--></script>
+</td></tr>
+<tr><td valign="top" align="left">
+<script language="javascript" src="/z/js/SL.js"></script>
+<script language="javascript"><!--
+ SetLeftMenu(4,'2330')
+//--></script>
+</td><td valign="top" width="99%">
+<script language="javascript"><!--
+if(typeof(ContentCenterBegin) == 'function'){ 	ContentCenterBegin();
+ } 
+//--></script>
+<form name="F">
+<table border="0"><tr><td class="t0">
+<table class="t01" border="0" cellspacing="1" cellpadding="1">
+<tr id="oScrollHead"><td class="t10" colspan="11">台積電(2330)法人持股走勢圖</td></tr>
+<tr id="oScrollHead"><td class="t3n0" colspan="11">
+<div id="SysJustWebGraphDIV"></div>
+</td></tr>
+<tr id="oScrollHead"><td class="t10" colspan="11">台積電(2330)法人持股明細</td></tr>
+<tr id="oScrollHead"><td class="t12" colspan="11">
+<select name="D" onChange="goA();">
+<option value="0" selected>請選擇</option>
+<option value="1">近五日</option>
+<option value="2">近十日</option>
+<option value="3">近20日</option>
+<option value="4">近40日</option>
+</select>
+ 自設區間：
+<script language="JavaScript" src="/z/js/month.djjs"></script>
+從　<SELECT name="Y2" onChange="javascript:SetMonthDate(document.F.Y2,document.F.M2,document.F.D2);">
+	<OPTION value="91"></OPTION>
+</SELECT>年 
+<SELECT name="M2" onChange="javascript:SetMonthDate(document.F.Y2,document.F.M2,document.F.D2);">
+	<OPTION value="-1"></OPTION>
+</SELECT>月 
+<SELECT name="D2">
+	<OPTION value="-1"></OPTION>
+</SELECT>日 
+ ～ 
+<SELECT name="Y1" onChange="javascript:SetMonthDate(document.F.Y1,document.F.M1,document.F.D1);">
+	<OPTION value="91"></OPTION>
+</SELECT>年 
+<SELECT name="M1" onChange="javascript:SetMonthDate(document.F.Y1,document.F.M1,document.F.D1);">
+	<OPTION value="-1"></OPTION>
+</SELECT>月 
+<SELECT name="D1">
+	<OPTION value="-1"></OPTION>
+</SELECT>日 
+<input type='hidden' name='bDate'>
+<input type='hidden' name='eDate'>
+<SCRIPT LANGUAGE=javascript><!--
+	var toDay ='2022/9/13'
+	var getYMD1 = '2014/12/31';
+	var getYMD2 = '2014/1/1';
+	PageInit(document.F);
+	function PageInit(obj)
+	{	//在 BODY onLoad 時候的初始化
+		ShowYear(obj.Y1,'2022/9/13',1,'N');
+		ShowYear(obj.Y2,'2022/9/13',1,'N');
+		SetOptionValue(obj.M1,1,12);
+		SetOptionValue(obj.M2,1,12);
+		//設定初始值
+		var YMDary1,Hary1;
+		if (getYMD1.indexOf(' ') > -1 ) {
+			YMDary1 = getYMD1.split(' ')[0].split('/');
+		}else {
+			YMDary1 = getYMD1.split('/');
+		}
+		SetFocus(obj.Y1,YMDary1[0]);
+		SetFocus(obj.M1,YMDary1[1]);
+		var YMDary2,Hary2;
+		if (getYMD2.indexOf(' ') > -1 ) {
+			YMDary2 = getYMD2.split(' ')[0].split('/');
+		}else {
+			YMDary2 = getYMD2.split('/');
+		}
+		SetFocus(obj.Y2,YMDary2[0]);
+		SetFocus(obj.M2,YMDary2[1]);
+		SetMonthDate(obj.Y1,obj.M1,obj.D1);
+		SetMonthDate(obj.Y2,obj.M2,obj.D2);
+		SetFocus(obj.D2,YMDary2[2]);
+		SetFocus(obj.D1,YMDary1[2]);
+		removeToday(obj.Y1,obj.M1,obj.D1,toDay);
+		removeToday(obj.Y2,obj.M2,obj.D2,toDay);
+	}
+	function CheckDate()
+	{
+		var Frm = document.F;
+		var y1 = parseInt(Frm.Y1.options[Frm.Y1.selectedIndex].value);
+		var m1 = parseInt(Frm.M1.options[Frm.M1.selectedIndex].value);
+		var d1 = parseInt(Frm.D1.options[Frm.D1.selectedIndex].value);
+		var y2 = parseInt(Frm.Y2.options[Frm.Y2.selectedIndex].value);
+		var m2 = parseInt(Frm.M2.options[Frm.M2.selectedIndex].value);
+		var d2 = parseInt(Frm.D2.options[Frm.D2.selectedIndex].value);
+		var sEDate = y1 + '-' + m1 + '-' + d1;
+		var sBDate = y2 + '-' + m2 + '-' + d2;
+		Frm.bDate.value = sBDate;
+		Frm.eDate.value = sEDate;
+		return checkBEdate(sBDate,sEDate);
+	}
+	function checkBEdate(sBDate,sEDate)
+	{
+		var aymd1 = sBDate.split(' ')[0].split('-');
+		var aymd2 = sEDate.split(' ')[0].split('-');
+		if (aymd1.length < 3 || aymd2.length < 3 ) {
+			alert ('日期選擇錯誤!!');
+			return false;
+		}
+		var nbdate = parseInt(aymd1[0])*1000000 + parseInt(aymd1[1])*10000 + parseInt(aymd1[2])*100;
+		var nedate = parseInt(aymd2[0])*1000000 + parseInt(aymd2[1])*10000 + parseInt(aymd2[2])*100;
+		if (nbdate > nedate) {
+			alert('您所輸入的起始日期大於結束日期');
+			return false;
+		}
+		return true;
+	}
+//--></SCRIPT>
+<INPUT type="button" name="BB" value="查詢" onclick="javascript:goC();">
+</td></tr>
+<tr id="oScrollHead"><td class="t12" colspan="11" style="text-align:right;">
+<span style='color:#ff0000;'>(自設區間僅提供一年內查詢)</span>
+</td></tr>
+<tr id="oScrollMenu" align="center">
+<td class="t2" nowrap>&nbsp;</td>
+<td class="t2" colspan=4 nowrap>買賣超</td>
+<td class="t2" colspan=4 nowrap>估計持股</td>
+<td class="t2" colspan=2 nowrap>持股比重</td>
+</tr>
+<tr id="oScrollMenu" align="center">
+<td class="t2" nowrap>日期</td>
+<td class="t2" nowrap>外資</td>
+<td class="t2" nowrap>投信</td>
+<td class="t2" nowrap>自營商</td>
+<td class="t2" nowrap>單日合計</td>
+<td class="t2" nowrap>外資</td>
+<td class="t2" nowrap>投信</td>
+<td class="t2" nowrap>自營商</td>
+<td class="t2" nowrap>單日合計</td>
+<td class="t2" nowrap>外資</td>
+<td class="t2" nowrap>三大法人</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/31</td>
+<td class="t3n1" nowrap>5,081</td>
+<td class="t3r1" nowrap>-746</td>
+<td class="t3r1" nowrap>-457</td>
+<td class="t3n1" nowrap>3,878</td>
+<td class="t3n1" nowrap>20,046,539</td>
+<td class="t3n1" nowrap>264,150</td>
+<td class="t3n1" nowrap>163,580</td>
+<td class="t3n1" nowrap>20,474,269</td>
+<td class="t3n1" nowrap>77.31%</td>
+<td class="t3n1" nowrap>78.96%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/30</td>
+<td class="t3n1" nowrap>2,431</td>
+<td class="t3n1" nowrap>6</td>
+<td class="t3n1" nowrap>500</td>
+<td class="t3n1" nowrap>2,937</td>
+<td class="t3n1" nowrap>20,041,428</td>
+<td class="t3n1" nowrap>271,932</td>
+<td class="t3n1" nowrap>164,037</td>
+<td class="t3n1" nowrap>20,477,397</td>
+<td class="t3n1" nowrap>77.29%</td>
+<td class="t3n1" nowrap>78.97%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/29</td>
+<td class="t3n1" nowrap>21,999</td>
+<td class="t3r1" nowrap>-795</td>
+<td class="t3r1" nowrap>-71</td>
+<td class="t3n1" nowrap>21,133</td>
+<td class="t3n1" nowrap>20,038,966</td>
+<td class="t3n1" nowrap>271,926</td>
+<td class="t3n1" nowrap>163,537</td>
+<td class="t3n1" nowrap>20,474,429</td>
+<td class="t3n1" nowrap>77.28%</td>
+<td class="t3n1" nowrap>78.96%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/27</td>
+<td class="t3r1" nowrap>-17</td>
+<td class="t3n1" nowrap>20</td>
+<td class="t3n1" nowrap>95</td>
+<td class="t3n1" nowrap>98</td>
+<td class="t3n1" nowrap>20,016,967</td>
+<td class="t3n1" nowrap>272,721</td>
+<td class="t3n1" nowrap>163,608</td>
+<td class="t3n1" nowrap>20,453,296</td>
+<td class="t3n1" nowrap>77.19%</td>
+<td class="t3n1" nowrap>78.87%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/26</td>
+<td class="t3n1" nowrap>7,124</td>
+<td class="t3r1" nowrap>-572</td>
+<td class="t3n1" nowrap>18</td>
+<td class="t3n1" nowrap>6,570</td>
+<td class="t3n1" nowrap>20,016,984</td>
+<td class="t3n1" nowrap>272,701</td>
+<td class="t3n1" nowrap>163,513</td>
+<td class="t3n1" nowrap>20,453,198</td>
+<td class="t3n1" nowrap>77.19%</td>
+<td class="t3n1" nowrap>78.87%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/25</td>
+<td class="t3n1" nowrap>21</td>
+<td class="t3r1" nowrap>-572</td>
+<td class="t3r1" nowrap>-291</td>
+<td class="t3r1" nowrap>-842</td>
+<td class="t3n1" nowrap>20,009,860</td>
+<td class="t3n1" nowrap>273,273</td>
+<td class="t3n1" nowrap>163,495</td>
+<td class="t3n1" nowrap>20,446,628</td>
+<td class="t3n1" nowrap>77.17%</td>
+<td class="t3n1" nowrap>78.85%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/24</td>
+<td class="t3n1" nowrap>3,181</td>
+<td class="t3r1" nowrap>-182</td>
+<td class="t3r1" nowrap>-711</td>
+<td class="t3n1" nowrap>2,288</td>
+<td class="t3n1" nowrap>20,009,839</td>
+<td class="t3n1" nowrap>273,845</td>
+<td class="t3n1" nowrap>163,786</td>
+<td class="t3n1" nowrap>20,447,470</td>
+<td class="t3n1" nowrap>77.17%</td>
+<td class="t3n1" nowrap>78.86%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/23</td>
+<td class="t3n1" nowrap>1,372</td>
+<td class="t3r1" nowrap>-34</td>
+<td class="t3r1" nowrap>-546</td>
+<td class="t3n1" nowrap>792</td>
+<td class="t3n1" nowrap>20,008,592</td>
+<td class="t3n1" nowrap>274,027</td>
+<td class="t3n1" nowrap>164,497</td>
+<td class="t3n1" nowrap>20,447,116</td>
+<td class="t3n1" nowrap>77.16%</td>
+<td class="t3n1" nowrap>78.85%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/22</td>
+<td class="t3n1" nowrap>12,982</td>
+<td class="t3n1" nowrap>214</td>
+<td class="t3r1" nowrap>-698</td>
+<td class="t3n1" nowrap>12,498</td>
+<td class="t3n1" nowrap>20,007,171</td>
+<td class="t3n1" nowrap>274,061</td>
+<td class="t3n1" nowrap>165,043</td>
+<td class="t3n1" nowrap>20,446,275</td>
+<td class="t3n1" nowrap>77.16%</td>
+<td class="t3n1" nowrap>78.85%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/19</td>
+<td class="t3n1" nowrap>17,125</td>
+<td class="t3n1" nowrap>478</td>
+<td class="t3r1" nowrap>-72</td>
+<td class="t3n1" nowrap>17,531</td>
+<td class="t3n1" nowrap>19,995,077</td>
+<td class="t3n1" nowrap>273,847</td>
+<td class="t3n1" nowrap>165,741</td>
+<td class="t3n1" nowrap>20,434,665</td>
+<td class="t3n1" nowrap>77.11%</td>
+<td class="t3n1" nowrap>78.81%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/18</td>
+<td class="t3r1" nowrap>-21,016</td>
+<td class="t3n1" nowrap>132</td>
+<td class="t3n1" nowrap>1,080</td>
+<td class="t3r1" nowrap>-19,804</td>
+<td class="t3n1" nowrap>19,975,561</td>
+<td class="t3n1" nowrap>273,369</td>
+<td class="t3n1" nowrap>165,813</td>
+<td class="t3n1" nowrap>20,414,743</td>
+<td class="t3n1" nowrap>77.03%</td>
+<td class="t3n1" nowrap>78.72%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/17</td>
+<td class="t3r1" nowrap>-37,974</td>
+<td class="t3r1" nowrap>-394</td>
+<td class="t3n1" nowrap>211</td>
+<td class="t3r1" nowrap>-38,157</td>
+<td class="t3n1" nowrap>19,997,465</td>
+<td class="t3n1" nowrap>273,237</td>
+<td class="t3n1" nowrap>164,733</td>
+<td class="t3n1" nowrap>20,435,435</td>
+<td class="t3n1" nowrap>77.12%</td>
+<td class="t3n1" nowrap>78.81%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/16</td>
+<td class="t3r1" nowrap>-20,196</td>
+<td class="t3r1" nowrap>-951</td>
+<td class="t3n1" nowrap>1,016</td>
+<td class="t3r1" nowrap>-20,131</td>
+<td class="t3n1" nowrap>20,036,036</td>
+<td class="t3n1" nowrap>273,631</td>
+<td class="t3n1" nowrap>164,522</td>
+<td class="t3n1" nowrap>20,474,189</td>
+<td class="t3n1" nowrap>77.27%</td>
+<td class="t3n1" nowrap>78.96%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/15</td>
+<td class="t3n1" nowrap>11,436</td>
+<td class="t3n1" nowrap>16</td>
+<td class="t3r1" nowrap>-301</td>
+<td class="t3n1" nowrap>11,151</td>
+<td class="t3n1" nowrap>20,056,232</td>
+<td class="t3n1" nowrap>274,582</td>
+<td class="t3n1" nowrap>163,506</td>
+<td class="t3n1" nowrap>20,494,320</td>
+<td class="t3n1" nowrap>77.34%</td>
+<td class="t3n1" nowrap>79.03%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/12</td>
+<td class="t3r1" nowrap>-10,643</td>
+<td class="t3r1" nowrap>-111</td>
+<td class="t3r1" nowrap>-132</td>
+<td class="t3r1" nowrap>-10,886</td>
+<td class="t3n1" nowrap>20,044,797</td>
+<td class="t3n1" nowrap>274,566</td>
+<td class="t3n1" nowrap>163,807</td>
+<td class="t3n1" nowrap>20,483,170</td>
+<td class="t3n1" nowrap>77.30%</td>
+<td class="t3n1" nowrap>78.99%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/11</td>
+<td class="t3r1" nowrap>-7,089</td>
+<td class="t3r1" nowrap>-394</td>
+<td class="t3n1" nowrap>125</td>
+<td class="t3r1" nowrap>-7,358</td>
+<td class="t3n1" nowrap>20,055,286</td>
+<td class="t3n1" nowrap>274,677</td>
+<td class="t3n1" nowrap>163,939</td>
+<td class="t3n1" nowrap>20,493,902</td>
+<td class="t3n1" nowrap>77.34%</td>
+<td class="t3n1" nowrap>79.03%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/10</td>
+<td class="t3r1" nowrap>-15,464</td>
+<td class="t3n1" nowrap>344</td>
+<td class="t3r1" nowrap>-356</td>
+<td class="t3r1" nowrap>-15,476</td>
+<td class="t3n1" nowrap>20,064,012</td>
+<td class="t3n1" nowrap>275,071</td>
+<td class="t3n1" nowrap>163,814</td>
+<td class="t3n1" nowrap>20,502,897</td>
+<td class="t3n1" nowrap>77.37%</td>
+<td class="t3n1" nowrap>79.06%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/09</td>
+<td class="t3n1" nowrap>7,163</td>
+<td class="t3n1" nowrap>837</td>
+<td class="t3r1" nowrap>-61</td>
+<td class="t3n1" nowrap>7,939</td>
+<td class="t3n1" nowrap>20,079,477</td>
+<td class="t3n1" nowrap>274,727</td>
+<td class="t3n1" nowrap>164,170</td>
+<td class="t3n1" nowrap>20,518,374</td>
+<td class="t3n1" nowrap>77.43%</td>
+<td class="t3n1" nowrap>79.12%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/08</td>
+<td class="t3n1" nowrap>1,040</td>
+<td class="t3r1" nowrap>-1,255</td>
+<td class="t3r1" nowrap>-461</td>
+<td class="t3r1" nowrap>-676</td>
+<td class="t3n1" nowrap>20,072,415</td>
+<td class="t3n1" nowrap>273,890</td>
+<td class="t3n1" nowrap>164,231</td>
+<td class="t3n1" nowrap>20,510,536</td>
+<td class="t3n1" nowrap>77.41%</td>
+<td class="t3n1" nowrap>79.10%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/05</td>
+<td class="t3r1" nowrap>-7,439</td>
+<td class="t3n1" nowrap>214</td>
+<td class="t3n1" nowrap>576</td>
+<td class="t3r1" nowrap>-6,649</td>
+<td class="t3n1" nowrap>20,073,533</td>
+<td class="t3n1" nowrap>275,145</td>
+<td class="t3n1" nowrap>164,692</td>
+<td class="t3n1" nowrap>20,513,370</td>
+<td class="t3n1" nowrap>77.41%</td>
+<td class="t3n1" nowrap>79.11%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/04</td>
+<td class="t3n1" nowrap>8,099</td>
+<td class="t3r1" nowrap>-122</td>
+<td class="t3n1" nowrap>48</td>
+<td class="t3n1" nowrap>8,025</td>
+<td class="t3n1" nowrap>20,081,161</td>
+<td class="t3n1" nowrap>274,931</td>
+<td class="t3n1" nowrap>164,116</td>
+<td class="t3n1" nowrap>20,520,208</td>
+<td class="t3n1" nowrap>77.44%</td>
+<td class="t3n1" nowrap>79.13%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/03</td>
+<td class="t3r1" nowrap>-7,746</td>
+<td class="t3r1" nowrap>-1,469</td>
+<td class="t3n1" nowrap>730</td>
+<td class="t3r1" nowrap>-8,485</td>
+<td class="t3n1" nowrap>20,082,047</td>
+<td class="t3n1" nowrap>275,053</td>
+<td class="t3n1" nowrap>164,068</td>
+<td class="t3n1" nowrap>20,521,168</td>
+<td class="t3n1" nowrap>77.44%</td>
+<td class="t3n1" nowrap>79.13%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/02</td>
+<td class="t3n1" nowrap>5,173</td>
+<td class="t3r1" nowrap>-567</td>
+<td class="t3r1" nowrap>-945</td>
+<td class="t3n1" nowrap>3,661</td>
+<td class="t3n1" nowrap>20,090,738</td>
+<td class="t3n1" nowrap>276,522</td>
+<td class="t3n1" nowrap>163,339</td>
+<td class="t3n1" nowrap>20,530,599</td>
+<td class="t3n1" nowrap>77.48%</td>
+<td class="t3n1" nowrap>79.18%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/12/01</td>
+<td class="t3r1" nowrap>-2,711</td>
+<td class="t3r1" nowrap>-417</td>
+<td class="t3n1" nowrap>1,374</td>
+<td class="t3r1" nowrap>-1,754</td>
+<td class="t3n1" nowrap>20,085,565</td>
+<td class="t3n1" nowrap>277,089</td>
+<td class="t3n1" nowrap>164,284</td>
+<td class="t3n1" nowrap>20,526,938</td>
+<td class="t3n1" nowrap>77.46%</td>
+<td class="t3n1" nowrap>79.16%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/28</td>
+<td class="t3n1" nowrap>10,564</td>
+<td class="t3r1" nowrap>-371</td>
+<td class="t3n1" nowrap>119</td>
+<td class="t3n1" nowrap>10,312</td>
+<td class="t3n1" nowrap>20,088,041</td>
+<td class="t3n1" nowrap>277,506</td>
+<td class="t3n1" nowrap>162,910</td>
+<td class="t3n1" nowrap>20,528,457</td>
+<td class="t3n1" nowrap>77.47%</td>
+<td class="t3n1" nowrap>79.17%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/27</td>
+<td class="t3n1" nowrap>9,291</td>
+<td class="t3r1" nowrap>-108</td>
+<td class="t3n1" nowrap>86</td>
+<td class="t3n1" nowrap>9,269</td>
+<td class="t3n1" nowrap>20,077,775</td>
+<td class="t3n1" nowrap>277,876</td>
+<td class="t3n1" nowrap>162,791</td>
+<td class="t3n1" nowrap>20,518,442</td>
+<td class="t3n1" nowrap>77.43%</td>
+<td class="t3n1" nowrap>79.13%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/26</td>
+<td class="t3n1" nowrap>3,448</td>
+<td class="t3r1" nowrap>-759</td>
+<td class="t3r1" nowrap>-140</td>
+<td class="t3n1" nowrap>2,549</td>
+<td class="t3n1" nowrap>20,073,390</td>
+<td class="t3n1" nowrap>277,984</td>
+<td class="t3n1" nowrap>162,705</td>
+<td class="t3n1" nowrap>20,514,079</td>
+<td class="t3n1" nowrap>77.41%</td>
+<td class="t3n1" nowrap>79.11%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/25</td>
+<td class="t3n1" nowrap>2,516</td>
+<td class="t3r1" nowrap>-25</td>
+<td class="t3n1" nowrap>179</td>
+<td class="t3n1" nowrap>2,670</td>
+<td class="t3n1" nowrap>20,070,097</td>
+<td class="t3n1" nowrap>278,743</td>
+<td class="t3n1" nowrap>162,845</td>
+<td class="t3n1" nowrap>20,511,685</td>
+<td class="t3n1" nowrap>77.40%</td>
+<td class="t3n1" nowrap>79.10%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/24</td>
+<td class="t3n1" nowrap>5,214</td>
+<td class="t3r1" nowrap>-26</td>
+<td class="t3n1" nowrap>265</td>
+<td class="t3n1" nowrap>5,453</td>
+<td class="t3n1" nowrap>20,070,651</td>
+<td class="t3n1" nowrap>278,768</td>
+<td class="t3n1" nowrap>162,666</td>
+<td class="t3n1" nowrap>20,512,085</td>
+<td class="t3n1" nowrap>77.40%</td>
+<td class="t3n1" nowrap>79.10%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/21</td>
+<td class="t3n1" nowrap>7,514</td>
+<td class="t3r1" nowrap>-508</td>
+<td class="t3r1" nowrap>-32</td>
+<td class="t3n1" nowrap>6,974</td>
+<td class="t3n1" nowrap>20,067,373</td>
+<td class="t3n1" nowrap>278,794</td>
+<td class="t3n1" nowrap>162,401</td>
+<td class="t3n1" nowrap>20,508,568</td>
+<td class="t3n1" nowrap>77.39%</td>
+<td class="t3n1" nowrap>79.09%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/20</td>
+<td class="t3n1" nowrap>23,769</td>
+<td class="t3n1" nowrap>277</td>
+<td class="t3r1" nowrap>-855</td>
+<td class="t3n1" nowrap>23,191</td>
+<td class="t3n1" nowrap>20,061,331</td>
+<td class="t3n1" nowrap>279,302</td>
+<td class="t3n1" nowrap>162,433</td>
+<td class="t3n1" nowrap>20,503,066</td>
+<td class="t3n1" nowrap>77.36%</td>
+<td class="t3n1" nowrap>79.06%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/19</td>
+<td class="t3n1" nowrap>39,681</td>
+<td class="t3n1" nowrap>446</td>
+<td class="t3r1" nowrap>-446</td>
+<td class="t3n1" nowrap>39,681</td>
+<td class="t3n1" nowrap>20,038,554</td>
+<td class="t3n1" nowrap>279,025</td>
+<td class="t3n1" nowrap>163,288</td>
+<td class="t3n1" nowrap>20,480,867</td>
+<td class="t3n1" nowrap>77.28%</td>
+<td class="t3n1" nowrap>78.99%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/18</td>
+<td class="t3n1" nowrap>591</td>
+<td class="t3r1" nowrap>-53</td>
+<td class="t3r1" nowrap>-260</td>
+<td class="t3n1" nowrap>278</td>
+<td class="t3n1" nowrap>19,988,363</td>
+<td class="t3n1" nowrap>278,579</td>
+<td class="t3n1" nowrap>163,734</td>
+<td class="t3n1" nowrap>20,430,676</td>
+<td class="t3n1" nowrap>77.08%</td>
+<td class="t3n1" nowrap>78.79%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/17</td>
+<td class="t3n1" nowrap>246</td>
+<td class="t3r1" nowrap>-437</td>
+<td class="t3r1" nowrap>-401</td>
+<td class="t3r1" nowrap>-592</td>
+<td class="t3n1" nowrap>19,988,516</td>
+<td class="t3n1" nowrap>278,632</td>
+<td class="t3n1" nowrap>163,994</td>
+<td class="t3n1" nowrap>20,431,142</td>
+<td class="t3n1" nowrap>77.08%</td>
+<td class="t3n1" nowrap>78.79%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/14</td>
+<td class="t3n1" nowrap>10,930</td>
+<td class="t3n1" nowrap>203</td>
+<td class="t3n1" nowrap>71</td>
+<td class="t3n1" nowrap>11,204</td>
+<td class="t3n1" nowrap>19,988,154</td>
+<td class="t3n1" nowrap>279,069</td>
+<td class="t3n1" nowrap>164,395</td>
+<td class="t3n1" nowrap>20,431,618</td>
+<td class="t3n1" nowrap>77.08%</td>
+<td class="t3n1" nowrap>78.79%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/13</td>
+<td class="t3n1" nowrap>13,383</td>
+<td class="t3r1" nowrap>-85</td>
+<td class="t3r1" nowrap>-411</td>
+<td class="t3n1" nowrap>12,887</td>
+<td class="t3n1" nowrap>19,977,963</td>
+<td class="t3n1" nowrap>278,866</td>
+<td class="t3n1" nowrap>164,324</td>
+<td class="t3n1" nowrap>20,421,153</td>
+<td class="t3n1" nowrap>77.04%</td>
+<td class="t3n1" nowrap>78.75%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/12</td>
+<td class="t3n1" nowrap>1,627</td>
+<td class="t3r1" nowrap>-401</td>
+<td class="t3n1" nowrap>210</td>
+<td class="t3n1" nowrap>1,436</td>
+<td class="t3n1" nowrap>19,968,847</td>
+<td class="t3n1" nowrap>278,951</td>
+<td class="t3n1" nowrap>164,735</td>
+<td class="t3n1" nowrap>20,412,533</td>
+<td class="t3n1" nowrap>77.01%</td>
+<td class="t3n1" nowrap>78.72%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/11</td>
+<td class="t3n1" nowrap>6,675</td>
+<td class="t3n1" nowrap>199</td>
+<td class="t3r1" nowrap>-1,193</td>
+<td class="t3n1" nowrap>5,681</td>
+<td class="t3n1" nowrap>19,967,320</td>
+<td class="t3n1" nowrap>279,352</td>
+<td class="t3n1" nowrap>164,525</td>
+<td class="t3n1" nowrap>20,411,197</td>
+<td class="t3n1" nowrap>77.00%</td>
+<td class="t3n1" nowrap>78.71%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/10</td>
+<td class="t3n1" nowrap>28,862</td>
+<td class="t3n1" nowrap>778</td>
+<td class="t3r1" nowrap>-1,252</td>
+<td class="t3n1" nowrap>28,388</td>
+<td class="t3n1" nowrap>19,960,765</td>
+<td class="t3n1" nowrap>279,153</td>
+<td class="t3n1" nowrap>165,718</td>
+<td class="t3n1" nowrap>20,405,636</td>
+<td class="t3n1" nowrap>76.98%</td>
+<td class="t3n1" nowrap>78.70%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/07</td>
+<td class="t3n1" nowrap>4,295</td>
+<td class="t3r1" nowrap>-101</td>
+<td class="t3n1" nowrap>636</td>
+<td class="t3n1" nowrap>4,830</td>
+<td class="t3n1" nowrap>19,931,903</td>
+<td class="t3n1" nowrap>278,375</td>
+<td class="t3n1" nowrap>166,970</td>
+<td class="t3n1" nowrap>20,377,248</td>
+<td class="t3n1" nowrap>76.86%</td>
+<td class="t3n1" nowrap>78.58%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/06</td>
+<td class="t3n1" nowrap>15,208</td>
+<td class="t3n1" nowrap>396</td>
+<td class="t3r1" nowrap>-232</td>
+<td class="t3n1" nowrap>15,372</td>
+<td class="t3n1" nowrap>19,927,608</td>
+<td class="t3n1" nowrap>278,476</td>
+<td class="t3n1" nowrap>166,334</td>
+<td class="t3n1" nowrap>20,372,418</td>
+<td class="t3n1" nowrap>76.85%</td>
+<td class="t3n1" nowrap>78.57%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/05</td>
+<td class="t3n1" nowrap>11,270</td>
+<td class="t3r1" nowrap>-84</td>
+<td class="t3n1" nowrap>49</td>
+<td class="t3n1" nowrap>11,235</td>
+<td class="t3n1" nowrap>19,911,299</td>
+<td class="t3n1" nowrap>278,080</td>
+<td class="t3n1" nowrap>166,566</td>
+<td class="t3n1" nowrap>20,355,945</td>
+<td class="t3n1" nowrap>76.79%</td>
+<td class="t3n1" nowrap>78.50%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/04</td>
+<td class="t3n1" nowrap>18,289</td>
+<td class="t3n1" nowrap>154</td>
+<td class="t3r1" nowrap>-1,101</td>
+<td class="t3n1" nowrap>17,342</td>
+<td class="t3n1" nowrap>19,900,029</td>
+<td class="t3n1" nowrap>278,164</td>
+<td class="t3n1" nowrap>166,517</td>
+<td class="t3n1" nowrap>20,344,710</td>
+<td class="t3n1" nowrap>76.74%</td>
+<td class="t3n1" nowrap>78.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/11/03</td>
+<td class="t3n1" nowrap>24,683</td>
+<td class="t3n1" nowrap>19</td>
+<td class="t3r1" nowrap>-827</td>
+<td class="t3n1" nowrap>23,875</td>
+<td class="t3n1" nowrap>19,881,620</td>
+<td class="t3n1" nowrap>278,010</td>
+<td class="t3n1" nowrap>167,618</td>
+<td class="t3n1" nowrap>20,327,248</td>
+<td class="t3n1" nowrap>76.67%</td>
+<td class="t3n1" nowrap>78.39%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/31</td>
+<td class="t3n1" nowrap>14,884</td>
+<td class="t3r1" nowrap>-215</td>
+<td class="t3r1" nowrap>-16</td>
+<td class="t3n1" nowrap>14,653</td>
+<td class="t3n1" nowrap>19,857,117</td>
+<td class="t3n1" nowrap>277,991</td>
+<td class="t3n1" nowrap>168,445</td>
+<td class="t3n1" nowrap>20,303,553</td>
+<td class="t3n1" nowrap>76.58%</td>
+<td class="t3n1" nowrap>78.30%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/30</td>
+<td class="t3n1" nowrap>12,011</td>
+<td class="t3n1" nowrap>1,013</td>
+<td class="t3n1" nowrap>702</td>
+<td class="t3n1" nowrap>13,726</td>
+<td class="t3n1" nowrap>19,844,983</td>
+<td class="t3n1" nowrap>278,206</td>
+<td class="t3n1" nowrap>168,461</td>
+<td class="t3n1" nowrap>20,291,650</td>
+<td class="t3n1" nowrap>76.53%</td>
+<td class="t3n1" nowrap>78.25%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/29</td>
+<td class="t3n1" nowrap>15,983</td>
+<td class="t3n1" nowrap>178</td>
+<td class="t3n1" nowrap>575</td>
+<td class="t3n1" nowrap>16,736</td>
+<td class="t3n1" nowrap>19,830,472</td>
+<td class="t3n1" nowrap>277,193</td>
+<td class="t3n1" nowrap>167,759</td>
+<td class="t3n1" nowrap>20,275,424</td>
+<td class="t3n1" nowrap>76.47%</td>
+<td class="t3n1" nowrap>78.19%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/28</td>
+<td class="t3n1" nowrap>18,168</td>
+<td class="t3n1" nowrap>105</td>
+<td class="t3r1" nowrap>-1,554</td>
+<td class="t3n1" nowrap>16,719</td>
+<td class="t3n1" nowrap>19,816,754</td>
+<td class="t3n1" nowrap>277,015</td>
+<td class="t3n1" nowrap>167,184</td>
+<td class="t3n1" nowrap>20,260,953</td>
+<td class="t3n1" nowrap>76.42%</td>
+<td class="t3n1" nowrap>78.13%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/27</td>
+<td class="t3n1" nowrap>8,989</td>
+<td class="t3n1" nowrap>304</td>
+<td class="t3r1" nowrap>-462</td>
+<td class="t3n1" nowrap>8,831</td>
+<td class="t3n1" nowrap>19,800,480</td>
+<td class="t3n1" nowrap>276,910</td>
+<td class="t3n1" nowrap>168,738</td>
+<td class="t3n1" nowrap>20,246,128</td>
+<td class="t3n1" nowrap>76.36%</td>
+<td class="t3n1" nowrap>78.08%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/24</td>
+<td class="t3r1" nowrap>-6,807</td>
+<td class="t3n1" nowrap>104</td>
+<td class="t3n1" nowrap>720</td>
+<td class="t3r1" nowrap>-5,983</td>
+<td class="t3n1" nowrap>19,792,948</td>
+<td class="t3n1" nowrap>276,606</td>
+<td class="t3n1" nowrap>169,200</td>
+<td class="t3n1" nowrap>20,238,754</td>
+<td class="t3n1" nowrap>76.33%</td>
+<td class="t3n1" nowrap>78.05%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/23</td>
+<td class="t3n1" nowrap>4,053</td>
+<td class="t3n1" nowrap>279</td>
+<td class="t3r1" nowrap>-421</td>
+<td class="t3n1" nowrap>3,911</td>
+<td class="t3n1" nowrap>19,800,250</td>
+<td class="t3n1" nowrap>276,502</td>
+<td class="t3n1" nowrap>168,480</td>
+<td class="t3n1" nowrap>20,245,232</td>
+<td class="t3n1" nowrap>76.36%</td>
+<td class="t3n1" nowrap>78.08%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/22</td>
+<td class="t3n1" nowrap>46,080</td>
+<td class="t3n1" nowrap>447</td>
+<td class="t3r1" nowrap>-853</td>
+<td class="t3n1" nowrap>45,674</td>
+<td class="t3n1" nowrap>19,796,041</td>
+<td class="t3n1" nowrap>276,223</td>
+<td class="t3n1" nowrap>168,901</td>
+<td class="t3n1" nowrap>20,241,165</td>
+<td class="t3n1" nowrap>76.34%</td>
+<td class="t3n1" nowrap>78.06%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/21</td>
+<td class="t3r1" nowrap>-300</td>
+<td class="t3n1" nowrap>609</td>
+<td class="t3r1" nowrap>-101</td>
+<td class="t3n1" nowrap>208</td>
+<td class="t3n1" nowrap>19,750,869</td>
+<td class="t3n1" nowrap>275,776</td>
+<td class="t3n1" nowrap>169,754</td>
+<td class="t3n1" nowrap>20,196,399</td>
+<td class="t3n1" nowrap>76.17%</td>
+<td class="t3n1" nowrap>77.89%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/20</td>
+<td class="t3n1" nowrap>11,553</td>
+<td class="t3n1" nowrap>215</td>
+<td class="t3r1" nowrap>-139</td>
+<td class="t3n1" nowrap>11,629</td>
+<td class="t3n1" nowrap>19,752,169</td>
+<td class="t3n1" nowrap>275,167</td>
+<td class="t3n1" nowrap>169,855</td>
+<td class="t3n1" nowrap>20,197,191</td>
+<td class="t3n1" nowrap>76.17%</td>
+<td class="t3n1" nowrap>77.89%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/17</td>
+<td class="t3n1" nowrap>20,643</td>
+<td class="t3n1" nowrap>1,787</td>
+<td class="t3r1" nowrap>-2,796</td>
+<td class="t3n1" nowrap>19,634</td>
+<td class="t3n1" nowrap>19,740,616</td>
+<td class="t3n1" nowrap>274,952</td>
+<td class="t3n1" nowrap>169,994</td>
+<td class="t3n1" nowrap>20,185,562</td>
+<td class="t3n1" nowrap>76.13%</td>
+<td class="t3n1" nowrap>77.85%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/16</td>
+<td class="t3r1" nowrap>-3,495</td>
+<td class="t3n1" nowrap>1,035</td>
+<td class="t3n1" nowrap>338</td>
+<td class="t3r1" nowrap>-2,122</td>
+<td class="t3n1" nowrap>19,720,883</td>
+<td class="t3n1" nowrap>273,165</td>
+<td class="t3n1" nowrap>172,790</td>
+<td class="t3n1" nowrap>20,166,838</td>
+<td class="t3n1" nowrap>76.05%</td>
+<td class="t3n1" nowrap>77.77%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/15</td>
+<td class="t3r1" nowrap>-396</td>
+<td class="t3n1" nowrap>1,284</td>
+<td class="t3r1" nowrap>-1,788</td>
+<td class="t3r1" nowrap>-900</td>
+<td class="t3n1" nowrap>19,733,251</td>
+<td class="t3n1" nowrap>272,130</td>
+<td class="t3n1" nowrap>172,452</td>
+<td class="t3n1" nowrap>20,177,833</td>
+<td class="t3n1" nowrap>76.10%</td>
+<td class="t3n1" nowrap>77.81%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/14</td>
+<td class="t3r1" nowrap>-8,817</td>
+<td class="t3n1" nowrap>753</td>
+<td class="t3n1" nowrap>142</td>
+<td class="t3r1" nowrap>-7,922</td>
+<td class="t3n1" nowrap>19,733,646</td>
+<td class="t3n1" nowrap>270,846</td>
+<td class="t3n1" nowrap>174,240</td>
+<td class="t3n1" nowrap>20,178,732</td>
+<td class="t3n1" nowrap>76.10%</td>
+<td class="t3n1" nowrap>77.82%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/13</td>
+<td class="t3r1" nowrap>-22,750</td>
+<td class="t3n1" nowrap>1,069</td>
+<td class="t3r1" nowrap>-12</td>
+<td class="t3r1" nowrap>-21,693</td>
+<td class="t3n1" nowrap>19,741,064</td>
+<td class="t3n1" nowrap>270,093</td>
+<td class="t3n1" nowrap>174,098</td>
+<td class="t3n1" nowrap>20,185,255</td>
+<td class="t3n1" nowrap>76.13%</td>
+<td class="t3n1" nowrap>77.84%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/09</td>
+<td class="t3r1" nowrap>-3,875</td>
+<td class="t3n1" nowrap>575</td>
+<td class="t3r1" nowrap>-323</td>
+<td class="t3r1" nowrap>-3,623</td>
+<td class="t3n1" nowrap>19,754,813</td>
+<td class="t3n1" nowrap>269,024</td>
+<td class="t3n1" nowrap>174,110</td>
+<td class="t3n1" nowrap>20,197,947</td>
+<td class="t3n1" nowrap>76.18%</td>
+<td class="t3n1" nowrap>77.89%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/08</td>
+<td class="t3r1" nowrap>-12,036</td>
+<td class="t3n1" nowrap>1,299</td>
+<td class="t3n1" nowrap>699</td>
+<td class="t3r1" nowrap>-10,038</td>
+<td class="t3n1" nowrap>19,758,688</td>
+<td class="t3n1" nowrap>268,449</td>
+<td class="t3n1" nowrap>174,433</td>
+<td class="t3n1" nowrap>20,201,570</td>
+<td class="t3n1" nowrap>76.20%</td>
+<td class="t3n1" nowrap>77.91%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/07</td>
+<td class="t3n1" nowrap>6,358</td>
+<td class="t3n1" nowrap>22</td>
+<td class="t3r1" nowrap>-2,365</td>
+<td class="t3n1" nowrap>4,015</td>
+<td class="t3n1" nowrap>19,770,724</td>
+<td class="t3n1" nowrap>267,150</td>
+<td class="t3n1" nowrap>173,734</td>
+<td class="t3n1" nowrap>20,211,608</td>
+<td class="t3n1" nowrap>76.24%</td>
+<td class="t3n1" nowrap>77.94%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/06</td>
+<td class="t3n1" nowrap>9,670</td>
+<td class="t3r1" nowrap>-202</td>
+<td class="t3r1" nowrap>-404</td>
+<td class="t3n1" nowrap>9,064</td>
+<td class="t3n1" nowrap>19,764,366</td>
+<td class="t3n1" nowrap>267,128</td>
+<td class="t3n1" nowrap>176,099</td>
+<td class="t3n1" nowrap>20,207,593</td>
+<td class="t3n1" nowrap>76.22%</td>
+<td class="t3n1" nowrap>77.93%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/03</td>
+<td class="t3n1" nowrap>12,582</td>
+<td class="t3n1" nowrap>1,918</td>
+<td class="t3r1" nowrap>-2,447</td>
+<td class="t3n1" nowrap>12,053</td>
+<td class="t3n1" nowrap>19,746,037</td>
+<td class="t3n1" nowrap>267,330</td>
+<td class="t3n1" nowrap>176,503</td>
+<td class="t3n1" nowrap>20,189,870</td>
+<td class="t3n1" nowrap>76.15%</td>
+<td class="t3n1" nowrap>77.86%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/02</td>
+<td class="t3r1" nowrap>-2,166</td>
+<td class="t3n1" nowrap>745</td>
+<td class="t3n1" nowrap>1,158</td>
+<td class="t3r1" nowrap>-263</td>
+<td class="t3n1" nowrap>19,735,955</td>
+<td class="t3n1" nowrap>265,412</td>
+<td class="t3n1" nowrap>178,950</td>
+<td class="t3n1" nowrap>20,180,317</td>
+<td class="t3n1" nowrap>76.11%</td>
+<td class="t3n1" nowrap>77.82%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/10/01</td>
+<td class="t3r1" nowrap>-10,246</td>
+<td class="t3n1" nowrap>1,613</td>
+<td class="t3n1" nowrap>1,446</td>
+<td class="t3r1" nowrap>-7,187</td>
+<td class="t3n1" nowrap>19,735,621</td>
+<td class="t3n1" nowrap>264,667</td>
+<td class="t3n1" nowrap>177,792</td>
+<td class="t3n1" nowrap>20,178,080</td>
+<td class="t3n1" nowrap>76.11%</td>
+<td class="t3n1" nowrap>77.82%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/30</td>
+<td class="t3r1" nowrap>-8,354</td>
+<td class="t3n1" nowrap>581</td>
+<td class="t3r1" nowrap>-177</td>
+<td class="t3r1" nowrap>-7,950</td>
+<td class="t3n1" nowrap>19,745,278</td>
+<td class="t3n1" nowrap>263,054</td>
+<td class="t3n1" nowrap>176,346</td>
+<td class="t3n1" nowrap>20,184,678</td>
+<td class="t3n1" nowrap>76.15%</td>
+<td class="t3n1" nowrap>77.84%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/29</td>
+<td class="t3r1" nowrap>-14,103</td>
+<td class="t3n1" nowrap>813</td>
+<td class="t3r1" nowrap>-32</td>
+<td class="t3r1" nowrap>-13,322</td>
+<td class="t3n1" nowrap>19,757,168</td>
+<td class="t3n1" nowrap>394,876</td>
+<td class="t3n1" nowrap>176,523</td>
+<td class="t3n1" nowrap>20,328,567</td>
+<td class="t3n1" nowrap>76.19%</td>
+<td class="t3n1" nowrap>78.39%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/26</td>
+<td class="t3r1" nowrap>-237</td>
+<td class="t3n1" nowrap>347</td>
+<td class="t3n1" nowrap>385</td>
+<td class="t3n1" nowrap>495</td>
+<td class="t3n1" nowrap>19,760,307</td>
+<td class="t3n1" nowrap>394,063</td>
+<td class="t3n1" nowrap>176,555</td>
+<td class="t3n1" nowrap>20,330,925</td>
+<td class="t3n1" nowrap>76.20%</td>
+<td class="t3n1" nowrap>78.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/25</td>
+<td class="t3n1" nowrap>2,377</td>
+<td class="t3r1" nowrap>-1,040</td>
+<td class="t3r1" nowrap>-349</td>
+<td class="t3n1" nowrap>988</td>
+<td class="t3n1" nowrap>19,756,693</td>
+<td class="t3n1" nowrap>393,716</td>
+<td class="t3n1" nowrap>176,170</td>
+<td class="t3n1" nowrap>20,326,579</td>
+<td class="t3n1" nowrap>76.19%</td>
+<td class="t3n1" nowrap>78.39%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/24</td>
+<td class="t3n1" nowrap>832</td>
+<td class="t3n1" nowrap>511</td>
+<td class="t3n1" nowrap>202</td>
+<td class="t3n1" nowrap>1,545</td>
+<td class="t3n1" nowrap>19,741,902</td>
+<td class="t3n1" nowrap>394,756</td>
+<td class="t3n1" nowrap>176,519</td>
+<td class="t3n1" nowrap>20,313,177</td>
+<td class="t3n1" nowrap>76.13%</td>
+<td class="t3n1" nowrap>78.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/23</td>
+<td class="t3r1" nowrap>-2,001</td>
+<td class="t3n1" nowrap>458</td>
+<td class="t3n1" nowrap>494</td>
+<td class="t3r1" nowrap>-1,049</td>
+<td class="t3n1" nowrap>19,741,677</td>
+<td class="t3n1" nowrap>394,245</td>
+<td class="t3n1" nowrap>176,317</td>
+<td class="t3n1" nowrap>20,312,239</td>
+<td class="t3n1" nowrap>76.13%</td>
+<td class="t3n1" nowrap>78.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/22</td>
+<td class="t3r1" nowrap>-20,861</td>
+<td class="t3n1" nowrap>554</td>
+<td class="t3r1" nowrap>-1,012</td>
+<td class="t3r1" nowrap>-21,319</td>
+<td class="t3n1" nowrap>19,740,108</td>
+<td class="t3n1" nowrap>393,787</td>
+<td class="t3n1" nowrap>175,823</td>
+<td class="t3n1" nowrap>20,309,718</td>
+<td class="t3n1" nowrap>76.13%</td>
+<td class="t3n1" nowrap>78.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/19</td>
+<td class="t3r1" nowrap>-259</td>
+<td class="t3n1" nowrap>171</td>
+<td class="t3r1" nowrap>-296</td>
+<td class="t3r1" nowrap>-384</td>
+<td class="t3n1" nowrap>19,760,969</td>
+<td class="t3n1" nowrap>393,233</td>
+<td class="t3n1" nowrap>176,835</td>
+<td class="t3n1" nowrap>20,331,037</td>
+<td class="t3n1" nowrap>76.21%</td>
+<td class="t3n1" nowrap>78.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/18</td>
+<td class="t3r1" nowrap>-73</td>
+<td class="t3r1" nowrap>-265</td>
+<td class="t3r1" nowrap>-37</td>
+<td class="t3r1" nowrap>-375</td>
+<td class="t3n1" nowrap>19,762,565</td>
+<td class="t3n1" nowrap>393,062</td>
+<td class="t3n1" nowrap>177,131</td>
+<td class="t3n1" nowrap>20,332,758</td>
+<td class="t3n1" nowrap>76.21%</td>
+<td class="t3n1" nowrap>78.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/17</td>
+<td class="t3r1" nowrap>-5,663</td>
+<td class="t3n1" nowrap>134</td>
+<td class="t3n1" nowrap>3,781</td>
+<td class="t3r1" nowrap>-1,748</td>
+<td class="t3n1" nowrap>19,763,246</td>
+<td class="t3n1" nowrap>393,327</td>
+<td class="t3n1" nowrap>177,168</td>
+<td class="t3n1" nowrap>20,333,741</td>
+<td class="t3n1" nowrap>76.21%</td>
+<td class="t3n1" nowrap>78.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/16</td>
+<td class="t3r1" nowrap>-12,361</td>
+<td class="t3n1" nowrap>314</td>
+<td class="t3n1" nowrap>225</td>
+<td class="t3r1" nowrap>-11,822</td>
+<td class="t3n1" nowrap>19,777,217</td>
+<td class="t3n1" nowrap>393,193</td>
+<td class="t3n1" nowrap>173,387</td>
+<td class="t3n1" nowrap>20,343,797</td>
+<td class="t3n1" nowrap>76.27%</td>
+<td class="t3n1" nowrap>78.46%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/15</td>
+<td class="t3r1" nowrap>-4,183</td>
+<td class="t3n1" nowrap>81</td>
+<td class="t3r1" nowrap>-149</td>
+<td class="t3r1" nowrap>-4,251</td>
+<td class="t3n1" nowrap>19,789,578</td>
+<td class="t3n1" nowrap>392,879</td>
+<td class="t3n1" nowrap>173,162</td>
+<td class="t3n1" nowrap>20,355,619</td>
+<td class="t3n1" nowrap>76.32%</td>
+<td class="t3n1" nowrap>78.50%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/12</td>
+<td class="t3r1" nowrap>-6,240</td>
+<td class="t3n1" nowrap>185</td>
+<td class="t3r1" nowrap>-1,592</td>
+<td class="t3r1" nowrap>-7,647</td>
+<td class="t3n1" nowrap>19,795,315</td>
+<td class="t3n1" nowrap>392,798</td>
+<td class="t3n1" nowrap>173,311</td>
+<td class="t3n1" nowrap>20,361,424</td>
+<td class="t3n1" nowrap>76.34%</td>
+<td class="t3n1" nowrap>78.52%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/11</td>
+<td class="t3n1" nowrap>81</td>
+<td class="t3n1" nowrap>523</td>
+<td class="t3r1" nowrap>-746</td>
+<td class="t3r1" nowrap>-142</td>
+<td class="t3n1" nowrap>19,801,555</td>
+<td class="t3n1" nowrap>392,613</td>
+<td class="t3n1" nowrap>174,903</td>
+<td class="t3n1" nowrap>20,369,071</td>
+<td class="t3n1" nowrap>76.36%</td>
+<td class="t3n1" nowrap>78.55%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/10</td>
+<td class="t3r1" nowrap>-13,082</td>
+<td class="t3n1" nowrap>50</td>
+<td class="t3r1" nowrap>-283</td>
+<td class="t3r1" nowrap>-13,315</td>
+<td class="t3n1" nowrap>19,801,474</td>
+<td class="t3n1" nowrap>392,090</td>
+<td class="t3n1" nowrap>175,649</td>
+<td class="t3n1" nowrap>20,369,213</td>
+<td class="t3n1" nowrap>76.36%</td>
+<td class="t3n1" nowrap>78.55%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/09</td>
+<td class="t3r1" nowrap>-1,163</td>
+<td class="t3n1" nowrap>183</td>
+<td class="t3n1" nowrap>508</td>
+<td class="t3r1" nowrap>-472</td>
+<td class="t3n1" nowrap>19,806,743</td>
+<td class="t3n1" nowrap>392,040</td>
+<td class="t3n1" nowrap>175,932</td>
+<td class="t3n1" nowrap>20,374,715</td>
+<td class="t3n1" nowrap>76.38%</td>
+<td class="t3n1" nowrap>78.57%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/05</td>
+<td class="t3n1" nowrap>377</td>
+<td class="t3n1" nowrap>449</td>
+<td class="t3r1" nowrap>-28</td>
+<td class="t3n1" nowrap>798</td>
+<td class="t3n1" nowrap>19,807,906</td>
+<td class="t3n1" nowrap>391,857</td>
+<td class="t3n1" nowrap>175,424</td>
+<td class="t3n1" nowrap>20,375,187</td>
+<td class="t3n1" nowrap>76.39%</td>
+<td class="t3n1" nowrap>78.58%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/04</td>
+<td class="t3r1" nowrap>-779</td>
+<td class="t3n1" nowrap>3,313</td>
+<td class="t3r1" nowrap>-660</td>
+<td class="t3n1" nowrap>1,874</td>
+<td class="t3n1" nowrap>19,804,572</td>
+<td class="t3n1" nowrap>391,408</td>
+<td class="t3n1" nowrap>175,452</td>
+<td class="t3n1" nowrap>20,371,432</td>
+<td class="t3n1" nowrap>76.37%</td>
+<td class="t3n1" nowrap>78.56%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/03</td>
+<td class="t3n1" nowrap>4,625</td>
+<td class="t3n1" nowrap>489</td>
+<td class="t3r1" nowrap>-1,429</td>
+<td class="t3n1" nowrap>3,685</td>
+<td class="t3n1" nowrap>19,806,551</td>
+<td class="t3n1" nowrap>388,095</td>
+<td class="t3n1" nowrap>176,112</td>
+<td class="t3n1" nowrap>20,370,758</td>
+<td class="t3n1" nowrap>76.38%</td>
+<td class="t3n1" nowrap>78.56%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/02</td>
+<td class="t3r1" nowrap>-2,615</td>
+<td class="t3n1" nowrap>748</td>
+<td class="t3r1" nowrap>-1,215</td>
+<td class="t3r1" nowrap>-3,082</td>
+<td class="t3n1" nowrap>19,754,313</td>
+<td class="t3n1" nowrap>387,606</td>
+<td class="t3n1" nowrap>177,541</td>
+<td class="t3n1" nowrap>20,319,460</td>
+<td class="t3n1" nowrap>76.18%</td>
+<td class="t3n1" nowrap>78.36%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/09/01</td>
+<td class="t3n1" nowrap>16,790</td>
+<td class="t3n1" nowrap>805</td>
+<td class="t3n1" nowrap>1,599</td>
+<td class="t3n1" nowrap>19,194</td>
+<td class="t3n1" nowrap>19,756,928</td>
+<td class="t3n1" nowrap>386,858</td>
+<td class="t3n1" nowrap>178,756</td>
+<td class="t3n1" nowrap>20,322,542</td>
+<td class="t3n1" nowrap>76.19%</td>
+<td class="t3n1" nowrap>78.37%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/29</td>
+<td class="t3r1" nowrap>-4,175</td>
+<td class="t3n1" nowrap>126</td>
+<td class="t3r1" nowrap>-118</td>
+<td class="t3r1" nowrap>-4,167</td>
+<td class="t3n1" nowrap>19,741,638</td>
+<td class="t3n1" nowrap>386,053</td>
+<td class="t3n1" nowrap>177,157</td>
+<td class="t3n1" nowrap>20,304,848</td>
+<td class="t3n1" nowrap>76.13%</td>
+<td class="t3n1" nowrap>78.30%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/28</td>
+<td class="t3r1" nowrap>-6,818</td>
+<td class="t3n1" nowrap>544</td>
+<td class="t3r1" nowrap>-45</td>
+<td class="t3r1" nowrap>-6,319</td>
+<td class="t3n1" nowrap>19,730,636</td>
+<td class="t3n1" nowrap>385,927</td>
+<td class="t3n1" nowrap>177,275</td>
+<td class="t3n1" nowrap>20,293,838</td>
+<td class="t3n1" nowrap>76.09%</td>
+<td class="t3n1" nowrap>78.26%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/27</td>
+<td class="t3r1" nowrap>-7,557</td>
+<td class="t3n1" nowrap>629</td>
+<td class="t3n1" nowrap>929</td>
+<td class="t3r1" nowrap>-5,999</td>
+<td class="t3n1" nowrap>19,708,629</td>
+<td class="t3n1" nowrap>385,383</td>
+<td class="t3n1" nowrap>177,320</td>
+<td class="t3n1" nowrap>20,271,332</td>
+<td class="t3n1" nowrap>76.00%</td>
+<td class="t3n1" nowrap>78.17%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/26</td>
+<td class="t3r1" nowrap>-10,627</td>
+<td class="t3n1" nowrap>124</td>
+<td class="t3r1" nowrap>-31</td>
+<td class="t3r1" nowrap>-10,534</td>
+<td class="t3n1" nowrap>19,716,882</td>
+<td class="t3n1" nowrap>384,754</td>
+<td class="t3n1" nowrap>176,391</td>
+<td class="t3n1" nowrap>20,278,027</td>
+<td class="t3n1" nowrap>76.04%</td>
+<td class="t3n1" nowrap>78.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/25</td>
+<td class="t3n1" nowrap>1,080</td>
+<td class="t3n1" nowrap>108</td>
+<td class="t3n1" nowrap>203</td>
+<td class="t3n1" nowrap>1,391</td>
+<td class="t3n1" nowrap>19,725,190</td>
+<td class="t3n1" nowrap>384,630</td>
+<td class="t3n1" nowrap>176,422</td>
+<td class="t3n1" nowrap>20,286,242</td>
+<td class="t3n1" nowrap>76.07%</td>
+<td class="t3n1" nowrap>78.23%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/22</td>
+<td class="t3n1" nowrap>3,480</td>
+<td class="t3n1" nowrap>193</td>
+<td class="t3n1" nowrap>655</td>
+<td class="t3n1" nowrap>4,328</td>
+<td class="t3n1" nowrap>19,721,985</td>
+<td class="t3n1" nowrap>384,522</td>
+<td class="t3n1" nowrap>176,219</td>
+<td class="t3n1" nowrap>20,282,726</td>
+<td class="t3n1" nowrap>76.06%</td>
+<td class="t3n1" nowrap>78.22%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/21</td>
+<td class="t3r1" nowrap>-611</td>
+<td class="t3n1" nowrap>1,089</td>
+<td class="t3r1" nowrap>-567</td>
+<td class="t3r1" nowrap>-89</td>
+<td class="t3n1" nowrap>19,716,258</td>
+<td class="t3n1" nowrap>384,329</td>
+<td class="t3n1" nowrap>175,564</td>
+<td class="t3n1" nowrap>20,276,151</td>
+<td class="t3n1" nowrap>76.03%</td>
+<td class="t3n1" nowrap>78.19%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/20</td>
+<td class="t3n1" nowrap>3,845</td>
+<td class="t3n1" nowrap>563</td>
+<td class="t3n1" nowrap>86</td>
+<td class="t3n1" nowrap>4,494</td>
+<td class="t3n1" nowrap>19,716,759</td>
+<td class="t3n1" nowrap>383,240</td>
+<td class="t3n1" nowrap>176,131</td>
+<td class="t3n1" nowrap>20,276,130</td>
+<td class="t3n1" nowrap>76.04%</td>
+<td class="t3n1" nowrap>78.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/19</td>
+<td class="t3n1" nowrap>2,225</td>
+<td class="t3n1" nowrap>224</td>
+<td class="t3n1" nowrap>170</td>
+<td class="t3n1" nowrap>2,619</td>
+<td class="t3n1" nowrap>19,715,606</td>
+<td class="t3n1" nowrap>382,677</td>
+<td class="t3n1" nowrap>176,045</td>
+<td class="t3n1" nowrap>20,274,328</td>
+<td class="t3n1" nowrap>76.03%</td>
+<td class="t3n1" nowrap>78.18%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/18</td>
+<td class="t3r1" nowrap>-3,310</td>
+<td class="t3n1" nowrap>497</td>
+<td class="t3r1" nowrap>-168</td>
+<td class="t3r1" nowrap>-2,981</td>
+<td class="t3n1" nowrap>19,712,830</td>
+<td class="t3n1" nowrap>382,453</td>
+<td class="t3n1" nowrap>175,875</td>
+<td class="t3n1" nowrap>20,271,158</td>
+<td class="t3n1" nowrap>76.02%</td>
+<td class="t3n1" nowrap>78.17%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/15</td>
+<td class="t3n1" nowrap>375</td>
+<td class="t3n1" nowrap>151</td>
+<td class="t3r1" nowrap>-1,050</td>
+<td class="t3r1" nowrap>-524</td>
+<td class="t3n1" nowrap>19,701,535</td>
+<td class="t3n1" nowrap>381,956</td>
+<td class="t3n1" nowrap>176,043</td>
+<td class="t3n1" nowrap>20,259,534</td>
+<td class="t3n1" nowrap>75.98%</td>
+<td class="t3n1" nowrap>78.13%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/14</td>
+<td class="t3r1" nowrap>-4,694</td>
+<td class="t3n1" nowrap>519</td>
+<td class="t3r1" nowrap>-778</td>
+<td class="t3r1" nowrap>-4,953</td>
+<td class="t3n1" nowrap>19,706,292</td>
+<td class="t3n1" nowrap>381,805</td>
+<td class="t3n1" nowrap>177,093</td>
+<td class="t3n1" nowrap>20,265,190</td>
+<td class="t3n1" nowrap>75.99%</td>
+<td class="t3n1" nowrap>78.15%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/13</td>
+<td class="t3r1" nowrap>-11,730</td>
+<td class="t3n1" nowrap>349</td>
+<td class="t3n1" nowrap>1,195</td>
+<td class="t3r1" nowrap>-10,186</td>
+<td class="t3n1" nowrap>19,703,912</td>
+<td class="t3n1" nowrap>381,286</td>
+<td class="t3n1" nowrap>177,871</td>
+<td class="t3n1" nowrap>20,263,069</td>
+<td class="t3n1" nowrap>75.99%</td>
+<td class="t3n1" nowrap>78.15%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/12</td>
+<td class="t3r1" nowrap>-10,459</td>
+<td class="t3n1" nowrap>58</td>
+<td class="t3n1" nowrap>1,099</td>
+<td class="t3r1" nowrap>-9,302</td>
+<td class="t3n1" nowrap>19,709,842</td>
+<td class="t3n1" nowrap>380,937</td>
+<td class="t3n1" nowrap>176,676</td>
+<td class="t3n1" nowrap>20,267,455</td>
+<td class="t3n1" nowrap>76.01%</td>
+<td class="t3n1" nowrap>78.16%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/11</td>
+<td class="t3r1" nowrap>-20,356</td>
+<td class="t3n1" nowrap>149</td>
+<td class="t3n1" nowrap>246</td>
+<td class="t3r1" nowrap>-19,961</td>
+<td class="t3n1" nowrap>19,713,293</td>
+<td class="t3n1" nowrap>380,879</td>
+<td class="t3n1" nowrap>175,577</td>
+<td class="t3n1" nowrap>20,269,749</td>
+<td class="t3n1" nowrap>76.02%</td>
+<td class="t3n1" nowrap>78.17%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/08</td>
+<td class="t3r1" nowrap>-13,894</td>
+<td class="t3n1" nowrap>618</td>
+<td class="t3n1" nowrap>15</td>
+<td class="t3r1" nowrap>-13,261</td>
+<td class="t3n1" nowrap>19,731,961</td>
+<td class="t3n1" nowrap>380,730</td>
+<td class="t3n1" nowrap>175,331</td>
+<td class="t3n1" nowrap>20,288,022</td>
+<td class="t3n1" nowrap>76.09%</td>
+<td class="t3n1" nowrap>78.23%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/07</td>
+<td class="t3r1" nowrap>-4,868</td>
+<td class="t3n1" nowrap>561</td>
+<td class="t3n1" nowrap>247</td>
+<td class="t3r1" nowrap>-4,060</td>
+<td class="t3n1" nowrap>19,735,022</td>
+<td class="t3n1" nowrap>380,112</td>
+<td class="t3n1" nowrap>175,316</td>
+<td class="t3n1" nowrap>20,290,450</td>
+<td class="t3n1" nowrap>76.11%</td>
+<td class="t3n1" nowrap>78.25%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/06</td>
+<td class="t3r1" nowrap>-481</td>
+<td class="t3r1" nowrap>-228</td>
+<td class="t3r1" nowrap>-513</td>
+<td class="t3r1" nowrap>-1,222</td>
+<td class="t3n1" nowrap>19,739,742</td>
+<td class="t3n1" nowrap>379,551</td>
+<td class="t3n1" nowrap>175,069</td>
+<td class="t3n1" nowrap>20,294,362</td>
+<td class="t3n1" nowrap>76.12%</td>
+<td class="t3n1" nowrap>78.26%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/05</td>
+<td class="t3r1" nowrap>-33,801</td>
+<td class="t3n1" nowrap>235</td>
+<td class="t3n1" nowrap>89</td>
+<td class="t3r1" nowrap>-33,477</td>
+<td class="t3n1" nowrap>19,743,600</td>
+<td class="t3n1" nowrap>379,779</td>
+<td class="t3n1" nowrap>175,582</td>
+<td class="t3n1" nowrap>20,298,961</td>
+<td class="t3n1" nowrap>76.14%</td>
+<td class="t3n1" nowrap>78.28%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/04</td>
+<td class="t3r1" nowrap>-2,181</td>
+<td class="t3n1" nowrap>228</td>
+<td class="t3n1" nowrap>1,297</td>
+<td class="t3r1" nowrap>-656</td>
+<td class="t3n1" nowrap>19,778,385</td>
+<td class="t3n1" nowrap>379,544</td>
+<td class="t3n1" nowrap>175,493</td>
+<td class="t3n1" nowrap>20,333,422</td>
+<td class="t3n1" nowrap>76.27%</td>
+<td class="t3n1" nowrap>78.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/08/01</td>
+<td class="t3r1" nowrap>-20,519</td>
+<td class="t3r1" nowrap>-291</td>
+<td class="t3n1" nowrap>771</td>
+<td class="t3r1" nowrap>-20,039</td>
+<td class="t3n1" nowrap>19,778,893</td>
+<td class="t3n1" nowrap>379,316</td>
+<td class="t3n1" nowrap>174,196</td>
+<td class="t3n1" nowrap>20,332,405</td>
+<td class="t3n1" nowrap>76.27%</td>
+<td class="t3n1" nowrap>78.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/31</td>
+<td class="t3r1" nowrap>-22,678</td>
+<td class="t3n1" nowrap>602</td>
+<td class="t3n1" nowrap>1,116</td>
+<td class="t3r1" nowrap>-20,960</td>
+<td class="t3n1" nowrap>19,786,069</td>
+<td class="t3n1" nowrap>379,607</td>
+<td class="t3n1" nowrap>173,425</td>
+<td class="t3n1" nowrap>20,339,101</td>
+<td class="t3n1" nowrap>76.30%</td>
+<td class="t3n1" nowrap>78.43%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/30</td>
+<td class="t3r1" nowrap>-288</td>
+<td class="t3n1" nowrap>393</td>
+<td class="t3n1" nowrap>264</td>
+<td class="t3n1" nowrap>369</td>
+<td class="t3n1" nowrap>19,809,518</td>
+<td class="t3n1" nowrap>379,005</td>
+<td class="t3n1" nowrap>172,310</td>
+<td class="t3n1" nowrap>20,360,833</td>
+<td class="t3n1" nowrap>76.39%</td>
+<td class="t3n1" nowrap>78.52%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/29</td>
+<td class="t3n1" nowrap>9,060</td>
+<td class="t3n1" nowrap>87</td>
+<td class="t3r1" nowrap>-277</td>
+<td class="t3n1" nowrap>8,870</td>
+<td class="t3n1" nowrap>19,805,606</td>
+<td class="t3n1" nowrap>378,612</td>
+<td class="t3n1" nowrap>172,046</td>
+<td class="t3n1" nowrap>20,356,264</td>
+<td class="t3n1" nowrap>76.38%</td>
+<td class="t3n1" nowrap>78.50%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/28</td>
+<td class="t3r1" nowrap>-13,292</td>
+<td class="t3n1" nowrap>1,022</td>
+<td class="t3n1" nowrap>298</td>
+<td class="t3r1" nowrap>-11,972</td>
+<td class="t3n1" nowrap>19,794,243</td>
+<td class="t3n1" nowrap>378,525</td>
+<td class="t3n1" nowrap>172,323</td>
+<td class="t3n1" nowrap>20,345,091</td>
+<td class="t3n1" nowrap>76.33%</td>
+<td class="t3n1" nowrap>78.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/25</td>
+<td class="t3r1" nowrap>-15,050</td>
+<td class="t3n1" nowrap>319</td>
+<td class="t3r1" nowrap>-496</td>
+<td class="t3r1" nowrap>-15,227</td>
+<td class="t3n1" nowrap>19,803,525</td>
+<td class="t3n1" nowrap>377,503</td>
+<td class="t3n1" nowrap>172,025</td>
+<td class="t3n1" nowrap>20,353,053</td>
+<td class="t3n1" nowrap>76.37%</td>
+<td class="t3n1" nowrap>78.49%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/24</td>
+<td class="t3r1" nowrap>-15,957</td>
+<td class="t3n1" nowrap>394</td>
+<td class="t3n1" nowrap>365</td>
+<td class="t3r1" nowrap>-15,198</td>
+<td class="t3n1" nowrap>19,818,573</td>
+<td class="t3n1" nowrap>377,184</td>
+<td class="t3n1" nowrap>172,521</td>
+<td class="t3n1" nowrap>20,368,278</td>
+<td class="t3n1" nowrap>76.43%</td>
+<td class="t3n1" nowrap>78.55%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/22</td>
+<td class="t3r1" nowrap>-14,461</td>
+<td class="t3r1" nowrap>-575</td>
+<td class="t3n1" nowrap>354</td>
+<td class="t3r1" nowrap>-14,682</td>
+<td class="t3n1" nowrap>19,831,284</td>
+<td class="t3n1" nowrap>376,790</td>
+<td class="t3n1" nowrap>172,156</td>
+<td class="t3n1" nowrap>20,380,230</td>
+<td class="t3n1" nowrap>76.48%</td>
+<td class="t3n1" nowrap>78.60%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/21</td>
+<td class="t3r1" nowrap>-24,761</td>
+<td class="t3n1" nowrap>203</td>
+<td class="t3n1" nowrap>1,064</td>
+<td class="t3r1" nowrap>-23,494</td>
+<td class="t3n1" nowrap>19,846,317</td>
+<td class="t3n1" nowrap>377,365</td>
+<td class="t3n1" nowrap>171,802</td>
+<td class="t3n1" nowrap>20,395,484</td>
+<td class="t3n1" nowrap>76.53%</td>
+<td class="t3n1" nowrap>78.65%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/18</td>
+<td class="t3r1" nowrap>-34,909</td>
+<td class="t3n1" nowrap>640</td>
+<td class="t3n1" nowrap>3,360</td>
+<td class="t3r1" nowrap>-30,909</td>
+<td class="t3n1" nowrap>19,872,560</td>
+<td class="t3n1" nowrap>377,162</td>
+<td class="t3n1" nowrap>170,738</td>
+<td class="t3n1" nowrap>20,420,460</td>
+<td class="t3n1" nowrap>76.64%</td>
+<td class="t3n1" nowrap>78.75%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/17</td>
+<td class="t3r1" nowrap>-70,187</td>
+<td class="t3r1" nowrap>-64</td>
+<td class="t3n1" nowrap>2,686</td>
+<td class="t3r1" nowrap>-67,565</td>
+<td class="t3n1" nowrap>19,907,470</td>
+<td class="t3n1" nowrap>376,522</td>
+<td class="t3n1" nowrap>167,378</td>
+<td class="t3n1" nowrap>20,451,370</td>
+<td class="t3n1" nowrap>76.77%</td>
+<td class="t3n1" nowrap>78.87%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/16</td>
+<td class="t3r1" nowrap>-12,078</td>
+<td class="t3n1" nowrap>22</td>
+<td class="t3n1" nowrap>1,529</td>
+<td class="t3r1" nowrap>-10,527</td>
+<td class="t3n1" nowrap>19,942,528</td>
+<td class="t3n1" nowrap>376,586</td>
+<td class="t3n1" nowrap>164,692</td>
+<td class="t3n1" nowrap>20,483,806</td>
+<td class="t3n1" nowrap>76.91%</td>
+<td class="t3n1" nowrap>79.00%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/15</td>
+<td class="t3r1" nowrap>-3,148</td>
+<td class="t3r1" nowrap>-353</td>
+<td class="t3n1" nowrap>930</td>
+<td class="t3r1" nowrap>-2,571</td>
+<td class="t3n1" nowrap>19,954,152</td>
+<td class="t3n1" nowrap>376,564</td>
+<td class="t3n1" nowrap>163,163</td>
+<td class="t3n1" nowrap>20,493,879</td>
+<td class="t3n1" nowrap>76.95%</td>
+<td class="t3n1" nowrap>79.03%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/14</td>
+<td class="t3r1" nowrap>-14,173</td>
+<td class="t3r1" nowrap>-390</td>
+<td class="t3r1" nowrap>-2,340</td>
+<td class="t3r1" nowrap>-16,903</td>
+<td class="t3n1" nowrap>19,957,301</td>
+<td class="t3n1" nowrap>376,917</td>
+<td class="t3n1" nowrap>162,233</td>
+<td class="t3n1" nowrap>20,496,451</td>
+<td class="t3n1" nowrap>76.96%</td>
+<td class="t3n1" nowrap>79.04%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/11</td>
+<td class="t3n1" nowrap>2,114</td>
+<td class="t3r1" nowrap>-260</td>
+<td class="t3n1" nowrap>1,754</td>
+<td class="t3n1" nowrap>3,608</td>
+<td class="t3n1" nowrap>19,972,695</td>
+<td class="t3n1" nowrap>377,307</td>
+<td class="t3n1" nowrap>164,573</td>
+<td class="t3n1" nowrap>20,514,575</td>
+<td class="t3n1" nowrap>77.02%</td>
+<td class="t3n1" nowrap>79.11%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/10</td>
+<td class="t3r1" nowrap>-26,788</td>
+<td class="t3r1" nowrap>-8</td>
+<td class="t3n1" nowrap>3,080</td>
+<td class="t3r1" nowrap>-23,716</td>
+<td class="t3n1" nowrap>19,970,469</td>
+<td class="t3n1" nowrap>377,567</td>
+<td class="t3n1" nowrap>162,819</td>
+<td class="t3n1" nowrap>20,510,855</td>
+<td class="t3n1" nowrap>77.01%</td>
+<td class="t3n1" nowrap>79.09%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/09</td>
+<td class="t3r1" nowrap>-15,946</td>
+<td class="t3n1" nowrap>26</td>
+<td class="t3n1" nowrap>89</td>
+<td class="t3r1" nowrap>-15,831</td>
+<td class="t3n1" nowrap>19,999,581</td>
+<td class="t3n1" nowrap>377,575</td>
+<td class="t3n1" nowrap>159,739</td>
+<td class="t3n1" nowrap>20,536,895</td>
+<td class="t3n1" nowrap>77.13%</td>
+<td class="t3n1" nowrap>79.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/08</td>
+<td class="t3r1" nowrap>-7,842</td>
+<td class="t3r1" nowrap>-123</td>
+<td class="t3r1" nowrap>-2,111</td>
+<td class="t3r1" nowrap>-10,076</td>
+<td class="t3n1" nowrap>20,015,778</td>
+<td class="t3n1" nowrap>377,549</td>
+<td class="t3n1" nowrap>159,650</td>
+<td class="t3n1" nowrap>20,552,977</td>
+<td class="t3n1" nowrap>77.19%</td>
+<td class="t3n1" nowrap>79.26%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/07</td>
+<td class="t3r1" nowrap>-3,887</td>
+<td class="t3n1" nowrap>21</td>
+<td class="t3r1" nowrap>-1,702</td>
+<td class="t3r1" nowrap>-5,568</td>
+<td class="t3n1" nowrap>20,025,526</td>
+<td class="t3n1" nowrap>377,672</td>
+<td class="t3n1" nowrap>161,761</td>
+<td class="t3n1" nowrap>20,564,959</td>
+<td class="t3n1" nowrap>77.23%</td>
+<td class="t3n1" nowrap>79.31%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/04</td>
+<td class="t3r1" nowrap>-18,900</td>
+<td class="t3r1" nowrap>-177</td>
+<td class="t3n1" nowrap>66</td>
+<td class="t3r1" nowrap>-19,011</td>
+<td class="t3n1" nowrap>20,029,423</td>
+<td class="t3n1" nowrap>377,651</td>
+<td class="t3n1" nowrap>163,463</td>
+<td class="t3n1" nowrap>20,570,537</td>
+<td class="t3n1" nowrap>77.24%</td>
+<td class="t3n1" nowrap>79.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/03</td>
+<td class="t3r1" nowrap>-11,691</td>
+<td class="t3n1" nowrap>461</td>
+<td class="t3r1" nowrap>-102</td>
+<td class="t3r1" nowrap>-11,332</td>
+<td class="t3n1" nowrap>20,048,323</td>
+<td class="t3n1" nowrap>377,828</td>
+<td class="t3n1" nowrap>163,397</td>
+<td class="t3n1" nowrap>20,589,548</td>
+<td class="t3n1" nowrap>77.31%</td>
+<td class="t3n1" nowrap>79.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/02</td>
+<td class="t3n1" nowrap>11,927</td>
+<td class="t3r1" nowrap>-269</td>
+<td class="t3r1" nowrap>-1,661</td>
+<td class="t3n1" nowrap>9,997</td>
+<td class="t3n1" nowrap>20,095,097</td>
+<td class="t3n1" nowrap>377,367</td>
+<td class="t3n1" nowrap>163,499</td>
+<td class="t3n1" nowrap>20,635,963</td>
+<td class="t3n1" nowrap>77.49%</td>
+<td class="t3n1" nowrap>79.58%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/07/01</td>
+<td class="t3r1" nowrap>-4,819</td>
+<td class="t3n1" nowrap>149</td>
+<td class="t3n1" nowrap>547</td>
+<td class="t3r1" nowrap>-4,123</td>
+<td class="t3n1" nowrap>20,083,235</td>
+<td class="t3n1" nowrap>377,636</td>
+<td class="t3n1" nowrap>165,160</td>
+<td class="t3n1" nowrap>20,626,031</td>
+<td class="t3n1" nowrap>77.45%</td>
+<td class="t3n1" nowrap>79.54%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/30</td>
+<td class="t3n1" nowrap>1,970</td>
+<td class="t3n1" nowrap>321</td>
+<td class="t3n1" nowrap>71</td>
+<td class="t3n1" nowrap>2,362</td>
+<td class="t3n1" nowrap>20,088,351</td>
+<td class="t3n1" nowrap>377,487</td>
+<td class="t3n1" nowrap>164,613</td>
+<td class="t3n1" nowrap>20,630,451</td>
+<td class="t3n1" nowrap>77.47%</td>
+<td class="t3n1" nowrap>79.56%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/27</td>
+<td class="t3n1" nowrap>9,595</td>
+<td class="t3n1" nowrap>213</td>
+<td class="t3n1" nowrap>66</td>
+<td class="t3n1" nowrap>9,874</td>
+<td class="t3n1" nowrap>20,085,269</td>
+<td class="t3n1" nowrap>252,955</td>
+<td class="t3n1" nowrap>164,542</td>
+<td class="t3n1" nowrap>20,502,766</td>
+<td class="t3n1" nowrap>77.46%</td>
+<td class="t3n1" nowrap>79.07%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/26</td>
+<td class="t3n1" nowrap>4,192</td>
+<td class="t3n1" nowrap>1,323</td>
+<td class="t3n1" nowrap>670</td>
+<td class="t3n1" nowrap>6,185</td>
+<td class="t3n1" nowrap>20,081,433</td>
+<td class="t3n1" nowrap>252,742</td>
+<td class="t3n1" nowrap>164,476</td>
+<td class="t3n1" nowrap>20,498,651</td>
+<td class="t3n1" nowrap>77.44%</td>
+<td class="t3n1" nowrap>79.05%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/25</td>
+<td class="t3n1" nowrap>5,143</td>
+<td class="t3n1" nowrap>274</td>
+<td class="t3n1" nowrap>2,787</td>
+<td class="t3n1" nowrap>8,204</td>
+<td class="t3n1" nowrap>20,077,319</td>
+<td class="t3n1" nowrap>251,419</td>
+<td class="t3n1" nowrap>163,806</td>
+<td class="t3n1" nowrap>20,492,544</td>
+<td class="t3n1" nowrap>77.43%</td>
+<td class="t3n1" nowrap>79.03%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/24</td>
+<td class="t3r1" nowrap>-1,172</td>
+<td class="t3r1" nowrap>-322</td>
+<td class="t3n1" nowrap>3,246</td>
+<td class="t3n1" nowrap>1,752</td>
+<td class="t3n1" nowrap>20,072,171</td>
+<td class="t3n1" nowrap>251,145</td>
+<td class="t3n1" nowrap>161,019</td>
+<td class="t3n1" nowrap>20,484,335</td>
+<td class="t3n1" nowrap>77.41%</td>
+<td class="t3n1" nowrap>79.00%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/23</td>
+<td class="t3r1" nowrap>-1,248</td>
+<td class="t3r1" nowrap>-260</td>
+<td class="t3n1" nowrap>588</td>
+<td class="t3r1" nowrap>-920</td>
+<td class="t3n1" nowrap>20,094,075</td>
+<td class="t3n1" nowrap>251,467</td>
+<td class="t3n1" nowrap>157,773</td>
+<td class="t3n1" nowrap>20,503,315</td>
+<td class="t3n1" nowrap>77.49%</td>
+<td class="t3n1" nowrap>79.07%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/20</td>
+<td class="t3r1" nowrap>-739</td>
+<td class="t3r1" nowrap>-1,026</td>
+<td class="t3n1" nowrap>637</td>
+<td class="t3r1" nowrap>-1,128</td>
+<td class="t3n1" nowrap>20,104,123</td>
+<td class="t3n1" nowrap>251,727</td>
+<td class="t3n1" nowrap>157,185</td>
+<td class="t3n1" nowrap>20,513,035</td>
+<td class="t3n1" nowrap>77.53%</td>
+<td class="t3n1" nowrap>79.11%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/19</td>
+<td class="t3n1" nowrap>678</td>
+<td class="t3r1" nowrap>-66</td>
+<td class="t3n1" nowrap>386</td>
+<td class="t3n1" nowrap>998</td>
+<td class="t3n1" nowrap>20,128,853</td>
+<td class="t3n1" nowrap>252,753</td>
+<td class="t3n1" nowrap>156,548</td>
+<td class="t3n1" nowrap>20,538,154</td>
+<td class="t3n1" nowrap>77.62%</td>
+<td class="t3n1" nowrap>79.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/18</td>
+<td class="t3n1" nowrap>15,055</td>
+<td class="t3r1" nowrap>-415</td>
+<td class="t3r1" nowrap>-1,979</td>
+<td class="t3n1" nowrap>12,661</td>
+<td class="t3n1" nowrap>20,146,890</td>
+<td class="t3n1" nowrap>252,819</td>
+<td class="t3n1" nowrap>156,162</td>
+<td class="t3n1" nowrap>20,555,871</td>
+<td class="t3n1" nowrap>77.69%</td>
+<td class="t3n1" nowrap>79.27%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/17</td>
+<td class="t3n1" nowrap>6,649</td>
+<td class="t3r1" nowrap>-431</td>
+<td class="t3n1" nowrap>1,272</td>
+<td class="t3n1" nowrap>7,490</td>
+<td class="t3n1" nowrap>20,144,192</td>
+<td class="t3n1" nowrap>253,234</td>
+<td class="t3n1" nowrap>158,141</td>
+<td class="t3n1" nowrap>20,555,567</td>
+<td class="t3n1" nowrap>77.68%</td>
+<td class="t3n1" nowrap>79.27%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/16</td>
+<td class="t3n1" nowrap>1,488</td>
+<td class="t3r1" nowrap>-908</td>
+<td class="t3r1" nowrap>-29</td>
+<td class="t3n1" nowrap>551</td>
+<td class="t3n1" nowrap>20,192,011</td>
+<td class="t3n1" nowrap>253,665</td>
+<td class="t3n1" nowrap>156,869</td>
+<td class="t3n1" nowrap>20,602,545</td>
+<td class="t3n1" nowrap>77.87%</td>
+<td class="t3n1" nowrap>79.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/13</td>
+<td class="t3r1" nowrap>-2,369</td>
+<td class="t3r1" nowrap>-662</td>
+<td class="t3r1" nowrap>-67</td>
+<td class="t3r1" nowrap>-3,098</td>
+<td class="t3n1" nowrap>20,204,855</td>
+<td class="t3n1" nowrap>254,573</td>
+<td class="t3n1" nowrap>156,898</td>
+<td class="t3n1" nowrap>20,616,326</td>
+<td class="t3n1" nowrap>77.92%</td>
+<td class="t3n1" nowrap>79.51%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/12</td>
+<td class="t3r1" nowrap>-1,358</td>
+<td class="t3r1" nowrap>-2,752</td>
+<td class="t3r1" nowrap>-141</td>
+<td class="t3r1" nowrap>-4,251</td>
+<td class="t3n1" nowrap>20,207,224</td>
+<td class="t3n1" nowrap>255,235</td>
+<td class="t3n1" nowrap>156,965</td>
+<td class="t3n1" nowrap>20,619,424</td>
+<td class="t3n1" nowrap>77.93%</td>
+<td class="t3n1" nowrap>79.52%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/11</td>
+<td class="t3n1" nowrap>8,927</td>
+<td class="t3r1" nowrap>-1,296</td>
+<td class="t3r1" nowrap>-1,064</td>
+<td class="t3n1" nowrap>6,567</td>
+<td class="t3n1" nowrap>20,208,582</td>
+<td class="t3n1" nowrap>257,987</td>
+<td class="t3n1" nowrap>157,106</td>
+<td class="t3n1" nowrap>20,623,675</td>
+<td class="t3n1" nowrap>77.93%</td>
+<td class="t3n1" nowrap>79.53%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/10</td>
+<td class="t3n1" nowrap>7,199</td>
+<td class="t3r1" nowrap>-734</td>
+<td class="t3n1" nowrap>30</td>
+<td class="t3n1" nowrap>6,495</td>
+<td class="t3n1" nowrap>20,199,812</td>
+<td class="t3n1" nowrap>259,283</td>
+<td class="t3n1" nowrap>158,170</td>
+<td class="t3n1" nowrap>20,617,265</td>
+<td class="t3n1" nowrap>77.90%</td>
+<td class="t3n1" nowrap>79.51%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/09</td>
+<td class="t3r1" nowrap>-1,376</td>
+<td class="t3r1" nowrap>-589</td>
+<td class="t3n1" nowrap>292</td>
+<td class="t3r1" nowrap>-1,673</td>
+<td class="t3n1" nowrap>20,193,846</td>
+<td class="t3n1" nowrap>260,017</td>
+<td class="t3n1" nowrap>158,140</td>
+<td class="t3n1" nowrap>20,612,003</td>
+<td class="t3n1" nowrap>77.88%</td>
+<td class="t3n1" nowrap>79.49%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/06</td>
+<td class="t3r1" nowrap>-2,346</td>
+<td class="t3r1" nowrap>-563</td>
+<td class="t3r1" nowrap>-305</td>
+<td class="t3r1" nowrap>-3,214</td>
+<td class="t3n1" nowrap>20,195,222</td>
+<td class="t3n1" nowrap>260,606</td>
+<td class="t3n1" nowrap>157,848</td>
+<td class="t3n1" nowrap>20,613,676</td>
+<td class="t3n1" nowrap>77.88%</td>
+<td class="t3n1" nowrap>79.49%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/05</td>
+<td class="t3r1" nowrap>-3,286</td>
+<td class="t3r1" nowrap>-674</td>
+<td class="t3r1" nowrap>-633</td>
+<td class="t3r1" nowrap>-4,593</td>
+<td class="t3n1" nowrap>20,197,596</td>
+<td class="t3n1" nowrap>261,169</td>
+<td class="t3n1" nowrap>158,153</td>
+<td class="t3n1" nowrap>20,616,918</td>
+<td class="t3n1" nowrap>77.89%</td>
+<td class="t3n1" nowrap>79.51%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/04</td>
+<td class="t3n1" nowrap>20,150</td>
+<td class="t3r1" nowrap>-287</td>
+<td class="t3r1" nowrap>-981</td>
+<td class="t3n1" nowrap>18,882</td>
+<td class="t3n1" nowrap>20,200,882</td>
+<td class="t3n1" nowrap>261,843</td>
+<td class="t3n1" nowrap>158,786</td>
+<td class="t3n1" nowrap>20,621,511</td>
+<td class="t3n1" nowrap>77.90%</td>
+<td class="t3n1" nowrap>79.52%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/06/03</td>
+<td class="t3n1" nowrap>9,186</td>
+<td class="t3r1" nowrap>-2,078</td>
+<td class="t3r1" nowrap>-37</td>
+<td class="t3n1" nowrap>7,071</td>
+<td class="t3n1" nowrap>20,180,732</td>
+<td class="t3n1" nowrap>262,130</td>
+<td class="t3n1" nowrap>159,767</td>
+<td class="t3n1" nowrap>20,602,629</td>
+<td class="t3n1" nowrap>77.82%</td>
+<td class="t3n1" nowrap>79.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/30</td>
+<td class="t3r1" nowrap>-11,234</td>
+<td class="t3r1" nowrap>-1,306</td>
+<td class="t3n1" nowrap>681</td>
+<td class="t3r1" nowrap>-11,859</td>
+<td class="t3n1" nowrap>20,171,546</td>
+<td class="t3n1" nowrap>264,208</td>
+<td class="t3n1" nowrap>159,804</td>
+<td class="t3n1" nowrap>20,595,558</td>
+<td class="t3n1" nowrap>77.79%</td>
+<td class="t3n1" nowrap>79.43%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/29</td>
+<td class="t3n1" nowrap>10,308</td>
+<td class="t3r1" nowrap>-263</td>
+<td class="t3n1" nowrap>1,122</td>
+<td class="t3n1" nowrap>11,167</td>
+<td class="t3n1" nowrap>20,182,780</td>
+<td class="t3n1" nowrap>265,514</td>
+<td class="t3n1" nowrap>159,123</td>
+<td class="t3n1" nowrap>20,607,417</td>
+<td class="t3n1" nowrap>77.83%</td>
+<td class="t3n1" nowrap>79.47%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/28</td>
+<td class="t3n1" nowrap>9,736</td>
+<td class="t3r1" nowrap>-850</td>
+<td class="t3n1" nowrap>304</td>
+<td class="t3n1" nowrap>9,190</td>
+<td class="t3n1" nowrap>20,172,472</td>
+<td class="t3n1" nowrap>265,777</td>
+<td class="t3n1" nowrap>158,001</td>
+<td class="t3n1" nowrap>20,596,250</td>
+<td class="t3n1" nowrap>77.79%</td>
+<td class="t3n1" nowrap>79.42%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/27</td>
+<td class="t3r1" nowrap>-4,667</td>
+<td class="t3r1" nowrap>-413</td>
+<td class="t3r1" nowrap>-51</td>
+<td class="t3r1" nowrap>-5,131</td>
+<td class="t3n1" nowrap>20,162,738</td>
+<td class="t3n1" nowrap>266,627</td>
+<td class="t3n1" nowrap>157,697</td>
+<td class="t3n1" nowrap>20,587,062</td>
+<td class="t3n1" nowrap>77.76%</td>
+<td class="t3n1" nowrap>79.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/26</td>
+<td class="t3n1" nowrap>2,614</td>
+<td class="t3r1" nowrap>-546</td>
+<td class="t3r1" nowrap>-120</td>
+<td class="t3n1" nowrap>1,948</td>
+<td class="t3n1" nowrap>20,167,405</td>
+<td class="t3n1" nowrap>267,040</td>
+<td class="t3n1" nowrap>157,748</td>
+<td class="t3n1" nowrap>20,592,193</td>
+<td class="t3n1" nowrap>77.77%</td>
+<td class="t3n1" nowrap>79.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/23</td>
+<td class="t3r1" nowrap>-2,912</td>
+<td class="t3r1" nowrap>-1</td>
+<td class="t3n1" nowrap>762</td>
+<td class="t3r1" nowrap>-2,151</td>
+<td class="t3n1" nowrap>20,164,791</td>
+<td class="t3n1" nowrap>267,586</td>
+<td class="t3n1" nowrap>157,868</td>
+<td class="t3n1" nowrap>20,590,245</td>
+<td class="t3n1" nowrap>77.76%</td>
+<td class="t3n1" nowrap>79.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/22</td>
+<td class="t3n1" nowrap>2,736</td>
+<td class="t3r1" nowrap>-300</td>
+<td class="t3n1" nowrap>653</td>
+<td class="t3n1" nowrap>3,089</td>
+<td class="t3n1" nowrap>20,167,703</td>
+<td class="t3n1" nowrap>267,587</td>
+<td class="t3n1" nowrap>157,106</td>
+<td class="t3n1" nowrap>20,592,396</td>
+<td class="t3n1" nowrap>77.77%</td>
+<td class="t3n1" nowrap>79.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/21</td>
+<td class="t3n1" nowrap>152</td>
+<td class="t3r1" nowrap>-85</td>
+<td class="t3r1" nowrap>-169</td>
+<td class="t3r1" nowrap>-102</td>
+<td class="t3n1" nowrap>20,164,968</td>
+<td class="t3n1" nowrap>267,887</td>
+<td class="t3n1" nowrap>156,453</td>
+<td class="t3n1" nowrap>20,589,308</td>
+<td class="t3n1" nowrap>77.76%</td>
+<td class="t3n1" nowrap>79.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/20</td>
+<td class="t3n1" nowrap>40</td>
+<td class="t3r1" nowrap>-8</td>
+<td class="t3r1" nowrap>-162</td>
+<td class="t3r1" nowrap>-130</td>
+<td class="t3n1" nowrap>20,164,974</td>
+<td class="t3n1" nowrap>267,972</td>
+<td class="t3n1" nowrap>156,622</td>
+<td class="t3n1" nowrap>20,589,568</td>
+<td class="t3n1" nowrap>77.76%</td>
+<td class="t3n1" nowrap>79.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/19</td>
+<td class="t3n1" nowrap>2,711</td>
+<td class="t3n1" nowrap>327</td>
+<td class="t3n1" nowrap>58</td>
+<td class="t3n1" nowrap>3,096</td>
+<td class="t3n1" nowrap>20,151,756</td>
+<td class="t3n1" nowrap>267,980</td>
+<td class="t3n1" nowrap>156,784</td>
+<td class="t3n1" nowrap>20,576,520</td>
+<td class="t3n1" nowrap>77.72%</td>
+<td class="t3n1" nowrap>79.36%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/16</td>
+<td class="t3n1" nowrap>9,001</td>
+<td class="t3r1" nowrap>-113</td>
+<td class="t3r1" nowrap>-4,656</td>
+<td class="t3n1" nowrap>4,232</td>
+<td class="t3n1" nowrap>20,149,078</td>
+<td class="t3n1" nowrap>267,653</td>
+<td class="t3n1" nowrap>156,726</td>
+<td class="t3n1" nowrap>20,573,457</td>
+<td class="t3n1" nowrap>77.71%</td>
+<td class="t3n1" nowrap>79.35%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/15</td>
+<td class="t3r1" nowrap>-2,818</td>
+<td class="t3n1" nowrap>34</td>
+<td class="t3n1" nowrap>338</td>
+<td class="t3r1" nowrap>-2,446</td>
+<td class="t3n1" nowrap>20,139,821</td>
+<td class="t3n1" nowrap>267,766</td>
+<td class="t3n1" nowrap>161,382</td>
+<td class="t3n1" nowrap>20,568,969</td>
+<td class="t3n1" nowrap>77.67%</td>
+<td class="t3n1" nowrap>79.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/14</td>
+<td class="t3n1" nowrap>18,182</td>
+<td class="t3n1" nowrap>165</td>
+<td class="t3r1" nowrap>-176</td>
+<td class="t3n1" nowrap>18,171</td>
+<td class="t3n1" nowrap>20,142,958</td>
+<td class="t3n1" nowrap>267,732</td>
+<td class="t3n1" nowrap>161,044</td>
+<td class="t3n1" nowrap>20,571,734</td>
+<td class="t3n1" nowrap>77.68%</td>
+<td class="t3n1" nowrap>79.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/13</td>
+<td class="t3n1" nowrap>14,278</td>
+<td class="t3n1" nowrap>207</td>
+<td class="t3r1" nowrap>-413</td>
+<td class="t3n1" nowrap>14,072</td>
+<td class="t3n1" nowrap>20,124,656</td>
+<td class="t3n1" nowrap>267,567</td>
+<td class="t3n1" nowrap>161,220</td>
+<td class="t3n1" nowrap>20,553,443</td>
+<td class="t3n1" nowrap>77.61%</td>
+<td class="t3n1" nowrap>79.26%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/12</td>
+<td class="t3r1" nowrap>-438</td>
+<td class="t3n1" nowrap>67</td>
+<td class="t3n1" nowrap>103</td>
+<td class="t3r1" nowrap>-268</td>
+<td class="t3n1" nowrap>20,109,179</td>
+<td class="t3n1" nowrap>267,360</td>
+<td class="t3n1" nowrap>161,633</td>
+<td class="t3n1" nowrap>20,538,172</td>
+<td class="t3n1" nowrap>77.55%</td>
+<td class="t3n1" nowrap>79.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/09</td>
+<td class="t3r1" nowrap>-637</td>
+<td class="t3n1" nowrap>29</td>
+<td class="t3r1" nowrap>-942</td>
+<td class="t3r1" nowrap>-1,550</td>
+<td class="t3n1" nowrap>20,109,800</td>
+<td class="t3n1" nowrap>267,293</td>
+<td class="t3n1" nowrap>161,530</td>
+<td class="t3n1" nowrap>20,538,623</td>
+<td class="t3n1" nowrap>77.55%</td>
+<td class="t3n1" nowrap>79.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/08</td>
+<td class="t3r1" nowrap>-1,117</td>
+<td class="t3n1" nowrap>236</td>
+<td class="t3r1" nowrap>-264</td>
+<td class="t3r1" nowrap>-1,145</td>
+<td class="t3n1" nowrap>20,110,438</td>
+<td class="t3n1" nowrap>267,264</td>
+<td class="t3n1" nowrap>162,472</td>
+<td class="t3n1" nowrap>20,540,174</td>
+<td class="t3n1" nowrap>77.56%</td>
+<td class="t3n1" nowrap>79.22%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/07</td>
+<td class="t3r1" nowrap>-6,754</td>
+<td class="t3n1" nowrap>273</td>
+<td class="t3n1" nowrap>89</td>
+<td class="t3r1" nowrap>-6,392</td>
+<td class="t3n1" nowrap>20,111,077</td>
+<td class="t3n1" nowrap>267,028</td>
+<td class="t3n1" nowrap>162,736</td>
+<td class="t3n1" nowrap>20,540,841</td>
+<td class="t3n1" nowrap>77.56%</td>
+<td class="t3n1" nowrap>79.22%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/06</td>
+<td class="t3r1" nowrap>-14,366</td>
+<td class="t3r1" nowrap>-138</td>
+<td class="t3n1" nowrap>888</td>
+<td class="t3r1" nowrap>-13,616</td>
+<td class="t3n1" nowrap>20,117,831</td>
+<td class="t3n1" nowrap>266,755</td>
+<td class="t3n1" nowrap>162,647</td>
+<td class="t3n1" nowrap>20,547,233</td>
+<td class="t3n1" nowrap>77.59%</td>
+<td class="t3n1" nowrap>79.25%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/05</td>
+<td class="t3r1" nowrap>-12,015</td>
+<td class="t3r1" nowrap>-309</td>
+<td class="t3n1" nowrap>349</td>
+<td class="t3r1" nowrap>-11,975</td>
+<td class="t3n1" nowrap>20,132,227</td>
+<td class="t3n1" nowrap>266,893</td>
+<td class="t3n1" nowrap>161,759</td>
+<td class="t3n1" nowrap>20,560,879</td>
+<td class="t3n1" nowrap>77.64%</td>
+<td class="t3n1" nowrap>79.29%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/05/02</td>
+<td class="t3r1" nowrap>-12,780</td>
+<td class="t3r1" nowrap>-233</td>
+<td class="t3n1" nowrap>811</td>
+<td class="t3r1" nowrap>-12,202</td>
+<td class="t3n1" nowrap>20,144,242</td>
+<td class="t3n1" nowrap>267,202</td>
+<td class="t3n1" nowrap>161,410</td>
+<td class="t3n1" nowrap>20,572,854</td>
+<td class="t3n1" nowrap>77.69%</td>
+<td class="t3n1" nowrap>79.34%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/30</td>
+<td class="t3r1" nowrap>-16,792</td>
+<td class="t3r1" nowrap>-81</td>
+<td class="t3r1" nowrap>-518</td>
+<td class="t3r1" nowrap>-17,391</td>
+<td class="t3n1" nowrap>20,157,150</td>
+<td class="t3n1" nowrap>267,435</td>
+<td class="t3n1" nowrap>160,599</td>
+<td class="t3n1" nowrap>20,585,184</td>
+<td class="t3n1" nowrap>77.74%</td>
+<td class="t3n1" nowrap>79.39%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/29</td>
+<td class="t3n1" nowrap>2,420</td>
+<td class="t3n1" nowrap>97</td>
+<td class="t3r1" nowrap>-1,064</td>
+<td class="t3n1" nowrap>1,453</td>
+<td class="t3n1" nowrap>20,173,942</td>
+<td class="t3n1" nowrap>267,516</td>
+<td class="t3n1" nowrap>161,117</td>
+<td class="t3n1" nowrap>20,602,575</td>
+<td class="t3n1" nowrap>77.80%</td>
+<td class="t3n1" nowrap>79.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/28</td>
+<td class="t3n1" nowrap>3,202</td>
+<td class="t3r1" nowrap>-683</td>
+<td class="t3r1" nowrap>-100</td>
+<td class="t3n1" nowrap>2,419</td>
+<td class="t3n1" nowrap>20,169,723</td>
+<td class="t3n1" nowrap>267,419</td>
+<td class="t3n1" nowrap>162,181</td>
+<td class="t3n1" nowrap>20,599,323</td>
+<td class="t3n1" nowrap>77.79%</td>
+<td class="t3n1" nowrap>79.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/25</td>
+<td class="t3n1" nowrap>3,883</td>
+<td class="t3r1" nowrap>-258</td>
+<td class="t3r1" nowrap>-555</td>
+<td class="t3n1" nowrap>3,070</td>
+<td class="t3n1" nowrap>20,166,521</td>
+<td class="t3n1" nowrap>268,102</td>
+<td class="t3n1" nowrap>162,281</td>
+<td class="t3n1" nowrap>20,596,904</td>
+<td class="t3n1" nowrap>77.77%</td>
+<td class="t3n1" nowrap>79.43%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/24</td>
+<td class="t3n1" nowrap>14</td>
+<td class="t3r1" nowrap>-1,006</td>
+<td class="t3n1" nowrap>15</td>
+<td class="t3r1" nowrap>-977</td>
+<td class="t3n1" nowrap>20,159,038</td>
+<td class="t3n1" nowrap>268,360</td>
+<td class="t3n1" nowrap>162,836</td>
+<td class="t3n1" nowrap>20,590,234</td>
+<td class="t3n1" nowrap>77.74%</td>
+<td class="t3n1" nowrap>79.40%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/23</td>
+<td class="t3r1" nowrap>-2,902</td>
+<td class="t3r1" nowrap>-651</td>
+<td class="t3r1" nowrap>-440</td>
+<td class="t3r1" nowrap>-3,993</td>
+<td class="t3n1" nowrap>20,159,024</td>
+<td class="t3n1" nowrap>269,366</td>
+<td class="t3n1" nowrap>162,821</td>
+<td class="t3n1" nowrap>20,591,211</td>
+<td class="t3n1" nowrap>77.74%</td>
+<td class="t3n1" nowrap>79.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/22</td>
+<td class="t3r1" nowrap>-4,969</td>
+<td class="t3r1" nowrap>-401</td>
+<td class="t3n1" nowrap>162</td>
+<td class="t3r1" nowrap>-5,208</td>
+<td class="t3n1" nowrap>20,162,426</td>
+<td class="t3n1" nowrap>270,017</td>
+<td class="t3n1" nowrap>163,261</td>
+<td class="t3n1" nowrap>20,595,704</td>
+<td class="t3n1" nowrap>77.76%</td>
+<td class="t3n1" nowrap>79.43%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/21</td>
+<td class="t3r1" nowrap>-5,279</td>
+<td class="t3r1" nowrap>-761</td>
+<td class="t3r1" nowrap>-83</td>
+<td class="t3r1" nowrap>-6,123</td>
+<td class="t3n1" nowrap>20,165,076</td>
+<td class="t3n1" nowrap>270,418</td>
+<td class="t3n1" nowrap>163,099</td>
+<td class="t3n1" nowrap>20,598,593</td>
+<td class="t3n1" nowrap>77.77%</td>
+<td class="t3n1" nowrap>79.44%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/18</td>
+<td class="t3n1" nowrap>10,189</td>
+<td class="t3r1" nowrap>-467</td>
+<td class="t3r1" nowrap>-3,159</td>
+<td class="t3n1" nowrap>6,563</td>
+<td class="t3n1" nowrap>20,170,354</td>
+<td class="t3n1" nowrap>271,179</td>
+<td class="t3n1" nowrap>163,182</td>
+<td class="t3n1" nowrap>20,604,715</td>
+<td class="t3n1" nowrap>77.79%</td>
+<td class="t3n1" nowrap>79.47%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/17</td>
+<td class="t3r1" nowrap>-18,121</td>
+<td class="t3n1" nowrap>106</td>
+<td class="t3n1" nowrap>826</td>
+<td class="t3r1" nowrap>-17,189</td>
+<td class="t3n1" nowrap>20,160,165</td>
+<td class="t3n1" nowrap>271,646</td>
+<td class="t3n1" nowrap>166,341</td>
+<td class="t3n1" nowrap>20,598,152</td>
+<td class="t3n1" nowrap>77.75%</td>
+<td class="t3n1" nowrap>79.44%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/16</td>
+<td class="t3r1" nowrap>-9,096</td>
+<td class="t3r1" nowrap>-530</td>
+<td class="t3r1" nowrap>-1,248</td>
+<td class="t3r1" nowrap>-10,874</td>
+<td class="t3n1" nowrap>20,178,318</td>
+<td class="t3n1" nowrap>271,540</td>
+<td class="t3n1" nowrap>165,515</td>
+<td class="t3n1" nowrap>20,615,373</td>
+<td class="t3n1" nowrap>77.82%</td>
+<td class="t3n1" nowrap>79.51%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/15</td>
+<td class="t3r1" nowrap>-2,953</td>
+<td class="t3r1" nowrap>-477</td>
+<td class="t3n1" nowrap>463</td>
+<td class="t3r1" nowrap>-2,967</td>
+<td class="t3n1" nowrap>20,188,414</td>
+<td class="t3n1" nowrap>272,070</td>
+<td class="t3n1" nowrap>166,763</td>
+<td class="t3n1" nowrap>20,627,247</td>
+<td class="t3n1" nowrap>77.86%</td>
+<td class="t3n1" nowrap>79.55%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/14</td>
+<td class="t3n1" nowrap>4,705</td>
+<td class="t3n1" nowrap>1,115</td>
+<td class="t3r1" nowrap>-36</td>
+<td class="t3n1" nowrap>5,784</td>
+<td class="t3n1" nowrap>20,192,097</td>
+<td class="t3n1" nowrap>272,547</td>
+<td class="t3n1" nowrap>166,300</td>
+<td class="t3n1" nowrap>20,630,944</td>
+<td class="t3n1" nowrap>77.87%</td>
+<td class="t3n1" nowrap>79.56%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/11</td>
+<td class="t3r1" nowrap>-773</td>
+<td class="t3n1" nowrap>993</td>
+<td class="t3n1" nowrap>273</td>
+<td class="t3n1" nowrap>493</td>
+<td class="t3n1" nowrap>20,187,392</td>
+<td class="t3n1" nowrap>271,431</td>
+<td class="t3n1" nowrap>166,336</td>
+<td class="t3n1" nowrap>20,625,159</td>
+<td class="t3n1" nowrap>77.85%</td>
+<td class="t3n1" nowrap>79.54%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/10</td>
+<td class="t3r1" nowrap>-893</td>
+<td class="t3r1" nowrap>-295</td>
+<td class="t3n1" nowrap>290</td>
+<td class="t3r1" nowrap>-898</td>
+<td class="t3n1" nowrap>20,186,465</td>
+<td class="t3n1" nowrap>270,438</td>
+<td class="t3n1" nowrap>166,063</td>
+<td class="t3n1" nowrap>20,622,966</td>
+<td class="t3n1" nowrap>77.85%</td>
+<td class="t3n1" nowrap>79.53%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/09</td>
+<td class="t3n1" nowrap>5,194</td>
+<td class="t3n1" nowrap>11</td>
+<td class="t3r1" nowrap>-515</td>
+<td class="t3n1" nowrap>4,690</td>
+<td class="t3n1" nowrap>20,187,359</td>
+<td class="t3n1" nowrap>270,733</td>
+<td class="t3n1" nowrap>165,773</td>
+<td class="t3n1" nowrap>20,623,865</td>
+<td class="t3n1" nowrap>77.85%</td>
+<td class="t3n1" nowrap>79.53%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/08</td>
+<td class="t3n1" nowrap>5,284</td>
+<td class="t3r1" nowrap>-455</td>
+<td class="t3n1" nowrap>193</td>
+<td class="t3n1" nowrap>5,022</td>
+<td class="t3n1" nowrap>20,183,788</td>
+<td class="t3n1" nowrap>270,722</td>
+<td class="t3n1" nowrap>166,288</td>
+<td class="t3n1" nowrap>20,620,798</td>
+<td class="t3n1" nowrap>77.84%</td>
+<td class="t3n1" nowrap>79.53%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/07</td>
+<td class="t3n1" nowrap>6,857</td>
+<td class="t3r1" nowrap>-234</td>
+<td class="t3n1" nowrap>383</td>
+<td class="t3n1" nowrap>7,006</td>
+<td class="t3n1" nowrap>20,183,104</td>
+<td class="t3n1" nowrap>271,177</td>
+<td class="t3n1" nowrap>166,095</td>
+<td class="t3n1" nowrap>20,620,376</td>
+<td class="t3n1" nowrap>77.84%</td>
+<td class="t3n1" nowrap>79.53%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/03</td>
+<td class="t3n1" nowrap>4,569</td>
+<td class="t3r1" nowrap>-856</td>
+<td class="t3n1" nowrap>191</td>
+<td class="t3n1" nowrap>3,904</td>
+<td class="t3n1" nowrap>20,177,112</td>
+<td class="t3n1" nowrap>271,411</td>
+<td class="t3n1" nowrap>165,712</td>
+<td class="t3n1" nowrap>20,614,235</td>
+<td class="t3n1" nowrap>77.81%</td>
+<td class="t3n1" nowrap>79.50%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/02</td>
+<td class="t3n1" nowrap>19,178</td>
+<td class="t3n1" nowrap>867</td>
+<td class="t3r1" nowrap>-830</td>
+<td class="t3n1" nowrap>19,215</td>
+<td class="t3n1" nowrap>20,167,310</td>
+<td class="t3n1" nowrap>272,267</td>
+<td class="t3n1" nowrap>165,521</td>
+<td class="t3n1" nowrap>20,605,098</td>
+<td class="t3n1" nowrap>77.78%</td>
+<td class="t3n1" nowrap>79.47%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/04/01</td>
+<td class="t3n1" nowrap>22,485</td>
+<td class="t3n1" nowrap>85</td>
+<td class="t3r1" nowrap>-347</td>
+<td class="t3n1" nowrap>22,223</td>
+<td class="t3n1" nowrap>20,143,990</td>
+<td class="t3n1" nowrap>271,400</td>
+<td class="t3n1" nowrap>166,351</td>
+<td class="t3n1" nowrap>20,581,741</td>
+<td class="t3n1" nowrap>77.69%</td>
+<td class="t3n1" nowrap>79.38%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/31</td>
+<td class="t3n1" nowrap>22,918</td>
+<td class="t3n1" nowrap>9</td>
+<td class="t3r1" nowrap>-472</td>
+<td class="t3n1" nowrap>22,455</td>
+<td class="t3n1" nowrap>20,121,305</td>
+<td class="t3n1" nowrap>271,315</td>
+<td class="t3n1" nowrap>166,698</td>
+<td class="t3n1" nowrap>20,559,318</td>
+<td class="t3n1" nowrap>77.60%</td>
+<td class="t3n1" nowrap>79.29%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/28</td>
+<td class="t3n1" nowrap>25,892</td>
+<td class="t3r1" nowrap>-436</td>
+<td class="t3r1" nowrap>-1,298</td>
+<td class="t3n1" nowrap>24,158</td>
+<td class="t3n1" nowrap>20,095,626</td>
+<td class="t3n1" nowrap>303,308</td>
+<td class="t3n1" nowrap>167,170</td>
+<td class="t3n1" nowrap>20,566,104</td>
+<td class="t3n1" nowrap>77.50%</td>
+<td class="t3n1" nowrap>79.31%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/27</td>
+<td class="t3n1" nowrap>13,527</td>
+<td class="t3n1" nowrap>371</td>
+<td class="t3n1" nowrap>45</td>
+<td class="t3n1" nowrap>13,943</td>
+<td class="t3n1" nowrap>20,070,007</td>
+<td class="t3n1" nowrap>303,744</td>
+<td class="t3n1" nowrap>168,468</td>
+<td class="t3n1" nowrap>20,542,219</td>
+<td class="t3n1" nowrap>77.40%</td>
+<td class="t3n1" nowrap>79.22%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/26</td>
+<td class="t3n1" nowrap>14,822</td>
+<td class="t3n1" nowrap>248</td>
+<td class="t3r1" nowrap>-426</td>
+<td class="t3n1" nowrap>14,644</td>
+<td class="t3n1" nowrap>20,056,480</td>
+<td class="t3n1" nowrap>303,373</td>
+<td class="t3n1" nowrap>168,423</td>
+<td class="t3n1" nowrap>20,528,276</td>
+<td class="t3n1" nowrap>77.35%</td>
+<td class="t3n1" nowrap>79.17%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/25</td>
+<td class="t3n1" nowrap>5,481</td>
+<td class="t3r1" nowrap>-463</td>
+<td class="t3n1" nowrap>1,288</td>
+<td class="t3n1" nowrap>6,306</td>
+<td class="t3n1" nowrap>20,041,659</td>
+<td class="t3n1" nowrap>303,125</td>
+<td class="t3n1" nowrap>168,849</td>
+<td class="t3n1" nowrap>20,513,633</td>
+<td class="t3n1" nowrap>77.29%</td>
+<td class="t3n1" nowrap>79.11%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/24</td>
+<td class="t3n1" nowrap>12,073</td>
+<td class="t3n1" nowrap>36</td>
+<td class="t3r1" nowrap>-521</td>
+<td class="t3n1" nowrap>11,588</td>
+<td class="t3n1" nowrap>20,036,178</td>
+<td class="t3n1" nowrap>303,588</td>
+<td class="t3n1" nowrap>167,561</td>
+<td class="t3n1" nowrap>20,507,327</td>
+<td class="t3n1" nowrap>77.27%</td>
+<td class="t3n1" nowrap>79.09%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/21</td>
+<td class="t3n1" nowrap>25,287</td>
+<td class="t3n1" nowrap>83</td>
+<td class="t3r1" nowrap>-1,005</td>
+<td class="t3n1" nowrap>24,365</td>
+<td class="t3n1" nowrap>20,024,105</td>
+<td class="t3n1" nowrap>303,552</td>
+<td class="t3n1" nowrap>168,082</td>
+<td class="t3n1" nowrap>20,495,739</td>
+<td class="t3n1" nowrap>77.22%</td>
+<td class="t3n1" nowrap>79.04%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/20</td>
+<td class="t3n1" nowrap>2,128</td>
+<td class="t3n1" nowrap>465</td>
+<td class="t3r1" nowrap>-135</td>
+<td class="t3n1" nowrap>2,458</td>
+<td class="t3n1" nowrap>19,995,694</td>
+<td class="t3n1" nowrap>303,469</td>
+<td class="t3n1" nowrap>169,087</td>
+<td class="t3n1" nowrap>20,468,250</td>
+<td class="t3n1" nowrap>77.11%</td>
+<td class="t3n1" nowrap>78.93%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/19</td>
+<td class="t3n1" nowrap>12,860</td>
+<td class="t3r1" nowrap>-501</td>
+<td class="t3n1" nowrap>656</td>
+<td class="t3n1" nowrap>13,015</td>
+<td class="t3n1" nowrap>19,993,662</td>
+<td class="t3n1" nowrap>303,004</td>
+<td class="t3n1" nowrap>169,222</td>
+<td class="t3n1" nowrap>20,465,888</td>
+<td class="t3n1" nowrap>77.11%</td>
+<td class="t3n1" nowrap>78.93%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/18</td>
+<td class="t3n1" nowrap>13,655</td>
+<td class="t3n1" nowrap>83</td>
+<td class="t3n1" nowrap>55</td>
+<td class="t3n1" nowrap>13,793</td>
+<td class="t3n1" nowrap>19,979,601</td>
+<td class="t3n1" nowrap>303,505</td>
+<td class="t3n1" nowrap>168,566</td>
+<td class="t3n1" nowrap>20,451,672</td>
+<td class="t3n1" nowrap>77.05%</td>
+<td class="t3n1" nowrap>78.87%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/17</td>
+<td class="t3n1" nowrap>3,847</td>
+<td class="t3r1" nowrap>-1,135</td>
+<td class="t3r1" nowrap>-125</td>
+<td class="t3n1" nowrap>2,587</td>
+<td class="t3n1" nowrap>19,965,995</td>
+<td class="t3n1" nowrap>303,422</td>
+<td class="t3n1" nowrap>168,511</td>
+<td class="t3n1" nowrap>20,437,928</td>
+<td class="t3n1" nowrap>77.00%</td>
+<td class="t3n1" nowrap>78.82%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/14</td>
+<td class="t3n1" nowrap>5,317</td>
+<td class="t3r1" nowrap>-285</td>
+<td class="t3n1" nowrap>102</td>
+<td class="t3n1" nowrap>5,134</td>
+<td class="t3n1" nowrap>19,962,149</td>
+<td class="t3n1" nowrap>304,557</td>
+<td class="t3n1" nowrap>168,636</td>
+<td class="t3n1" nowrap>20,435,342</td>
+<td class="t3n1" nowrap>76.98%</td>
+<td class="t3n1" nowrap>78.80%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/13</td>
+<td class="t3n1" nowrap>25,286</td>
+<td class="t3n1" nowrap>620</td>
+<td class="t3r1" nowrap>-2,193</td>
+<td class="t3n1" nowrap>23,713</td>
+<td class="t3n1" nowrap>19,956,832</td>
+<td class="t3n1" nowrap>304,842</td>
+<td class="t3n1" nowrap>168,534</td>
+<td class="t3n1" nowrap>20,430,208</td>
+<td class="t3n1" nowrap>76.96%</td>
+<td class="t3n1" nowrap>78.79%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/12</td>
+<td class="t3n1" nowrap>1,538</td>
+<td class="t3r1" nowrap>-221</td>
+<td class="t3r1" nowrap>-3,636</td>
+<td class="t3r1" nowrap>-2,319</td>
+<td class="t3n1" nowrap>19,931,546</td>
+<td class="t3n1" nowrap>304,222</td>
+<td class="t3n1" nowrap>170,727</td>
+<td class="t3n1" nowrap>20,406,495</td>
+<td class="t3n1" nowrap>76.87%</td>
+<td class="t3n1" nowrap>78.70%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/11</td>
+<td class="t3r1" nowrap>-2,688</td>
+<td class="t3r1" nowrap>-267</td>
+<td class="t3n1" nowrap>142</td>
+<td class="t3r1" nowrap>-2,813</td>
+<td class="t3n1" nowrap>19,929,685</td>
+<td class="t3n1" nowrap>304,443</td>
+<td class="t3n1" nowrap>174,363</td>
+<td class="t3n1" nowrap>20,408,491</td>
+<td class="t3n1" nowrap>76.86%</td>
+<td class="t3n1" nowrap>78.71%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/10</td>
+<td class="t3r1" nowrap>-3,685</td>
+<td class="t3r1" nowrap>-913</td>
+<td class="t3n1" nowrap>317</td>
+<td class="t3r1" nowrap>-4,281</td>
+<td class="t3n1" nowrap>19,932,373</td>
+<td class="t3n1" nowrap>304,710</td>
+<td class="t3n1" nowrap>174,221</td>
+<td class="t3n1" nowrap>20,411,304</td>
+<td class="t3n1" nowrap>76.87%</td>
+<td class="t3n1" nowrap>78.72%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/07</td>
+<td class="t3n1" nowrap>24,710</td>
+<td class="t3n1" nowrap>3</td>
+<td class="t3r1" nowrap>-2,263</td>
+<td class="t3n1" nowrap>22,450</td>
+<td class="t3n1" nowrap>19,936,098</td>
+<td class="t3n1" nowrap>305,623</td>
+<td class="t3n1" nowrap>173,904</td>
+<td class="t3n1" nowrap>20,415,625</td>
+<td class="t3n1" nowrap>76.88%</td>
+<td class="t3n1" nowrap>78.73%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/06</td>
+<td class="t3n1" nowrap>18,289</td>
+<td class="t3n1" nowrap>229</td>
+<td class="t3r1" nowrap>-1,017</td>
+<td class="t3n1" nowrap>17,501</td>
+<td class="t3n1" nowrap>19,909,465</td>
+<td class="t3n1" nowrap>305,620</td>
+<td class="t3n1" nowrap>176,167</td>
+<td class="t3n1" nowrap>20,391,252</td>
+<td class="t3n1" nowrap>76.78%</td>
+<td class="t3n1" nowrap>78.64%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/05</td>
+<td class="t3n1" nowrap>4,963</td>
+<td class="t3r1" nowrap>-131</td>
+<td class="t3n1" nowrap>662</td>
+<td class="t3n1" nowrap>5,494</td>
+<td class="t3n1" nowrap>19,886,182</td>
+<td class="t3n1" nowrap>305,391</td>
+<td class="t3n1" nowrap>177,184</td>
+<td class="t3n1" nowrap>20,368,757</td>
+<td class="t3n1" nowrap>76.69%</td>
+<td class="t3n1" nowrap>78.55%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/04</td>
+<td class="t3n1" nowrap>750</td>
+<td class="t3r1" nowrap>-532</td>
+<td class="t3n1" nowrap>170</td>
+<td class="t3n1" nowrap>388</td>
+<td class="t3n1" nowrap>19,881,218</td>
+<td class="t3n1" nowrap>305,522</td>
+<td class="t3n1" nowrap>176,522</td>
+<td class="t3n1" nowrap>20,363,262</td>
+<td class="t3n1" nowrap>76.67%</td>
+<td class="t3n1" nowrap>78.53%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/03/03</td>
+<td class="t3n1" nowrap>5,007</td>
+<td class="t3r1" nowrap>-412</td>
+<td class="t3r1" nowrap>-2,015</td>
+<td class="t3n1" nowrap>2,580</td>
+<td class="t3n1" nowrap>19,879,207</td>
+<td class="t3n1" nowrap>306,054</td>
+<td class="t3n1" nowrap>176,352</td>
+<td class="t3n1" nowrap>20,361,613</td>
+<td class="t3n1" nowrap>76.66%</td>
+<td class="t3n1" nowrap>78.52%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/27</td>
+<td class="t3n1" nowrap>13,334</td>
+<td class="t3r1" nowrap>-69</td>
+<td class="t3n1" nowrap>2,200</td>
+<td class="t3n1" nowrap>15,465</td>
+<td class="t3n1" nowrap>19,872,738</td>
+<td class="t3n1" nowrap>306,466</td>
+<td class="t3n1" nowrap>178,367</td>
+<td class="t3n1" nowrap>20,357,571</td>
+<td class="t3n1" nowrap>76.64%</td>
+<td class="t3n1" nowrap>78.51%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/26</td>
+<td class="t3n1" nowrap>14,502</td>
+<td class="t3n1" nowrap>112</td>
+<td class="t3n1" nowrap>273</td>
+<td class="t3n1" nowrap>14,887</td>
+<td class="t3n1" nowrap>19,862,839</td>
+<td class="t3n1" nowrap>306,535</td>
+<td class="t3n1" nowrap>176,167</td>
+<td class="t3n1" nowrap>20,345,541</td>
+<td class="t3n1" nowrap>76.60%</td>
+<td class="t3n1" nowrap>78.46%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/25</td>
+<td class="t3n1" nowrap>18,272</td>
+<td class="t3n1" nowrap>536</td>
+<td class="t3r1" nowrap>-168</td>
+<td class="t3n1" nowrap>18,640</td>
+<td class="t3n1" nowrap>19,848,337</td>
+<td class="t3n1" nowrap>306,423</td>
+<td class="t3n1" nowrap>175,894</td>
+<td class="t3n1" nowrap>20,330,654</td>
+<td class="t3n1" nowrap>76.55%</td>
+<td class="t3n1" nowrap>78.41%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/24</td>
+<td class="t3n1" nowrap>15,682</td>
+<td class="t3r1" nowrap>-388</td>
+<td class="t3n1" nowrap>239</td>
+<td class="t3n1" nowrap>15,533</td>
+<td class="t3n1" nowrap>19,830,065</td>
+<td class="t3n1" nowrap>305,887</td>
+<td class="t3n1" nowrap>176,062</td>
+<td class="t3n1" nowrap>20,312,014</td>
+<td class="t3n1" nowrap>76.48%</td>
+<td class="t3n1" nowrap>78.34%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/21</td>
+<td class="t3n1" nowrap>19,742</td>
+<td class="t3r1" nowrap>-454</td>
+<td class="t3r1" nowrap>-162</td>
+<td class="t3n1" nowrap>19,126</td>
+<td class="t3n1" nowrap>19,814,383</td>
+<td class="t3n1" nowrap>306,275</td>
+<td class="t3n1" nowrap>175,823</td>
+<td class="t3n1" nowrap>20,296,481</td>
+<td class="t3n1" nowrap>76.41%</td>
+<td class="t3n1" nowrap>78.27%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/20</td>
+<td class="t3n1" nowrap>6,164</td>
+<td class="t3r1" nowrap>-664</td>
+<td class="t3r1" nowrap>-147</td>
+<td class="t3n1" nowrap>5,353</td>
+<td class="t3n1" nowrap>19,793,739</td>
+<td class="t3n1" nowrap>306,729</td>
+<td class="t3n1" nowrap>175,985</td>
+<td class="t3n1" nowrap>20,276,453</td>
+<td class="t3n1" nowrap>76.34%</td>
+<td class="t3n1" nowrap>78.20%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/19</td>
+<td class="t3n1" nowrap>16,484</td>
+<td class="t3n1" nowrap>65</td>
+<td class="t3r1" nowrap>-866</td>
+<td class="t3n1" nowrap>15,683</td>
+<td class="t3n1" nowrap>19,787,605</td>
+<td class="t3n1" nowrap>307,393</td>
+<td class="t3n1" nowrap>176,132</td>
+<td class="t3n1" nowrap>20,271,130</td>
+<td class="t3n1" nowrap>76.31%</td>
+<td class="t3n1" nowrap>78.17%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/18</td>
+<td class="t3n1" nowrap>12,438</td>
+<td class="t3n1" nowrap>951</td>
+<td class="t3r1" nowrap>-109</td>
+<td class="t3n1" nowrap>13,280</td>
+<td class="t3n1" nowrap>19,776,677</td>
+<td class="t3n1" nowrap>307,328</td>
+<td class="t3n1" nowrap>176,998</td>
+<td class="t3n1" nowrap>20,261,003</td>
+<td class="t3n1" nowrap>76.27%</td>
+<td class="t3n1" nowrap>78.14%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/17</td>
+<td class="t3n1" nowrap>20,755</td>
+<td class="t3n1" nowrap>148</td>
+<td class="t3r1" nowrap>-465</td>
+<td class="t3n1" nowrap>20,438</td>
+<td class="t3n1" nowrap>19,762,639</td>
+<td class="t3n1" nowrap>306,377</td>
+<td class="t3n1" nowrap>177,107</td>
+<td class="t3n1" nowrap>20,246,123</td>
+<td class="t3n1" nowrap>76.22%</td>
+<td class="t3n1" nowrap>78.08%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/14</td>
+<td class="t3n1" nowrap>22,636</td>
+<td class="t3n1" nowrap>223</td>
+<td class="t3n1" nowrap>270</td>
+<td class="t3n1" nowrap>23,129</td>
+<td class="t3n1" nowrap>19,741,874</td>
+<td class="t3n1" nowrap>306,229</td>
+<td class="t3n1" nowrap>177,572</td>
+<td class="t3n1" nowrap>20,225,675</td>
+<td class="t3n1" nowrap>76.14%</td>
+<td class="t3n1" nowrap>78.01%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/13</td>
+<td class="t3n1" nowrap>8,982</td>
+<td class="t3r1" nowrap>-959</td>
+<td class="t3r1" nowrap>-2,925</td>
+<td class="t3n1" nowrap>5,098</td>
+<td class="t3n1" nowrap>19,719,239</td>
+<td class="t3n1" nowrap>306,006</td>
+<td class="t3n1" nowrap>177,302</td>
+<td class="t3n1" nowrap>20,202,547</td>
+<td class="t3n1" nowrap>76.05%</td>
+<td class="t3n1" nowrap>77.91%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/12</td>
+<td class="t3n1" nowrap>3,510</td>
+<td class="t3r1" nowrap>-46</td>
+<td class="t3r1" nowrap>-131</td>
+<td class="t3n1" nowrap>3,333</td>
+<td class="t3n1" nowrap>19,711,322</td>
+<td class="t3n1" nowrap>306,965</td>
+<td class="t3n1" nowrap>180,227</td>
+<td class="t3n1" nowrap>20,198,514</td>
+<td class="t3n1" nowrap>76.02%</td>
+<td class="t3n1" nowrap>77.90%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/11</td>
+<td class="t3n1" nowrap>564</td>
+<td class="t3r1" nowrap>-117</td>
+<td class="t3r1" nowrap>-862</td>
+<td class="t3r1" nowrap>-415</td>
+<td class="t3n1" nowrap>19,708,357</td>
+<td class="t3n1" nowrap>307,011</td>
+<td class="t3n1" nowrap>180,358</td>
+<td class="t3n1" nowrap>20,195,726</td>
+<td class="t3n1" nowrap>76.01%</td>
+<td class="t3n1" nowrap>77.89%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/10</td>
+<td class="t3r1" nowrap>-12,528</td>
+<td class="t3r1" nowrap>-318</td>
+<td class="t3r1" nowrap>-503</td>
+<td class="t3r1" nowrap>-13,349</td>
+<td class="t3n1" nowrap>19,707,793</td>
+<td class="t3n1" nowrap>307,128</td>
+<td class="t3n1" nowrap>181,220</td>
+<td class="t3n1" nowrap>20,196,141</td>
+<td class="t3n1" nowrap>76.00%</td>
+<td class="t3n1" nowrap>77.88%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/07</td>
+<td class="t3r1" nowrap>-12,622</td>
+<td class="t3n1" nowrap>359</td>
+<td class="t3r1" nowrap>-1,535</td>
+<td class="t3r1" nowrap>-13,798</td>
+<td class="t3n1" nowrap>19,720,602</td>
+<td class="t3n1" nowrap>307,446</td>
+<td class="t3n1" nowrap>181,723</td>
+<td class="t3n1" nowrap>20,209,771</td>
+<td class="t3n1" nowrap>76.05%</td>
+<td class="t3n1" nowrap>77.94%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/06</td>
+<td class="t3r1" nowrap>-26,688</td>
+<td class="t3r1" nowrap>-999</td>
+<td class="t3r1" nowrap>-390</td>
+<td class="t3r1" nowrap>-28,077</td>
+<td class="t3n1" nowrap>19,725,524</td>
+<td class="t3n1" nowrap>307,087</td>
+<td class="t3n1" nowrap>183,258</td>
+<td class="t3n1" nowrap>20,215,869</td>
+<td class="t3n1" nowrap>76.07%</td>
+<td class="t3n1" nowrap>77.96%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/02/05</td>
+<td class="t3r1" nowrap>-91,850</td>
+<td class="t3r1" nowrap>-94</td>
+<td class="t3n1" nowrap>2,069</td>
+<td class="t3r1" nowrap>-89,875</td>
+<td class="t3n1" nowrap>19,752,150</td>
+<td class="t3n1" nowrap>308,086</td>
+<td class="t3n1" nowrap>183,648</td>
+<td class="t3n1" nowrap>20,243,884</td>
+<td class="t3n1" nowrap>76.17%</td>
+<td class="t3n1" nowrap>78.07%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/27</td>
+<td class="t3r1" nowrap>-28,992</td>
+<td class="t3n1" nowrap>985</td>
+<td class="t3n1" nowrap>1,233</td>
+<td class="t3r1" nowrap>-26,774</td>
+<td class="t3n1" nowrap>19,844,666</td>
+<td class="t3n1" nowrap>308,180</td>
+<td class="t3n1" nowrap>181,579</td>
+<td class="t3n1" nowrap>20,334,425</td>
+<td class="t3n1" nowrap>76.53%</td>
+<td class="t3n1" nowrap>78.42%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/24</td>
+<td class="t3n1" nowrap>2,376</td>
+<td class="t3n1" nowrap>142</td>
+<td class="t3r1" nowrap>-66</td>
+<td class="t3n1" nowrap>2,452</td>
+<td class="t3n1" nowrap>19,872,456</td>
+<td class="t3n1" nowrap>307,195</td>
+<td class="t3n1" nowrap>180,346</td>
+<td class="t3n1" nowrap>20,359,997</td>
+<td class="t3n1" nowrap>76.64%</td>
+<td class="t3n1" nowrap>78.52%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/23</td>
+<td class="t3n1" nowrap>6,396</td>
+<td class="t3r1" nowrap>-4</td>
+<td class="t3r1" nowrap>-760</td>
+<td class="t3n1" nowrap>5,632</td>
+<td class="t3n1" nowrap>19,870,489</td>
+<td class="t3n1" nowrap>307,053</td>
+<td class="t3n1" nowrap>180,412</td>
+<td class="t3n1" nowrap>20,357,954</td>
+<td class="t3n1" nowrap>76.63%</td>
+<td class="t3n1" nowrap>78.51%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/22</td>
+<td class="t3n1" nowrap>3,497</td>
+<td class="t3r1" nowrap>-88</td>
+<td class="t3n1" nowrap>579</td>
+<td class="t3n1" nowrap>3,988</td>
+<td class="t3n1" nowrap>19,863,943</td>
+<td class="t3n1" nowrap>307,057</td>
+<td class="t3n1" nowrap>181,172</td>
+<td class="t3n1" nowrap>20,352,172</td>
+<td class="t3n1" nowrap>76.61%</td>
+<td class="t3n1" nowrap>78.49%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/21</td>
+<td class="t3n1" nowrap>5,075</td>
+<td class="t3n1" nowrap>117</td>
+<td class="t3r1" nowrap>-447</td>
+<td class="t3n1" nowrap>4,745</td>
+<td class="t3n1" nowrap>19,860,628</td>
+<td class="t3n1" nowrap>307,145</td>
+<td class="t3n1" nowrap>180,593</td>
+<td class="t3n1" nowrap>20,348,366</td>
+<td class="t3n1" nowrap>76.59%</td>
+<td class="t3n1" nowrap>78.47%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/20</td>
+<td class="t3n1" nowrap>5,741</td>
+<td class="t3r1" nowrap>-25</td>
+<td class="t3r1" nowrap>-1,231</td>
+<td class="t3n1" nowrap>4,485</td>
+<td class="t3n1" nowrap>19,855,553</td>
+<td class="t3n1" nowrap>307,028</td>
+<td class="t3n1" nowrap>181,040</td>
+<td class="t3n1" nowrap>20,343,621</td>
+<td class="t3n1" nowrap>76.57%</td>
+<td class="t3n1" nowrap>78.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/17</td>
+<td class="t3n1" nowrap>26,004</td>
+<td class="t3n1" nowrap>433</td>
+<td class="t3r1" nowrap>-7,593</td>
+<td class="t3n1" nowrap>18,844</td>
+<td class="t3n1" nowrap>19,849,812</td>
+<td class="t3n1" nowrap>307,053</td>
+<td class="t3n1" nowrap>182,271</td>
+<td class="t3n1" nowrap>20,339,136</td>
+<td class="t3n1" nowrap>76.55%</td>
+<td class="t3n1" nowrap>78.44%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/16</td>
+<td class="t3n1" nowrap>9,983</td>
+<td class="t3n1" nowrap>1,711</td>
+<td class="t3n1" nowrap>900</td>
+<td class="t3n1" nowrap>12,594</td>
+<td class="t3n1" nowrap>19,823,688</td>
+<td class="t3n1" nowrap>306,620</td>
+<td class="t3n1" nowrap>189,864</td>
+<td class="t3n1" nowrap>20,320,172</td>
+<td class="t3n1" nowrap>76.45%</td>
+<td class="t3n1" nowrap>78.36%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/15</td>
+<td class="t3n1" nowrap>8,127</td>
+<td class="t3n1" nowrap>1,887</td>
+<td class="t3n1" nowrap>4,000</td>
+<td class="t3n1" nowrap>14,014</td>
+<td class="t3n1" nowrap>19,812,802</td>
+<td class="t3n1" nowrap>304,909</td>
+<td class="t3n1" nowrap>188,964</td>
+<td class="t3n1" nowrap>20,306,675</td>
+<td class="t3n1" nowrap>76.41%</td>
+<td class="t3n1" nowrap>78.31%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/14</td>
+<td class="t3r1" nowrap>-5,730</td>
+<td class="t3n1" nowrap>1,286</td>
+<td class="t3n1" nowrap>2,495</td>
+<td class="t3r1" nowrap>-1,949</td>
+<td class="t3n1" nowrap>19,802,924</td>
+<td class="t3n1" nowrap>303,022</td>
+<td class="t3n1" nowrap>184,964</td>
+<td class="t3n1" nowrap>20,290,910</td>
+<td class="t3n1" nowrap>76.37%</td>
+<td class="t3n1" nowrap>78.25%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/13</td>
+<td class="t3r1" nowrap>-3,330</td>
+<td class="t3n1" nowrap>453</td>
+<td class="t3n1" nowrap>2,349</td>
+<td class="t3r1" nowrap>-528</td>
+<td class="t3n1" nowrap>19,808,533</td>
+<td class="t3n1" nowrap>301,736</td>
+<td class="t3n1" nowrap>182,469</td>
+<td class="t3n1" nowrap>20,292,738</td>
+<td class="t3n1" nowrap>76.39%</td>
+<td class="t3n1" nowrap>78.26%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/10</td>
+<td class="t3r1" nowrap>-19,017</td>
+<td class="t3n1" nowrap>1,539</td>
+<td class="t3n1" nowrap>718</td>
+<td class="t3r1" nowrap>-16,760</td>
+<td class="t3n1" nowrap>19,811,864</td>
+<td class="t3n1" nowrap>301,283</td>
+<td class="t3n1" nowrap>180,120</td>
+<td class="t3n1" nowrap>20,293,267</td>
+<td class="t3n1" nowrap>76.41%</td>
+<td class="t3n1" nowrap>78.27%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/09</td>
+<td class="t3r1" nowrap>-31,923</td>
+<td class="t3n1" nowrap>373</td>
+<td class="t3r1" nowrap>-33</td>
+<td class="t3r1" nowrap>-31,583</td>
+<td class="t3n1" nowrap>19,831,237</td>
+<td class="t3n1" nowrap>299,744</td>
+<td class="t3n1" nowrap>179,402</td>
+<td class="t3n1" nowrap>20,310,383</td>
+<td class="t3n1" nowrap>76.48%</td>
+<td class="t3n1" nowrap>78.33%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/08</td>
+<td class="t3n1" nowrap>4,012</td>
+<td class="t3n1" nowrap>344</td>
+<td class="t3r1" nowrap>-351</td>
+<td class="t3n1" nowrap>4,005</td>
+<td class="t3n1" nowrap>19,863,160</td>
+<td class="t3n1" nowrap>299,371</td>
+<td class="t3n1" nowrap>179,435</td>
+<td class="t3n1" nowrap>20,341,966</td>
+<td class="t3n1" nowrap>76.60%</td>
+<td class="t3n1" nowrap>78.45%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/07</td>
+<td class="t3r1" nowrap>-3,013</td>
+<td class="t3n1" nowrap>123</td>
+<td class="t3n1" nowrap>262</td>
+<td class="t3r1" nowrap>-2,628</td>
+<td class="t3n1" nowrap>19,859,148</td>
+<td class="t3n1" nowrap>299,027</td>
+<td class="t3n1" nowrap>179,786</td>
+<td class="t3n1" nowrap>20,337,961</td>
+<td class="t3n1" nowrap>76.59%</td>
+<td class="t3n1" nowrap>78.44%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/06</td>
+<td class="t3r1" nowrap>-13,215</td>
+<td class="t3n1" nowrap>22</td>
+<td class="t3n1" nowrap>79</td>
+<td class="t3r1" nowrap>-13,114</td>
+<td class="t3n1" nowrap>19,855,023</td>
+<td class="t3n1" nowrap>298,904</td>
+<td class="t3n1" nowrap>179,524</td>
+<td class="t3n1" nowrap>20,333,451</td>
+<td class="t3n1" nowrap>76.57%</td>
+<td class="t3n1" nowrap>78.42%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/03</td>
+<td class="t3r1" nowrap>-24,222</td>
+<td class="t3r1" nowrap>-811</td>
+<td class="t3n1" nowrap>1,032</td>
+<td class="t3r1" nowrap>-24,001</td>
+<td class="t3n1" nowrap>19,867,876</td>
+<td class="t3n1" nowrap>298,882</td>
+<td class="t3n1" nowrap>179,445</td>
+<td class="t3n1" nowrap>20,346,203</td>
+<td class="t3n1" nowrap>76.62%</td>
+<td class="t3n1" nowrap>78.46%</td>
+</tr>
+<tr>
+<td class="t3n0" nowrap>103/01/02</td>
+<td class="t3r1" nowrap>-4,785</td>
+<td class="t3r1" nowrap>-984</td>
+<td class="t3n1" nowrap>925</td>
+<td class="t3r1" nowrap>-4,844</td>
+<td class="t3n1" nowrap>19,891,688</td>
+<td class="t3n1" nowrap>299,693</td>
+<td class="t3n1" nowrap>178,413</td>
+<td class="t3n1" nowrap>20,369,794</td>
+<td class="t3n1" nowrap>76.71%</td>
+<td class="t3n1" nowrap>78.55%</td>
+</tr>
+<tr id="oScrollFoot">
+<td class="t3n0" nowrap>合計買賣超</td>
+<td class="t3n1" nowrap>103,250</td>
+<td class="t3n1" nowrap>10,701</td>
+<td class="t3r1" nowrap>-13,906</td>
+<td class="t3n1" nowrap>100,045</td>
+<td class="t3n1" nowrap colspan=6>&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+</form>
+<script language="javascript"><!--
+function goA()
+{
+	var i = document.F.D.selectedIndex;
+	i = document.F.D.options[i].value;
+	if (i > 0) {
+		window.location.href = '/z/zc/zcl/zcl.djhtm?a=2330&b='+i ;
+	}
+}
+function goC()
+{
+	if (CheckDate()) {
+		if(checkDateDur(document.F.bDate.value)) {
+			var bDate = document.F.bDate.value;		//起始日期 
+			var eDate = document.F.eDate.value;		//結束日期 
+			sURL = '/z/zc/zcl/zcl.djhtm?a=2330&c=' + bDate + '&d=' + eDate ;
+			window.location.href = sURL;
+		}
+	}
+}
+//--></script>
+<table border="0" width=628><tr><td class="t3t1">註：</td></tr><tr><td class="t3t1">１. 外資持股數，除了每日買賣超外，海外公司債轉換普通股、存託憑證發行或兌回普通股、外資配認股數、外資原始股東出售股數、借券、ETF異動等因素也會影響持股數，若兩日間的持股數異動較大，請至<a href="http://www.tse.com.tw" target="_blank">台灣證券交易所</a>與<a href="http://www.otc.org.tw" target="_blank">證券櫃檯買賣中心</a>查詢異動原因。</td></tr><tr><td class="t3t1">２. 持股比重中的「外資」及「三大法人」算式：<BR>外資的持股比重為全體外資持股比率，等於「全體外資持有股數」除以「發行股數」。三大法人的持股比重，為「外資持股比重+(投信與自營商持股佔發行張數的比例)」。</td></tr><tr><td class="t3t1">３. 投信估計庫存，除了依每日買賣超計算外，會利用投信投顧公會公告的基金季持股明細(或半年持股明細，視基金類型)進行個股投信的庫存數值調整（季末的持股值可能會與前一日會有較大的落差）。<BR>估算公式為：季末估計庫存＝季末基金規模×持股比率÷季末當日股價。</td></tr><tr><td class="t3t1">４. 交易所並未公告自營商與股信持股庫存，本表所列數值，皆為估計值，僅供參考，本公司不負任何法律責任，投資人若依此以為買賣依據，須自負盈虧之責。</td></tr><tr><td class="t3t1">５. 上市個股的外資數值自2017/12/18起指「外陸資(不含自營商)」。</td></tr></table>
+
+<SCRIPT LANGUAGE=javascript>
+<!--
+    var $DJWebGraph1;
+    var sRenderTo = 'SysJustWebGraphDIV';
+    
+    $(document).ready(function () {
+        if (!!$DJWebGraph) {
+			$DJWebGraph1 = new $DJWebGraph();
+			$DJWebGraph1.CallBack = GetBcdData;	
+        	
+            $DJWebGraph1.CreateGraphObject({
+					'CanvasClass': 'canvas', //表示為複合式圖形
+					'ID': 'ZCL3',
+					'Width': '600',
+					'Height': '350',
+					'RenderTo': sRenderTo,
+					'Type': [['Trade:R'],['Trade:L','Bar'],['Trade:L','Bar'],['Trade:L','Bar']],
+					'Title': [['台積電股價'], ['外資持股', '外資買賣超'], ['投信持股', '投信買賣超'], ['自營商持股', '自營商買賣超']],
+					'Unit': [['元'],['張'],['張'],['張']],
+					'LineColor': [['0089E9'], ['FF00FF', '13B5B1'], ['8FC31F', '00D2FF'], ['FF1868', '996C33']],
+					'BgColor': 'FFFFFF',
+					'Mark': 'none',
+					'BCDUrl': '/Z/ZC/ZCL/CZCL3.DJBCD?A=2330&B=Y'
+            })
+        }
+	});
+		
+    function GetBcdData(data) {
+        if (!!data.length) {
+            var arrData = data.split(' ');
+            var X = arrData[0];
+            var ArrY = [
+				[arrData[1]],
+                [arrData[2], arrData[5]],
+				[arrData[3], arrData[6]],
+                [arrData[4], arrData[7]]
+			];
+
+            $DJWebGraph1.SetGraphBcd({ 'X': X, 'Y': ArrY });
+        }
+    }
+//-->
+</SCRIPT>
+<script language="javascript"><!--
+if(typeof(ContentCenterEnd) == 'function'){ 	ContentCenterEnd();
+ } 
+//--></script>
+</td><td valign="top" align="right">
+<script language="javascript" src="/z/js/SR.js"></script>
+</td></tr>
+<tr><td colspan="3" valign="top">
+<script language="javascript" src="/z/js/SD.js"></script>
+</td></tr></table>
+</div>
+</body>
+</html>
+
+<script language="JavaScript"><!--
+	function changeStkID() {
+		var sUrl;
+		var i = document.F.D.options[document.F.D.selectedIndex].value;
+		if (CheckDate()) {
+			var bDate = document.F.bDate.value;		//起始日期
+			var eDate = document.F.eDate.value;		//結束日期
+		}
+		stk = document.F.stk.options[document.F.stk.selectedIndex].value;
+		if (i>0)
+			sUrl = '/z/zc/zcl/zcl.djhtm?a=' + stk + '&b=' + i ;
+		else
+			sUrl = '/z/zc/zcl/zcl.djhtm?a=' + stk + '&b=' + i + '&c=' + bDate + '&d=' + eDate;
+		self.location = sUrl;
+	}
+
+	function checkDateDur(dd) {
+		var now = new Date();
+		yearAgo = (now.getFullYear() - 1) * 10000 + (now.getMonth() + 1) * 100 + now.getDate() ;
+		//alert('yearAgo = ' + yearAgo);
+
+		daray = dd.split('-');
+		if (daray[1] < 10) { daray[1] = '0' + daray[1] }
+		if (daray[2] < 10) { daray[2] = '0' + daray[2] }
+
+		var Edate = daray[0] + daray[1] + daray[2];
+
+		//alert('Edate = ' + Edate);
+		if (Edate < yearAgo){
+				alert('僅提供一年內查詢。');
+				return false;
+			}
+		else
+			return true;
+	}
+
+// --></script>
