@@ -1,4 +1,5 @@
 """
+20220914 新增
 【程式功能說明】
 讀取法人買賣與持股資料資料，並將之格式化為Insert SQL Command
 資料來源：https://jsjustweb.jihsun.com.tw/z/zc/zcl/zcl.djhtm?a=2049&c=2021-9-7&d=2022-9-7
@@ -48,7 +49,7 @@ theSaveFileDir = ""
 theStockNo = ""
 if platform.system() == "Windows" :
 #   讀取檔案的來原路徑    
-    theLoadFileDir = "DATA\\LEGAL\\HTM\\20120101-20121231_utf8\\"
+    theLoadFileDir = "DATA\\LEGAL\\HTM\\20190101-20191231_utf8\\"
 #    theLoadFileDir = "Data\\LEGAL\\"   
     theSaveFileDir = "Data\\LEGAL\\SQL\\"
 else :
