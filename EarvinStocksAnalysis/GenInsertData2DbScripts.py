@@ -1,18 +1,18 @@
 """
-20220522 產生執行InsertData2DbByFile.py的script (Copy From Goodinfo Project)
+20220914 產生執行InsertData2DbByFile.py的script 
+         (Copy From Goodinfo Project，程式主架構相同，只是懶得整併，直接借用)
          需要輸入的參數：檔案路徑 
          -------------------------------------------------------------------------
          Content :
          -------------------------------------------------------------------------
-         [windows] -- 可使用相對路徑
-	    	python GenInsertData2DbScripts.py DATA\\LEGAL\\SQL\\20190101-20191231\\ 
+         [windows] -- 可使用相對路徑 (2022.09.14 Test OK)
+	    	python GenInsertData2DbScripts.py DATA\LEGAL\SQL\ 
 
 		 [imac / linux] 絕對路徑可正常執行 (??? untest)
          python3 GenInsertData2DbScripts.py /Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/ 
-
 """
-import sys
 import os 
+import sys
 import time
 import platform
 
@@ -27,8 +27,8 @@ try:
 
 	if len(sys.argv) < 2 :
 		print("You need input one parameter : 檔案目錄")
-		print("syntax(windows)    : C:\python GenInsertData2DbScripts.py DATA\\LEGAL\\SQL\\20190101-20191231\\")
-		print("syntax(imac/linux) : $python3 GenInsertData2DbScripts.py Data/LEGAL/SQL/20190101-20191231/")
+		print("syntax(windows)    : C:\python GenInsertData2DbScripts.py DATA\\LEGAL\\SQL\\")
+		print("syntax(imac/linux) : $python3 GenInsertData2DbScripts.py Data/LEGAL/SQL/")
 		sys.exit()
 
 	# 設定檔案存取路徑
@@ -39,6 +39,7 @@ try:
 		outputFile = "_InsertStocksData2DB.Bat"
 	else :
 		pythonCompiler = "python3"
+#		開發主機(imac)上的絕對路徑		
 		loadFileDir = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/" + sys.argv[1]
 		outputFile = "_InsertStocksData2DB.sh"
 
@@ -46,8 +47,8 @@ try:
 
 	outfile = open(outputFile, 'w')
 
-    # python InsertData2DbByFile.py DATA\\LEGAL\\SQL\\20190101-20191231\\ 1101.txt
-	# 20220522 取得要處理的檔案資料
+    # EX: python InsertData2DbByFile.py DATA\LEGAL\SQL\ 法人_0050_20100101-20101231.txt
+	# 取得要處理的檔案資料
 	files = os.listdir(loadFileDir)
 	# 以迴圈處理
 	for inputFile in files:
@@ -55,8 +56,7 @@ try:
 		if os.path.isfile(relativePath) :
 			print("檔案：", inputFile)
 
-		stockCode = inputFile[:4]
-		writeContent = pythonCompiler + " InsertData2DbByFile.py " + loadFileDir + " " + stockCode + ".txt"
+		writeContent = pythonCompiler + " InsertData2DbByFile.py " + loadFileDir + " " + inputFile 
 #		print("Content: " + writeContent)
 		outfile.write(writeContent + "\n")
 		processCnt += 1
