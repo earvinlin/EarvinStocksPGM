@@ -1,10 +1,11 @@
 import re
 import sys
 import csv
-import urllib.parse
-import urllib.request
-#from bs4 import BeautifulSoup
 import ssl
+import requests
+#import urllib.parse
+#import urllib.request
+from bs4 import BeautifulSoup
 
 """
 if len(sys.argv) < 2 :
@@ -13,31 +14,57 @@ if len(sys.argv) < 2 :
     sys.exit()
 """
 
+HYPER_LINK = "https://sjmain.esunsec.com.tw"
 ssl._create_default_https_context = ssl._create_unverified_context
-url = "https://www.esunsec.com.tw/tw-market/z/ze/zeg/zeg_23.djhtm"
+# Source : 玉山證券，資料嵌在iframe
+# iframe : https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm
+url = "https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm"
 
-#f = urllib.request.urlopen(url)
-
-#url = 'http://www.someserver.com/cgi-bin/register.cgi'
 user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'
-values = {'name': 'Michael Foord',
-          'location': 'Northampton',
-          'language': 'Python' }
 headers = {'User-Agent': user_agent}
 
-#data = urllib.parse.urlencode(values)
-#data = data.encode('utf-8')
-req = urllib.request.Request(url, headers=headers)
-f = urllib.request.urlopen(req)
+resp = requests.get(url, headers=headers)
+resp.encoding = 'cp950'
+
+#soup = BeautifulSoup(resp.text, 'html.parser')
+soup = BeautifulSoup(resp.text, 'lxml')
+print("title: ", soup.title.text)
+
+table = soup.find(lambda tag: tag.name=='table' and tag.has_key('id') and tag['id']=="oMainTable")
+rows = table.findAll(lambda tag: tag.name=='tr')
+icount = 0
+for row in table.findAll("tr"):
+#   只取「產業別」欄位
+    if icount%2 == 0 :
+        tds = row.find_all("td")
+        for td in tds :
+            industry = td.get_text()
+            lnks = td.find_all("a")
+            for lnk in lnks :
+                industryGroupHyperlink = HYPER_LINK + lnk.get('href')
+                print("v(" + str(icount) + ")= " + industry)
+                print("industryGroupHyperlink= " + industryGroupHyperlink)
+                break   # 資料位在第1筆
+            break   # 資料位在第1筆
+        
+    icount += 1
 
 try :
     saveFileDir = "產業分類\\"
-    fileName = "產業分類" + ".txt"
+    fileName = "產業分類" + ".htm"
     print('檔案名稱：' + fileName)
     with open(saveFileDir + fileName, 'w') as out :
-#		f.read()是byte型態，需解碼(decode)儲存成字串
-        out.write(f.read().decode('utf-8'))
+        out.write(resp.text)
 
     print('資料儲存完成!!')
 except IOError as err :
     print('Fie error : ' + str(err))
+
+"""
+
+rawtext=urlopen('http://www.ccnu.edu.cn',timeout=15).read();
+print(rawtext)
+rawtext=rawtext.decode('gbk')
+print(rawtext)
+
+"""
