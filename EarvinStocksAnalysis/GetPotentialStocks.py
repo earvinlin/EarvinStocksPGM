@@ -17,7 +17,7 @@ db   = 'stocksdb'
 # 絕對路徑：OK
 #IMAC_PATH = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/DATA/"
 # 相對路徑：預設為Windows Platform
-DATA_PATH = "DATA\\"
+DATA_PATH = "DATA\\POTENTIAL\\"
 
 # 打算比對的次數
 DEF_COMP_TIME = 8
