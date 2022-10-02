@@ -62,7 +62,10 @@ try :
 		else :
 			print("Get it!!!")
 			df = pd.DataFrame(data, columns=['股票代號','股利發放年度', \
-				'股價年度','年度股價最高價','年度股價最低價'])	
+				'股價年度','年度股價最高價','年度股價最低價'])
+			df['p0'] = None
+			df['p1'] = None
+			df['p2'] = None
 			print(df)
 #			print(len(df))
 			for i in range(len(df)-2) :
@@ -70,11 +73,17 @@ try :
 					print(df.at[i,'年度股價最低價'])
 					continue
 				lowPrice = df.at[i,'年度股價最低價']
-				highPrice1st = df.at[i+1,'年度股價最高價']
-				highPrice2nd = df.at[i+2,'年度股價最高價']
+				highPrice = df.at[i,'年度股價最高價']
+				highPrice1st = df.at[i + 1,'年度股價最高價']
+				highPrice2nd = df.at[i + 2,'年度股價最高價']
+				diff00 = (highPrice - lowPrice) / lowPrice
 				diff01 = (highPrice1st - lowPrice) / lowPrice
 				diff02 = (highPrice2nd - lowPrice) / lowPrice
-				print("The value1 is ", diff01, ", value2 is ", diff02)
+				df.iloc[i,5] = "{:.2f}".format(diff00)
+				df.iloc[i,6] = "{:.2f}".format(diff01)		
+				df.iloc[i,7] = "{:.2f}".format(diff02)
+#				print("The value1 is ", diff01, ", value2 is ", diff02)
+			print(df)
 
 		readCnt += 1
 
