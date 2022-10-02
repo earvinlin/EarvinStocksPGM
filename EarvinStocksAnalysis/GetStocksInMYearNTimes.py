@@ -39,16 +39,18 @@ if len(sys.argv) < 3 :
     sys.exit()
 
 try :
-#	select stock_no, dividend_year, stock_price_year, year_high_price, year_low_price from stocks_dividend where stock_no = '2049' order by stock_price_year, dividend_year;
+#	注意，有些個股有季配，所以資料會有重複，因此加上「year_high_price is not null」條件過濾
+#	select stock_no, dividend_year, stock_price_year, year_high_price, year_low_price from stocks_dividend where year_high_price is not null and stock_no = '2049' order by stock_price_year, dividend_year;
 	theSQLCmd = "select stock_no, dividend_year, stock_price_year, " + \
 				"year_high_price, year_low_price from stocks_dividend " + \
-				"where stock_no = %s order by stock_price_year, dividend_year "
+				"where year_high_price is not null and " + \
+				"stock_no = %s order by stock_price_year, dividend_year "
 
 	print(input_file)
 	twStocksList = open(input_file, 'r')	# 預設以系統編碼開啟
 	stocks = twStocksList.readlines()
 	for stockNo in stocks :
-		stockNo = stockNo.replace('\n','')	# 不知為何檔案會有換行符號
+		stockNo = stockNo.replace('\n', '')	# 不知為何檔案會有換行符號
 		print("正在處理", stockNo)
 		theArgs = (stockNo,)
 #       判斷每年盈收成長率是否大於10%(連續3年)
@@ -61,8 +63,18 @@ try :
 			print("Get it!!!")
 			df = pd.DataFrame(data, columns=['股票代號','股利發放年度', \
 				'股價年度','年度股價最高價','年度股價最低價'])	
-#			print(df)
-				
+			print(df)
+#			print(len(df))
+			for i in range(len(df)-2) :
+				if df.at[i,'年度股價最低價'] is None :
+					print(df.at[i,'年度股價最低價'])
+					continue
+				lowPrice = df.at[i,'年度股價最低價']
+				highPrice1st = df.at[i+1,'年度股價最高價']
+				highPrice2nd = df.at[i+2,'年度股價最高價']
+				diff01 = (highPrice1st - lowPrice) / lowPrice
+				diff02 = (highPrice2nd - lowPrice) / lowPrice
+				print("The value1 is ", diff01, ", value2 is ", diff02)
 
 		readCnt += 1
 
