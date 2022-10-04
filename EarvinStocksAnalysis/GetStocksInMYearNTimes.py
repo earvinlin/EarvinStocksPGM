@@ -38,12 +38,19 @@ if len(sys.argv) < 3 :
 
 try :
 #	注意，有些個股有季配，所以資料會有重複，因此加上「year_high_price is not null」條件過濾
-#	select stock_no, dividend_year, stock_price_year, year_high_price, year_low_price from stocks_dividend where year_high_price is not null and stock_no = '2049' order by stock_price_year, dividend_year;
-	theSQLCmd = "select stock_no, dividend_year, stock_price_year, " + \
-				"year_high_price, year_low_price from stocks_dividend " + \
-				"where year_high_price is not null and " + \
-				"dividend_year > 2011 and " + \
-				"stock_no = %s order by stock_price_year, dividend_year "
+#	select a.stock_no, b.stock_name, a.dividend_year, a.stock_price_year, a.year_high_price, a.year_low_price 
+#	from stocks_dividend a
+#	left outer join stocks_name b on a.stock_no = b.stock_no
+#	where a.year_high_price is not null and a.stock_no = '2049' order by a.stock_price_year, a.dividend_year;
+	
+	theSQLCmd = "select a.stock_no, b.stock_name, a.dividend_year, " + \
+				"a.stock_price_year, a.year_high_price, a.year_low_price " + \
+				"from stocks_dividend a " + \
+				"inner join stocks_name b on " + \
+				"a.stock_no = b.stock_no " + \
+				"where a.year_high_price is not null and " + \
+				"a.dividend_year > 2011 and a.stock_no = %s " + \
+				"order by a.stock_price_year, a.dividend_year "
 
 	print(inputFile)
 	twStocksList = open(inputFile, 'r')	# 預設以系統編碼開啟
@@ -51,7 +58,6 @@ try :
 	for stockNo in stocks :	
 		stockNo = stockNo.replace('\n', '')	# 不知為何檔案會有換行符號
 		print("正在處理", stockNo)
-		outputFile = stockNo + ".csv"
 		theArgs = (stockNo,)
 #       判斷每年盈收成長率是否大於10%(連續3年)
 		cursor.execute(theSQLCmd, theArgs)
@@ -60,14 +66,17 @@ try :
 		if not data :
 			print("No data found!!!")
 		else :
-			df = pd.DataFrame(data, columns=['股票代號','股利發放年度', \
-				'股價年度','年度最高價','年度最低價'])
+			df = pd.DataFrame(data, columns=['股票代號', '股票名稱', \
+				'股利發放年度', '股價年度', '年度最高價', '年度最低價'])
 			df['p0'] = None
 			df['p1'] = None
 			df['p2'] = None
 #			print(df)
 #			print("df counts: ",len(df))
 			counts = len(df)
+			stockName = str.strip(df.at[0, '股票名稱'])
+			outputFile = stockNo + stockName + ".csv"
+			print(outputFile)
 			
 			for i in range(counts) :
 #				print(i)
@@ -77,17 +86,17 @@ try :
 				lowPrice = df.at[i,'年度最低價']
 				highPrice = df.at[i,'年度最高價']
 				diff00 = (highPrice - lowPrice) / lowPrice
-				df.iloc[i,5] = "{:.2f}".format(diff00)
+				df.iloc[i,6] = "{:.2f}".format(diff00)
 #				次年
 				if i < (counts - 1) :
 					highPrice1st = df.at[i + 1,'年度最高價']
 					diff01 = (highPrice1st - lowPrice) / lowPrice
-					df.iloc[i,6] = "{:.2f}".format(diff01)
+					df.iloc[i,7] = "{:.2f}".format(diff01)
 #				2年
 				if i < (counts - 2) :
 					highPrice2nd = df.at[i + 2,'年度最高價']
 					diff02 = (highPrice2nd - lowPrice) / lowPrice
-					df.iloc[i,7] = "{:.2f}".format(diff02)
+					df.iloc[i,8] = "{:.2f}".format(diff02)
 			print(df)
 			
 #			df.to_csv(DATA_PATH + outputFile, encoding='cp950')
@@ -98,10 +107,9 @@ try :
 			if float(num0.max()) >= 10 or float(num1.max()) >= 10 or \
 				float(num2.max()) >= 10 :
 				df.to_csv(DATA_PATH + outputFile, encoding='cp950')
-
 		readCnt += 1
 
-except mysql.connector.Error as err:
+except mysql.connector.Error as err :
 	print("Processing Error!!! ")
 	print("Error: {}".format(err.msg))
 	sys.exit()
