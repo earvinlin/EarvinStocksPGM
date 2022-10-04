@@ -86,20 +86,19 @@ try :
 				lowPrice = df.at[i,'年度最低價']
 				highPrice = df.at[i,'年度最高價']
 				diff00 = (highPrice - lowPrice) / lowPrice
-				df.iloc[i,6] = "{:.2f}".format(diff00)
+				df.iloc[i,6] = "{:.2f}".format(diff00)	# 回寫第6行(p0)
 #				次年
 				if i < (counts - 1) :
 					highPrice1st = df.at[i + 1,'年度最高價']
 					diff01 = (highPrice1st - lowPrice) / lowPrice
-					df.iloc[i,7] = "{:.2f}".format(diff01)
+					df.iloc[i,7] = "{:.2f}".format(diff01)	# 回寫第7行(p1)
 #				2年
 				if i < (counts - 2) :
 					highPrice2nd = df.at[i + 2,'年度最高價']
 					diff02 = (highPrice2nd - lowPrice) / lowPrice
-					df.iloc[i,8] = "{:.2f}".format(diff02)
+					df.iloc[i,8] = "{:.2f}".format(diff02)	# 回寫第8行(p2)
 			print(df)
 			
-#			df.to_csv(DATA_PATH + outputFile, encoding='cp950')
 			num0 = df.p0.dropna()
 			num1 = df.p1.dropna()
 			num2 = df.p2.dropna()
