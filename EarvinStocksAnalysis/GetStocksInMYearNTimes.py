@@ -40,13 +40,13 @@ try :
 #	注意，有些個股有季配，所以資料會有重複，因此加上「year_high_price is not null」條件過濾
 #	select a.stock_no, b.stock_name, a.dividend_year, a.stock_price_year, a.year_high_price, a.year_low_price 
 #	from stocks_dividend a
-#	left outer join stocks_name b on a.stock_no = b.stock_no
+#	left outer join stocks_name2 b on a.stock_no = b.stock_no
 #	where a.year_high_price is not null and a.stock_no = '2049' order by a.stock_price_year, a.dividend_year;
 	
 	theSQLCmd = "select a.stock_no, b.stock_name, a.dividend_year, " + \
 				"a.stock_price_year, a.year_high_price, a.year_low_price " + \
 				"from stocks_dividend a " + \
-				"inner join stocks_name b on " + \
+				"inner join stocks_name2 b on " + \
 				"a.stock_no = b.stock_no " + \
 				"where a.year_high_price is not null and " + \
 				"a.dividend_year > 2011 and a.stock_no = %s " + \
@@ -74,7 +74,8 @@ try :
 #			print(df)
 #			print("df counts: ",len(df))
 			counts = len(df)
-			stockName = str.strip(df.at[0, '股票名稱'])
+#			stockName = str.strip(df.at[0, '股票名稱'])
+			stockName = df.at[0, '股票名稱']
 			outputFile = stockNo + stockName + ".csv"
 			print(outputFile)
 			
@@ -87,12 +88,12 @@ try :
 				highPrice = df.at[i,'年度最高價']
 				diff00 = (highPrice - lowPrice) / lowPrice
 				df.iloc[i,6] = "{:.2f}".format(diff00)	# 回寫第6行(p0)
-#				次年
+#				第1年
 				if i < (counts - 1) :
 					highPrice1st = df.at[i + 1,'年度最高價']
 					diff01 = (highPrice1st - lowPrice) / lowPrice
 					df.iloc[i,7] = "{:.2f}".format(diff01)	# 回寫第7行(p1)
-#				2年
+#				第2年
 				if i < (counts - 2) :
 					highPrice2nd = df.at[i + 2,'年度最高價']
 					diff02 = (highPrice2nd - lowPrice) / lowPrice
