@@ -76,6 +76,7 @@ try :
 			counts = len(df)
 #			stockName = str.strip(df.at[0, '股票名稱'])
 			stockName = df.at[0, '股票名稱']
+			stockName = stockName.replace('*', 'star', 2)
 			outputFile = stockNo + stockName + ".csv"
 			print(outputFile)
 			
