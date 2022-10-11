@@ -13,13 +13,11 @@ import os
 import time
 import platform
 
-print("[GenGet3FinRateScript.py] 開始執行時間：" + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
-
 outputFile = ""
 processCnt = 0
 errorCnt = 0
 try:
-	print("[GenGet3FinRateScript.py] 開始執行時間：" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
+	print("[GenInsert3FinRate2DBScript.py] 開始執行時間：" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
 
 	if len(sys.argv) < 3 :
 		print("You need input two parameter : 起日 迄日")
@@ -36,30 +34,22 @@ try:
 	pythonCompiler = ""
 	if platform.system() == "Windows" :
 		pythonCompiler = "python"
-		outputFile = "_GenGet3FinRateScript.Bat"
+		outputFile = "_GenInsert3FinRateDBScript.Bat"
 	else :
 		pythonCompiler = "python3"
-		outputFile = "_GenGet3FinRateScript.sh"
+		outputFile = "_GenInsert3FinRateDBScript.sh"
 
-	outfile = open(outputFile, 'w', encoding="cp950")
+	outfile = open(outputFile, 'w',encoding="utf8")
 
     # python GenGet3FinRateScript.py 20200101 20210131
 	while beginDate <= endDate :
-		print(beginDate)
 #		Write out contents
-#		python 01_getStocksDailyRatiosData.py 20211027
-#		python 01_formatStocksDailyRatiosData.py 20211027
-
-		writeContent1 = pythonCompiler + " 01_getStocksDailyRatiosData.py " + str(beginDate) + "\n"
+#       python 02_insertDailyRatiosToMySQLDB.py 1111003 stocks_個股日本益比殖利率及股價淨值比-20221003.txt
+		chineseDate = beginDate - 19110000
+		writeContent = pythonCompiler + " 02_insertDailyRatiosToMySQLDB.py " + \
+            str(chineseDate) + " stocks_個股日本益比殖利率及股價淨值比-" + str(beginDate) + ".txt\n"
 #		print("Content: " + writeContent)
-		outfile.write(writeContent1)
-		writeContent2 = pythonCompiler + " 01_formatStocksDailyRatiosData.py " + str(beginDate) + "\n" 
-#		print("Content: " + writeContent)
-		outfile.write(writeContent2)
-		writeContent2 = pythonCompiler + " 01_formatStocksDailyRatiosData.py " + str(beginDate) + "\n" 
-#		print("Content: " + writeContent)
-		outfile.write("timeout /t 10\n")
-		outfile.write("rem wait 10 sec.\n")
+		outfile.write(writeContent)
 		processCnt += 1
 
 		if str(beginDate)[4:6] == "01" or str(beginDate)[4:6] == "03" or \
@@ -109,11 +99,10 @@ try:
 				else :
 					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
 
-
 	outfile.close()
 
 	print("資料處理完成!! 共 " + str(processCnt) + " 筆。")
-	print("[GenGet3FinRateScript.py] 結束執行時間：" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
+	print("[GenInsert3FinRate2DBScript.py] 結束執行時間：" + time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
 
 except IOError as err :
 	print('File error : ' + str(err))
