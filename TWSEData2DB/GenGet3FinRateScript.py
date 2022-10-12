@@ -51,7 +51,7 @@ try:
 
     # python GenGet3FinRateScript.py 20200101 20210131
 	while beginDate <= endDate :
-		print(beginDate)
+		print("Print Date: ", beginDate)
 #		Write out contents
 #		python 01_getStocksDailyRatiosData.py 20211027
 #		python 01_formatStocksDailyRatiosData.py 20211027
@@ -70,26 +70,23 @@ try:
 		if str(beginDate)[4:6] == "01" or str(beginDate)[4:6] == "03" or \
 			str(beginDate)[4:6] == "05" or str(beginDate)[4:6] == "07" or \
 			str(beginDate)[4:6] == "08" or str(beginDate)[4:6] == "10" or \
-			str(beginDate)[4:6] == "12" :
-			
+			str(beginDate)[4:6] == "12" :	
 			if int(str(beginDate)[6:8]) < 31 :
 				beginDate += 1
 			else :
 				if int(str(beginDate)[4:6]) < 12 :
-					beginDate = beginDate + 100 - int(str(beginDate)[6:8]) + 1
+					beginDate = beginDate - int(str(beginDate)[6:8]) + 101
 				else :
-					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
+					beginDate = beginDate - int(str(beginDate)[4:8]) + 10101
+			continue
 
 		if str(beginDate)[4:6] == "04" or str(beginDate)[4:6] == "06" or \
 			str(beginDate)[4:6] == "09" or str(beginDate)[4:6] == "11" :
-			
 			if int(str(beginDate)[6:8]) < 30 :
 				beginDate += 1
 			else :
-				if int(str(beginDate)[4:6]) < 12 :
-					beginDate = beginDate + 100 - int(str(beginDate)[6:8]) + 1
-				else :
-					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
+				beginDate = beginDate - int(str(beginDate)[6:8]) + 101
+			continue
 
 		if str(beginDate)[4:6] == "02" :
 #			閏年判斷			
@@ -109,10 +106,7 @@ try:
 			if int(str(beginDate)[6:8]) < day :
 				beginDate += 1
 			else :
-				if int(str(beginDate)[4:6]) < 12 :
-					beginDate = beginDate + 100 - int(str(beginDate)[6:8]) + 1
-				else :
-					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
+				beginDate = beginDate - int(str(beginDate)[6:8]) + 101
 
 
 	outfile.close()
