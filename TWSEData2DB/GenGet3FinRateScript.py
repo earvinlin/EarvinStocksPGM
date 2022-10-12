@@ -32,14 +32,20 @@ try:
 
 	print ("beginDate= ", beginDate, ", endDate= ", endDate)
 
+	writeContent3 = ""
+	writeContent4 = ""
 	# 設定檔案存取路徑
 	pythonCompiler = ""
 	if platform.system() == "Windows" :
 		pythonCompiler = "python"
 		outputFile = "_GenGet3FinRateScript.Bat"
+		writeContent3 = "timeout /t 10"
+		writeContent4 = "rem wait 10 sec."	
 	else :
 		pythonCompiler = "python3"
 		outputFile = "_GenGet3FinRateScript.sh"
+		writeContent3 = "sleep 10"
+		writeContent4 = "# wait 10 sec."	
 
 	outfile = open(outputFile, 'w', encoding="cp950")
 
@@ -56,10 +62,9 @@ try:
 		writeContent2 = pythonCompiler + " 01_formatStocksDailyRatiosData.py " + str(beginDate) + "\n" 
 #		print("Content: " + writeContent)
 		outfile.write(writeContent2)
-		writeContent2 = pythonCompiler + " 01_formatStocksDailyRatiosData.py " + str(beginDate) + "\n" 
-#		print("Content: " + writeContent)
-		outfile.write("timeout /t 10\n")
-		outfile.write("rem wait 10 sec.\n")
+
+		outfile.write(writeContent3 + "\n")
+		outfile.write(writeContent4 + "\n")
 		processCnt += 1
 
 		if str(beginDate)[4:6] == "01" or str(beginDate)[4:6] == "03" or \
@@ -90,7 +95,7 @@ try:
 #			閏年判斷			
 			day = 28
 			WesternNewYear =  int(str(beginDate)[1:4])
-			if not WesternNewYear%4 : 
+			if WesternNewYear%4 : 
 				day = 28
 			else :
 				if not WesternNewYear%100 :	
