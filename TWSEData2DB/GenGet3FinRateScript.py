@@ -1,12 +1,12 @@
 """
-20220522 產生執行_GetDailyRatios.py的script
+20221013 產生執行_GetDailyRatios.py的script
+		 (程式放在「…\OneDrive\myStocksPGMs\V2.0\PythonTools\【新增個股3項財務指標】」)
          需要輸入的參數：檔案路徑 
-         -------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
          Content :
-         -------------------------------------------------------------------------
-         python3 GenGet3FinRateScript.py /Users/earvin/workspaces/GithubProjects/GoodinfoData2DB/Data/TXT/salemon/22020520/ 
-
-https://www.twse.com.tw/zh/page/trading/exchange/BWIBBU_d.html
+         ----------------------------------------------------------------------------
+         win : python GenGet3FinRateScript.py 起日(fmt: yyyymmdd) 迄日(fmt: yyyymmdd)
+		 imac: python3 GenGet3FinRateScript.py 起日(fmt: yyyymmdd) 迄日(fmt: yyyymmdd)
 """
 import sys
 import os 
@@ -23,8 +23,8 @@ try:
 
 	if len(sys.argv) < 3 :
 		print("You need input two parameter : 起日 迄日")
-		print("syntax(windows)    : C:\python GenInsertData2DbScripts.py Data\\3Rate\\")
-		print("syntax(imac/linux) : $python3 GenInsertData2DbScripts.py Data/TXT/salemon/20220522/")
+		print("syntax(windows)    : C:\python GenGet3FinRateScript.py 20210101 20221012")
+		print("syntax(imac/linux) : $python3 GenGet3FinRateScript.py 20210101 20221012")
 		sys.exit()
 
 	beginDate = int(sys.argv[1])
@@ -49,20 +49,12 @@ try:
 
 	outfile = open(outputFile, 'w', encoding="cp950")
 
-    # python GenGet3FinRateScript.py 20200101 20210131
 	while beginDate <= endDate :
 		print("Print Date: ", beginDate)
-#		Write out contents
-#		python 01_getStocksDailyRatiosData.py 20211027
-#		python 01_formatStocksDailyRatiosData.py 20211027
-
 		writeContent1 = pythonCompiler + " 01_getStocksDailyRatiosData.py " + str(beginDate) + "\n"
-#		print("Content: " + writeContent)
 		outfile.write(writeContent1)
 		writeContent2 = pythonCompiler + " 01_formatStocksDailyRatiosData.py " + str(beginDate) + "\n" 
-#		print("Content: " + writeContent)
 		outfile.write(writeContent2)
-
 		outfile.write(writeContent3 + "\n")
 		outfile.write(writeContent4 + "\n")
 		processCnt += 1
@@ -89,7 +81,6 @@ try:
 			continue
 
 		if str(beginDate)[4:6] == "02" :
-#			閏年判斷			
 			day = 28
 			WesternNewYear =  int(str(beginDate)[1:4])
 			if WesternNewYear%4 : 
@@ -102,12 +93,10 @@ try:
 						day = 28
 				else :
 					day = 29
-
 			if int(str(beginDate)[6:8]) < day :
 				beginDate += 1
 			else :
 				beginDate = beginDate - int(str(beginDate)[6:8]) + 101
-
 
 	outfile.close()
 

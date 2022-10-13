@@ -1,12 +1,12 @@
 """
-20220522 產生執行_GetDailyRatios.py的script
+20221013 產生執行_InsertDailyRatio.py的批次script
+		 (程式放在「…\OneDrive\myStocksPGMs\V2.0\PythonTools\【新增個股3項財務指標】」)
          需要輸入的參數：檔案路徑 
-         -------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
          Content :
-         -------------------------------------------------------------------------
-         python3 GenGet3FinRateScript.py /Users/earvin/workspaces/GithubProjects/GoodinfoData2DB/Data/TXT/salemon/22020520/ 
-
-https://www.twse.com.tw/zh/page/trading/exchange/BWIBBU_d.html
+         ----------------------------------------------------------------------------
+         win : python GenInsert3FinRate2DBScript.py 起日(fmt: yyyymmdd) 迄日(fmt: yyyymmdd)
+		 imac: python3 GenInsert3FinRate2DBScript.py 起日(fmt: yyyymmdd) 迄日(fmt: yyyymmdd)
 """
 import sys
 import os 
@@ -21,8 +21,8 @@ try:
 
 	if len(sys.argv) < 3 :
 		print("You need input two parameter : 起日 迄日")
-		print("syntax(windows)    : C:\python GenInsertData2DbScripts.py Data\\3Rate\\")
-		print("syntax(imac/linux) : $python3 GenInsertData2DbScripts.py Data/TXT/salemon/20220522/")
+		print("syntax(windows)    : C:\python GenInsert3FinRate2DBScript.py 20210101 20221012")
+		print("syntax(imac/linux) : $python3 GenInsert3FinRate2DBScript.py 20210101 20221012")
 		sys.exit()
 
 	beginDate = int(sys.argv[1])
@@ -39,16 +39,13 @@ try:
 		pythonCompiler = "python3"
 		outputFile = "_GenInsert3FinRateDBScript.sh"
 
-	outfile = open(outputFile, 'w',encoding="utf8")
+	outfile = open(outputFile, 'w', encoding="utf8")
 
-    # python GenGet3FinRateScript.py 20200101 20210131
 	while beginDate <= endDate :
-#		Write out contents
-#       python 02_insertDailyRatiosToMySQLDB.py 1111003 stocks_個股日本益比殖利率及股價淨值比-20221003.txt
 		chineseDate = beginDate - 19110000
 		writeContent = pythonCompiler + " 02_insertDailyRatiosToMySQLDB.py " + \
-            str(chineseDate) + " stocks_個股日本益比殖利率及股價淨值比-" + str(beginDate) + ".txt\n"
-#		print("Content: " + writeContent)
+            str(chineseDate) + " stocks_個股日本益比殖利率及股價淨值比-" + \
+			str(beginDate) + ".txt\n"
 		outfile.write(writeContent)
 		processCnt += 1
 
@@ -56,28 +53,24 @@ try:
 			str(beginDate)[4:6] == "05" or str(beginDate)[4:6] == "07" or \
 			str(beginDate)[4:6] == "08" or str(beginDate)[4:6] == "10" or \
 			str(beginDate)[4:6] == "12" :
-			
 			if int(str(beginDate)[6:8]) < 31 :
 				beginDate += 1
 			else :
 				if int(str(beginDate)[4:6]) < 12 :
-					beginDate = beginDate + 100 - int(str(beginDate)[6:8]) + 1
+					beginDate = beginDate - int(str(beginDate)[6:8]) + 101
 				else :
-					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
+					beginDate = beginDate - int(str(beginDate)[4:8]) + 10101
+			continue
 
 		if str(beginDate)[4:6] == "04" or str(beginDate)[4:6] == "06" or \
-			str(beginDate)[4:6] == "09" or str(beginDate)[4:6] == "11" :
-			
+			str(beginDate)[4:6] == "09" or str(beginDate)[4:6] == "11" :	
 			if int(str(beginDate)[6:8]) < 30 :
 				beginDate += 1
 			else :
-				if int(str(beginDate)[4:6]) < 12 :
-					beginDate = beginDate + 100 - int(str(beginDate)[6:8]) + 1
-				else :
-					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
+				beginDate = beginDate - int(str(beginDate)[6:8]) + 101
+			continue
 
-		if str(beginDate)[4:6] == "02" :
-#			閏年判斷			
+		if str(beginDate)[4:6] == "02" :	
 			day = 28
 			WesternNewYear =  int(str(beginDate)[1:4])
 			if not WesternNewYear%4 : 
@@ -90,14 +83,10 @@ try:
 						day = 28
 				else :
 					day = 29
-
 			if int(str(beginDate)[6:8]) < day :
 				beginDate += 1
 			else :
-				if int(str(beginDate)[4:6]) < 12 :
-					beginDate = beginDate + 100 - int(str(beginDate)[6:8]) + 1
-				else :
-					beginDate = beginDate - int(str(beginDate)[4:6]) - int(str(beginDate)[6:8]) + 101
+				beginDate = beginDate - int(str(beginDate)[6:8]) + 101
 
 	outfile.close()
 
