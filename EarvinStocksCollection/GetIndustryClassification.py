@@ -1,3 +1,7 @@
+"""
+
+"""
+
 import re
 import sys
 import csv
@@ -10,7 +14,7 @@ from bs4 import BeautifulSoup
 """
 if len(sys.argv) < 2 :
     print("You need input two parameter(fmt : theDate(yyyymmdd))")
-    print("syntax : C:\python 03_getTaiwanDataTsecVolumeWithParams2.py 20170401 ")
+    print("syntax : C:\python GetIndustryClassification.py 20170401 ")
     sys.exit()
 """
 
@@ -30,22 +34,29 @@ resp.encoding = 'cp950'
 soup = BeautifulSoup(resp.text, 'lxml')
 print("title: ", soup.title.text)
 
-table = soup.find(lambda tag: tag.name=='table' and tag.has_key('id') and tag['id']=="oMainTable")
+table = soup.find(lambda tag: tag.name=='table' and \
+    tag.has_key('id') and tag['id']=="oMainTable")
 rows = table.findAll(lambda tag: tag.name=='tr')
 icount = 0
 for row in table.findAll("tr"):
-#   只取「產業別」欄位
-    if icount%2 == 0 :
-        tds = row.find_all("td")
-        for td in tds :
+    if icount < 3 :
+        icount += 1
+        continue
+    print("row-td: ", row.get_text())
+#   只取「產業別」欄位 (第0個)
+    iloop = 0
+    tds = row.find_all("td")
+    for td in tds :
+        if iloop%2 :
             industry = td.get_text()
-            lnks = td.find_all("a")
-            for lnk in lnks :
-                industryGroupHyperlink = HYPER_LINK + lnk.get('href')
-                print("v(" + str(icount) + ")= " + industry)
-                print("industryGroupHyperlink= " + industryGroupHyperlink)
-                break   # 資料位在第1筆
-            break   # 資料位在第1筆
+            print("industry0=", industry)            
+        else :
+            industry = td.get_text()
+            print("industry1=", industry)
+        iloop += 1
+#    else :
+#   取產業別下的子類別(用另一個table包覆)
+
         
     icount += 1
 
