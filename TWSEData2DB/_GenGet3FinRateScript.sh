@@ -1,1460 +1,1464 @@
-python3 01_getStocksDailyRatiosData.py 20110101
-python3 01_formatStocksDailyRatiosData.py 20110101
+python3 01_getStocksDailyRatiosData.py 20160101
+python3 01_formatStocksDailyRatiosData.py 20160101
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110102
-python3 01_formatStocksDailyRatiosData.py 20110102
+python3 01_getStocksDailyRatiosData.py 20160102
+python3 01_formatStocksDailyRatiosData.py 20160102
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110103
-python3 01_formatStocksDailyRatiosData.py 20110103
+python3 01_getStocksDailyRatiosData.py 20160103
+python3 01_formatStocksDailyRatiosData.py 20160103
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110104
-python3 01_formatStocksDailyRatiosData.py 20110104
+python3 01_getStocksDailyRatiosData.py 20160104
+python3 01_formatStocksDailyRatiosData.py 20160104
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110105
-python3 01_formatStocksDailyRatiosData.py 20110105
+python3 01_getStocksDailyRatiosData.py 20160105
+python3 01_formatStocksDailyRatiosData.py 20160105
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110106
-python3 01_formatStocksDailyRatiosData.py 20110106
+python3 01_getStocksDailyRatiosData.py 20160106
+python3 01_formatStocksDailyRatiosData.py 20160106
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110107
-python3 01_formatStocksDailyRatiosData.py 20110107
+python3 01_getStocksDailyRatiosData.py 20160107
+python3 01_formatStocksDailyRatiosData.py 20160107
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110108
-python3 01_formatStocksDailyRatiosData.py 20110108
+python3 01_getStocksDailyRatiosData.py 20160108
+python3 01_formatStocksDailyRatiosData.py 20160108
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110109
-python3 01_formatStocksDailyRatiosData.py 20110109
+python3 01_getStocksDailyRatiosData.py 20160109
+python3 01_formatStocksDailyRatiosData.py 20160109
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110110
-python3 01_formatStocksDailyRatiosData.py 20110110
+python3 01_getStocksDailyRatiosData.py 20160110
+python3 01_formatStocksDailyRatiosData.py 20160110
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110111
-python3 01_formatStocksDailyRatiosData.py 20110111
+python3 01_getStocksDailyRatiosData.py 20160111
+python3 01_formatStocksDailyRatiosData.py 20160111
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110112
-python3 01_formatStocksDailyRatiosData.py 20110112
+python3 01_getStocksDailyRatiosData.py 20160112
+python3 01_formatStocksDailyRatiosData.py 20160112
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110113
-python3 01_formatStocksDailyRatiosData.py 20110113
+python3 01_getStocksDailyRatiosData.py 20160113
+python3 01_formatStocksDailyRatiosData.py 20160113
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110114
-python3 01_formatStocksDailyRatiosData.py 20110114
+python3 01_getStocksDailyRatiosData.py 20160114
+python3 01_formatStocksDailyRatiosData.py 20160114
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110115
-python3 01_formatStocksDailyRatiosData.py 20110115
+python3 01_getStocksDailyRatiosData.py 20160115
+python3 01_formatStocksDailyRatiosData.py 20160115
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110116
-python3 01_formatStocksDailyRatiosData.py 20110116
+python3 01_getStocksDailyRatiosData.py 20160116
+python3 01_formatStocksDailyRatiosData.py 20160116
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110117
-python3 01_formatStocksDailyRatiosData.py 20110117
+python3 01_getStocksDailyRatiosData.py 20160117
+python3 01_formatStocksDailyRatiosData.py 20160117
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110118
-python3 01_formatStocksDailyRatiosData.py 20110118
+python3 01_getStocksDailyRatiosData.py 20160118
+python3 01_formatStocksDailyRatiosData.py 20160118
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110119
-python3 01_formatStocksDailyRatiosData.py 20110119
+python3 01_getStocksDailyRatiosData.py 20160119
+python3 01_formatStocksDailyRatiosData.py 20160119
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110120
-python3 01_formatStocksDailyRatiosData.py 20110120
+python3 01_getStocksDailyRatiosData.py 20160120
+python3 01_formatStocksDailyRatiosData.py 20160120
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110121
-python3 01_formatStocksDailyRatiosData.py 20110121
+python3 01_getStocksDailyRatiosData.py 20160121
+python3 01_formatStocksDailyRatiosData.py 20160121
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110122
-python3 01_formatStocksDailyRatiosData.py 20110122
+python3 01_getStocksDailyRatiosData.py 20160122
+python3 01_formatStocksDailyRatiosData.py 20160122
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110123
-python3 01_formatStocksDailyRatiosData.py 20110123
+python3 01_getStocksDailyRatiosData.py 20160123
+python3 01_formatStocksDailyRatiosData.py 20160123
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110124
-python3 01_formatStocksDailyRatiosData.py 20110124
+python3 01_getStocksDailyRatiosData.py 20160124
+python3 01_formatStocksDailyRatiosData.py 20160124
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110125
-python3 01_formatStocksDailyRatiosData.py 20110125
+python3 01_getStocksDailyRatiosData.py 20160125
+python3 01_formatStocksDailyRatiosData.py 20160125
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110126
-python3 01_formatStocksDailyRatiosData.py 20110126
+python3 01_getStocksDailyRatiosData.py 20160126
+python3 01_formatStocksDailyRatiosData.py 20160126
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110127
-python3 01_formatStocksDailyRatiosData.py 20110127
+python3 01_getStocksDailyRatiosData.py 20160127
+python3 01_formatStocksDailyRatiosData.py 20160127
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110128
-python3 01_formatStocksDailyRatiosData.py 20110128
+python3 01_getStocksDailyRatiosData.py 20160128
+python3 01_formatStocksDailyRatiosData.py 20160128
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110129
-python3 01_formatStocksDailyRatiosData.py 20110129
+python3 01_getStocksDailyRatiosData.py 20160129
+python3 01_formatStocksDailyRatiosData.py 20160129
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110130
-python3 01_formatStocksDailyRatiosData.py 20110130
+python3 01_getStocksDailyRatiosData.py 20160130
+python3 01_formatStocksDailyRatiosData.py 20160130
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110131
-python3 01_formatStocksDailyRatiosData.py 20110131
+python3 01_getStocksDailyRatiosData.py 20160131
+python3 01_formatStocksDailyRatiosData.py 20160131
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110201
-python3 01_formatStocksDailyRatiosData.py 20110201
+python3 01_getStocksDailyRatiosData.py 20160201
+python3 01_formatStocksDailyRatiosData.py 20160201
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110202
-python3 01_formatStocksDailyRatiosData.py 20110202
+python3 01_getStocksDailyRatiosData.py 20160202
+python3 01_formatStocksDailyRatiosData.py 20160202
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110203
-python3 01_formatStocksDailyRatiosData.py 20110203
+python3 01_getStocksDailyRatiosData.py 20160203
+python3 01_formatStocksDailyRatiosData.py 20160203
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110204
-python3 01_formatStocksDailyRatiosData.py 20110204
+python3 01_getStocksDailyRatiosData.py 20160204
+python3 01_formatStocksDailyRatiosData.py 20160204
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110205
-python3 01_formatStocksDailyRatiosData.py 20110205
+python3 01_getStocksDailyRatiosData.py 20160205
+python3 01_formatStocksDailyRatiosData.py 20160205
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110206
-python3 01_formatStocksDailyRatiosData.py 20110206
+python3 01_getStocksDailyRatiosData.py 20160206
+python3 01_formatStocksDailyRatiosData.py 20160206
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110207
-python3 01_formatStocksDailyRatiosData.py 20110207
+python3 01_getStocksDailyRatiosData.py 20160207
+python3 01_formatStocksDailyRatiosData.py 20160207
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110208
-python3 01_formatStocksDailyRatiosData.py 20110208
+python3 01_getStocksDailyRatiosData.py 20160208
+python3 01_formatStocksDailyRatiosData.py 20160208
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110209
-python3 01_formatStocksDailyRatiosData.py 20110209
+python3 01_getStocksDailyRatiosData.py 20160209
+python3 01_formatStocksDailyRatiosData.py 20160209
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110210
-python3 01_formatStocksDailyRatiosData.py 20110210
+python3 01_getStocksDailyRatiosData.py 20160210
+python3 01_formatStocksDailyRatiosData.py 20160210
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110211
-python3 01_formatStocksDailyRatiosData.py 20110211
+python3 01_getStocksDailyRatiosData.py 20160211
+python3 01_formatStocksDailyRatiosData.py 20160211
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110212
-python3 01_formatStocksDailyRatiosData.py 20110212
+python3 01_getStocksDailyRatiosData.py 20160212
+python3 01_formatStocksDailyRatiosData.py 20160212
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110213
-python3 01_formatStocksDailyRatiosData.py 20110213
+python3 01_getStocksDailyRatiosData.py 20160213
+python3 01_formatStocksDailyRatiosData.py 20160213
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110214
-python3 01_formatStocksDailyRatiosData.py 20110214
+python3 01_getStocksDailyRatiosData.py 20160214
+python3 01_formatStocksDailyRatiosData.py 20160214
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110215
-python3 01_formatStocksDailyRatiosData.py 20110215
+python3 01_getStocksDailyRatiosData.py 20160215
+python3 01_formatStocksDailyRatiosData.py 20160215
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110216
-python3 01_formatStocksDailyRatiosData.py 20110216
+python3 01_getStocksDailyRatiosData.py 20160216
+python3 01_formatStocksDailyRatiosData.py 20160216
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110217
-python3 01_formatStocksDailyRatiosData.py 20110217
+python3 01_getStocksDailyRatiosData.py 20160217
+python3 01_formatStocksDailyRatiosData.py 20160217
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110218
-python3 01_formatStocksDailyRatiosData.py 20110218
+python3 01_getStocksDailyRatiosData.py 20160218
+python3 01_formatStocksDailyRatiosData.py 20160218
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110219
-python3 01_formatStocksDailyRatiosData.py 20110219
+python3 01_getStocksDailyRatiosData.py 20160219
+python3 01_formatStocksDailyRatiosData.py 20160219
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110220
-python3 01_formatStocksDailyRatiosData.py 20110220
+python3 01_getStocksDailyRatiosData.py 20160220
+python3 01_formatStocksDailyRatiosData.py 20160220
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110221
-python3 01_formatStocksDailyRatiosData.py 20110221
+python3 01_getStocksDailyRatiosData.py 20160221
+python3 01_formatStocksDailyRatiosData.py 20160221
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110222
-python3 01_formatStocksDailyRatiosData.py 20110222
+python3 01_getStocksDailyRatiosData.py 20160222
+python3 01_formatStocksDailyRatiosData.py 20160222
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110223
-python3 01_formatStocksDailyRatiosData.py 20110223
+python3 01_getStocksDailyRatiosData.py 20160223
+python3 01_formatStocksDailyRatiosData.py 20160223
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110224
-python3 01_formatStocksDailyRatiosData.py 20110224
+python3 01_getStocksDailyRatiosData.py 20160224
+python3 01_formatStocksDailyRatiosData.py 20160224
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110225
-python3 01_formatStocksDailyRatiosData.py 20110225
+python3 01_getStocksDailyRatiosData.py 20160225
+python3 01_formatStocksDailyRatiosData.py 20160225
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110226
-python3 01_formatStocksDailyRatiosData.py 20110226
+python3 01_getStocksDailyRatiosData.py 20160226
+python3 01_formatStocksDailyRatiosData.py 20160226
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110227
-python3 01_formatStocksDailyRatiosData.py 20110227
+python3 01_getStocksDailyRatiosData.py 20160227
+python3 01_formatStocksDailyRatiosData.py 20160227
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110228
-python3 01_formatStocksDailyRatiosData.py 20110228
+python3 01_getStocksDailyRatiosData.py 20160228
+python3 01_formatStocksDailyRatiosData.py 20160228
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110301
-python3 01_formatStocksDailyRatiosData.py 20110301
+python3 01_getStocksDailyRatiosData.py 20160229
+python3 01_formatStocksDailyRatiosData.py 20160229
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110302
-python3 01_formatStocksDailyRatiosData.py 20110302
+python3 01_getStocksDailyRatiosData.py 20160301
+python3 01_formatStocksDailyRatiosData.py 20160301
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110303
-python3 01_formatStocksDailyRatiosData.py 20110303
+python3 01_getStocksDailyRatiosData.py 20160302
+python3 01_formatStocksDailyRatiosData.py 20160302
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110304
-python3 01_formatStocksDailyRatiosData.py 20110304
+python3 01_getStocksDailyRatiosData.py 20160303
+python3 01_formatStocksDailyRatiosData.py 20160303
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110305
-python3 01_formatStocksDailyRatiosData.py 20110305
+python3 01_getStocksDailyRatiosData.py 20160304
+python3 01_formatStocksDailyRatiosData.py 20160304
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110306
-python3 01_formatStocksDailyRatiosData.py 20110306
+python3 01_getStocksDailyRatiosData.py 20160305
+python3 01_formatStocksDailyRatiosData.py 20160305
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110307
-python3 01_formatStocksDailyRatiosData.py 20110307
+python3 01_getStocksDailyRatiosData.py 20160306
+python3 01_formatStocksDailyRatiosData.py 20160306
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110308
-python3 01_formatStocksDailyRatiosData.py 20110308
+python3 01_getStocksDailyRatiosData.py 20160307
+python3 01_formatStocksDailyRatiosData.py 20160307
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110309
-python3 01_formatStocksDailyRatiosData.py 20110309
+python3 01_getStocksDailyRatiosData.py 20160308
+python3 01_formatStocksDailyRatiosData.py 20160308
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110310
-python3 01_formatStocksDailyRatiosData.py 20110310
+python3 01_getStocksDailyRatiosData.py 20160309
+python3 01_formatStocksDailyRatiosData.py 20160309
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110311
-python3 01_formatStocksDailyRatiosData.py 20110311
+python3 01_getStocksDailyRatiosData.py 20160310
+python3 01_formatStocksDailyRatiosData.py 20160310
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110312
-python3 01_formatStocksDailyRatiosData.py 20110312
+python3 01_getStocksDailyRatiosData.py 20160311
+python3 01_formatStocksDailyRatiosData.py 20160311
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110313
-python3 01_formatStocksDailyRatiosData.py 20110313
+python3 01_getStocksDailyRatiosData.py 20160312
+python3 01_formatStocksDailyRatiosData.py 20160312
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110314
-python3 01_formatStocksDailyRatiosData.py 20110314
+python3 01_getStocksDailyRatiosData.py 20160313
+python3 01_formatStocksDailyRatiosData.py 20160313
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110315
-python3 01_formatStocksDailyRatiosData.py 20110315
+python3 01_getStocksDailyRatiosData.py 20160314
+python3 01_formatStocksDailyRatiosData.py 20160314
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110316
-python3 01_formatStocksDailyRatiosData.py 20110316
+python3 01_getStocksDailyRatiosData.py 20160315
+python3 01_formatStocksDailyRatiosData.py 20160315
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110317
-python3 01_formatStocksDailyRatiosData.py 20110317
+python3 01_getStocksDailyRatiosData.py 20160316
+python3 01_formatStocksDailyRatiosData.py 20160316
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110318
-python3 01_formatStocksDailyRatiosData.py 20110318
+python3 01_getStocksDailyRatiosData.py 20160317
+python3 01_formatStocksDailyRatiosData.py 20160317
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110319
-python3 01_formatStocksDailyRatiosData.py 20110319
+python3 01_getStocksDailyRatiosData.py 20160318
+python3 01_formatStocksDailyRatiosData.py 20160318
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110320
-python3 01_formatStocksDailyRatiosData.py 20110320
+python3 01_getStocksDailyRatiosData.py 20160319
+python3 01_formatStocksDailyRatiosData.py 20160319
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110321
-python3 01_formatStocksDailyRatiosData.py 20110321
+python3 01_getStocksDailyRatiosData.py 20160320
+python3 01_formatStocksDailyRatiosData.py 20160320
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110322
-python3 01_formatStocksDailyRatiosData.py 20110322
+python3 01_getStocksDailyRatiosData.py 20160321
+python3 01_formatStocksDailyRatiosData.py 20160321
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110323
-python3 01_formatStocksDailyRatiosData.py 20110323
+python3 01_getStocksDailyRatiosData.py 20160322
+python3 01_formatStocksDailyRatiosData.py 20160322
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110324
-python3 01_formatStocksDailyRatiosData.py 20110324
+python3 01_getStocksDailyRatiosData.py 20160323
+python3 01_formatStocksDailyRatiosData.py 20160323
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110325
-python3 01_formatStocksDailyRatiosData.py 20110325
+python3 01_getStocksDailyRatiosData.py 20160324
+python3 01_formatStocksDailyRatiosData.py 20160324
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110326
-python3 01_formatStocksDailyRatiosData.py 20110326
+python3 01_getStocksDailyRatiosData.py 20160325
+python3 01_formatStocksDailyRatiosData.py 20160325
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110327
-python3 01_formatStocksDailyRatiosData.py 20110327
+python3 01_getStocksDailyRatiosData.py 20160326
+python3 01_formatStocksDailyRatiosData.py 20160326
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110328
-python3 01_formatStocksDailyRatiosData.py 20110328
+python3 01_getStocksDailyRatiosData.py 20160327
+python3 01_formatStocksDailyRatiosData.py 20160327
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110329
-python3 01_formatStocksDailyRatiosData.py 20110329
+python3 01_getStocksDailyRatiosData.py 20160328
+python3 01_formatStocksDailyRatiosData.py 20160328
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110330
-python3 01_formatStocksDailyRatiosData.py 20110330
+python3 01_getStocksDailyRatiosData.py 20160329
+python3 01_formatStocksDailyRatiosData.py 20160329
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110331
-python3 01_formatStocksDailyRatiosData.py 20110331
+python3 01_getStocksDailyRatiosData.py 20160330
+python3 01_formatStocksDailyRatiosData.py 20160330
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110401
-python3 01_formatStocksDailyRatiosData.py 20110401
+python3 01_getStocksDailyRatiosData.py 20160331
+python3 01_formatStocksDailyRatiosData.py 20160331
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110402
-python3 01_formatStocksDailyRatiosData.py 20110402
+python3 01_getStocksDailyRatiosData.py 20160401
+python3 01_formatStocksDailyRatiosData.py 20160401
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110403
-python3 01_formatStocksDailyRatiosData.py 20110403
+python3 01_getStocksDailyRatiosData.py 20160402
+python3 01_formatStocksDailyRatiosData.py 20160402
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110404
-python3 01_formatStocksDailyRatiosData.py 20110404
+python3 01_getStocksDailyRatiosData.py 20160403
+python3 01_formatStocksDailyRatiosData.py 20160403
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110405
-python3 01_formatStocksDailyRatiosData.py 20110405
+python3 01_getStocksDailyRatiosData.py 20160404
+python3 01_formatStocksDailyRatiosData.py 20160404
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110406
-python3 01_formatStocksDailyRatiosData.py 20110406
+python3 01_getStocksDailyRatiosData.py 20160405
+python3 01_formatStocksDailyRatiosData.py 20160405
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110407
-python3 01_formatStocksDailyRatiosData.py 20110407
+python3 01_getStocksDailyRatiosData.py 20160406
+python3 01_formatStocksDailyRatiosData.py 20160406
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110408
-python3 01_formatStocksDailyRatiosData.py 20110408
+python3 01_getStocksDailyRatiosData.py 20160407
+python3 01_formatStocksDailyRatiosData.py 20160407
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110409
-python3 01_formatStocksDailyRatiosData.py 20110409
+python3 01_getStocksDailyRatiosData.py 20160408
+python3 01_formatStocksDailyRatiosData.py 20160408
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110410
-python3 01_formatStocksDailyRatiosData.py 20110410
+python3 01_getStocksDailyRatiosData.py 20160409
+python3 01_formatStocksDailyRatiosData.py 20160409
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110411
-python3 01_formatStocksDailyRatiosData.py 20110411
+python3 01_getStocksDailyRatiosData.py 20160410
+python3 01_formatStocksDailyRatiosData.py 20160410
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110412
-python3 01_formatStocksDailyRatiosData.py 20110412
+python3 01_getStocksDailyRatiosData.py 20160411
+python3 01_formatStocksDailyRatiosData.py 20160411
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110413
-python3 01_formatStocksDailyRatiosData.py 20110413
+python3 01_getStocksDailyRatiosData.py 20160412
+python3 01_formatStocksDailyRatiosData.py 20160412
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110414
-python3 01_formatStocksDailyRatiosData.py 20110414
+python3 01_getStocksDailyRatiosData.py 20160413
+python3 01_formatStocksDailyRatiosData.py 20160413
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110415
-python3 01_formatStocksDailyRatiosData.py 20110415
+python3 01_getStocksDailyRatiosData.py 20160414
+python3 01_formatStocksDailyRatiosData.py 20160414
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110416
-python3 01_formatStocksDailyRatiosData.py 20110416
+python3 01_getStocksDailyRatiosData.py 20160415
+python3 01_formatStocksDailyRatiosData.py 20160415
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110417
-python3 01_formatStocksDailyRatiosData.py 20110417
+python3 01_getStocksDailyRatiosData.py 20160416
+python3 01_formatStocksDailyRatiosData.py 20160416
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110418
-python3 01_formatStocksDailyRatiosData.py 20110418
+python3 01_getStocksDailyRatiosData.py 20160417
+python3 01_formatStocksDailyRatiosData.py 20160417
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110419
-python3 01_formatStocksDailyRatiosData.py 20110419
+python3 01_getStocksDailyRatiosData.py 20160418
+python3 01_formatStocksDailyRatiosData.py 20160418
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110420
-python3 01_formatStocksDailyRatiosData.py 20110420
+python3 01_getStocksDailyRatiosData.py 20160419
+python3 01_formatStocksDailyRatiosData.py 20160419
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110421
-python3 01_formatStocksDailyRatiosData.py 20110421
+python3 01_getStocksDailyRatiosData.py 20160420
+python3 01_formatStocksDailyRatiosData.py 20160420
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110422
-python3 01_formatStocksDailyRatiosData.py 20110422
+python3 01_getStocksDailyRatiosData.py 20160421
+python3 01_formatStocksDailyRatiosData.py 20160421
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110423
-python3 01_formatStocksDailyRatiosData.py 20110423
+python3 01_getStocksDailyRatiosData.py 20160422
+python3 01_formatStocksDailyRatiosData.py 20160422
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110424
-python3 01_formatStocksDailyRatiosData.py 20110424
+python3 01_getStocksDailyRatiosData.py 20160423
+python3 01_formatStocksDailyRatiosData.py 20160423
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110425
-python3 01_formatStocksDailyRatiosData.py 20110425
+python3 01_getStocksDailyRatiosData.py 20160424
+python3 01_formatStocksDailyRatiosData.py 20160424
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110426
-python3 01_formatStocksDailyRatiosData.py 20110426
+python3 01_getStocksDailyRatiosData.py 20160425
+python3 01_formatStocksDailyRatiosData.py 20160425
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110427
-python3 01_formatStocksDailyRatiosData.py 20110427
+python3 01_getStocksDailyRatiosData.py 20160426
+python3 01_formatStocksDailyRatiosData.py 20160426
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110428
-python3 01_formatStocksDailyRatiosData.py 20110428
+python3 01_getStocksDailyRatiosData.py 20160427
+python3 01_formatStocksDailyRatiosData.py 20160427
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110429
-python3 01_formatStocksDailyRatiosData.py 20110429
+python3 01_getStocksDailyRatiosData.py 20160428
+python3 01_formatStocksDailyRatiosData.py 20160428
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110430
-python3 01_formatStocksDailyRatiosData.py 20110430
+python3 01_getStocksDailyRatiosData.py 20160429
+python3 01_formatStocksDailyRatiosData.py 20160429
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110501
-python3 01_formatStocksDailyRatiosData.py 20110501
+python3 01_getStocksDailyRatiosData.py 20160430
+python3 01_formatStocksDailyRatiosData.py 20160430
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110502
-python3 01_formatStocksDailyRatiosData.py 20110502
+python3 01_getStocksDailyRatiosData.py 20160501
+python3 01_formatStocksDailyRatiosData.py 20160501
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110503
-python3 01_formatStocksDailyRatiosData.py 20110503
+python3 01_getStocksDailyRatiosData.py 20160502
+python3 01_formatStocksDailyRatiosData.py 20160502
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110504
-python3 01_formatStocksDailyRatiosData.py 20110504
+python3 01_getStocksDailyRatiosData.py 20160503
+python3 01_formatStocksDailyRatiosData.py 20160503
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110505
-python3 01_formatStocksDailyRatiosData.py 20110505
+python3 01_getStocksDailyRatiosData.py 20160504
+python3 01_formatStocksDailyRatiosData.py 20160504
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110506
-python3 01_formatStocksDailyRatiosData.py 20110506
+python3 01_getStocksDailyRatiosData.py 20160505
+python3 01_formatStocksDailyRatiosData.py 20160505
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110507
-python3 01_formatStocksDailyRatiosData.py 20110507
+python3 01_getStocksDailyRatiosData.py 20160506
+python3 01_formatStocksDailyRatiosData.py 20160506
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110508
-python3 01_formatStocksDailyRatiosData.py 20110508
+python3 01_getStocksDailyRatiosData.py 20160507
+python3 01_formatStocksDailyRatiosData.py 20160507
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110509
-python3 01_formatStocksDailyRatiosData.py 20110509
+python3 01_getStocksDailyRatiosData.py 20160508
+python3 01_formatStocksDailyRatiosData.py 20160508
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110510
-python3 01_formatStocksDailyRatiosData.py 20110510
+python3 01_getStocksDailyRatiosData.py 20160509
+python3 01_formatStocksDailyRatiosData.py 20160509
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110511
-python3 01_formatStocksDailyRatiosData.py 20110511
+python3 01_getStocksDailyRatiosData.py 20160510
+python3 01_formatStocksDailyRatiosData.py 20160510
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110512
-python3 01_formatStocksDailyRatiosData.py 20110512
+python3 01_getStocksDailyRatiosData.py 20160511
+python3 01_formatStocksDailyRatiosData.py 20160511
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110513
-python3 01_formatStocksDailyRatiosData.py 20110513
+python3 01_getStocksDailyRatiosData.py 20160512
+python3 01_formatStocksDailyRatiosData.py 20160512
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110514
-python3 01_formatStocksDailyRatiosData.py 20110514
+python3 01_getStocksDailyRatiosData.py 20160513
+python3 01_formatStocksDailyRatiosData.py 20160513
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110515
-python3 01_formatStocksDailyRatiosData.py 20110515
+python3 01_getStocksDailyRatiosData.py 20160514
+python3 01_formatStocksDailyRatiosData.py 20160514
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110516
-python3 01_formatStocksDailyRatiosData.py 20110516
+python3 01_getStocksDailyRatiosData.py 20160515
+python3 01_formatStocksDailyRatiosData.py 20160515
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110517
-python3 01_formatStocksDailyRatiosData.py 20110517
+python3 01_getStocksDailyRatiosData.py 20160516
+python3 01_formatStocksDailyRatiosData.py 20160516
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110518
-python3 01_formatStocksDailyRatiosData.py 20110518
+python3 01_getStocksDailyRatiosData.py 20160517
+python3 01_formatStocksDailyRatiosData.py 20160517
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110519
-python3 01_formatStocksDailyRatiosData.py 20110519
+python3 01_getStocksDailyRatiosData.py 20160518
+python3 01_formatStocksDailyRatiosData.py 20160518
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110520
-python3 01_formatStocksDailyRatiosData.py 20110520
+python3 01_getStocksDailyRatiosData.py 20160519
+python3 01_formatStocksDailyRatiosData.py 20160519
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110521
-python3 01_formatStocksDailyRatiosData.py 20110521
+python3 01_getStocksDailyRatiosData.py 20160520
+python3 01_formatStocksDailyRatiosData.py 20160520
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110522
-python3 01_formatStocksDailyRatiosData.py 20110522
+python3 01_getStocksDailyRatiosData.py 20160521
+python3 01_formatStocksDailyRatiosData.py 20160521
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110523
-python3 01_formatStocksDailyRatiosData.py 20110523
+python3 01_getStocksDailyRatiosData.py 20160522
+python3 01_formatStocksDailyRatiosData.py 20160522
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110524
-python3 01_formatStocksDailyRatiosData.py 20110524
+python3 01_getStocksDailyRatiosData.py 20160523
+python3 01_formatStocksDailyRatiosData.py 20160523
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110525
-python3 01_formatStocksDailyRatiosData.py 20110525
+python3 01_getStocksDailyRatiosData.py 20160524
+python3 01_formatStocksDailyRatiosData.py 20160524
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110526
-python3 01_formatStocksDailyRatiosData.py 20110526
+python3 01_getStocksDailyRatiosData.py 20160525
+python3 01_formatStocksDailyRatiosData.py 20160525
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110527
-python3 01_formatStocksDailyRatiosData.py 20110527
+python3 01_getStocksDailyRatiosData.py 20160526
+python3 01_formatStocksDailyRatiosData.py 20160526
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110528
-python3 01_formatStocksDailyRatiosData.py 20110528
+python3 01_getStocksDailyRatiosData.py 20160527
+python3 01_formatStocksDailyRatiosData.py 20160527
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110529
-python3 01_formatStocksDailyRatiosData.py 20110529
+python3 01_getStocksDailyRatiosData.py 20160528
+python3 01_formatStocksDailyRatiosData.py 20160528
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110530
-python3 01_formatStocksDailyRatiosData.py 20110530
+python3 01_getStocksDailyRatiosData.py 20160529
+python3 01_formatStocksDailyRatiosData.py 20160529
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110531
-python3 01_formatStocksDailyRatiosData.py 20110531
+python3 01_getStocksDailyRatiosData.py 20160530
+python3 01_formatStocksDailyRatiosData.py 20160530
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110601
-python3 01_formatStocksDailyRatiosData.py 20110601
+python3 01_getStocksDailyRatiosData.py 20160531
+python3 01_formatStocksDailyRatiosData.py 20160531
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110602
-python3 01_formatStocksDailyRatiosData.py 20110602
+python3 01_getStocksDailyRatiosData.py 20160601
+python3 01_formatStocksDailyRatiosData.py 20160601
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110603
-python3 01_formatStocksDailyRatiosData.py 20110603
+python3 01_getStocksDailyRatiosData.py 20160602
+python3 01_formatStocksDailyRatiosData.py 20160602
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110604
-python3 01_formatStocksDailyRatiosData.py 20110604
+python3 01_getStocksDailyRatiosData.py 20160603
+python3 01_formatStocksDailyRatiosData.py 20160603
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110605
-python3 01_formatStocksDailyRatiosData.py 20110605
+python3 01_getStocksDailyRatiosData.py 20160604
+python3 01_formatStocksDailyRatiosData.py 20160604
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110606
-python3 01_formatStocksDailyRatiosData.py 20110606
+python3 01_getStocksDailyRatiosData.py 20160605
+python3 01_formatStocksDailyRatiosData.py 20160605
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110607
-python3 01_formatStocksDailyRatiosData.py 20110607
+python3 01_getStocksDailyRatiosData.py 20160606
+python3 01_formatStocksDailyRatiosData.py 20160606
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110608
-python3 01_formatStocksDailyRatiosData.py 20110608
+python3 01_getStocksDailyRatiosData.py 20160607
+python3 01_formatStocksDailyRatiosData.py 20160607
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110609
-python3 01_formatStocksDailyRatiosData.py 20110609
+python3 01_getStocksDailyRatiosData.py 20160608
+python3 01_formatStocksDailyRatiosData.py 20160608
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110610
-python3 01_formatStocksDailyRatiosData.py 20110610
+python3 01_getStocksDailyRatiosData.py 20160609
+python3 01_formatStocksDailyRatiosData.py 20160609
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110611
-python3 01_formatStocksDailyRatiosData.py 20110611
+python3 01_getStocksDailyRatiosData.py 20160610
+python3 01_formatStocksDailyRatiosData.py 20160610
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110612
-python3 01_formatStocksDailyRatiosData.py 20110612
+python3 01_getStocksDailyRatiosData.py 20160611
+python3 01_formatStocksDailyRatiosData.py 20160611
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110613
-python3 01_formatStocksDailyRatiosData.py 20110613
+python3 01_getStocksDailyRatiosData.py 20160612
+python3 01_formatStocksDailyRatiosData.py 20160612
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110614
-python3 01_formatStocksDailyRatiosData.py 20110614
+python3 01_getStocksDailyRatiosData.py 20160613
+python3 01_formatStocksDailyRatiosData.py 20160613
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110615
-python3 01_formatStocksDailyRatiosData.py 20110615
+python3 01_getStocksDailyRatiosData.py 20160614
+python3 01_formatStocksDailyRatiosData.py 20160614
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110616
-python3 01_formatStocksDailyRatiosData.py 20110616
+python3 01_getStocksDailyRatiosData.py 20160615
+python3 01_formatStocksDailyRatiosData.py 20160615
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110617
-python3 01_formatStocksDailyRatiosData.py 20110617
+python3 01_getStocksDailyRatiosData.py 20160616
+python3 01_formatStocksDailyRatiosData.py 20160616
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110618
-python3 01_formatStocksDailyRatiosData.py 20110618
+python3 01_getStocksDailyRatiosData.py 20160617
+python3 01_formatStocksDailyRatiosData.py 20160617
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110619
-python3 01_formatStocksDailyRatiosData.py 20110619
+python3 01_getStocksDailyRatiosData.py 20160618
+python3 01_formatStocksDailyRatiosData.py 20160618
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110620
-python3 01_formatStocksDailyRatiosData.py 20110620
+python3 01_getStocksDailyRatiosData.py 20160619
+python3 01_formatStocksDailyRatiosData.py 20160619
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110621
-python3 01_formatStocksDailyRatiosData.py 20110621
+python3 01_getStocksDailyRatiosData.py 20160620
+python3 01_formatStocksDailyRatiosData.py 20160620
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110622
-python3 01_formatStocksDailyRatiosData.py 20110622
+python3 01_getStocksDailyRatiosData.py 20160621
+python3 01_formatStocksDailyRatiosData.py 20160621
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110623
-python3 01_formatStocksDailyRatiosData.py 20110623
+python3 01_getStocksDailyRatiosData.py 20160622
+python3 01_formatStocksDailyRatiosData.py 20160622
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110624
-python3 01_formatStocksDailyRatiosData.py 20110624
+python3 01_getStocksDailyRatiosData.py 20160623
+python3 01_formatStocksDailyRatiosData.py 20160623
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110625
-python3 01_formatStocksDailyRatiosData.py 20110625
+python3 01_getStocksDailyRatiosData.py 20160624
+python3 01_formatStocksDailyRatiosData.py 20160624
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110626
-python3 01_formatStocksDailyRatiosData.py 20110626
+python3 01_getStocksDailyRatiosData.py 20160625
+python3 01_formatStocksDailyRatiosData.py 20160625
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110627
-python3 01_formatStocksDailyRatiosData.py 20110627
+python3 01_getStocksDailyRatiosData.py 20160626
+python3 01_formatStocksDailyRatiosData.py 20160626
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110628
-python3 01_formatStocksDailyRatiosData.py 20110628
+python3 01_getStocksDailyRatiosData.py 20160627
+python3 01_formatStocksDailyRatiosData.py 20160627
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110629
-python3 01_formatStocksDailyRatiosData.py 20110629
+python3 01_getStocksDailyRatiosData.py 20160628
+python3 01_formatStocksDailyRatiosData.py 20160628
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110630
-python3 01_formatStocksDailyRatiosData.py 20110630
+python3 01_getStocksDailyRatiosData.py 20160629
+python3 01_formatStocksDailyRatiosData.py 20160629
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110701
-python3 01_formatStocksDailyRatiosData.py 20110701
+python3 01_getStocksDailyRatiosData.py 20160630
+python3 01_formatStocksDailyRatiosData.py 20160630
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110702
-python3 01_formatStocksDailyRatiosData.py 20110702
+python3 01_getStocksDailyRatiosData.py 20160701
+python3 01_formatStocksDailyRatiosData.py 20160701
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110703
-python3 01_formatStocksDailyRatiosData.py 20110703
+python3 01_getStocksDailyRatiosData.py 20160702
+python3 01_formatStocksDailyRatiosData.py 20160702
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110704
-python3 01_formatStocksDailyRatiosData.py 20110704
+python3 01_getStocksDailyRatiosData.py 20160703
+python3 01_formatStocksDailyRatiosData.py 20160703
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110705
-python3 01_formatStocksDailyRatiosData.py 20110705
+python3 01_getStocksDailyRatiosData.py 20160704
+python3 01_formatStocksDailyRatiosData.py 20160704
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110706
-python3 01_formatStocksDailyRatiosData.py 20110706
+python3 01_getStocksDailyRatiosData.py 20160705
+python3 01_formatStocksDailyRatiosData.py 20160705
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110707
-python3 01_formatStocksDailyRatiosData.py 20110707
+python3 01_getStocksDailyRatiosData.py 20160706
+python3 01_formatStocksDailyRatiosData.py 20160706
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110708
-python3 01_formatStocksDailyRatiosData.py 20110708
+python3 01_getStocksDailyRatiosData.py 20160707
+python3 01_formatStocksDailyRatiosData.py 20160707
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110709
-python3 01_formatStocksDailyRatiosData.py 20110709
+python3 01_getStocksDailyRatiosData.py 20160708
+python3 01_formatStocksDailyRatiosData.py 20160708
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110710
-python3 01_formatStocksDailyRatiosData.py 20110710
+python3 01_getStocksDailyRatiosData.py 20160709
+python3 01_formatStocksDailyRatiosData.py 20160709
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110711
-python3 01_formatStocksDailyRatiosData.py 20110711
+python3 01_getStocksDailyRatiosData.py 20160710
+python3 01_formatStocksDailyRatiosData.py 20160710
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110712
-python3 01_formatStocksDailyRatiosData.py 20110712
+python3 01_getStocksDailyRatiosData.py 20160711
+python3 01_formatStocksDailyRatiosData.py 20160711
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110713
-python3 01_formatStocksDailyRatiosData.py 20110713
+python3 01_getStocksDailyRatiosData.py 20160712
+python3 01_formatStocksDailyRatiosData.py 20160712
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110714
-python3 01_formatStocksDailyRatiosData.py 20110714
+python3 01_getStocksDailyRatiosData.py 20160713
+python3 01_formatStocksDailyRatiosData.py 20160713
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110715
-python3 01_formatStocksDailyRatiosData.py 20110715
+python3 01_getStocksDailyRatiosData.py 20160714
+python3 01_formatStocksDailyRatiosData.py 20160714
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110716
-python3 01_formatStocksDailyRatiosData.py 20110716
+python3 01_getStocksDailyRatiosData.py 20160715
+python3 01_formatStocksDailyRatiosData.py 20160715
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110717
-python3 01_formatStocksDailyRatiosData.py 20110717
+python3 01_getStocksDailyRatiosData.py 20160716
+python3 01_formatStocksDailyRatiosData.py 20160716
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110718
-python3 01_formatStocksDailyRatiosData.py 20110718
+python3 01_getStocksDailyRatiosData.py 20160717
+python3 01_formatStocksDailyRatiosData.py 20160717
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110719
-python3 01_formatStocksDailyRatiosData.py 20110719
+python3 01_getStocksDailyRatiosData.py 20160718
+python3 01_formatStocksDailyRatiosData.py 20160718
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110720
-python3 01_formatStocksDailyRatiosData.py 20110720
+python3 01_getStocksDailyRatiosData.py 20160719
+python3 01_formatStocksDailyRatiosData.py 20160719
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110721
-python3 01_formatStocksDailyRatiosData.py 20110721
+python3 01_getStocksDailyRatiosData.py 20160720
+python3 01_formatStocksDailyRatiosData.py 20160720
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110722
-python3 01_formatStocksDailyRatiosData.py 20110722
+python3 01_getStocksDailyRatiosData.py 20160721
+python3 01_formatStocksDailyRatiosData.py 20160721
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110723
-python3 01_formatStocksDailyRatiosData.py 20110723
+python3 01_getStocksDailyRatiosData.py 20160722
+python3 01_formatStocksDailyRatiosData.py 20160722
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110724
-python3 01_formatStocksDailyRatiosData.py 20110724
+python3 01_getStocksDailyRatiosData.py 20160723
+python3 01_formatStocksDailyRatiosData.py 20160723
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110725
-python3 01_formatStocksDailyRatiosData.py 20110725
+python3 01_getStocksDailyRatiosData.py 20160724
+python3 01_formatStocksDailyRatiosData.py 20160724
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110726
-python3 01_formatStocksDailyRatiosData.py 20110726
+python3 01_getStocksDailyRatiosData.py 20160725
+python3 01_formatStocksDailyRatiosData.py 20160725
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110727
-python3 01_formatStocksDailyRatiosData.py 20110727
+python3 01_getStocksDailyRatiosData.py 20160726
+python3 01_formatStocksDailyRatiosData.py 20160726
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110728
-python3 01_formatStocksDailyRatiosData.py 20110728
+python3 01_getStocksDailyRatiosData.py 20160727
+python3 01_formatStocksDailyRatiosData.py 20160727
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110729
-python3 01_formatStocksDailyRatiosData.py 20110729
+python3 01_getStocksDailyRatiosData.py 20160728
+python3 01_formatStocksDailyRatiosData.py 20160728
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110730
-python3 01_formatStocksDailyRatiosData.py 20110730
+python3 01_getStocksDailyRatiosData.py 20160729
+python3 01_formatStocksDailyRatiosData.py 20160729
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110731
-python3 01_formatStocksDailyRatiosData.py 20110731
+python3 01_getStocksDailyRatiosData.py 20160730
+python3 01_formatStocksDailyRatiosData.py 20160730
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110801
-python3 01_formatStocksDailyRatiosData.py 20110801
+python3 01_getStocksDailyRatiosData.py 20160731
+python3 01_formatStocksDailyRatiosData.py 20160731
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110802
-python3 01_formatStocksDailyRatiosData.py 20110802
+python3 01_getStocksDailyRatiosData.py 20160801
+python3 01_formatStocksDailyRatiosData.py 20160801
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110803
-python3 01_formatStocksDailyRatiosData.py 20110803
+python3 01_getStocksDailyRatiosData.py 20160802
+python3 01_formatStocksDailyRatiosData.py 20160802
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110804
-python3 01_formatStocksDailyRatiosData.py 20110804
+python3 01_getStocksDailyRatiosData.py 20160803
+python3 01_formatStocksDailyRatiosData.py 20160803
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110805
-python3 01_formatStocksDailyRatiosData.py 20110805
+python3 01_getStocksDailyRatiosData.py 20160804
+python3 01_formatStocksDailyRatiosData.py 20160804
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110806
-python3 01_formatStocksDailyRatiosData.py 20110806
+python3 01_getStocksDailyRatiosData.py 20160805
+python3 01_formatStocksDailyRatiosData.py 20160805
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110807
-python3 01_formatStocksDailyRatiosData.py 20110807
+python3 01_getStocksDailyRatiosData.py 20160806
+python3 01_formatStocksDailyRatiosData.py 20160806
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110808
-python3 01_formatStocksDailyRatiosData.py 20110808
+python3 01_getStocksDailyRatiosData.py 20160807
+python3 01_formatStocksDailyRatiosData.py 20160807
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110809
-python3 01_formatStocksDailyRatiosData.py 20110809
+python3 01_getStocksDailyRatiosData.py 20160808
+python3 01_formatStocksDailyRatiosData.py 20160808
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110810
-python3 01_formatStocksDailyRatiosData.py 20110810
+python3 01_getStocksDailyRatiosData.py 20160809
+python3 01_formatStocksDailyRatiosData.py 20160809
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110811
-python3 01_formatStocksDailyRatiosData.py 20110811
+python3 01_getStocksDailyRatiosData.py 20160810
+python3 01_formatStocksDailyRatiosData.py 20160810
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110812
-python3 01_formatStocksDailyRatiosData.py 20110812
+python3 01_getStocksDailyRatiosData.py 20160811
+python3 01_formatStocksDailyRatiosData.py 20160811
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110813
-python3 01_formatStocksDailyRatiosData.py 20110813
+python3 01_getStocksDailyRatiosData.py 20160812
+python3 01_formatStocksDailyRatiosData.py 20160812
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110814
-python3 01_formatStocksDailyRatiosData.py 20110814
+python3 01_getStocksDailyRatiosData.py 20160813
+python3 01_formatStocksDailyRatiosData.py 20160813
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110815
-python3 01_formatStocksDailyRatiosData.py 20110815
+python3 01_getStocksDailyRatiosData.py 20160814
+python3 01_formatStocksDailyRatiosData.py 20160814
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110816
-python3 01_formatStocksDailyRatiosData.py 20110816
+python3 01_getStocksDailyRatiosData.py 20160815
+python3 01_formatStocksDailyRatiosData.py 20160815
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110817
-python3 01_formatStocksDailyRatiosData.py 20110817
+python3 01_getStocksDailyRatiosData.py 20160816
+python3 01_formatStocksDailyRatiosData.py 20160816
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110818
-python3 01_formatStocksDailyRatiosData.py 20110818
+python3 01_getStocksDailyRatiosData.py 20160817
+python3 01_formatStocksDailyRatiosData.py 20160817
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110819
-python3 01_formatStocksDailyRatiosData.py 20110819
+python3 01_getStocksDailyRatiosData.py 20160818
+python3 01_formatStocksDailyRatiosData.py 20160818
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110820
-python3 01_formatStocksDailyRatiosData.py 20110820
+python3 01_getStocksDailyRatiosData.py 20160819
+python3 01_formatStocksDailyRatiosData.py 20160819
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110821
-python3 01_formatStocksDailyRatiosData.py 20110821
+python3 01_getStocksDailyRatiosData.py 20160820
+python3 01_formatStocksDailyRatiosData.py 20160820
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110822
-python3 01_formatStocksDailyRatiosData.py 20110822
+python3 01_getStocksDailyRatiosData.py 20160821
+python3 01_formatStocksDailyRatiosData.py 20160821
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110823
-python3 01_formatStocksDailyRatiosData.py 20110823
+python3 01_getStocksDailyRatiosData.py 20160822
+python3 01_formatStocksDailyRatiosData.py 20160822
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110824
-python3 01_formatStocksDailyRatiosData.py 20110824
+python3 01_getStocksDailyRatiosData.py 20160823
+python3 01_formatStocksDailyRatiosData.py 20160823
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110825
-python3 01_formatStocksDailyRatiosData.py 20110825
+python3 01_getStocksDailyRatiosData.py 20160824
+python3 01_formatStocksDailyRatiosData.py 20160824
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110826
-python3 01_formatStocksDailyRatiosData.py 20110826
+python3 01_getStocksDailyRatiosData.py 20160825
+python3 01_formatStocksDailyRatiosData.py 20160825
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110827
-python3 01_formatStocksDailyRatiosData.py 20110827
+python3 01_getStocksDailyRatiosData.py 20160826
+python3 01_formatStocksDailyRatiosData.py 20160826
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110828
-python3 01_formatStocksDailyRatiosData.py 20110828
+python3 01_getStocksDailyRatiosData.py 20160827
+python3 01_formatStocksDailyRatiosData.py 20160827
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110829
-python3 01_formatStocksDailyRatiosData.py 20110829
+python3 01_getStocksDailyRatiosData.py 20160828
+python3 01_formatStocksDailyRatiosData.py 20160828
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110830
-python3 01_formatStocksDailyRatiosData.py 20110830
+python3 01_getStocksDailyRatiosData.py 20160829
+python3 01_formatStocksDailyRatiosData.py 20160829
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110831
-python3 01_formatStocksDailyRatiosData.py 20110831
+python3 01_getStocksDailyRatiosData.py 20160830
+python3 01_formatStocksDailyRatiosData.py 20160830
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110901
-python3 01_formatStocksDailyRatiosData.py 20110901
+python3 01_getStocksDailyRatiosData.py 20160831
+python3 01_formatStocksDailyRatiosData.py 20160831
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110902
-python3 01_formatStocksDailyRatiosData.py 20110902
+python3 01_getStocksDailyRatiosData.py 20160901
+python3 01_formatStocksDailyRatiosData.py 20160901
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110903
-python3 01_formatStocksDailyRatiosData.py 20110903
+python3 01_getStocksDailyRatiosData.py 20160902
+python3 01_formatStocksDailyRatiosData.py 20160902
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110904
-python3 01_formatStocksDailyRatiosData.py 20110904
+python3 01_getStocksDailyRatiosData.py 20160903
+python3 01_formatStocksDailyRatiosData.py 20160903
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110905
-python3 01_formatStocksDailyRatiosData.py 20110905
+python3 01_getStocksDailyRatiosData.py 20160904
+python3 01_formatStocksDailyRatiosData.py 20160904
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110906
-python3 01_formatStocksDailyRatiosData.py 20110906
+python3 01_getStocksDailyRatiosData.py 20160905
+python3 01_formatStocksDailyRatiosData.py 20160905
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110907
-python3 01_formatStocksDailyRatiosData.py 20110907
+python3 01_getStocksDailyRatiosData.py 20160906
+python3 01_formatStocksDailyRatiosData.py 20160906
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110908
-python3 01_formatStocksDailyRatiosData.py 20110908
+python3 01_getStocksDailyRatiosData.py 20160907
+python3 01_formatStocksDailyRatiosData.py 20160907
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110909
-python3 01_formatStocksDailyRatiosData.py 20110909
+python3 01_getStocksDailyRatiosData.py 20160908
+python3 01_formatStocksDailyRatiosData.py 20160908
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110910
-python3 01_formatStocksDailyRatiosData.py 20110910
+python3 01_getStocksDailyRatiosData.py 20160909
+python3 01_formatStocksDailyRatiosData.py 20160909
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110911
-python3 01_formatStocksDailyRatiosData.py 20110911
+python3 01_getStocksDailyRatiosData.py 20160910
+python3 01_formatStocksDailyRatiosData.py 20160910
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110912
-python3 01_formatStocksDailyRatiosData.py 20110912
+python3 01_getStocksDailyRatiosData.py 20160911
+python3 01_formatStocksDailyRatiosData.py 20160911
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110913
-python3 01_formatStocksDailyRatiosData.py 20110913
+python3 01_getStocksDailyRatiosData.py 20160912
+python3 01_formatStocksDailyRatiosData.py 20160912
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110914
-python3 01_formatStocksDailyRatiosData.py 20110914
+python3 01_getStocksDailyRatiosData.py 20160913
+python3 01_formatStocksDailyRatiosData.py 20160913
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110915
-python3 01_formatStocksDailyRatiosData.py 20110915
+python3 01_getStocksDailyRatiosData.py 20160914
+python3 01_formatStocksDailyRatiosData.py 20160914
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110916
-python3 01_formatStocksDailyRatiosData.py 20110916
+python3 01_getStocksDailyRatiosData.py 20160915
+python3 01_formatStocksDailyRatiosData.py 20160915
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110917
-python3 01_formatStocksDailyRatiosData.py 20110917
+python3 01_getStocksDailyRatiosData.py 20160916
+python3 01_formatStocksDailyRatiosData.py 20160916
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110918
-python3 01_formatStocksDailyRatiosData.py 20110918
+python3 01_getStocksDailyRatiosData.py 20160917
+python3 01_formatStocksDailyRatiosData.py 20160917
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110919
-python3 01_formatStocksDailyRatiosData.py 20110919
+python3 01_getStocksDailyRatiosData.py 20160918
+python3 01_formatStocksDailyRatiosData.py 20160918
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110920
-python3 01_formatStocksDailyRatiosData.py 20110920
+python3 01_getStocksDailyRatiosData.py 20160919
+python3 01_formatStocksDailyRatiosData.py 20160919
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110921
-python3 01_formatStocksDailyRatiosData.py 20110921
+python3 01_getStocksDailyRatiosData.py 20160920
+python3 01_formatStocksDailyRatiosData.py 20160920
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110922
-python3 01_formatStocksDailyRatiosData.py 20110922
+python3 01_getStocksDailyRatiosData.py 20160921
+python3 01_formatStocksDailyRatiosData.py 20160921
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110923
-python3 01_formatStocksDailyRatiosData.py 20110923
+python3 01_getStocksDailyRatiosData.py 20160922
+python3 01_formatStocksDailyRatiosData.py 20160922
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110924
-python3 01_formatStocksDailyRatiosData.py 20110924
+python3 01_getStocksDailyRatiosData.py 20160923
+python3 01_formatStocksDailyRatiosData.py 20160923
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110925
-python3 01_formatStocksDailyRatiosData.py 20110925
+python3 01_getStocksDailyRatiosData.py 20160924
+python3 01_formatStocksDailyRatiosData.py 20160924
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110926
-python3 01_formatStocksDailyRatiosData.py 20110926
+python3 01_getStocksDailyRatiosData.py 20160925
+python3 01_formatStocksDailyRatiosData.py 20160925
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110927
-python3 01_formatStocksDailyRatiosData.py 20110927
+python3 01_getStocksDailyRatiosData.py 20160926
+python3 01_formatStocksDailyRatiosData.py 20160926
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110928
-python3 01_formatStocksDailyRatiosData.py 20110928
+python3 01_getStocksDailyRatiosData.py 20160927
+python3 01_formatStocksDailyRatiosData.py 20160927
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110929
-python3 01_formatStocksDailyRatiosData.py 20110929
+python3 01_getStocksDailyRatiosData.py 20160928
+python3 01_formatStocksDailyRatiosData.py 20160928
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20110930
-python3 01_formatStocksDailyRatiosData.py 20110930
+python3 01_getStocksDailyRatiosData.py 20160929
+python3 01_formatStocksDailyRatiosData.py 20160929
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111001
-python3 01_formatStocksDailyRatiosData.py 20111001
+python3 01_getStocksDailyRatiosData.py 20160930
+python3 01_formatStocksDailyRatiosData.py 20160930
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111002
-python3 01_formatStocksDailyRatiosData.py 20111002
+python3 01_getStocksDailyRatiosData.py 20161001
+python3 01_formatStocksDailyRatiosData.py 20161001
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111003
-python3 01_formatStocksDailyRatiosData.py 20111003
+python3 01_getStocksDailyRatiosData.py 20161002
+python3 01_formatStocksDailyRatiosData.py 20161002
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111004
-python3 01_formatStocksDailyRatiosData.py 20111004
+python3 01_getStocksDailyRatiosData.py 20161003
+python3 01_formatStocksDailyRatiosData.py 20161003
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111005
-python3 01_formatStocksDailyRatiosData.py 20111005
+python3 01_getStocksDailyRatiosData.py 20161004
+python3 01_formatStocksDailyRatiosData.py 20161004
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111006
-python3 01_formatStocksDailyRatiosData.py 20111006
+python3 01_getStocksDailyRatiosData.py 20161005
+python3 01_formatStocksDailyRatiosData.py 20161005
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111007
-python3 01_formatStocksDailyRatiosData.py 20111007
+python3 01_getStocksDailyRatiosData.py 20161006
+python3 01_formatStocksDailyRatiosData.py 20161006
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111008
-python3 01_formatStocksDailyRatiosData.py 20111008
+python3 01_getStocksDailyRatiosData.py 20161007
+python3 01_formatStocksDailyRatiosData.py 20161007
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111009
-python3 01_formatStocksDailyRatiosData.py 20111009
+python3 01_getStocksDailyRatiosData.py 20161008
+python3 01_formatStocksDailyRatiosData.py 20161008
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111010
-python3 01_formatStocksDailyRatiosData.py 20111010
+python3 01_getStocksDailyRatiosData.py 20161009
+python3 01_formatStocksDailyRatiosData.py 20161009
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111011
-python3 01_formatStocksDailyRatiosData.py 20111011
+python3 01_getStocksDailyRatiosData.py 20161010
+python3 01_formatStocksDailyRatiosData.py 20161010
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111012
-python3 01_formatStocksDailyRatiosData.py 20111012
+python3 01_getStocksDailyRatiosData.py 20161011
+python3 01_formatStocksDailyRatiosData.py 20161011
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111013
-python3 01_formatStocksDailyRatiosData.py 20111013
+python3 01_getStocksDailyRatiosData.py 20161012
+python3 01_formatStocksDailyRatiosData.py 20161012
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111014
-python3 01_formatStocksDailyRatiosData.py 20111014
+python3 01_getStocksDailyRatiosData.py 20161013
+python3 01_formatStocksDailyRatiosData.py 20161013
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111015
-python3 01_formatStocksDailyRatiosData.py 20111015
+python3 01_getStocksDailyRatiosData.py 20161014
+python3 01_formatStocksDailyRatiosData.py 20161014
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111016
-python3 01_formatStocksDailyRatiosData.py 20111016
+python3 01_getStocksDailyRatiosData.py 20161015
+python3 01_formatStocksDailyRatiosData.py 20161015
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111017
-python3 01_formatStocksDailyRatiosData.py 20111017
+python3 01_getStocksDailyRatiosData.py 20161016
+python3 01_formatStocksDailyRatiosData.py 20161016
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111018
-python3 01_formatStocksDailyRatiosData.py 20111018
+python3 01_getStocksDailyRatiosData.py 20161017
+python3 01_formatStocksDailyRatiosData.py 20161017
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111019
-python3 01_formatStocksDailyRatiosData.py 20111019
+python3 01_getStocksDailyRatiosData.py 20161018
+python3 01_formatStocksDailyRatiosData.py 20161018
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111020
-python3 01_formatStocksDailyRatiosData.py 20111020
+python3 01_getStocksDailyRatiosData.py 20161019
+python3 01_formatStocksDailyRatiosData.py 20161019
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111021
-python3 01_formatStocksDailyRatiosData.py 20111021
+python3 01_getStocksDailyRatiosData.py 20161020
+python3 01_formatStocksDailyRatiosData.py 20161020
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111022
-python3 01_formatStocksDailyRatiosData.py 20111022
+python3 01_getStocksDailyRatiosData.py 20161021
+python3 01_formatStocksDailyRatiosData.py 20161021
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111023
-python3 01_formatStocksDailyRatiosData.py 20111023
+python3 01_getStocksDailyRatiosData.py 20161022
+python3 01_formatStocksDailyRatiosData.py 20161022
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111024
-python3 01_formatStocksDailyRatiosData.py 20111024
+python3 01_getStocksDailyRatiosData.py 20161023
+python3 01_formatStocksDailyRatiosData.py 20161023
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111025
-python3 01_formatStocksDailyRatiosData.py 20111025
+python3 01_getStocksDailyRatiosData.py 20161024
+python3 01_formatStocksDailyRatiosData.py 20161024
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111026
-python3 01_formatStocksDailyRatiosData.py 20111026
+python3 01_getStocksDailyRatiosData.py 20161025
+python3 01_formatStocksDailyRatiosData.py 20161025
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111027
-python3 01_formatStocksDailyRatiosData.py 20111027
+python3 01_getStocksDailyRatiosData.py 20161026
+python3 01_formatStocksDailyRatiosData.py 20161026
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111028
-python3 01_formatStocksDailyRatiosData.py 20111028
+python3 01_getStocksDailyRatiosData.py 20161027
+python3 01_formatStocksDailyRatiosData.py 20161027
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111029
-python3 01_formatStocksDailyRatiosData.py 20111029
+python3 01_getStocksDailyRatiosData.py 20161028
+python3 01_formatStocksDailyRatiosData.py 20161028
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111030
-python3 01_formatStocksDailyRatiosData.py 20111030
+python3 01_getStocksDailyRatiosData.py 20161029
+python3 01_formatStocksDailyRatiosData.py 20161029
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111031
-python3 01_formatStocksDailyRatiosData.py 20111031
+python3 01_getStocksDailyRatiosData.py 20161030
+python3 01_formatStocksDailyRatiosData.py 20161030
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111101
-python3 01_formatStocksDailyRatiosData.py 20111101
+python3 01_getStocksDailyRatiosData.py 20161031
+python3 01_formatStocksDailyRatiosData.py 20161031
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111102
-python3 01_formatStocksDailyRatiosData.py 20111102
+python3 01_getStocksDailyRatiosData.py 20161101
+python3 01_formatStocksDailyRatiosData.py 20161101
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111103
-python3 01_formatStocksDailyRatiosData.py 20111103
+python3 01_getStocksDailyRatiosData.py 20161102
+python3 01_formatStocksDailyRatiosData.py 20161102
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111104
-python3 01_formatStocksDailyRatiosData.py 20111104
+python3 01_getStocksDailyRatiosData.py 20161103
+python3 01_formatStocksDailyRatiosData.py 20161103
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111105
-python3 01_formatStocksDailyRatiosData.py 20111105
+python3 01_getStocksDailyRatiosData.py 20161104
+python3 01_formatStocksDailyRatiosData.py 20161104
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111106
-python3 01_formatStocksDailyRatiosData.py 20111106
+python3 01_getStocksDailyRatiosData.py 20161105
+python3 01_formatStocksDailyRatiosData.py 20161105
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111107
-python3 01_formatStocksDailyRatiosData.py 20111107
+python3 01_getStocksDailyRatiosData.py 20161106
+python3 01_formatStocksDailyRatiosData.py 20161106
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111108
-python3 01_formatStocksDailyRatiosData.py 20111108
+python3 01_getStocksDailyRatiosData.py 20161107
+python3 01_formatStocksDailyRatiosData.py 20161107
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111109
-python3 01_formatStocksDailyRatiosData.py 20111109
+python3 01_getStocksDailyRatiosData.py 20161108
+python3 01_formatStocksDailyRatiosData.py 20161108
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111110
-python3 01_formatStocksDailyRatiosData.py 20111110
+python3 01_getStocksDailyRatiosData.py 20161109
+python3 01_formatStocksDailyRatiosData.py 20161109
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111111
-python3 01_formatStocksDailyRatiosData.py 20111111
+python3 01_getStocksDailyRatiosData.py 20161110
+python3 01_formatStocksDailyRatiosData.py 20161110
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111112
-python3 01_formatStocksDailyRatiosData.py 20111112
+python3 01_getStocksDailyRatiosData.py 20161111
+python3 01_formatStocksDailyRatiosData.py 20161111
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111113
-python3 01_formatStocksDailyRatiosData.py 20111113
+python3 01_getStocksDailyRatiosData.py 20161112
+python3 01_formatStocksDailyRatiosData.py 20161112
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111114
-python3 01_formatStocksDailyRatiosData.py 20111114
+python3 01_getStocksDailyRatiosData.py 20161113
+python3 01_formatStocksDailyRatiosData.py 20161113
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111115
-python3 01_formatStocksDailyRatiosData.py 20111115
+python3 01_getStocksDailyRatiosData.py 20161114
+python3 01_formatStocksDailyRatiosData.py 20161114
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111116
-python3 01_formatStocksDailyRatiosData.py 20111116
+python3 01_getStocksDailyRatiosData.py 20161115
+python3 01_formatStocksDailyRatiosData.py 20161115
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111117
-python3 01_formatStocksDailyRatiosData.py 20111117
+python3 01_getStocksDailyRatiosData.py 20161116
+python3 01_formatStocksDailyRatiosData.py 20161116
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111118
-python3 01_formatStocksDailyRatiosData.py 20111118
+python3 01_getStocksDailyRatiosData.py 20161117
+python3 01_formatStocksDailyRatiosData.py 20161117
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111119
-python3 01_formatStocksDailyRatiosData.py 20111119
+python3 01_getStocksDailyRatiosData.py 20161118
+python3 01_formatStocksDailyRatiosData.py 20161118
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111120
-python3 01_formatStocksDailyRatiosData.py 20111120
+python3 01_getStocksDailyRatiosData.py 20161119
+python3 01_formatStocksDailyRatiosData.py 20161119
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111121
-python3 01_formatStocksDailyRatiosData.py 20111121
+python3 01_getStocksDailyRatiosData.py 20161120
+python3 01_formatStocksDailyRatiosData.py 20161120
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111122
-python3 01_formatStocksDailyRatiosData.py 20111122
+python3 01_getStocksDailyRatiosData.py 20161121
+python3 01_formatStocksDailyRatiosData.py 20161121
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111123
-python3 01_formatStocksDailyRatiosData.py 20111123
+python3 01_getStocksDailyRatiosData.py 20161122
+python3 01_formatStocksDailyRatiosData.py 20161122
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111124
-python3 01_formatStocksDailyRatiosData.py 20111124
+python3 01_getStocksDailyRatiosData.py 20161123
+python3 01_formatStocksDailyRatiosData.py 20161123
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111125
-python3 01_formatStocksDailyRatiosData.py 20111125
+python3 01_getStocksDailyRatiosData.py 20161124
+python3 01_formatStocksDailyRatiosData.py 20161124
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111126
-python3 01_formatStocksDailyRatiosData.py 20111126
+python3 01_getStocksDailyRatiosData.py 20161125
+python3 01_formatStocksDailyRatiosData.py 20161125
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111127
-python3 01_formatStocksDailyRatiosData.py 20111127
+python3 01_getStocksDailyRatiosData.py 20161126
+python3 01_formatStocksDailyRatiosData.py 20161126
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111128
-python3 01_formatStocksDailyRatiosData.py 20111128
+python3 01_getStocksDailyRatiosData.py 20161127
+python3 01_formatStocksDailyRatiosData.py 20161127
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111129
-python3 01_formatStocksDailyRatiosData.py 20111129
+python3 01_getStocksDailyRatiosData.py 20161128
+python3 01_formatStocksDailyRatiosData.py 20161128
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111130
-python3 01_formatStocksDailyRatiosData.py 20111130
+python3 01_getStocksDailyRatiosData.py 20161129
+python3 01_formatStocksDailyRatiosData.py 20161129
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111201
-python3 01_formatStocksDailyRatiosData.py 20111201
+python3 01_getStocksDailyRatiosData.py 20161130
+python3 01_formatStocksDailyRatiosData.py 20161130
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111202
-python3 01_formatStocksDailyRatiosData.py 20111202
+python3 01_getStocksDailyRatiosData.py 20161201
+python3 01_formatStocksDailyRatiosData.py 20161201
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111203
-python3 01_formatStocksDailyRatiosData.py 20111203
+python3 01_getStocksDailyRatiosData.py 20161202
+python3 01_formatStocksDailyRatiosData.py 20161202
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111204
-python3 01_formatStocksDailyRatiosData.py 20111204
+python3 01_getStocksDailyRatiosData.py 20161203
+python3 01_formatStocksDailyRatiosData.py 20161203
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111205
-python3 01_formatStocksDailyRatiosData.py 20111205
+python3 01_getStocksDailyRatiosData.py 20161204
+python3 01_formatStocksDailyRatiosData.py 20161204
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111206
-python3 01_formatStocksDailyRatiosData.py 20111206
+python3 01_getStocksDailyRatiosData.py 20161205
+python3 01_formatStocksDailyRatiosData.py 20161205
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111207
-python3 01_formatStocksDailyRatiosData.py 20111207
+python3 01_getStocksDailyRatiosData.py 20161206
+python3 01_formatStocksDailyRatiosData.py 20161206
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111208
-python3 01_formatStocksDailyRatiosData.py 20111208
+python3 01_getStocksDailyRatiosData.py 20161207
+python3 01_formatStocksDailyRatiosData.py 20161207
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111209
-python3 01_formatStocksDailyRatiosData.py 20111209
+python3 01_getStocksDailyRatiosData.py 20161208
+python3 01_formatStocksDailyRatiosData.py 20161208
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111210
-python3 01_formatStocksDailyRatiosData.py 20111210
+python3 01_getStocksDailyRatiosData.py 20161209
+python3 01_formatStocksDailyRatiosData.py 20161209
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111211
-python3 01_formatStocksDailyRatiosData.py 20111211
+python3 01_getStocksDailyRatiosData.py 20161210
+python3 01_formatStocksDailyRatiosData.py 20161210
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111212
-python3 01_formatStocksDailyRatiosData.py 20111212
+python3 01_getStocksDailyRatiosData.py 20161211
+python3 01_formatStocksDailyRatiosData.py 20161211
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111213
-python3 01_formatStocksDailyRatiosData.py 20111213
+python3 01_getStocksDailyRatiosData.py 20161212
+python3 01_formatStocksDailyRatiosData.py 20161212
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111214
-python3 01_formatStocksDailyRatiosData.py 20111214
+python3 01_getStocksDailyRatiosData.py 20161213
+python3 01_formatStocksDailyRatiosData.py 20161213
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111215
-python3 01_formatStocksDailyRatiosData.py 20111215
+python3 01_getStocksDailyRatiosData.py 20161214
+python3 01_formatStocksDailyRatiosData.py 20161214
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111216
-python3 01_formatStocksDailyRatiosData.py 20111216
+python3 01_getStocksDailyRatiosData.py 20161215
+python3 01_formatStocksDailyRatiosData.py 20161215
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111217
-python3 01_formatStocksDailyRatiosData.py 20111217
+python3 01_getStocksDailyRatiosData.py 20161216
+python3 01_formatStocksDailyRatiosData.py 20161216
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111218
-python3 01_formatStocksDailyRatiosData.py 20111218
+python3 01_getStocksDailyRatiosData.py 20161217
+python3 01_formatStocksDailyRatiosData.py 20161217
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111219
-python3 01_formatStocksDailyRatiosData.py 20111219
+python3 01_getStocksDailyRatiosData.py 20161218
+python3 01_formatStocksDailyRatiosData.py 20161218
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111220
-python3 01_formatStocksDailyRatiosData.py 20111220
+python3 01_getStocksDailyRatiosData.py 20161219
+python3 01_formatStocksDailyRatiosData.py 20161219
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111221
-python3 01_formatStocksDailyRatiosData.py 20111221
+python3 01_getStocksDailyRatiosData.py 20161220
+python3 01_formatStocksDailyRatiosData.py 20161220
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111222
-python3 01_formatStocksDailyRatiosData.py 20111222
+python3 01_getStocksDailyRatiosData.py 20161221
+python3 01_formatStocksDailyRatiosData.py 20161221
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111223
-python3 01_formatStocksDailyRatiosData.py 20111223
+python3 01_getStocksDailyRatiosData.py 20161222
+python3 01_formatStocksDailyRatiosData.py 20161222
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111224
-python3 01_formatStocksDailyRatiosData.py 20111224
+python3 01_getStocksDailyRatiosData.py 20161223
+python3 01_formatStocksDailyRatiosData.py 20161223
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111225
-python3 01_formatStocksDailyRatiosData.py 20111225
+python3 01_getStocksDailyRatiosData.py 20161224
+python3 01_formatStocksDailyRatiosData.py 20161224
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111226
-python3 01_formatStocksDailyRatiosData.py 20111226
+python3 01_getStocksDailyRatiosData.py 20161225
+python3 01_formatStocksDailyRatiosData.py 20161225
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111227
-python3 01_formatStocksDailyRatiosData.py 20111227
+python3 01_getStocksDailyRatiosData.py 20161226
+python3 01_formatStocksDailyRatiosData.py 20161226
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111228
-python3 01_formatStocksDailyRatiosData.py 20111228
+python3 01_getStocksDailyRatiosData.py 20161227
+python3 01_formatStocksDailyRatiosData.py 20161227
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111229
-python3 01_formatStocksDailyRatiosData.py 20111229
+python3 01_getStocksDailyRatiosData.py 20161228
+python3 01_formatStocksDailyRatiosData.py 20161228
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111230
-python3 01_formatStocksDailyRatiosData.py 20111230
+python3 01_getStocksDailyRatiosData.py 20161229
+python3 01_formatStocksDailyRatiosData.py 20161229
 sleep 10
 # wait 10 sec.
-python3 01_getStocksDailyRatiosData.py 20111231
-python3 01_formatStocksDailyRatiosData.py 20111231
+python3 01_getStocksDailyRatiosData.py 20161230
+python3 01_formatStocksDailyRatiosData.py 20161230
+sleep 10
+# wait 10 sec.
+python3 01_getStocksDailyRatiosData.py 20161231
+python3 01_formatStocksDailyRatiosData.py 20161231
 sleep 10
 # wait 10 sec.
