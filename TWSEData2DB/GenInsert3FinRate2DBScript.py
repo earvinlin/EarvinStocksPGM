@@ -73,7 +73,7 @@ try:
 		if str(beginDate)[4:6] == "02" :	
 			day = 28
 			WesternNewYear =  int(str(beginDate)[1:4])
-			if not WesternNewYear%4 : 
+			if WesternNewYear%4 : 
 				day = 28
 			else :
 				if not WesternNewYear%100 :	
