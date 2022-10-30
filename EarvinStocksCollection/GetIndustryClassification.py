@@ -34,8 +34,9 @@ resp.encoding = 'cp950'
 soup = BeautifulSoup(resp.text, 'lxml')
 print("title: ", soup.title.text)
 
-table = soup.find(lambda tag: tag.name=='table' and \
-    tag.has_key('id') and tag['id']=="oMainTable")
+# has_key('id') is deprecated, use has_attr('id') instead.
+#table = soup.find(lambda tag: tag.name=='table' and tag.has_key('id') and tag['id']=="oMainTable")
+table = soup.find(lambda tag: tag.name=='table' and tag.has_attr('id') and tag['id']=="oMainTable")
 rows = table.findAll(lambda tag: tag.name=='tr')
 icount = 0
 for row in table.findAll("tr"):
