@@ -20,6 +20,10 @@ if len(sys.argv) < 2 :
 
 HYPER_LINK = "https://sjmain.esunsec.com.tw"
 ssl._create_default_https_context = ssl._create_unverified_context
+#
+# 玉山證券：產業分析 -> 類股行情表
+# https://www.esunsec.com.tw/tw-market/z/ze/zeg/zeg_23.djhtm
+#
 # Source : 玉山證券，資料嵌在iframe
 # iframe : https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm
 url = "https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm"
@@ -34,37 +38,40 @@ resp.encoding = 'cp950'
 soup = BeautifulSoup(resp.text, 'lxml')
 print("title: ", soup.title.text)
 
-# has_key('id') is deprecated, use has_attr('id') instead.
-#table = soup.find(lambda tag: tag.name=='table' and tag.has_key('id') and tag['id']=="oMainTable")
-table = soup.find(lambda tag: tag.name=='table' and tag.has_attr('id') and tag['id']=="oMainTable")
-rows = table.findAll(lambda tag: tag.name=='tr')
-icount = 0
-for row in table.findAll("tr"):
-    if icount < 3 :
-        icount += 1
-        continue
-    print("row-td: ", row.get_text())
-#   只取「產業別」欄位 (第0個)
-    iloop = 0
-    tds = row.find_all("td")
-    for td in tds :
-        if iloop%2 :
-            industry = td.get_text()
-            print("industry0=", industry)            
-        else :
-            industry = td.get_text()
-            print("industry1=", industry)
-        iloop += 1
-#    else :
-#   取產業別下的子類別(用另一個table包覆)
+table = soup.find(lambda tag: tag.name=='table' and \
+    tag.has_key('id') and tag['id']=="oMainTable")
 
+
+rowCount = 0
+serialCount = 0
+blnFindTagA = False
+for sibling in table.tr.next_siblings:
+    print('處理筆數= ', str(rowCount))
+    
+    theTR = BeautifulSoup(repr(sibling), 'lxml')
+    tds = theTR.findAll(lambda tag: tag.name=='td')
+    print(len(tds), str(blnFindTagA), str(serialCount))
+    for theTD in theTR.findAll(lambda tag: tag.name=='td') :
+        for link in theTD.findAll('a') :
+            print(str(rowCount), str(serialCount), link.get('href'), link.text)
+            blnFindTagA = True
+
+    print('-----', str(blnFindTagA))
+    if blnFindTagA == True :
+        serialCount += 1
+        blnFindTagA = False
+        print("In loop: ", str(blnFindTagA), str(serialCount))
         
-    icount += 1
+    rowCount += 1
+print("END!!! ", str(rowCount))
+
+
 
 try :
-    saveFileDir = "產業分類\\"
-    fileName = "產業分類" + ".htm"
-    print('檔案名稱：' + fileName)
+#   下面這行有bug，會因為平台不同而有錯誤發生(要判斷執行程式的平台)    
+    saveFileDir = "IndustryClassification\\"
+    fileName = "IC" + ".htm"
+    print('FileName：' + fileName)
     with open(saveFileDir + fileName, 'w') as out :
         out.write(resp.text)
 
