@@ -5600,6 +5600,8 @@ table = soup.find(lambda tag: tag.name=='table' and \
 rowCount = 0
 serialCount = 0
 blnFindTagA = False
+#theHrefs = set()
+
 for sibling in table.tr.next_siblings:
     print('處理筆數= ', str(rowCount))
     
@@ -5609,13 +5611,16 @@ for sibling in table.tr.next_siblings:
     for theTD in theTR.findAll(lambda tag: tag.name=='td') :
         for link in theTD.findAll('a') :
             print(str(rowCount), str(serialCount), link.get('href'), link.text)
+#            tp = tuple([serialCount, str(link.get('href')), link.text])
+#            theHrefs.add(tp)
             blnFindTagA = True
 
     print('-----', str(blnFindTagA))
     if blnFindTagA == True :
         serialCount += 1
         blnFindTagA = False
-        print("In loop: ", str(blnFindTagA), str(serialCount))
+#        print("In loop: ", str(blnFindTagA), str(serialCount))
         
     rowCount += 1
 print("END!!! ", str(rowCount))
+print(theHrefs)
