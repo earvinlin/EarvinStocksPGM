@@ -1,4 +1,5 @@
 ﻿"""
+※ 本程式在許多路徑均有相同程式，所以要注意如果有修改程式有多處需同步處理…應該要想個做法改進！
 在新增資料如果卡住，可能是之前的資料庫異動操作還沒有commit
 解法就是先開toad，然後執行commit、最後再跑程式
 20220524-1046	處理新增資料時出現「mysql.connector.errors.ProgrammingError: 1115 (42000):Unknown \
@@ -6,6 +7,7 @@
 			  	處理方式就是建立connector時增加參數 charset = 'utf8'
 			  	(目前還是先點掉，因為現行資料庫均可正常執行本程式)
 20220622-0832	修正print訊息
+20221103-1046   修改print訊息
 """
 import mysql.connector
 import sys
@@ -40,7 +42,7 @@ if len(sys.argv) < 2 :
 	print("syntax : C:\python InsertData2DbByFile.py Data\TXT\dividend\22020520\ 2002.txt")
 	print("syntax : C:\python InsertData2DbByFile.py Data\TXT\salemon\22020520\ 2002.txt")
 	print("syntax : C:\python InsertData2DbByFile.py Data\TXT\BzPerformance\22020520\ 2002.txt")
-	print("=== iMac / Linux (要寫全路徑) ===")
+	print("=== iMac / Linux (要寫全路徑) ===(note: 20221103在iMac執行發現可寫相對路徑了~~)")
 	print("syntax : $python3 InsertData2DbByFile.py ~/workspaces/GithubProjects/GoodinfoData2DB/Data/TXT/dividend/22020520/ 2002.txt")
 	print("syntax : $python3 InsertData2DbByFile.py ~/workspaces/GithubProjects/GoodinfoData2DB/Data/TXT/salemon/22020520/ 2002.txt")
 	print("syntax : $python3 InsertData2DbByFile.py ~/workspaces/GithubProjects/GoodinfoData2DB/Data/TXT/BzPerformance/22020520/ 2002.txt")
