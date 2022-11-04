@@ -1,7 +1,6 @@
 """
 python GetStocksByIndustryClassification.py 
 """
-import mysql.connector
 import sys
 import os 
 import time
@@ -22,25 +21,29 @@ if len(sys.argv) < 3 :
 
 
 
-user = 'root'
-pwd  = 'lin32ledi'
-host = '127.0.0.1'
-db   = 'stocksdb'
-port = 3306
-charset = 'utf8'
-
-theLoadFileDir = sys.argv[1]
+theSaveFileDir = sys.argv[1]
 theInputFile = sys.argv[2]
+theOutputFile = ""
 insertCnt = 0
 errorCnt = 0
-theSelectCmd = "Select * from industry_classification;"
+
 
 # for windows now (2022.11.02)
 #saveFileDir = "IndustryClassification\\"
 #fileName = "test.txt"
 saveFileDir = sys.argv[1]
 fileName = sys.argv[2]
-outfile = open(saveFileDir + fileName, 'w')
+theInputFile = open(saveFileDir + fileName, 'w')
+
+# Step01
+# 先組出要抓檔的分類、來源網址 (Data from file: IC_StocksAddressList.txt)
+#
+
+
+
+# Step02
+# 依序抓網頁資料並
+#
 
 #HYPER_LINK = "https://sjmain.esunsec.com.tw"
 ssl._create_default_https_context = ssl._create_unverified_context
