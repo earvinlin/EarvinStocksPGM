@@ -20,8 +20,9 @@ if len(sys.argv) < 3 :
     sys.exit()
 
 theSaveFileDir = sys.argv[1]
-theInputFile = sys.argv[2]
-theOutputFile = ""
+#theInputFile = sys.argv[2]
+#theOutputFile = "insertcmd.txt"
+theInsertCmd = "insert into stocks_belongto_industry_classification (classificationType, classificationCode, stockNo, stockName) values ("
 insertCnt = 0
 errorCnt = 0
 
@@ -30,30 +31,35 @@ errorCnt = 0
 #fileName = "test.txt"
 theSaveFileDir = sys.argv[1]
 theInputFileName = sys.argv[2]
+theOutputFileName = "insert_cmd.txt"
 
-# Step01
-# 先組出要抓檔的分類、來源網址 (Data from file: IC_StocksAddressList.txt)
-#
-#with open(theSaveFileDir + theInputFileName, 'r', encoding = 'CP950') as infile :
+
+
+#with open(theInputFileName, 'r', encoding = 'cp950') as theInputFile :
 with open(theInputFileName, 'r', encoding = 'utf-8') as theInputFile :
+    theOutputFile = open(theSaveFileDir + theOutputFileName, 'w', encoding = 'utf-8')
     for eachLine in theInputFile :
         theList = eachLine.split(",") 
         print(theList)
-        theOutputFileName = theSaveFileDir + theList[1] + ".txt"
+        theClassificationType = theList[0]
+        theClassificationCode = theList[1]
         theHyperlink = theList[2].replace("\n", "")
-        print(theOutputFileName)
+
+    #    theOutputFileName = theSaveFileDir + theClassificationCode + ".txt"
+    #    print(theOutputFileName)
 #        theOutputFile = open(prnData, 'w')
 
-        print('處理網頁 : ' + theList[1])
-        theOutputFile = open(theOutputFileName, 'w')
+        print('處理網頁 : ' + theClassificationCode)
+#        theOutputFile = open(theOutputFileName, 'w', encoding = 'utf-8')
         ssl._create_default_https_context = ssl._create_unverified_context
-        url = "https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm"
+#        url = "https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm"
 
         user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'
         headers = {'User-Agent': user_agent}
 
         resp = requests.get(theHyperlink, headers = headers)
-        resp.encoding = 'cp950'
+#       windows platform : big5 ; linux platform : utf-8        
+        resp.encoding = 'big5'
 
         soup = BeautifulSoup(resp.text, 'lxml')
         theTable = soup.find(lambda tag: tag.name=='table' and tag.has_key('id') and tag['id']=="oMainTable")
@@ -62,13 +68,20 @@ with open(theInputFileName, 'r', encoding = 'utf-8') as theInputFile :
         for sibling in theTable.tr.next_siblings:
             theTR = BeautifulSoup(repr(sibling), 'lxml')
             tds = theTR.findAll(lambda tag: tag.name=='td')
-            for theTD in theTR.findAll(lambda tag: tag.name=='td') :
-                print(theTD)
-                theOutputFile.write(str(theTD))
-                theOutputFile.write('\n')
-
+            for theTD in theTR.findAll(lambda tag: tag.name=='td') :  
+                theContent = str(theTD)
+                print(theContent)
+                if theContent.find("GenLink2stk('") >= 0 :
+                    thePos1 = theContent.find("GenLink2stk('") + 12
+                    thePos2 = theContent.find(");")
+                    print(str(thePos1), str(thePos2))
+#                    theOutputFile.write(str(theTD))
+                    theValues = theInsertCmd + "'" + theClassificationType + "', '" + theClassificationCode + \
+                        "','" + theContent[thePos1+3:thePos2] + ");"
+                    theOutputFile.write(theValues)
+                    theOutputFile.write('\n')
         
-        theOutputFile.close()
+    theOutputFile.close()
 
 
 
