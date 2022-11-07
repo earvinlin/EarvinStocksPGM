@@ -44,7 +44,7 @@ with open(theInputFileName, 'r', encoding = 'utf-8') as theInputFile :
         resp = requests.get(theHyperlink, headers = headers)
         resp.encoding = 'big5' # 本網站網頁是big5編碼
 
-        time.sleep(5) # 暫停5秒,以免頻繁讀取被封鎖
+        time.sleep(2) # 暫停2秒,以免頻繁讀取被封鎖
 
         soup = BeautifulSoup(resp.text, 'lxml')
         theTable = soup.find(lambda tag: tag.name=='table' and tag.has_key('id') and tag['id']=="oMainTable")
