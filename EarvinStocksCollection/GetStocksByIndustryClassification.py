@@ -5,6 +5,7 @@ Syntax:
     linux   : python3 GetStocksByIndustryClassification.py IndustryClassification/ IC_StocksAddressList.txt
     NOTE    : IC_StocksAddressList.txt 資料來至 stocksdb -> industry_classification (table)
 20221106 Windows & Linux platform both run OK
+20221108 配合table欄位名稱修改調整sql command
 """
 import os 
 import re
@@ -22,7 +23,7 @@ if len(sys.argv) < 3 :
     sys.exit()
 
 THE_INSERT_CMD = "insert into stocks_belongto_industry_classification " \
-    "(classificationType, classificationCode, stockNo, stockName) values ("
+    "(classification_type, classification_code, stock_no, stock_name) values ("
 theSaveFileDir = sys.argv[1]
 theInputFileName = sys.argv[2]
 theOutputFileName = "Insert_stocks_belongto_industry_classification_cmd.txt"
@@ -66,17 +67,3 @@ with open(theInputFileName, 'r', encoding = 'utf-8') as theInputFile :
                     theOutputFile.write('\n')
         
     theOutputFile.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-

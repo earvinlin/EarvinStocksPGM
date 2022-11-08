@@ -5,7 +5,7 @@ Syntax :
     linux   : python3 GetIndustryClassification.py IndustryClassification/ ic20221102.txt
     NOTE    : 資料來自 玉山證券：產業分析 -> 類股行情表
               https://sjmain.esunsec.com.tw/z/zh/zha/zha.djhtm
-
+20221108 配合table欄位名稱修改調整sql command
 """
 import re
 import sys
@@ -69,8 +69,8 @@ for sibling in table.tr.next_siblings:
             classCode = theAddr[(theAddr.find('a=') + 2):]
 #           產業分類(M大項_S子項)、產業分類代碼、網址、產業分類名稱
 #            print(str(rowCount), str(serialCount), classType, classCode, theAddr, link.text)
-            theInsertCmd = "insert into industry_classification (groupid, " + \
-                "classificationType, classificationCode, classificationName, hrefAddr) " + \
+            theInsertCmd = "insert into industry_classification (group_id, " + \
+                "classification_type, classification_code, classification_name, href_addr) " + \
                 "values (" + str(serialCount) + ", '" + classType + "', '" + classCode + \
                 "', '" + link.text + "', '" + theAddr + "');"
 #            print(theInsertCmd)
@@ -87,29 +87,3 @@ for sibling in table.tr.next_siblings:
     
 print("END!!! ", str(rowCount))
 outfile.close()
-
-
-
-
-
-"""
-try :
-#   下面這行有bug，會因為平台不同而有錯誤發生(要判斷執行程式的平台)    
-    saveFileDir = "IndustryClassification\\"
-    fileName = "IC" + ".htm"
-    print('FileName：' + fileName)
-    with open(saveFileDir + fileName, 'w') as out :
-        out.write(resp.text)
-
-    print('資料儲存完成!!')
-except IOError as err :
-    print('Fie error : ' + str(err))
-
-
-
-rawtext=urlopen('http://www.ccnu.edu.cn',timeout=15).read();
-print(rawtext)
-rawtext=rawtext.decode('gbk')
-print(rawtext)
-
-"""
