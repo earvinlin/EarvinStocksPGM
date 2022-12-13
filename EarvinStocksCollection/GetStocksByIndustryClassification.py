@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 
 if len(sys.argv) < 3 :
     print("You need input two parameter(fmt : directory inputfile)")
-    print("syntax : C:\python GetStocksByIndustryClassification.py IndustryClassification\\ ic20221102.txt ")
+    print("syntax : C:\python GetStocksByIndustryClassification.py IndustryClassification\\ IC_StocksAddressList.txt ")
     sys.exit()
 
 THE_INSERT_CMD = "insert into stocks_belongto_industry_classification " \
