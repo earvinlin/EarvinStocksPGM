@@ -16,15 +16,17 @@ def GetStocksData(stockNo) :
     select_sql = "SELECT DATE, START_PRICE, HIGH_PRICE, LOW_PRICE, END_PRICE, VOLUME FROM TAIWAN_DATA_POLARIS_STOCKS WHERE STOCK_NO = %s ORDER BY DATE "
     cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
     cursor = cnx.cursor()
-    values = []
+    theResult = []
     try:
         insertCnt = 0
         cursor.execute(select_sql, (stockNo, ))
         for row in cursor:
             outStr = ""
+            theValues = []
             for i in range(len(row)) :
-                outStr += str(row[i]) + ","
-            values.append(outStr)
+#                outStr += str(row[i]) + ","
+                theValues.append(row[i])
+            theResult.append(theValues)
 #            print(outStr[0:len(outStr)-1])
     except mysql.connector.Error as err:
         sys.exit()
@@ -32,7 +34,7 @@ def GetStocksData(stockNo) :
 #    stocks.close()
     cursor.close()
     cnx.close()
-    return values
+    return theResult
 
 
 
