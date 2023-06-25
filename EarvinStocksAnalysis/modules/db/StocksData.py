@@ -18,27 +18,20 @@ def GetStocksData(stockNo) :
     select_sql = "SELECT DATE, START_PRICE, HIGH_PRICE, LOW_PRICE, END_PRICE, VOLUME FROM TAIWAN_DATA_POLARIS_STOCKS WHERE STOCK_NO = %s ORDER BY DATE "
     cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
     cursor = cnx.cursor()
-    theResult2 = []
+    stocksData = []
     try:
         insertCnt = 0
         cursor.execute(select_sql, (stockNo, ))
         for row in cursor:
-            outStr = ""
-            theValues = []
+            rsData = []
             for i in range(len(row)) :
-#                outStr += str(row[i]) + ","
-                theValues.append(row[i])
-            theResult2.append(theValues)
-#            print(outStr[0:len(outStr)-1])
+                rsData.append(row[i])
+            stocksData.append(rsData)
     except mysql.connector.Error as err:
         sys.exit()
 
-#    stocks.close()
     cursor.close()
     cnx.close()
-    theResult = pd.DataFrame(theResult2, columns=['trade_date', 'start_price', 'high_price', 'low_price', 'end_price', 'volume'])
-    theResult.index = list(theResult['trade_date'])
-    return theResult
-
-
-
+    rtnData = pd.DataFrame(stocksData, columns=['trade_date', 'start_price', 'high_price', 'low_price', 'end_price', 'volume'])
+    rtnData.index = list(rtnData['trade_date'])
+    return rtnData
