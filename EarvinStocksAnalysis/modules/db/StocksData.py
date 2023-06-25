@@ -5,6 +5,8 @@
 import mysql.connector
 import sys
 import os 
+import pandas as pd
+import numpy as np
  
 user = 'root'
 pwd  = 'lin32ledi'
@@ -16,7 +18,7 @@ def GetStocksData(stockNo) :
     select_sql = "SELECT DATE, START_PRICE, HIGH_PRICE, LOW_PRICE, END_PRICE, VOLUME FROM TAIWAN_DATA_POLARIS_STOCKS WHERE STOCK_NO = %s ORDER BY DATE "
     cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
     cursor = cnx.cursor()
-    theResult = []
+    theResult2 = []
     try:
         insertCnt = 0
         cursor.execute(select_sql, (stockNo, ))
@@ -26,7 +28,7 @@ def GetStocksData(stockNo) :
             for i in range(len(row)) :
 #                outStr += str(row[i]) + ","
                 theValues.append(row[i])
-            theResult.append(theValues)
+            theResult2.append(theValues)
 #            print(outStr[0:len(outStr)-1])
     except mysql.connector.Error as err:
         sys.exit()
@@ -34,6 +36,8 @@ def GetStocksData(stockNo) :
 #    stocks.close()
     cursor.close()
     cnx.close()
+    theResult = pd.DataFrame(theResult2, columns=['trade_date', 'start_price', 'high_price', 'low_price', 'end_price', 'volume'])
+    theResult.index = list(theResult['trade_date'])
     return theResult
 
 

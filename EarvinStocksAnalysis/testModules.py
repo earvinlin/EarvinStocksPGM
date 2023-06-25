@@ -6,6 +6,8 @@ from modules.db import StocksData as sd
 
 ind.testMAP("hello modules!")
 theResult = sd.GetStocksData("0056")
-for r in theResult :
-    print(r)
+#for r in theResult :
+#    print(r)
 print(len(theResult))
+print(theResult)
+
