@@ -3,11 +3,10 @@
 產出的檔案名稱為股票代號(沒有副檔案)
 """
 import mysql.connector
-import sys
-import os 
 import pandas as pd
 import numpy as np
- 
+
+# 不好的做法，應該要搬走
 user = 'root'
 pwd  = 'lin32ledi'
 host = '127.0.0.1'

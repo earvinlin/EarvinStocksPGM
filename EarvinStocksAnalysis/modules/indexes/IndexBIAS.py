@@ -17,7 +17,7 @@ input :
 output :
     rtnData    : 回傳技術指標MAP值(Series object)
 """
-def indexMAP(sd, indDay) :
+def indexBIAS(sd, indDay) :
 #    print("=== Calculate index map ===")
 #    print("the data size is ", len(sd))
     sdEndPrice = list(sd.end_price)
@@ -35,5 +35,13 @@ def indexMAP(sd, indDay) :
                 sum = sum - sdEndPrice[i-indDay+1]
                 i += 1
         i += 1
+    
+    i = 0
+    while i < len(sdEndPrice) :
+        if rtnData[i] == 0 :
+            rtnData[i] = 0
+        else :
+            rtnData[i] = (sdEndPrice[i] - rtnData[i]) / rtnData[i] * 100
+        i = i + 1
 
     return pd.Series(rtnData, index=sd.trade_date)
