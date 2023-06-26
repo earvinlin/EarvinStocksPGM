@@ -5,6 +5,7 @@ import numpy as np
 from modules.indexes import IndexMAP as ind
 from modules.indexes import IndexMAV as imav
 from modules.indexes import IndexBIAS as ibais
+from modules.indexes import IndexPSY as ipsy
 #import modules.indexes.* -- cannot use
 
 from modules.db import StocksData as sd
@@ -22,11 +23,12 @@ theStocksData = sd.GetStocksData("0056")
 
 #theValue = ind.indexMAP(theStocksData, 10)
 #theValue = imav.indexMAV(theStocksData, 10)
-theValue = ibais.indexBIAS(theStocksData, 10)
+#theValue = ibais.indexBIAS(theStocksData, 10)
+theValue = ipsy.indexPSY(theStocksData, 8)
 
 # 將資料寫入stocksData
 #theStocksData['indMAV10'] = theValue
-theStocksData['indBIAS10'] = theValue
+theStocksData['indPSY5'] = theValue
 
 print("== The result is ==")
 print(theStocksData)
