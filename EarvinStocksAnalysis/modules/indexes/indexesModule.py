@@ -139,11 +139,9 @@ def indexWMS(sd, indDay) :
                      DownTotVol(n)：表示過去n日股價下跌日之成交量總數
                      EquTotVol(n) ：表示過去n日股價不變日之成交量總數
 輸入參數: 
-    udtStock   股市資料
-    udtIndex   股市指標資料
-    intStockNo 股市資料的筆數
-    intVRNo    欲計算指標之天數
-輸出參數: 無
+    sd      股市資料
+    indDay  欲計算指標之天數
+輸出參數: rntData   回傳指標值(Series object)
 版    本: 
     1.00 20130706 新增
 """
@@ -160,6 +158,68 @@ def indexVR(sd, indDay) :
         if i < (indDay - 1) :
             rtnData.append(0)
         else :
+            k = i
+            volumeUp = 0
+            volumeDown = 0
+            volumeFlat = 0
+            for j in range(0,indDay) :
+#                print("k= ", k, ", i= ", i, ",up= ", up)
+                if (sdEndPrice[k] - sdStartPrice[k]) > 0 :
+                    volumeUp += sdVolume[k]
+                elif (sdEndPrice[k] - sdStartPrice[k]) < 0 :
+                    volumeDown += sdVolume[k]
+                else :
+                    volumeFlat += sdVolume[k]
+                k = k - 1
+            
+            if (volumeUp + volumeDown + (volumeFlat / 2)) > 0 :
+                rtnData.append(((volumeUp + (volumeFlat / 2))/(volumeUp + volumeDown + (volumeFlat / 2)))*100)
+            else :
+                rtnData.append(0)
+            
+        i = i + 1
+
+    return pd.Series(rtnData, index=sd.trade_date) 
+
+
+
+"""
+說    明:  -- WAIT-TO-DO , 20230707 --
+    K : 「快速平均值」、快線
+    D : 「慢速平均值」、慢線
+    Formula: KD(n) = 
+    [KD]
+    today's K = 2/3 yesterday K + 1/3 today RSV
+    today's D = 2/3 yesterday D + 1/3 today RSV
+    [RSV]
+            (今天收盤價 - 最近N天最低價)
+    RSV = -------------------------------- * 100
+           (最近N天最高價 - 最近N天最低價)
+輸入參數: 
+    sd      股市資料
+    indDay  欲計算指標之天數
+輸出參數: 無
+版    本: 
+    1.00 20130706 新增
+"""
+def indexKD(sd, indDay) :
+#    print("=== Calculate index KD ===")
+#    print("the data size is ", len(sd))
+    sdStartPrice = list(sd.start_price)
+    sdEndPrice = list(sd.end_price)
+    sdVolume = list(sd.volume)
+    rtnData = []
+    i = 0
+
+    while i < len(sdEndPrice) :
+        maxValue = -1
+        minValue = 99999
+
+        if i < (indDay - 1) :
+            # unfinished
+            rtnData.append(0)
+        else :
+            # unfinished
             k = i
             volumeUp = 0
             volumeDown = 0
