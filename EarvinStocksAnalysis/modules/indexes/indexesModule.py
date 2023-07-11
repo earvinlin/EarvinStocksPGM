@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 """
 技術指標 MAP
@@ -182,9 +183,8 @@ def indexVR(sd, indDay) :
     return pd.Series(rtnData, index=sd.trade_date) 
 
 
-
 """
-說    明:  -- WAIT-TO-DO , 20230707 --
+說    明:  Calculate the KD values
     K : 「快速平均值」、快線
     D : 「慢速平均值」、慢線
     Formula: KD(n) = 
@@ -198,18 +198,23 @@ def indexVR(sd, indDay) :
 輸入參數: 
     sd      股市資料
     indDay  欲計算指標之天數
-輸出參數: 無
+輸出參數: dictory {TradeDate, K, D, RSV}
 版    本: 
-    1.00 20130706 新增
+    1.00 20130706 新增(Test OK)
 """
 def indexKD(sd, indDay) :
 #    print("=== Calculate index KD ===")
 #    print("the data size is ", len(sd))
-    sdStartPrice = list(sd.start_price)
+    sdHighPrice = list(sd.high_price)
+    sdLowPrice = list(sd.low_price)
     sdEndPrice = list(sd.end_price)
-    sdVolume = list(sd.volume)
-    rtnData = []
+    lstK = []
+    lstD =[]
+    lstRSV = []
+    
     i = 0
+    preK = 50
+    preD = 50
 
     while i < len(sdEndPrice) :
         maxValue = -1
@@ -217,29 +222,56 @@ def indexKD(sd, indDay) :
 
         if i < (indDay - 1) :
             # unfinished
-            rtnData.append(0)
+            maxValue = max(sdHighPrice[0:i+1])
+            minValue = min(sdLowPrice[0:i+1])
         else :
             # unfinished
-            k = i
-            volumeUp = 0
-            volumeDown = 0
-            volumeFlat = 0
-            for j in range(0,indDay) :
-#                print("k= ", k, ", i= ", i, ",up= ", up)
-                if (sdEndPrice[k] - sdStartPrice[k]) > 0 :
-                    volumeUp += sdVolume[k]
-                elif (sdEndPrice[k] - sdStartPrice[k]) < 0 :
-                    volumeDown += sdVolume[k]
-                else :
-                    volumeFlat += sdVolume[k]
-                k = k - 1
-            
-            if (volumeUp + volumeDown + (volumeFlat / 2)) > 0 :
-                rtnData.append(((volumeUp + (volumeFlat / 2))/(volumeUp + volumeDown + (volumeFlat / 2)))*100)
-            else :
-                rtnData.append(0)
+            maxValue = max(sdHighPrice[(i-indDay+1):(i+1)])
+            minValue = min(sdLowPrice[(i-indDay+1):(i+1)])
+
+        rsv = 50
+        if maxValue != minValue :
+            rsv = (sdEndPrice[i] - minValue) / (maxValue - minValue) * 100
+
+        curK = preK * 2 / 3 + rsv / 3
+        curD = preD * 2 / 3 + curK / 3
+        lstK.append(curK)
+        lstD.append(curD)
+        lstRSV.append(rsv)
+        preK = curK
+        preD = curD
             
         i = i + 1
 
-    return pd.Series(rtnData, index=sd.trade_date) 
+#    return pd.Series(rtnData, index=sd.trade_date) 
+    return {"TradeDate" : sd.trade_date, "K" : lstK, "D" : lstD, "RSV" : lstRSV}
 
+
+"""
+說    明: Calculate the BIAS value
+    Formula : 乖離率 = (股價 - 移動平均價) / 移動平均價
+輸入參數: 
+    sd      股市資料
+    indDay  欲計算指標之天數
+輸出參數: the BIAS list
+版    本: 
+    1.00 20130711 新增 (??)
+"""
+def indexBIAS(sd, indDay) :
+#    print("=== Calculate index BIAS ===")
+#    print("the data size is ", len(sd))
+    sdEndPrice = list(sd.end_price)
+    rtnData = []
+    i = 0
+
+    while i < len(sdEndPrice) :
+        theBias = 0
+        if i < (indDay - 1) :
+            theBias = (sdEndPrice[i] - np.mean(sdEndPrice[0:i+1])) / np.mean(sdEndPrice[0:i+1]) * 100
+        else :
+            theBias = (sdEndPrice[i] - np.mean(sdEndPrice[(i-indDay+1):(i+1)])) / np.mean(sdEndPrice[(i-indDay+1):(i+1)]) * 100
+        
+        rtnData.append(theBias)
+        i += 1
+    
+    return pd.Series(rtnData, index=sd.trade_date)

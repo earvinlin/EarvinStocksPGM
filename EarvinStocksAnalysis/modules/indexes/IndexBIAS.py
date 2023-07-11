@@ -10,7 +10,7 @@ def testMAP2(x) :
     return theResult
 
 """
-技術指標 MAP
+技術指標 BIAS == Not Implement. (20230711) ==
 input :
     stocksData : 股票資料
     indexDay   : 指標天數

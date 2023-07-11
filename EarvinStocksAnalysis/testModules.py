@@ -14,10 +14,24 @@ theStockData = sd.getStocksData("0056")
 #theIndValues = im.indexVR(theStockData, 5)
 
 # index KD 
-theIndValues = im.indexKD(theStockData, 5)
+"""
+theIndValues = im.indexKD(theStockData, 9)
+theTradeDate = theIndValues["TradeDate"]
+theK = theIndValues["K"]
+theD = theIndValues["D"]
+theRSV = theIndValues["RSV"]
+"""
+
+# index BIAS
+theIndValues = im.indexBIAS(theStockData, 10)
 
 #for r in theResult :
 #    print(r)
 print(len(theIndValues))
-print(theIndValues)
-
+print(theIndValues[3791:3795])
+"""
+print(theTradeDate[3791:3795])
+print(theK[3791:3795])
+print(theD[3791:3795])
+print(theRSV[3791:3795])
+"""
