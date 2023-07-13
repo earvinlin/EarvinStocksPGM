@@ -255,7 +255,7 @@ def indexKD(sd, indDay) :
     indDay  欲計算指標之天數
 輸出參數: the BIAS list
 版    本: 
-    1.00 20130711 新增 (??)
+    1.00 20130711 新增 (OK)
 """
 def indexBIAS(sd, indDay) :
 #    print("=== Calculate index BIAS ===")
@@ -275,3 +275,61 @@ def indexBIAS(sd, indDay) :
         i += 1
     
     return pd.Series(rtnData, index=sd.trade_date)
+
+
+"""
+說    明: Calculate the Wilder's RSI value
+    Formula : WRSI= UP / ( DN+UP) * 100
+    WRSI = 100 - (100 / (1 + RS))，其中 RS = UP / DN 
+            UP = 期間內絕對漲幅
+            DN = 期間內絕對跌幅
+輸入參數: 
+    sd      股市資料
+    indDay  欲計算指標之天數
+輸出參數: the WRSI list
+版    本: 
+    1.00 20130713 新增 (OK)
+"""
+def indexWRSI(sd, indDay) :
+#    print("=== Calculate index WRSI ===")
+#    print("the data size is ", len(sd))
+    sdEndPrice = list(sd.end_price)
+    rtnData = []
+    i = 1   # 2nd start
+    prevUp = 0
+    prevDown = 0
+    theWRSI = 50
+    rtnData.append(theWRSI)
+
+    while i < len(sdEndPrice) :
+        curUp = 0
+        curDown = 0
+        diffValue = sdEndPrice[i] - sdEndPrice[i-1]
+        if diffValue > 0 :
+            curUp = diffValue
+        else :
+            curDown = abs(diffValue)
+        
+#        print("BEF i=", i, prevUp, curUp, prevDown, curDown)
+
+        if i < (indDay - 1) :
+            curUp = (i / (i + 1)) * prevUp + (1 / (i + 1)) * curUp
+            curDown = (i / (i + 1)) * prevDown + (1 / (i + 1)) * curDown
+        else :
+            curUp = (indDay - 1)/indDay * prevUp + (1 / indDay) * curUp
+            curDown = (indDay - 1)/indDay * prevDown + (1 / indDay) * curDown
+
+#        print("AFT i=", i, prevUp, curUp, prevDown, curDown)
+
+        if i > 0 and (curUp + curDown) != 0 :
+            theWRSI = curUp / (curUp + curDown) *100
+        else :
+            theWRSI = 50
+
+        rtnData.append(theWRSI)
+        prevUp = curUp
+        prevDown = curDown
+        i += 1
+    
+    return pd.Series(rtnData, index=sd.trade_date)
+

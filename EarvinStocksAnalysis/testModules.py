@@ -23,12 +23,19 @@ theRSV = theIndValues["RSV"]
 """
 
 # index BIAS
-theIndValues = im.indexBIAS(theStockData, 10)
+#theIndValues = im.indexBIAS(theStockData, 10)
+
+# index WRSI
+theIndValues = im.indexWRSI(theStockData[0:15], 5)
+#theIndValues = im.indexWRSI(theStockData, 14)
+
 
 #for r in theResult :
 #    print(r)
 print(len(theIndValues))
-print(theIndValues[3791:3795])
+#print(theIndValues[3791:3795])
+print(theIndValues)
+
 """
 print(theTradeDate[3791:3795])
 print(theK[3791:3795])
