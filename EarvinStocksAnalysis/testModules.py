@@ -4,6 +4,7 @@ import os
 #from modules.indexes import IndexMAP as ind
 from modules.db import stocksData as sd
 from modules.indexes import indexesModule as im
+from modules.prediction import stocksPrediction as sp
 
 #ind.testMAP("hello modules!")
 theStockData = sd.getStocksData("0056")
@@ -26,15 +27,24 @@ theRSV = theIndValues["RSV"]
 #theIndValues = im.indexBIAS(theStockData, 10)
 
 # index WRSI
-theIndValues = im.indexWRSI(theStockData[0:15], 5)
+#theIndValues = im.indexWRSI(theStockData[0:15], 5)
 #theIndValues = im.indexWRSI(theStockData, 14)
 
 
 #for r in theResult :
 #    print(r)
-print(len(theIndValues))
+#print(len(theIndValues))
 #print(theIndValues[3791:3795])
-print(theIndValues)
+#print(theIndValues)
+
+
+# TestCase : test splitSector() 
+theCompV1 = im.indexMAP(theStockData, 20)
+theCompV2 = im.indexMAP(theStockData, 60)
+print(theCompV1)
+print(theCompV2)
+theSectors = sp.splitSector(theCompV1, theCompV2)
+print(theSectors)
 
 """
 print(theTradeDate[3791:3795])
