@@ -37,18 +37,45 @@ theRSV = theIndValues["RSV"]
 #print(theIndValues[3791:3795])
 #print(theIndValues)
 
-
-# TestCase : test splitSector() 
-theCompV1 = im.indexMAP(theStockData, 20)
-theCompV2 = im.indexMAP(theStockData, 60)
-print(theCompV1)
-print(theCompV2)
-theSectors = sp.splitSector(theCompV1, theCompV2)
-print(theSectors)
-
 """
 print(theTradeDate[3791:3795])
 print(theK[3791:3795])
 print(theD[3791:3795])
 print(theRSV[3791:3795])
 """
+
+
+# TestCase : test splitSector() 
+"""
+theCompV1 = im.indexMAP(theStockData, 20)
+theCompV2 = im.indexMAP(theStockData, 60)
+print(theCompV1)
+print(theCompV2)
+theSectors = sp.splitSector(theCompV1, theCompV2)
+print(theSectors)
+"""
+
+# TestCase : test preProcess()
+theCompV1 = im.indexMAP(theStockData, 20)
+theCompV2 = im.indexMAP(theStockData, 60)
+theSectors = sp.splitSector(theCompV1, theCompV2)
+print(theSectors)
+
+preValue = theSectors.iloc[0]  
+print(preValue)
+
+i = 1
+lastLoc = 0
+while  i < len(theSectors) :
+    if preValue == theSectors.iloc[i] :
+        i += 1
+    else : 
+        lastLoc = i
+        break
+#sss = theSectors[0:lastLoc]
+theIndValues = im.indexBIAS(theStockData, 10)
+print(theIndValues[0:lastLoc])
+thePreProcessData = sp.preProcess(theIndValues[0:lastLoc], sp.CLS_MAX)
+print(thePreProcessData)
+
+
