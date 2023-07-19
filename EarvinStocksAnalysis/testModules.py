@@ -82,4 +82,11 @@ print(theIndValues[0:lastLoc])
 thePreProcessData = sp.preProcess(theIndValues[0:lastLoc], sp.CLS_MAX)
 print(thePreProcessData)
 
-
+"""
+# Series 合併為 DataFrame
+df1 = pd.DataFrame(indVR5.values, columns=['indVR5'], index=indVR5.index)
+df2 = pd.DataFrame(indBIAS10.values, columns=['indBIAS10'], index=indBIAS10.index)
+df3 = pd.DataFrame(indWRSI14.values, columns=['indWRSI14'], index=indWRSI14.index)
+res = pd.concat([df1,df2,df3],axis=1)
+print(res, df1, df2, df3)
+"""
