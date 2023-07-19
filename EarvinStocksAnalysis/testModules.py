@@ -26,8 +26,12 @@ theRSV = theIndValues["RSV"]
 #theIndValues = im.indexBIAS(theStockData, 10)
 
 # index WRSI
-theIndValues = im.indexWRSI(theStockData[0:15], 5)
+#theIndValues = im.indexWRSI(theStockData[0:15], 5)
 #theIndValues = im.indexWRSI(theStockData, 14)
+
+# index RSI
+theIndValues = im.indexRSI(theStockData[0:15], 6)
+#theIndValues = im.indexRSI(theStockData, 14)
 
 
 #for r in theResult :

@@ -97,7 +97,7 @@ def indexPSY(sd, indDay) :
 
 
 """
-技術指標 PSY
+技術指標 WMS
 input :
     stocksData : 股票資料
     indexDay   : 指標天數
@@ -332,4 +332,125 @@ def indexWRSI(sd, indDay) :
         i += 1
     
     return pd.Series(rtnData, index=sd.trade_date)
+
+
+"""
+說    明: Calculate the RSI value
+    Formula : RSI = UP / (DN + UP) * 100 
+            UP = 期間內累積漲幅 / 累積天數
+            DN = 期間內累積跌幅 / 累積天數
+輸入參數: 
+    sd      股市資料
+    indDay  欲計算指標之天數
+輸出參數: the RSI list
+版    本: 
+    1.00 20130714 新增 ( -- DOING -- )
+"""
+def indexRSI(sd, indDay) :
+#    print("=== Calculate index RSI ===")
+#    print("the data size is ", len(sd))
+    sdEndPrice = list(sd.end_price)
+    rtnData = []
+    i = 1   # 2nd start
+    theRSI = 50
+    rtnData.append(theRSI)
+
+    while i < len(sdEndPrice) :
+        upValue = 0
+        downValue = 0
+
+        if i < (indDay - 1) :
+            for k in range(i, 0, -1) :
+                diffValue = sdEndPrice[k] - sdEndPrice[k-1]
+                if diffValue > 0 :
+                    upValue += diffValue
+                else :
+                    downValue += abs(diffValue)
+            upValue /= (i + 1)
+            downValue /= (i + 1)
+        else :
+            for k in range(i, (i - indDay), -1) :
+                diffValue = sdEndPrice[k] - sdEndPrice[k-1]
+                if diffValue > 0 :
+                    upValue += diffValue
+                else :
+                    downValue += abs(diffValue)
+            upValue /= indDay
+            downValue /= indDay
+
+        if i > 0 and (upValue + downValue) != 0 :
+            theRSI = upValue / (upValue + downValue) *100
+        else :
+            theRSI = 50
+
+        rtnData.append(theRSI)
+        i += 1
+    
+    return pd.Series(rtnData, index=sd.trade_date)
+
+
+"""
+說    明: Calculate the Stoch's RSI value
+    Formula : SRSI= UP / ( DN+UP) * 100
+    WRSI = 100 - (100 / (1 + RS))，其中 RS = UP / DN 
+            UP = 期間內絕對漲幅
+            DN = 期間內絕對跌幅
+輸入參數: 
+    sd      股市資料
+    indDay  欲計算指標之天數
+輸出參數: the SRSI list
+版    本: 
+    1.00 20130714 新增 ( -- DOING -- )
+"""
+def indexSRSI(sd, indDay) :
+#    print("=== Calculate index SRSI ===")
+#    print("the data size is ", len(sd))
+    sdEndPrice = list(sd.end_price)
+    rtnData = []
+    i = 1   # 2nd start
+    maxValue = 0
+    minValue = 100
+    theSRSI = 50
+    rtnData.append(theSRSI)
+
+    while i < len(sdEndPrice) :
+        if i < (indDay - 1) :
+            maxValue = max(sdHighPrice[0:i+1])
+            minValue = min(sdLowPrice[0:i+1])
+        else :
+            maxValue = max(sdHighPrice[(i-indDay+1):(i+1)])
+            minValue = min(sdLowPrice[(i-indDay+1):(i+1)])
+        
+        
+        diffValue = sdEndPrice[i] - sdEndPrice[i-1]
+        if diffValue > 0 :
+            curUp = diffValue
+        else :
+            curDown = abs(diffValue)
+        
+#        print("BEF i=", i, prevUp, curUp, prevDown, curDown)
+
+        if i < (indDay - 1) :
+            curUp = (i / (i + 1)) * prevUp + (1 / (i + 1)) * curUp
+            curDown = (i / (i + 1)) * prevDown + (1 / (i + 1)) * curDown
+        else :
+            curUp = (indDay - 1)/indDay * prevUp + (1 / indDay) * curUp
+            curDown = (indDay - 1)/indDay * prevDown + (1 / indDay) * curDown
+
+#        print("AFT i=", i, prevUp, curUp, prevDown, curDown)
+
+        if i > 0 and (curUp + curDown) != 0 :
+            theWRSI = curUp / (curUp + curDown) *100
+        else :
+            theWRSI = 50
+
+        rtnData.append(theSRSI)
+        prevUp = curUp
+        prevDown = curDown
+        i += 1
+    
+    return pd.Series(rtnData, index=sd.trade_date)
+
+
+
 
