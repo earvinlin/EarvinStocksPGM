@@ -1,7 +1,3 @@
-"""
-取得高殖利率股票 
-syntax : GetHighYieldStocks.py yield-rate(fmt: 0.04)
-"""
 from pickle import FALSE
 from xmlrpc.client import boolean
 import mysql.connector
@@ -21,8 +17,7 @@ db   = 'stocksdb'
 # 絕對路徑：OK
 #IMAC_PATH = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/DATA/"
 # 相對路徑：預設為Windows Platform
-#DATA_PATH = "DATA\\"
-DATA_PATH = "TEST\\"  # 20240519 程式測試中…
+DATA_PATH = "DATA\\POTENTIAL\\"
 
 # 打算比對的次數
 DEF_COMP_TIME = 8
@@ -60,7 +55,6 @@ try:
 					"left outer join stocks_name d " + \
 					"on a.股票代號 = d.stock_no " + \
 					"where a.股票代號 = %s order by a.年度 desc "
-	print(theSQLCmd)
 
 
 	print(input_file)
