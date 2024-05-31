@@ -47,7 +47,7 @@ DATA_PATH = "TEST\\"  # 20240527 程式測試中…
 # 打算比對的次數
 DEF_COMP_TIME = 8
 
-input_file = "STOCKS_LIST.txt"
+input_file = "STOCKS_LIST_test.txt"
 output_file = "STOCKS_REVENUE_LIST.txt"
 readCnt = 0
 
@@ -72,6 +72,8 @@ try:
 		"left outer join stocks_dividend c on a.stock_no = c.stock_no and a.year = c.dividend_year " + \
 		"and (substring(c.period_of_dividend,3,2) between '00' and '99' or substring(c.period_of_dividend,3,2) = 'Q4') " + \
 		"and c.dividend_year = a.year " + \
+		"left outer join taiwan_data_polaris d on a.stock_no = d.stock_no " + \
+		"and d.date = (select max(date) as date from taiwan_data_polaris) " + \
 		"where substring(a.year,3,1) between '0' and '9' " + \
 		"and a.stock_no = %s order by a.year " 
 	print(theSQLCmd)
@@ -97,22 +99,15 @@ try:
 				'本益比', 'roe', 'roa', '每股帳面價值', '盈餘成長率', 'a1', 'a2', ' a3'])		
 #			print(df[['股票代號', '年度', '累計營收年增_百分比']])
 
-			df.fillna(value=-1, inplace = True)	# 將空值填入-1
-			counts = 0		# 記錄符合條件的次數
-			compTimes = DEF_COMP_TIME	# 要比對的次數
+			df.fillna(value=-999, inplace = True)	# 將空值填入-1
 
-#			如果資料筆數小於預設比對次數，則不處理!!			
-			if len(df.index) >= DEF_COMP_TIME and df.iloc[0,2] == '2021' :
-				for num in range(0, compTimes) :
+			output_file = stockNo + ".csv"
+			print("output_file=", output_file)
 
-					if df.iloc[num,14] > 6.0 :
-						counts += 1
-
-					if counts == compTimes :
-						output_file = stockNo + str(df.iloc[num,1]) + ".csv"
-						if platform.system() != "Windows" :
-							DATA_PATH = "./DATA/"
-						df.to_csv(DATA_PATH + output_file, encoding="utf_8_sig")
+			if platform.system() != "Windows" :
+				DATA_PATH = "./DATA/"
+			df.to_csv(DATA_PATH + output_file, encoding="utf_8_sig")
+#			df.to_csv(output_file, encoding="utf_8_sig")
 
 		readCnt += 1
 
