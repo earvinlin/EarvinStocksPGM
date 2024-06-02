@@ -35,7 +35,7 @@ try:
 #        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20170501 ")
 #        sys.exit()
 
-	theSQLCmd = "select a.股票代號, d.stock_name as 股票名稱, a.年度, a.累計營收_億, a.累計營收年增_百分比, " + \
+	theSQLCmd = "select a.股票代號, d.stock_name as 股票名稱, a.年度, e.end_price, a.累計營收_億, a.累計營收年增_百分比, " + \
 					"b.股本_億, b.財報評分, b.年度股價_收盤, b.年度股價_平均, b.roe, b.roa, b.bps, " + \
 					"c.股利所屬期間, c.股利合計, c.年均殖利率_合計, c.eps, c.盈餘分配率_合計 " + \
 					"from ( select stock_no as 股票代號, mid(cast(date as char),1,4) as 年度, " + \
@@ -54,6 +54,8 @@ try:
 					"on a.股票代號 = c.股票代號 and a.年度 = c.股利所屬期間 " + \
 					"left outer join stocks_name d " + \
 					"on a.股票代號 = d.stock_no " + \
+					"inner join (select a.stock_no, b.date, a.end_price from taiwan_data_polaris a inner join (select stock_no, max(date) as date from taiwan_data_polaris group by stock_no) b on a.stock_no = b.stock_no  and a.date = b.date" + \
+					"where a.stock_no = %s ) e on a.stock_no  = e.stock_no" + \
 					"where a.股票代號 = %s order by a.年度 desc "
 
 
@@ -73,7 +75,7 @@ try:
 		if not data :
 			print("No data found!!!")
 		else :
-			df = pd.DataFrame(data, columns=['股票代號', '股票名稱', '年度', '累計營收_億', \
+			df = pd.DataFrame(data, columns=['股票代號', '股票名稱', '年度', '最新收盤價', '累計營收_億', \
 				'累計營收年增_百分比', '股本_億', '財報評分', '年度股價_收盤', \
 				'年度股價_平均', 'roe', 'roa', 'bps', '股利所屬期間', \
 				'股利合計', '年均殖利率_合計', 'eps', '盈餘分配率_合計'])		
