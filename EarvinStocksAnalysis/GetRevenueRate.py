@@ -51,7 +51,8 @@ input_file = "STOCKS_LIST_test.txt"
 output_file = "STOCKS_REVENUE_LIST.txt"
 readCnt = 0
 
-cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
+#cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
+cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db,auth_plugin='caching_sha2_password')
 cursor = cnx.cursor()
 
 try:
