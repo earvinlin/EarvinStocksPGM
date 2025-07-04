@@ -15,7 +15,7 @@ try :
 #    saveFileDir = "Files\\"
     saveFileDir = ""
     if sys.platform == "darwin" or sys.platform == "linux" :
-        saveFileDir = "Files//"
+        saveFileDir = "Files/"
     else :
         saveFileDir = "Files\\"
 # 20250702 --- END ---
