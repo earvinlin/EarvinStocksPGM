@@ -20,7 +20,15 @@ f = urllib.request.urlopen(url)
 #print(f.read().decode('CP950'))
 
 try :
-    saveFileDir = "Files/"
+# 20250702 判斷程式是在何種作業系統執行以確認路徑撰寫方式
+#    saveFileDir = "Files\\"
+    saveFileDir = ""
+    if sys.platform == "darwin" or sys.platform == "linux" :
+        saveFileDir = "Files/"
+    else :
+        saveFileDir = "Files\\"
+# 20250702 --- END ---
+
     fileName = "stocks_個股日本益比殖利率及股價淨值比-" + sys.argv[1] + ".txt"
     print('檔案名稱：' + fileName)
     with open(saveFileDir + fileName, 'w') as out :

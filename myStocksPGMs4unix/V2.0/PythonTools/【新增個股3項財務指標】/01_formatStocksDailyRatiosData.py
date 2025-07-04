@@ -11,7 +11,15 @@ print("input-value= " + sys.argv[1] + "\n")
 
 try :
     data = []   # 儲存要寫出的檔案內容
-    saveFileDir = "Files/"
+# 20250702 判斷程式是在何種作業系統執行以確認路徑撰寫方式
+#    saveFileDir = "Files\\"
+    saveFileDir = ""
+    if sys.platform == "darwin" or sys.platform == "linux" :
+        saveFileDir = "Files/"
+    else :
+        saveFileDir = "Files\\"
+# 20250702 --- END ---
+
     fileName = "stocks_個股日本益比殖利率及股價淨值比-" + sys.argv[1] + ".txt"
     bk_fileName = "BK_" + fileName   # 先把原始檔案備份一份
 

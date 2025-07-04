@@ -1,0 +1,16 @@
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250609
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250610
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250611
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250612
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250613
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250616
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250617
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250618
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250619
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250620
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250623
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250624
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250625
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250626
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250627
+Python InsertTaiwanDataPolarisWithParams_V1.1.py Close20250630

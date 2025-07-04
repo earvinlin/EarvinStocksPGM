@@ -1,6 +1,0 @@
-Python3 InsertTaiwanDataPolarisWithParams_V2.py Close20220725
-Python3 InsertTaiwanDataPolarisWithParams_V2.py Close20220726
-Python3 InsertTaiwanDataPolarisWithParams_V2.py Close20220727
-Python3 InsertTaiwanDataPolarisWithParams_V2.py Close20220728
-Python3 InsertTaiwanDataPolarisWithParams_V2.py Close20220729
-

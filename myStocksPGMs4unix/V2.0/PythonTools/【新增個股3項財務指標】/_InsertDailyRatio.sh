@@ -1,6 +1,0 @@
-rem python3 02_insertDailyRatiosToMySQLDB_V2.py 1110725 stocks_個股日本益比殖利率及股價淨值比-20220725.txt
-python3 02_insertDailyRatiosToMySQLDB_V2.py 1110726 stocks_個股日本益比殖利率及股價淨值比-20220726.txt
-rem python3 02_insertDailyRatiosToMySQLDB_V2.py 1110727 stocks_個股日本益比殖利率及股價淨值比-20220727.txt
-rem python3 02_insertDailyRatiosToMySQLDB_V2.py 1110728 stocks_個股日本益比殖利率及股價淨值比-20220728.txt
-rem python3 02_insertDailyRatiosToMySQLDB_V2.py 1110729 stocks_個股日本益比殖利率及股價淨值比-20220729.txt
-

@@ -1,4 +1,0 @@
-Python 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250701
-Python 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250702
-Python 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250703
-Python 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250704
