@@ -34,9 +34,11 @@ try :
 #    theTradeDate = str(int(int(theFileName[5:9])-1911)*10000 + int(theFileName[9:11])*100 + int(theFileName[11:]))
     theTradeDate = int(int(theFileName[5:9])-1911)*10000 + int(theFileName[9:11])*100 + int(theFileName[11:])
     print("The trade date is " + str(theTradeDate))
-    
+
+# 20250704 Unix預設為utf-8編碼      
 #   Windows預設為CP950編碼 (在Windows會跳行<應該是windows 與 unix的換行符號不同所致!!>)  
-    with open(saveFileDir + input_file, 'r', encoding = 'CP950') as infile :
+#    with open(saveFileDir + input_file, 'r', encoding = 'CP950') as infile :
+    with open(saveFileDir + input_file, 'r', encoding = 'utf-8') as infile :
         for each_line in infile :   
             theStockNo = each_line[0:10]
 #  20240906  除掉尾部的空白

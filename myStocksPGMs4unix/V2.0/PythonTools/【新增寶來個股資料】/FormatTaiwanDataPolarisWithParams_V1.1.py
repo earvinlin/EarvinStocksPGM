@@ -1,3 +1,6 @@
+"""
+20250704 Input file 的編碼需為utf8，否則程式無法解析
+"""
 import re
 import sys
 import shutil
@@ -34,11 +37,9 @@ try :
     infile.close()
 
     readCount = 0
-# 20250704 判斷程式是在何種作業系統執行以確認編碼，方能正確讀取檔案
+    outfile = open(saveFileDir + input_file, 'w')
+#    outfile = open(saveFileDir + input_file, 'w', encoding="cp950")
 
-#    outfile = open(saveFileDir + input_file, 'w')
-    stocks = open(saveFileDir + input_file, 'w', encoding="cp950")
-# 20250704 --- END ---
 
     while readCount < len(data):
         if len(re.findall("^[0-9]{4}", data[readCount])) or len(re.findall("^[a-zA-Z][a-zA-Z0-9]", data[readCount])) > 0:
