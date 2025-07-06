@@ -1,1 +1,0 @@
-Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250630

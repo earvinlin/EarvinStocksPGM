@@ -64,6 +64,23 @@ try :
                 print("Readline " + str(readCount) + ": \"凱基ESG BBB債15+\" found!!")
                 subData = re.sub("凱基ESG BBB債15+", "凱基ESG_BBB債15+", data[readCount], 1)
                 outfile.write(subData)           
+# 20250705 Add Format [Q Burger] to [Q_Burger]
+            elif re.search("Q Burger", data[readCount]):
+                print("Readline " + str(readCount) + ": \"Q Burger\" found!!")
+                subData = re.sub("Q Burger", "Q_Burger", data[readCount], 1)
+                outfile.write(subData)
+# 20250705 find [AU9901] Line to format 001 to 00 1
+            elif re.search("AU9901", data[readCount]):
+                print("Readline " + str(readCount) + ": \"AU9901\" found!!")
+#                subData = re.sub("001", "00 1", data[readCount], 1)
+                subData = re.sub("001", "00 1", data[readCount])
+                outfile.write(subData)
+# 20250705 Add Format [AU9902] to [Q_Burger]
+            elif re.search("AU9902", data[readCount]):
+                print("Readline " + str(readCount) + ": \"AU9902\" found!!")
+#                subData = re.sub("001", "00 1", data[readCount], 1)
+                subData = re.sub("001", "00 1", data[readCount])
+                outfile.write(subData)           
             else:
                 outfile.write(data[readCount])
         else:

@@ -1,3 +1,7 @@
+#!/bin/bash
+
+python3 05_getTaiwanDataTsecMarginData.py 20250630 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250630 MS
 python3 05_getTaiwanDataTsecMarginData.py 20250701 MS
 python3 05_formatTaiwanDataTsecMarginData.py 20250701 MS
 python3 05_getTaiwanDataTsecMarginData.py 20250702 MS

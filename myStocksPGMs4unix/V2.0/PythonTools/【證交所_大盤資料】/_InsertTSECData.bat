@@ -1,3 +1,0 @@
-Call __InsertTaiwanDataTsec.bat
-Call __InsertTaiwanDataTsecMargin.bat
-Call __InsertTaiwanDataTsecVolume.bat
