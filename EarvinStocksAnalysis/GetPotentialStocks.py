@@ -17,7 +17,13 @@ db   = 'stocksdb'
 # 絕對路徑：OK
 #IMAC_PATH = "/Users/earvin/workspaces/GithubProjects/EarvinStocksPGM/EarvinStocksAnalysis/DATA/"
 # 相對路徑：預設為Windows Platform
-DATA_PATH = "DATA\\POTENTIAL\\"
+# 20250707 依不同平台撰寫路街格式
+#DATA_PATH = "DATA\\POTENTIAL\\"
+DATA_PATH = ""
+if sys.platform == "darwin" or sys.platform == "linux" :
+    DATA_PATH = "DATA/POTENTIAL/"
+else :
+    DATA_PATH = "DATA\\POTENTIAL\\"
 
 # 打算比對的次數
 DEF_COMP_TIME = 8
@@ -32,7 +38,7 @@ cursor = cnx.cursor()
 try:
 #    if len(sys.argv) < 2 :
 #        print("You need input one parameter(fmt : theDate(yyyymmdd))")
-#        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20170501 ")
+#        print("syntax : C:\python 02_insertTaiwanDataTsecToMySQLDB.py 20250701 ")
 #        sys.exit()
 
 	theSQLCmd = "select a.股票代號, d.stock_name as 股票名稱, a.年度, a.累計營收_億, a.累計營收年增_百分比, " + \
@@ -44,7 +50,7 @@ try:
 					"left outer join " + \
 					"( select stock_no as 股票代號, year as 年度, share_capital as 股本_億, fin_report_score as 財報評分, " + \
 					"ann_stock_end_price as 年度股價_收盤, ann_stock_avg_price as 年度股價_平均, roe, roa, bps " + \
-					"from STOCKS_BZ_PERFORMANCE ) b " + \
+					"from stocks_bz_performance ) b " + \
 					"on a.股票代號 = b.股票代號 and a.年度 = b.年度 " + \
 					"left outer join " + \
 					"( select stock_no as 股票代號, period_of_dividend as 股利所屬期間, total_dividend as 股利合計, " + \
