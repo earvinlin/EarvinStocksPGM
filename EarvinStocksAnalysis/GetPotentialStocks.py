@@ -28,7 +28,9 @@ else :
 # 打算比對的次數
 DEF_COMP_TIME = 8
 
-input_file = "STOCKS_LIST.txt"
+# 20250707 DEBUG
+#input_file = "STOCKS_LIST.txt"
+input_file = "STOCKS_LIST_test.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
 
@@ -72,7 +74,7 @@ try:
 		theArgs = (stockNo,)
 		print(theArgs)
 #       判斷每年盈收成長率是否大於10%(連續3年)
-		print(theSQLCmd)
+#		print(theSQLCmd)
 		cursor.execute(theSQLCmd, theArgs)
 		data = cursor.fetchall()
 		
@@ -92,12 +94,13 @@ try:
 #			如果資料筆數小於預設比對次數，則不處理!!			
 			if len(df.index) >= DEF_COMP_TIME and df.iloc[0,2] == '2021' :
 				for num in range(0, compTimes) :
-
-					if df.iloc[num,14] > 6.0 :
+#					殖利率(filed=14) > 6.0
+					if df.iloc[num,14] > 1.0 :
 						counts += 1
 
 					if counts == compTimes :
 						output_file = stockNo + str(df.iloc[num,1]) + ".csv"
+						print("outputfile= ", output_file)
 						if platform.system() != "Windows" :
 							DATA_PATH = "./DATA/"
 						df.to_csv(DATA_PATH + output_file, encoding="utf_8_sig")
