@@ -38,8 +38,6 @@ int main(int argc, char *argv[]) {
 		exit(EXIT_FAILURE);
 	}
 
-//    in = fopen("2002-20170120.csv", "r");
-//    out = fopen("2002-20170120.dat", "wb");
 	char inputFileName[40] ;
 	char outputFileName[40] ;
 	char filePathCSV[] = "csv/";
@@ -70,6 +68,7 @@ int main(int argc, char *argv[]) {
         printf("%s\n", line);
         int count = split(arr, line, del, 10);
 
+        // DEBUG : display array
         for (int i = 0; i < count; i++) {
             printf("data[%i]= %s\n", i+1, arr[i]);
 //            printf("欄位 %d：%s\n", i + 1, fields[i]);
