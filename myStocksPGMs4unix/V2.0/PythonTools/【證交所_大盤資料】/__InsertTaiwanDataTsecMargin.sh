@@ -1,7 +1,7 @@
 #!/bin/bash
 
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250707
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250708
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250709
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250710
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250711
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250728
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250729
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250730
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250731
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250801

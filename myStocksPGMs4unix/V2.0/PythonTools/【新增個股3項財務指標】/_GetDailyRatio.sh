@@ -1,12 +1,12 @@
 #!/bin/bash
 
-python3 01_getStocksDailyRatiosData.py 20250707
-python3 01_formatStocksDailyRatiosData.py 20250707
-python3 01_getStocksDailyRatiosData.py 20250708
-python3 01_formatStocksDailyRatiosData.py 20250708
-python3 01_getStocksDailyRatiosData.py 20250709
-python3 01_formatStocksDailyRatiosData.py 20250709
-python3 01_getStocksDailyRatiosData.py 20250710
-python3 01_formatStocksDailyRatiosData.py 20250710
-python3 01_getStocksDailyRatiosData.py 20250711
-python3 01_formatStocksDailyRatiosData.py 20250711
+python3 01_getStocksDailyRatiosData.py 20250728
+python3 01_formatStocksDailyRatiosData.py 20250728
+python3 01_getStocksDailyRatiosData.py 20250729
+python3 01_formatStocksDailyRatiosData.py 20250729
+python3 01_getStocksDailyRatiosData.py 20250730
+python3 01_formatStocksDailyRatiosData.py 20250730
+python3 01_getStocksDailyRatiosData.py 20250731
+python3 01_formatStocksDailyRatiosData.py 20250731
+python3 01_getStocksDailyRatiosData.py 20250801
+python3 01_formatStocksDailyRatiosData.py 20250801

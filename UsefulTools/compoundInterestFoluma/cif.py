@@ -96,6 +96,7 @@ elif type == "r" :
     print(f"theR= {theR:.2f}")
 
 # Case 求 n (期數) ; 20240714 有問題，要再確認為何？
+# 使用AI範例也是不行…   
 elif type == "n" :
     theA = float(sys.argv[2])
     theP = float(sys.argv[3])

@@ -1,12 +1,12 @@
 #!/bin/bash
 
-python3 05_getTaiwanDataTsecMarginData.py 20250707 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250707 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250708 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250708 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250709 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250709 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250710 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250710 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250711 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250711 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250728 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250728 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250729 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250729 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250730 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250730 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250731 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250731 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250801 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250801 MS
