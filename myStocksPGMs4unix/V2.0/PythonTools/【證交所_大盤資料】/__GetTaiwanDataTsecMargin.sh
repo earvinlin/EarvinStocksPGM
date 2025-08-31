@@ -10,7 +10,6 @@
 # python3 05_formatTaiwanDataTsecMarginData.py 20250807 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20250808 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20250808 MS
-
 # python3 05_getTaiwanDataTsecMarginData.py 20250811 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20250811 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20250812 MS
@@ -21,14 +20,24 @@
 # python3 05_formatTaiwanDataTsecMarginData.py 20250814 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20250815 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20250815 MS
+# python3 05_getTaiwanDataTsecMarginData.py 20250818 MS
+# python3 05_formatTaiwanDataTsecMarginData.py 20250818 MS
+# python3 05_getTaiwanDataTsecMarginData.py 20250819 MS
+# python3 05_formatTaiwanDataTsecMarginData.py 20250819 MS
+# python3 05_getTaiwanDataTsecMarginData.py 20250820 MS
+# python3 05_formatTaiwanDataTsecMarginData.py 20250820 MS
+# python3 05_getTaiwanDataTsecMarginData.py 20250821 MS
+# python3 05_formatTaiwanDataTsecMarginData.py 20250821 MS
+# python3 05_getTaiwanDataTsecMarginData.py 20250822 MS
+# python3 05_formatTaiwanDataTsecMarginData.py 20250822 MS
 
-python3 05_getTaiwanDataTsecMarginData.py 20250818 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250818 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250819 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250819 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250820 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250820 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250821 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250821 MS
-python3 05_getTaiwanDataTsecMarginData.py 20250822 MS
-python3 05_formatTaiwanDataTsecMarginData.py 20250822 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250825 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250825 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250826 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250826 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250827 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250827 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250828 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250828 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250829 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250829 MS
