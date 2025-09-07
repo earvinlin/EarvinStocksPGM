@@ -30,6 +30,7 @@
 # python3 05_formatTaiwanDataTsecMarginData.py 20250821 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20250822 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20250822 MS
+<<<<<<< HEAD
 # python3 05_getTaiwanDataTsecMarginData.py 20250825 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20250825 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20250826 MS
@@ -51,3 +52,16 @@ python3 05_getTaiwanDataTsecMarginData.py 20250904 MS
 python3 05_formatTaiwanDataTsecMarginData.py 20250904 MS
 python3 05_getTaiwanDataTsecMarginData.py 20250905 MS
 python3 05_formatTaiwanDataTsecMarginData.py 20250905 MS
+=======
+
+python3 05_getTaiwanDataTsecMarginData.py 20250825 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250825 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250826 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250826 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250827 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250827 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250828 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250828 MS
+python3 05_getTaiwanDataTsecMarginData.py 20250829 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20250829 MS
+>>>>>>> c43ff113b78fccb779c243b74f7143669ef926cc
