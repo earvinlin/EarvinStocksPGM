@@ -39,38 +39,24 @@
 # python3 01_formatStocksDailyRatiosData.py 20250828
 # python3 01_getStocksDailyRatiosData.py 20250829
 # python3 01_formatStocksDailyRatiosData.py 20250829
+# python3 01_getStocksDailyRatiosData.py 20250901
+# python3 01_formatStocksDailyRatiosData.py 20250901
+# python3 01_getStocksDailyRatiosData.py 20250902
+# python3 01_formatStocksDailyRatiosData.py 20250902
+# python3 01_getStocksDailyRatiosData.py 20250903
+# python3 01_formatStocksDailyRatiosData.py 20250903
+# python3 01_getStocksDailyRatiosData.py 20250904
+# python3 01_formatStocksDailyRatiosData.py 20250904
+# python3 01_getStocksDailyRatiosData.py 20250905
+# python3 01_formatStocksDailyRatiosData.py 20250905
 
-<<<<<<< HEAD
-python3 01_getStocksDailyRatiosData.py 20250901
-python3 01_formatStocksDailyRatiosData.py 20250901
-python3 01_getStocksDailyRatiosData.py 20250902
-python3 01_formatStocksDailyRatiosData.py 20250902
-python3 01_getStocksDailyRatiosData.py 20250903
-python3 01_formatStocksDailyRatiosData.py 20250903
-python3 01_getStocksDailyRatiosData.py 20250904
-python3 01_formatStocksDailyRatiosData.py 20250904
-python3 01_getStocksDailyRatiosData.py 20250905
-python3 01_formatStocksDailyRatiosData.py 20250905
-=======
-# python3 01_getStocksDailyRatiosData.py 20250818
-# python3 01_formatStocksDailyRatiosData.py 20250818
-# python3 01_getStocksDailyRatiosData.py 20250819
-# python3 01_formatStocksDailyRatiosData.py 20250819
-# python3 01_getStocksDailyRatiosData.py 20250820
-# python3 01_formatStocksDailyRatiosData.py 20250820
-# python3 01_getStocksDailyRatiosData.py 20250821
-# python3 01_formatStocksDailyRatiosData.py 20250821
-# python3 01_getStocksDailyRatiosData.py 20250822
-# python3 01_formatStocksDailyRatiosData.py 20250822
-
-python3 01_getStocksDailyRatiosData.py 20250825
-python3 01_formatStocksDailyRatiosData.py 20250825
-python3 01_getStocksDailyRatiosData.py 20250826
-python3 01_formatStocksDailyRatiosData.py 20250826
-python3 01_getStocksDailyRatiosData.py 20250827
-python3 01_formatStocksDailyRatiosData.py 20250827
-python3 01_getStocksDailyRatiosData.py 20250828
-python3 01_formatStocksDailyRatiosData.py 20250828
-python3 01_getStocksDailyRatiosData.py 20250829
-python3 01_formatStocksDailyRatiosData.py 20250829
->>>>>>> c43ff113b78fccb779c243b74f7143669ef926cc
+python3 01_getStocksDailyRatiosData.py 20250908
+python3 01_formatStocksDailyRatiosData.py 20250908
+python3 01_getStocksDailyRatiosData.py 20250909
+python3 01_formatStocksDailyRatiosData.py 20250909
+python3 01_getStocksDailyRatiosData.py 20250910
+python3 01_formatStocksDailyRatiosData.py 20250910
+python3 01_getStocksDailyRatiosData.py 20250911
+python3 01_formatStocksDailyRatiosData.py 20250911
+python3 01_getStocksDailyRatiosData.py 20250912
+python3 01_formatStocksDailyRatiosData.py 20250912
