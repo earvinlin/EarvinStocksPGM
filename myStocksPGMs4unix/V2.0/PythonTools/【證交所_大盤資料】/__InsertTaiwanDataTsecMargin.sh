@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250804
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250805
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250806
