@@ -25,3 +25,9 @@
 # Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250910
 # Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250911
 # Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250912
+
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250915
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250916
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250917
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250918
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20250919
