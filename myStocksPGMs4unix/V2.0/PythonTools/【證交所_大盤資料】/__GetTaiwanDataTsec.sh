@@ -7,3 +7,5 @@
 
 Python3 01_getTaiwanDataTsecData.py 20250901
 Python3 01_formatTaiwanDataTsecData.py 20250901
+Python3 01_getTaiwanDataTsecData.py 20251001
+Python3 01_formatTaiwanDataTsecData.py 20251001
