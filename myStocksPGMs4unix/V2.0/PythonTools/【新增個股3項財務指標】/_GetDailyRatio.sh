@@ -48,23 +48,23 @@
 # python3 01_formatStocksDailyRatiosData.py 20251002
 # python3 01_getStocksDailyRatiosData.py 20251003
 # python3 01_formatStocksDailyRatiosData.py 20251003
+# python3 01_getStocksDailyRatiosData.py 20251007
+# python3 01_formatStocksDailyRatiosData.py 20251007
+# python3 01_getStocksDailyRatiosData.py 20251008
+# python3 01_formatStocksDailyRatiosData.py 20251008
+# python3 01_getStocksDailyRatiosData.py 20251009
+# python3 01_formatStocksDailyRatiosData.py 20251009
+# python3 01_getStocksDailyRatiosData.py 20251013
+# python3 01_formatStocksDailyRatiosData.py 20251013
+# python3 01_getStocksDailyRatiosData.py 20251014
+# python3 01_formatStocksDailyRatiosData.py 20251014
+# python3 01_getStocksDailyRatiosData.py 20251015
+# python3 01_formatStocksDailyRatiosData.py 20251015
+# python3 01_getStocksDailyRatiosData.py 20251016
+# python3 01_formatStocksDailyRatiosData.py 20251016
+# python3 01_getStocksDailyRatiosData.py 20251017
+# python3 01_formatStocksDailyRatiosData.py 20251017
 
-python3 01_getStocksDailyRatiosData.py 20251007
-python3 01_formatStocksDailyRatiosData.py 20251007
-python3 01_getStocksDailyRatiosData.py 20251008
-python3 01_formatStocksDailyRatiosData.py 20251008
-python3 01_getStocksDailyRatiosData.py 20251009
-python3 01_formatStocksDailyRatiosData.py 20251009
-python3 01_getStocksDailyRatiosData.py 20251013
-python3 01_formatStocksDailyRatiosData.py 20251013
-python3 01_getStocksDailyRatiosData.py 20251014
-python3 01_formatStocksDailyRatiosData.py 20251014
-python3 01_getStocksDailyRatiosData.py 20251015
-python3 01_formatStocksDailyRatiosData.py 20251015
-python3 01_getStocksDailyRatiosData.py 20251016
-python3 01_formatStocksDailyRatiosData.py 20251016
-python3 01_getStocksDailyRatiosData.py 20251017
-python3 01_formatStocksDailyRatiosData.py 20251017
 python3 01_getStocksDailyRatiosData.py 20251020
 python3 01_formatStocksDailyRatiosData.py 20251020
 python3 01_getStocksDailyRatiosData.py 20251021
