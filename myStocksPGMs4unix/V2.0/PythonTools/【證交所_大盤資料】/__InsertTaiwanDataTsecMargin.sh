@@ -1,25 +1,5 @@
 #!/bin/bash
 
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250804
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250805
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250806
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250807
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250808
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250811
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250812
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250813
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250814
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250815
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250818
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250819
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250820
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250821
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250822
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250825
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250826
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250827
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250828
-# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250829
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250901
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250902
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250903
@@ -41,24 +21,29 @@
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250925
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250926
 # Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20250930
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251001
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251002
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251003
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251007
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251008
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251009
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251013
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251014
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251015
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251016
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251017
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251020
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251021
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251022
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251023
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251027
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251028
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251029
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251030
+# Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251031
 
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251001
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251002
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251003
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251007
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251008
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251009
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251013
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251014
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251015
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251016
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251017
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251020
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251021
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251022
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251023
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251027
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251028
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251029
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251030
-Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251031
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251103
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251104
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251105
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251106
+Python3 06_insertTaiwanDataTsecMarginToMySQLDB.py 20251107
