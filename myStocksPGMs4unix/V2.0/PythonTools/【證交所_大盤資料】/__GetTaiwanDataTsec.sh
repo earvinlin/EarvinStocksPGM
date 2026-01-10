@@ -11,5 +11,5 @@
 # Python3 01_getTaiwanDataTsecData.py 20251101
 # Python3 01_formatTaiwanDataTsecData.py 20251101
 
-Python3 01_getTaiwanDataTsecData.py 20251201
-Python3 01_formatTaiwanDataTsecData.py 20251201
+Python3 01_getTaiwanDataTsecData.py 20260101
+Python3 01_formatTaiwanDataTsecData.py 20260101
