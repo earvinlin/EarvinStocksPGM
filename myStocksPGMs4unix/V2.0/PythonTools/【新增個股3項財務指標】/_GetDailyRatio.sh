@@ -45,3 +45,5 @@ python3 01_getStocksDailyRatiosData.py 20251230
 python3 01_formatStocksDailyRatiosData.py 20251230
 python3 01_getStocksDailyRatiosData.py 20251231
 python3 01_formatStocksDailyRatiosData.py 20251231
+python3 01_getStocksDailyRatiosData.py 20260102
+python3 01_formatStocksDailyRatiosData.py 20260102

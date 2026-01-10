@@ -7,3 +7,4 @@
 # Python3 02_insertTaiwanDataTsecToMySQLDB.py 20251101
 
 Python3 02_insertTaiwanDataTsecToMySQLDB.py 20251201
+Python3 02_insertTaiwanDataTsecToMySQLDB.py 20260101

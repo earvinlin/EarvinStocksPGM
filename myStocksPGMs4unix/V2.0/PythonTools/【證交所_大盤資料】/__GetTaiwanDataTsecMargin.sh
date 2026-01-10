@@ -45,3 +45,5 @@ python3 05_getTaiwanDataTsecMarginData.py 20251230 MS
 python3 05_formatTaiwanDataTsecMarginData.py 20251230 MS
 python3 05_getTaiwanDataTsecMarginData.py 20251231 MS
 python3 05_formatTaiwanDataTsecMarginData.py 20251231 MS
+python3 05_getTaiwanDataTsecMarginData.py 20260102 MS
+python3 05_formatTaiwanDataTsecMarginData.py 20260102 MS
