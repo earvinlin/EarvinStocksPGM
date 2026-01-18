@@ -39,9 +39,13 @@
 # python3 02_insertDailyRatiosToMySQLDB.py 1141223 stocks_個股日本益比殖利率及股價淨值比-20251223.txt
 # python3 02_insertDailyRatiosToMySQLDB.py 1141224 stocks_個股日本益比殖利率及股價淨值比-20251224.txt
 # python3 02_insertDailyRatiosToMySQLDB.py 1141226 stocks_個股日本益比殖利率及股價淨值比-20251226.txt
+# python3 02_insertDailyRatiosToMySQLDB.py 1150105 stocks_個股日本益比殖利率及股價淨值比-20260105.txt
+# python3 02_insertDailyRatiosToMySQLDB.py 1150106 stocks_個股日本益比殖利率及股價淨值比-20260106.txt
+# python3 02_insertDailyRatiosToMySQLDB.py 1150107 stocks_個股日本益比殖利率及股價淨值比-20260107.txt
+# python3 02_insertDailyRatiosToMySQLDB.py 1150108 stocks_個股日本益比殖利率及股價淨值比-20260108.txt
 
-python3 02_insertDailyRatiosToMySQLDB.py 1150105 stocks_個股日本益比殖利率及股價淨值比-20260105.txt
-python3 02_insertDailyRatiosToMySQLDB.py 1150106 stocks_個股日本益比殖利率及股價淨值比-20260106.txt
-python3 02_insertDailyRatiosToMySQLDB.py 1150107 stocks_個股日本益比殖利率及股價淨值比-20260107.txt
-python3 02_insertDailyRatiosToMySQLDB.py 1150108 stocks_個股日本益比殖利率及股價淨值比-20260108.txt
-python3 02_insertDailyRatiosToMySQLDB.py 1150109 stocks_個股日本益比殖利率及股價淨值比-20260109.txt
+python3 02_insertDailyRatiosToMySQLDB.py 1150112 stocks_個股日本益比殖利率及股價淨值比-20260112.txt
+python3 02_insertDailyRatiosToMySQLDB.py 1150113 stocks_個股日本益比殖利率及股價淨值比-20260113.txt
+python3 02_insertDailyRatiosToMySQLDB.py 1150114 stocks_個股日本益比殖利率及股價淨值比-20260114.txt
+python3 02_insertDailyRatiosToMySQLDB.py 1150115 stocks_個股日本益比殖利率及股價淨值比-20260115.txt
+python3 02_insertDailyRatiosToMySQLDB.py 1150116 stocks_個股日本益比殖利率及股價淨值比-20260116.txt
