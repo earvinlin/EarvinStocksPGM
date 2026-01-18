@@ -23,9 +23,12 @@
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20251229
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20251230
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20251231
+<<<<<<< HEAD
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20251229
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20251230
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20251231
+=======
+>>>>>>> c089f77cb0af5fc09f20b449e991d1a1de408186
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20260102
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20260105
 # Python3 InsertTaiwanDataPolarisWithParams_V1.1.py Close20260106
