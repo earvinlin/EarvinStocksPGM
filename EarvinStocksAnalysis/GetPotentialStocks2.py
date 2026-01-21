@@ -18,6 +18,8 @@ import csv
 import numpy as np
 import pandas as pd
 import platform
+from modules.db import stocksData as sd
+from modules.indexes import indexesModule as im
 
 user = 'root'
 pwd  = 'lin32ledi'
@@ -44,8 +46,8 @@ input_file = "STOCKS_LIST_test.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
 
-cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
-cursor = cnx.cursor()
+#cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
+#cursor = cnx.cursor()
 
 try:
 #    if len(sys.argv) < 2 :
@@ -69,17 +71,25 @@ try:
 		print("正在處理股票代號：", theArgs)
 #       <20250708 wait to confirm>判斷每年盈收成長率是否大於10%(連續3年)
 		print(theSQLCmd)
-		cursor.execute(theSQLCmd, theArgs)
-		data = cursor.fetchall()
+#		cursor.execute(theSQLCmd, theArgs)
+#		data = cursor.fetchall()
+
+		theStockData = sd.getStocksData(stockNo)
 		
-		if not data :
+		if theStockData.empty :
 			print("No data found!!!")
 		else :
-			df = pd.DataFrame(data, columns=['日期','股票代號', '股票名稱', '開盤價', \
-				'最高價', '最低價', '收盤價', '成交量'])		
+#			日期, 股票代號, 股票名稱, 開盤價, 最高價, 最低價, 收盤價, 成交量
+#			df = pd.DataFrame(data, columns=['trade_date','stock_no', 'stock_name', \
+#				'start_price', 'high_price', 'low_price', 'end_price', 'volume'])		
+ 
+#			print("data counts= ", len(df))
+#			找出平均成交量>10000張的股票
+			theIndVol = im.indexMAV(theStockData[0:20], 5)
+			for idx, value in theIndVol.items() :
+				print(idx, value)
 
-			print(data)
-
+			print("data counts= ", len(theIndVol))
 
 		readCnt += 1
 
@@ -90,6 +100,7 @@ except mysql.connector.Error as err:
 
 print("資料處理完成!! 共 " + str(readCnt) + " 筆。")
 twStocksList.close()
-cnx.commit()
-cursor.close()
-cnx.close()
+#cnx.commit()
+#cursor.close()
+#cnx.close()
+
