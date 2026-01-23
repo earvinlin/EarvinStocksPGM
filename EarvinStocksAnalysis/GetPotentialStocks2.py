@@ -39,8 +39,8 @@ else :
 DEF_COMP_TIME = 5
 
 # 20250707 DEBUG
-#input_file = "STOCKS_LIST.txt"
-input_file = "STOCKS_LIST_test.txt"
+input_file = "STOCKS_LIST.txt"
+#input_file = "STOCKS_LIST_test.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
 
