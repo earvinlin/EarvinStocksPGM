@@ -41,8 +41,8 @@ else :
 DEF_COMP_TIME = 5
 
 # 20250707 DEBUG
-#input_file = "STOCKS_LIST.txt"
-input_file = "STOCKS_LIST_test.txt"
+input_file = "STOCKS_LIST.txt"
+#input_file = "STOCKS_LIST_test.txt"
 output_file = "POTIENTIAL_STOCKS_LIST.txt"
 readCnt = 0
 
@@ -60,7 +60,8 @@ try:
 				"from taiwan_data_polaris " + \
 				"where stock_no = %s order by date;"
 
-
+	okList = []
+	
 	print(input_file)
 	twStocksList = open(input_file, 'r')	# 預設以系統編碼開啟
 	stocks = twStocksList.readlines()
@@ -70,7 +71,7 @@ try:
 		theArgs = (stockNo,)
 		print("正在處理股票代號：", theArgs)
 #       <20250708 wait to confirm>判斷每年盈收成長率是否大於10%(連續3年)
-		print(theSQLCmd)
+#		print(theSQLCmd)
 #		cursor.execute(theSQLCmd, theArgs)
 #		data = cursor.fetchall()
 
@@ -84,14 +85,28 @@ try:
 #				'start_price', 'high_price', 'low_price', 'end_price', 'volume'])		
  
 #			print("data counts= ", len(df))
-#			找出平均成交量>10000張的股票
-			theIndVol = im.indexMAV(theStockData[0:20], 5)
+
+			totCounts = 0
+			meetCounts = 0
+#			找出平均成交量>5000張的股票
+			theIndVol = im.indexMAV(theStockData, 5)
 			for idx, value in theIndVol.items() :
-				print(idx, value)
+				if idx > 1131231 :
+					if value >= 5000 :
+						meetCounts += 1
+					totCounts += 1
 
-			print("data counts= ", len(theIndVol))
-
+			print("data counts= ", len(theIndVol), \
+		 			"totCounts= ", totCounts, \
+					" meetCounts= ", meetCounts)
+			if meetCounts > 0 and meetCounts / totCounts >= 0.8 :
+				okList.append(stockNo)
+				print("符合條件的股票代號：", stockNo)
+				
 		readCnt += 1
+
+	with open(DATA_PATH + output_file, 'a') as output_f :
+		output_f.write(str(okList) + '\n')
 
 except mysql.connector.Error as err:
     print("Processing Error!!! ")
