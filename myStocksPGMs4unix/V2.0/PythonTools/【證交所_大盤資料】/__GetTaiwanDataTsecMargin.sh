@@ -38,7 +38,6 @@
 # python3 05_formatTaiwanDataTsecMarginData.py 20251224 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20251226 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20251226 MS
-<<<<<<< HEAD
 # python3 05_getTaiwanDataTsecMarginData.py 20251229 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20251229 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20251230 MS
@@ -47,8 +46,6 @@
 # python3 05_formatTaiwanDataTsecMarginData.py 20251231 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20260102 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20260102 MS
-=======
->>>>>>> c089f77cb0af5fc09f20b449e991d1a1de408186
 # python3 05_getTaiwanDataTsecMarginData.py 20260105 MS
 # python3 05_formatTaiwanDataTsecMarginData.py 20260105 MS
 # python3 05_getTaiwanDataTsecMarginData.py 20260106 MS

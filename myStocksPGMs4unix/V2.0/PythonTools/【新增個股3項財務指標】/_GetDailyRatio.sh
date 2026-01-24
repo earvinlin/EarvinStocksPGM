@@ -38,7 +38,6 @@
 # python3 01_formatStocksDailyRatiosData.py 20251224
 # python3 01_getStocksDailyRatiosData.py 20251226
 # python3 01_formatStocksDailyRatiosData.py 20251226
-<<<<<<< HEAD
 # python3 01_getStocksDailyRatiosData.py 20251229
 # python3 01_formatStocksDailyRatiosData.py 20251229
 # python3 01_getStocksDailyRatiosData.py 20251230
@@ -47,8 +46,6 @@
 # python3 01_formatStocksDailyRatiosData.py 20251231
 # python3 01_getStocksDailyRatiosData.py 20260102
 # python3 01_formatStocksDailyRatiosData.py 20260102
-=======
->>>>>>> c089f77cb0af5fc09f20b449e991d1a1de408186
 # python3 01_getStocksDailyRatiosData.py 20260105
 # python3 01_formatStocksDailyRatiosData.py 20260105
 # python3 01_getStocksDailyRatiosData.py 20260106
