@@ -38,9 +38,14 @@
 # Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260121
 # Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260122
 # Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260123
+# Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260126
+# Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260127
+# Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260128
+# Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260129
+# Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260130
 
-Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260126
-Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260127
-Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260128
-Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260129
-Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260130
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260202
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260203
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260204
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260205
+Python3 FormatTaiwanDataPolarisWithParams_V1.1.py Close20260206
