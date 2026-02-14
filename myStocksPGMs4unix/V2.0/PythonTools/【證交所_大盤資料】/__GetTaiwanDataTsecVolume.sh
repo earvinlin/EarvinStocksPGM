@@ -12,6 +12,8 @@
 # Python3 03_formatTaiwanDataTsecVolumeData.py 20251101
 # Python3 03_getTaiwanDataTsecVolumeData.py 20251201
 # Python3 03_formatTaiwanDataTsecVolumeData.py 20251201
+# Python3 03_getTaiwanDataTsecVolumeData.py 20260101
+# Python3 03_formatTaiwanDataTsecVolumeData.py 20260101
 
-Python3 03_getTaiwanDataTsecVolumeData.py 20260101
-Python3 03_formatTaiwanDataTsecVolumeData.py 20260101
+Python3 03_getTaiwanDataTsecVolumeData.py 20260201
+Python3 03_formatTaiwanDataTsecVolumeData.py 20260201
