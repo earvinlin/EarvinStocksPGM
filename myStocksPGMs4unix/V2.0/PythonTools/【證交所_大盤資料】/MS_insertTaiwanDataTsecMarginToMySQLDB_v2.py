@@ -35,7 +35,14 @@ try:
         print("開始日期不可大於結束日期")
         sys.exit()
 
-    saveFileDir = "大盤融資融券\\"
+#   判斷程式是在何種作業系統執行以確認路徑撰寫方式
+#    saveFileDir = "大盤融資融券\\"
+    saveFileDir = ""
+    if sys.platform == "darwin" or sys.platform == "linux" :
+        saveFileDir = "大盤融資融券/"
+    else :
+        saveFileDir = "大盤融資融券\\"
+
     total_insert = 0
 
     current = start_date

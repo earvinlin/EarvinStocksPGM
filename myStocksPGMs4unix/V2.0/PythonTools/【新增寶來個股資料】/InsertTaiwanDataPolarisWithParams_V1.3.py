@@ -3,11 +3,7 @@ import sys
 import os 
 import unicodedata
 import datetime
-
-user = 'root'
-pwd  = 'lin32ledi'
-host = '127.0.0.1'
-db   = 'stocksdb'
+import chardet
 
 def slice_display_width(s, start, end):
     result = []
@@ -19,6 +15,18 @@ def slice_display_width(s, start, end):
         width += w
     return ''.join(result)
 
+def detect_encoding(file_path):
+    with open(file_path, 'rb') as f:
+        rawdata = f.read(10000)  # 讀取前 10KB
+    result = chardet.detect(rawdata)
+    return result['encoding']
+
+
+user = 'root'
+pwd  = 'lin32ledi'
+host = '127.0.0.1'
+db   = 'stocksdb'
+
 select_sql = "SELECT * FROM taiwan_data_polaris where date = %s and stock_no = %s "
 cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
 cursor = cnx.cursor()
@@ -29,7 +37,13 @@ try:
         print("syntax : C:\\python InsertTaiwanDataPolarisWithParams_V1.3.py Close20260211 ")
         sys.exit()
 
-    saveFileDir = "Files\\"
+#   判斷程式是在何種作業系統執行以確認路徑撰寫方式
+    saveFileDir = ""
+    if sys.platform == "darwin" or sys.platform == "linux" :
+        saveFileDir = "Files/"
+    else :
+        saveFileDir = "Files\\"
+
     totalCnt = 0
     insertCnt = 0
     errorCnt = 0
@@ -42,7 +56,10 @@ try:
     error_log_path = "error_log.txt"
     error_file = open(error_log_path, "a", encoding="utf-8")
 
-    with open(saveFileDir + input_file, 'r', encoding='CP950') as infile:
+
+    encoding = detect_encoding(saveFileDir + input_file)
+#    with open(saveFileDir + input_file, 'r', encoding='CP950') as infile:
+    with open(saveFileDir + input_file, 'r', encoding=encoding) as infile:
         for each_line in infile:
             try:
                 theStockNo = slice_display_width(each_line, 0, 10).strip()
@@ -75,7 +92,7 @@ try:
                     error_file.write(f"{datetime.datetime.now()} | Duplicate data | Date={theTradeDate} | Line={each_line}\n")
                     errorCnt += 1
             except ValueError as err:
-                print('File error2 : ' + str(err) + ", each_line= " + each_line)
+                print('File error : ' + str(err) + ", each_line= " + each_line)
                 error_file.write(f"{datetime.datetime.now()} | ValueError: {err} | Line={each_line}\n")
                 errorCnt += 1
 
@@ -84,7 +101,8 @@ try:
     cnx.commit()
     error_file.close()
 
-    print('資料處理完成!! 處理 ' + str(totalCnt) + '筆，新增成功 ' + str(insertCnt) + ' 筆， 錯誤 ' + str(errorCnt) + '筆')
+    print('資料處理完成!! 處理 ' + str(totalCnt) + '筆，新增成功 ' + str(insertCnt) \
+          + ' 筆， 錯誤 ' + str(errorCnt) + '筆')
 
 except mysql.connector.Error as err:
     print("Insert table [taiwan_data_polaris] failed.")

@@ -34,7 +34,13 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # -----------------------------
 # 逐日抓取資料
 # -----------------------------
-save_dir = "大盤融資融券\\"
+# save_dir = "大盤融資融券\\"
+# 判斷程式是在何種作業系統執行以確認路徑撰寫方式
+save_dir = ""
+if sys.platform == "darwin" or sys.platform == "linux" :
+    save_dir = "大盤融資融券/"
+else :
+    save_dir = "大盤融資融券\\"
 
 current = start_date
 while current <= end_date:

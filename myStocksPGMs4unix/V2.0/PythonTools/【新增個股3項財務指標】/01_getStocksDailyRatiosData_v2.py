@@ -41,7 +41,11 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # -----------------------------
 # 逐日抓取資料
 # -----------------------------
-save_dir = "Files\\"
+save_dir = ""
+if sys.platform == "darwin" or sys.platform == "linux" :
+    save_dir = "Files/"
+else :
+    save_dir = "Files\\"
 
 current = start_date
 while current <= end_date:

@@ -33,7 +33,7 @@ def open_text_file_safely(path):
 # -----------------------------
 if len(sys.argv) < 3:
     print("You need input two parameters (fmt: yyyymmdd yyyymmdd)")
-    print("syntax : python 03_insertDailyRatiosToMySQLDB_v2.py 20050902 20050930")
+    print("syntax : python3 03_insertDailyRatiosToMySQLDB_v2.py 20050902 20050930")
     sys.exit()
 
 start_date_str = sys.argv[1]
@@ -56,7 +56,12 @@ if start_date > end_date:
 cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
 cursor = cnx.cursor()
 
-save_dir = "Files\\"
+# 判斷程式是在何種作業系統執行以確認路徑撰寫方式
+save_dir = ""
+if sys.platform == "darwin" or sys.platform == "linux" :
+    save_dir = "Files/"
+else :
+    save_dir = "Files\\"
 
 # -----------------------------
 # 主迴圈：逐日處理
@@ -91,8 +96,8 @@ while current <= end_date:
             yields = 0.0 if row['殖利率(%)'] == '-' else float(row['殖利率(%)'].replace(",", ""))
             pb = 0.0 if row['股價淨值比'] == '-' else float(row['股價淨值比'].replace(",", ""))
 
-            # 查重
-            cursor.execute(select_sql, (row['證券代號'], int(date_str)))
+            # 查重 ; 日期轉換為民國年 [ (int(date_str) - 19110000) ]
+            cursor.execute(select_sql, (row['證券代號'], (int(date_str) - 19110000)))
             data = cursor.fetchall()
 
             if not data:
@@ -102,7 +107,7 @@ while current <= end_date:
                     "VALUES (%s, %s, %s, %s, %s, %s)"
                 )
                 cursor.execute(insert_sql, (
-                    int(date_str),
+                    (int(date_str) - 19110000),
                     row['證券代號'],
                     row['證券名稱'],
                     pe,

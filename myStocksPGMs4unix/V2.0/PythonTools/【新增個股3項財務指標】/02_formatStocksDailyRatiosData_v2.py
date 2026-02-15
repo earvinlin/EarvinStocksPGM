@@ -34,7 +34,11 @@ if start_date > end_date:
 # -----------------------------
 # 主程式：逐日處理
 # -----------------------------
-save_dir = "Files\\"
+save_dir = ""
+if sys.platform == "darwin" or sys.platform == "linux" :
+    save_dir = "Files/"
+else :
+    save_dir = "Files\\"
 
 current = start_date
 while current <= end_date:

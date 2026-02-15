@@ -30,7 +30,13 @@ if start_date > end_date:
 # -----------------------------
 # 主程式：逐日處理
 # -----------------------------
-save_dir = "大盤融資融券\\"
+#save_dir = "大盤融資融券\\"
+# 判斷程式是在何種作業系統執行以確認路徑撰寫方式
+save_dir = ""
+if sys.platform == "darwin" or sys.platform == "linux" :
+    save_dir = "大盤融資融券/"
+else :
+    save_dir = "大盤融資融券\\"
 
 current = start_date
 while current <= end_date:
