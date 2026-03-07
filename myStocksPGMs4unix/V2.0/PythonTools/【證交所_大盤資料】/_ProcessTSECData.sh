@@ -1,7 +1,9 @@
-Call __GetTaiwanDataTsec.bat  
-Call __InsertTaiwanDataTsec.bat
-    
-Call __GetTaiwanDataTsecVolume.bat
-Call __InsertTaiwanDataTsecVolume.bat
+#!/bin/bash
 
-Call __MS_ProcessTaiwanDataTsecMargin
+sh __GetTaiwanDataTsec.sh  
+sh __InsertTaiwanDataTsec.sh
+    
+sh __GetTaiwanDataTsecVolume.sh
+sh __InsertTaiwanDataTsecVolume.sh
+
+sh __MS_ProcessTaiwanDataTsecMargin.sh
