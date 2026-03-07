@@ -1,3 +1,3 @@
-python3 01_getStocksDailyRatiosData_v2.py 20260223 20260226
-python3 02_formatStocksDailyRatiosData_v2.py 20260223 20260226
-python3 03_insertDailyRatiosToMySQLDB_v2.py 20260223 20260226
+python3 01_getStocksDailyRatiosData_v2.py 20260302 20260306
+python3 02_formatStocksDailyRatiosData_v2.py 20260302 20260306
+python3 03_insertDailyRatiosToMySQLDB_v2.py 20260302 20260306
