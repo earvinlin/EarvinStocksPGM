@@ -7,8 +7,8 @@
 #Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260508
 
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260504
+Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260505
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260506
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260507
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260508
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260509
 
