@@ -11,10 +11,3 @@ Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260512
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260513
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260514
 Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260515
-
-
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260427
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260428
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260429
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260430
-
