@@ -1,3 +1,6 @@
+/**
+ * clang -framework ApplicationServices -o goodinfo_mac goodinfo_mac.c
+ */
 #include <ApplicationServices/ApplicationServices.h>
 #include <unistd.h>
 #include <stdio.h>
