@@ -1,6 +1,7 @@
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 import time
+import csv
 
 # 啟動防偵測的 Chrome
 options = uc.ChromeOptions()
@@ -28,9 +29,13 @@ try:
     table = soup.find("table", {"id": "tblDetail"})
 
     # 輸出表格內容
-    for row in table.find_all("tr"):
-        cells = [cell.get_text(strip=True) for cell in row.find_all(["td", "th"])]
-        print(cells)
-
+#    for row in table.find_all("tr"):
+#        cells = [cell.get_text(strip=True) for cell in row.find_all(["td", "th"])]
+#        print(cells)
+    with open("d:\\dividend_policy.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        for row in table.find_all("tr"):
+            cells = [cell.get_text(strip=True) for cell in row.find_all(["td", "th"])]
+            writer.writerow(cells)
 finally:
     driver.quit()
