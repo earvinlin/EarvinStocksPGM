@@ -1,5 +1,5 @@
 #!/bin/bash
 
-python3 01_getStocksDailyRatiosData_v2.py 20260706 20260709
-python3 02_formatStocksDailyRatiosData_v2.py 20260706 20260709
-python3 03_insertDailyRatiosToMySQLDB_v2.py 20260706 20260709
+python3 01_getStocksDailyRatiosData_v2.py 20260713 20260717
+python3 02_formatStocksDailyRatiosData_v2.py 20260713 20260717
+python3 03_insertDailyRatiosToMySQLDB_v2.py 20260713 20260717
