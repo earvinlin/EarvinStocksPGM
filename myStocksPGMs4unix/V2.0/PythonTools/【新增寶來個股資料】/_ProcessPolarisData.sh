@@ -1,14 +1,13 @@
 #!/bin/bash
 
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260608
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260609
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260610
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260611
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260612
+Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260810
+Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260811
+Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260812
+Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260813
+Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260814
 
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260608
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260609
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260610
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260611
-Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260612
-
+Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260810
+Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260811
+Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260812
+Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260813
+Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260814
