@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EarvinSTocksPGM_CS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bef1b29835c582f52d411a8def1ec32c581f4413")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c68a53d2695ffd7a5f849848aaef1d5bd0b751e")]
 [assembly: System.Reflection.AssemblyProductAttribute("EarvinSTocksPGM_CS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EarvinSTocksPGM_CS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
