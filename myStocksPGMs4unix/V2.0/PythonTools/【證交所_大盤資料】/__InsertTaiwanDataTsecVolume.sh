@@ -1,7 +1,17 @@
 #!/bin/bash
 
-#Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260501
-#Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260601
-#Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260701
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260901
 
 Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260801
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260701
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260601
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260501
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260401
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260301
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260201
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20260101
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20251201
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20251101
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20251001
+Python3 04_insertTaiwanDataTsecVolumeToMySQLDB.py 20250901
+
