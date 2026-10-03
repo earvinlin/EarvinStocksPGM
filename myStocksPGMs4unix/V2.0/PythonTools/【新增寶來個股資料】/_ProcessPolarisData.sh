@@ -1,58 +1,15 @@
 #!/bin/bash
 
-# Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260921
-# Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260922
-# Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260923
-# Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260924
-# Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260925
+# python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260921
+# python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260929
+# python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260930
+# python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20261001
+# python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20261002
 
-# Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260921
-# Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260922
-# Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260923
-# Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260924
-# Python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260925
+# python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260921
+python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260929
+python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260930
+python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20261001
+python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20261002
 
 
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260803
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260804
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260805
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260806
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260807
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260810
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260811
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260812
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260813
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260814
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260817
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260818
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260819
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260820
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260821
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260824
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260825
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260826
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260827
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260828
-Python3 FormatTaiwanDataPolarisWithParams_V1.4.py Close20260831
-
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260803
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260804
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260805
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260806
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260807
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260810
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260811
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260812
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260813
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260814
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260817
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260818
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260819
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260820
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260821
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260824
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260825
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260826
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260827
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260828
-python3 InsertTaiwanDataPolarisWithParams_V1.4.py Close20260831
