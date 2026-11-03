@@ -14,7 +14,7 @@ db   = 'stocksdb'
 
 def getStocksData(stockNo) :
     # 欄位順序：日期,開盤,最高,最低,收盤, 成交量
-    select_sql = "SELECT DATE, START_PRICE, HIGH_PRICE, LOW_PRICE, END_PRICE, VOLUME FROM TAIWAN_DATA_POLARIS_STOCKS WHERE STOCK_NO = %s ORDER BY DATE "
+    select_sql = "SELECT DATE, START_PRICE, HIGH_PRICE, LOW_PRICE, END_PRICE, VOLUME FROM TAIWAN_DATA_POLARIS WHERE STOCK_NO = %s ORDER BY DATE "
     cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
     cursor = cnx.cursor()
     stocksData = []
