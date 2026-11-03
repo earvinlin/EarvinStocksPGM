@@ -1,0 +1,143 @@
+"""
+InsertTaiwanDataPolarisWithParams_V1.4.py
+讀取檔案(utf-8)新增至taiwan_data_polaris
+"""
+import mysql.connector
+import sys
+import os 
+import unicodedata
+import datetime
+import chardet
+
+def slice_display_width(s, start, end):
+    result = []
+    width = 0
+    for ch in s:
+        w = 2 if unicodedata.east_asian_width(ch) in ('F','W') else 1
+        if start <= width < end:
+            result.append(ch)
+        width += w
+    return ''.join(result)
+
+def detect_encoding(file_path):
+    with open(file_path, 'rb') as f:
+        rawdata = f.read(10000)  # 讀取前 10KB
+    result = chardet.detect(rawdata)
+    return result['encoding']
+
+
+user = 'root'
+pwd  = 'lin32ledi'
+host = '127.0.0.1'
+db   = 'stocksdb'
+
+select_sql = "SELECT * FROM taiwan_data_polaris where date = %s and stock_no = %s "
+cnx = mysql.connector.connect(user=user, password=pwd, host=host, database=db)
+cursor = cnx.cursor()
+
+try:
+    if len(sys.argv) < 2:
+        print("You need input one parameter(fmt : theFileName)")
+        print("syntax : C:\\python InsertTaiwanDataPolarisWithParams_V1.3.py Close20260211 ")
+        sys.exit()
+
+#   判斷程式是在何種作業系統執行以確認路徑撰寫方式
+    saveFileDir = ""
+    if sys.platform == "darwin" or sys.platform == "linux" :
+        saveFileDir = "Files/"
+    else :
+        saveFileDir = "Files\\"
+
+    totalCnt = 0
+    insertCnt = 0
+    errorCnt = 0
+    theFileName = sys.argv[1]
+    input_file = theFileName + ".TXT"
+    theTradeDate = int(int(theFileName[5:9])-1911)*10000 + int(theFileName[9:11])*100 + int(theFileName[11:])
+    print("The trade date is " + str(theTradeDate))
+
+    # 開啟錯誤紀錄檔案
+    error_log_path = "error_log.txt"
+    error_file = open(error_log_path, "a", encoding="utf-8")
+
+
+    encoding = detect_encoding(saveFileDir + input_file)
+    print("encoding= ", encoding)
+
+#    with open(saveFileDir + input_file, 'r', encoding='CP950') as infile:
+    with open(saveFileDir + input_file, 'r', encoding=encoding) as infile:
+        for each_line in infile:
+#           將each_line轉換為CP950編碼，否則計算長度會有錯
+            byteLength = len(each_line.encode('CP950'))
+            print(byteLength, ", ", each_line)
+            try:
+#               依字串長度判斷，目前檔案就是2種長度(110, 112)；依不同長度切割欄位
+                if byteLength > 111 :
+                    theStockNo = slice_display_width(each_line, 0, 12).strip()
+                    theStockName = slice_display_width(each_line, 12, 32).strip()
+                    theStartPrice = float(slice_display_width(each_line, 32, 42).strip())
+                    theHighPrice = float(slice_display_width(each_line, 42, 52).strip())
+                    theLowPrice = float(slice_display_width(each_line, 52, 62).strip())
+                    theEndPrice = float(slice_display_width(each_line, 62, 72).strip())
+                    theUpDown = slice_display_width(each_line, 72, 82).strip()
+                    theVolume = float(slice_display_width(each_line, 82, 92).strip())
+                    theHighestPrice = float(slice_display_width(each_line, 92, 102).strip())
+                    theLowestPrice = float(slice_display_width(each_line, 102, 112).strip())
+                else :
+                    theStockNo = slice_display_width(each_line, 0, 10).strip()
+                    theStockName = slice_display_width(each_line, 10, 30).strip()
+                    theStartPrice = float(slice_display_width(each_line, 30, 40).strip())
+                    theHighPrice = float(slice_display_width(each_line, 40, 50).strip())
+                    theLowPrice = float(slice_display_width(each_line, 50, 60).strip())
+                    theEndPrice = float(slice_display_width(each_line, 60, 70).strip())
+                    theUpDown = slice_display_width(each_line, 70, 80).strip()
+                    theVolume = float(slice_display_width(each_line, 80, 90).strip())
+                    theHighestPrice = float(slice_display_width(each_line, 90, 100).strip())
+                    theLowestPrice = float(slice_display_width(each_line, 100, 110).strip())
+
+                print(theStockNo,", ", theStockName, ", ",theStartPrice, ", ",
+                      theHighPrice, ", ",theLowPrice, ", ",theEndPrice, ", ",
+                      theUpDown, ", ",theVolume, ", ", theHighestPrice, ", ",theLowestPrice)
+
+                cursor.execute(select_sql, (theTradeDate, theStockNo))
+                data = cursor.fetchall()
+                if not data:
+                    print("Prepare to insert, Date = " + str(theTradeDate) + " ,StockName = " + theStockName)
+                    insertstmt = ("INSERT INTO taiwan_data_polaris "
+                                  "(date, stock_no, stock_name, start_price, high_price, low_price, end_price, up_down, volume, highest_price, lowest_price) "
+                                  "VALUES ('%i', '%s', '%s', '%f', '%f', '%f', '%f', '%s', '%f', '%f', '%f')" %
+                                  (theTradeDate, theStockNo, theStockName, theStartPrice, theHighPrice, theLowPrice, theEndPrice, theUpDown, theVolume, theHighestPrice, theLowestPrice))
+                    cursor.execute(insertstmt)
+                    insertCnt += 1
+                else:
+                    print("Duplicate data, Date = " + str(theTradeDate) + ", each_line= " + each_line)
+                    error_file.write(f"{datetime.datetime.now()} | Duplicate data | Date={theTradeDate} | Line={each_line}\n")
+                    errorCnt += 1
+            except ValueError as err:
+                print(theStockNo,", ", theStockName, ", ",theStartPrice, ", ",
+                      theHighPrice, ", ",theLowPrice, ", ",theEndPrice, ", ",
+                      theUpDown, ", ",theVolume, ", ", theHighestPrice, ", ",theLowestPrice)
+
+                print('File error : ' + str(err) + ", each_line= " + each_line)
+                error_file.write(f"{datetime.datetime.now()} | ValueError: {err} | Line={each_line}\n")
+                errorCnt += 1
+
+            totalCnt += 1
+
+    cnx.commit()
+    error_file.close()
+
+    print('資料處理完成!! 處理 ' + str(totalCnt) + '筆，新增成功 ' + str(insertCnt) \
+          + ' 筆， 錯誤 ' + str(errorCnt) + '筆')
+
+except mysql.connector.Error as err:
+    print("Insert table [taiwan_data_polaris] failed.")
+    print("Error: {}".format(err.msg))
+    sys.exit()
+except IOError as err:
+    print('File error1 : ' + str(err))
+except ValueError as err:
+    print('File error2 : ' + str(err) + ", each_line= " + each_line)
+finally:
+    cursor.close()
+    cnx.close()
