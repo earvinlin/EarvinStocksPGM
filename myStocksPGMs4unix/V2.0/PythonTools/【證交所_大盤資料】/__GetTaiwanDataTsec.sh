@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#Python3 01_getTaiwanDataTsecData.py 20260501
-#Python3 01_formatTaiwanDataTsecData.py 20260501
-#Python3 01_getTaiwanDataTsecData.py 20260601
-#Python3 01_formatTaiwanDataTsecData.py 20260601
-#Python3 01_getTaiwanDataTsecData.py 20260701
-#Python3 01_formatTaiwanDataTsecData.py 20260701
-#Python3 01_getTaiwanDataTsecData.py 20260801
-#Python3 01_formatTaiwanDataTsecData.py 20260801
+# python3 01_getTaiwanDataTsecData.py 20260901
+# python3 01_formatTaiwanDataTsecData.py 20260901
+# python3 01_getTaiwanDataTsecData.py 20261001
+# python3 01_formatTaiwanDataTsecData.py 20261001
 
-Python3 01_getTaiwanDataTsecData.py 20260901
-Python3 01_formatTaiwanDataTsecData.py 20260901
+python3 01_getTaiwanDataTsecData.py 20261101
+python3 01_formatTaiwanDataTsecData.py 20261101
+
+
